@@ -341,6 +341,230 @@ export interface AppFeatureDto {
 /**
  * 
  * @export
+ * @interface AppPricingDto
+ */
+export interface AppPricingDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppPricingDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'displayName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'monthPrice'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'monthDiscount'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'monthDiscountPrice'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'monthDiscountStartAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'monthDiscountEndAt'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'yearPrice'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'yearDiscount'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'yearDiscountPrice'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'yearDiscountStartAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'yearDiscountEndAt'?: string;
+    /**
+     * 
+     * @type {Array<AppPricingItemDto>}
+     * @memberof AppPricingDto
+     */
+    'items'?: Array<AppPricingItemDto>;
+}
+/**
+ * 
+ * @export
+ * @interface AppPricingItemDto
+ */
+export interface AppPricingItemDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppPricingItemDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'displayName'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingItemDto
+     */
+    'count'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppPricingItemDto
+     */
+    'isAvailable'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppPricingItemDto
+     */
+    'hasValue'?: boolean;
+}
+/**
+ * 
+ * @export
  * @interface AppReleaseDto
  */
 export interface AppReleaseDto {
@@ -1239,6 +1463,97 @@ export interface CreateOrUpdateAppFeatureDto {
      * @memberof CreateOrUpdateAppFeatureDto
      */
     'screenshotKeys'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface CreateOrUpdateAppPricingDto
+ */
+export interface CreateOrUpdateAppPricingDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'displayName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'monthPrice'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'monthDiscount'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'monthDiscountPrice'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'monthDiscountStartAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'monthDiscountEndAt'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearPrice'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearDiscount'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearDiscountPrice'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearDiscountStartAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearDiscountEndAt'?: string;
+    /**
+     * 
+     * @type {Array<AppPricingItemDto>}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'items'?: Array<AppPricingItemDto>;
 }
 /**
  * 
@@ -7085,6 +7400,768 @@ export class AppFeatureApi extends BaseAPI {
      */
     public apiAppAppFeaturePost(body?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig) {
         return AppFeatureApiFp(this.configuration).apiAppAppFeaturePost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AppPricingApi - axios parameter creator
+ * @export
+ */
+export const AppPricingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingGet: async (appId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app-pricing`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (appId !== undefined) {
+                localVarQueryParameter['appId'] = appId;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingIdDelete', 'id', id)
+            const localVarPath = `/api/app/app-pricing/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingIdGet', 'id', id)
+            const localVarPath = `/api/app/app-pricing/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdPut: async (id: string, body?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingIdPut', 'id', id)
+            const localVarPath = `/api/app/app-pricing/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingPost: async (body?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app-pricing`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AppPricingApi - functional programming interface
+ * @export
+ */
+export const AppPricingApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AppPricingApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingGet(appId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AppPricingDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingGet(appId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingIdPut(id, body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingPost(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AppPricingApi - factory interface
+ * @export
+ */
+export const AppPricingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AppPricingApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingGet(appId?: string, options?: any): AxiosPromise<Array<AppPricingDto>> {
+            return localVarFp.apiAppAppPricingGet(appId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdDelete(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAppAppPricingIdDelete(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdGet(id: string, options?: any): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingIdGet(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: any): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingIdPut(id, body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: any): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingPost(body, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AppPricingApi - object-oriented interface
+ * @export
+ * @class AppPricingApi
+ * @extends {BaseAPI}
+ */
+export class AppPricingApi extends BaseAPI {
+    /**
+     * 
+     * @param {string} [appId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingGet(appId?: string, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingGet(appId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingIdDelete(id: string, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingIdGet(id: string, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {CreateOrUpdateAppPricingDto} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {CreateOrUpdateAppPricingDto} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingPost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AppPricingItemApi - axios parameter creator
+ * @export
+ */
+export const AppPricingItemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemGet: async (appId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app-pricing-item`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (appId !== undefined) {
+                localVarQueryParameter['appId'] = appId;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingItemIdDelete', 'id', id)
+            const localVarPath = `/api/app/app-pricing-item/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingItemIdGet', 'id', id)
+            const localVarPath = `/api/app/app-pricing-item/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdPut: async (id: string, body?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppPricingItemIdPut', 'id', id)
+            const localVarPath = `/api/app/app-pricing-item/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemPost: async (body?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app-pricing-item`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AppPricingItemApi - functional programming interface
+ * @export
+ */
+export const AppPricingItemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AppPricingItemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingItemGet(appId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AppPricingItemDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemGet(appId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingItemIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingItemIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingItemIdPut(id: string, body?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdPut(id, body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingItemPost(body?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemPost(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AppPricingItemApi - factory interface
+ * @export
+ */
+export const AppPricingItemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AppPricingItemApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemGet(appId?: string, options?: any): AxiosPromise<Array<AppPricingItemDto>> {
+            return localVarFp.apiAppAppPricingItemGet(appId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdDelete(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAppAppPricingItemIdDelete(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdGet(id: string, options?: any): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemIdGet(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemIdPut(id: string, body?: object, options?: any): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemIdPut(id, body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {object} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingItemPost(body?: object, options?: any): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemPost(body, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AppPricingItemApi - object-oriented interface
+ * @export
+ * @class AppPricingItemApi
+ * @extends {BaseAPI}
+ */
+export class AppPricingItemApi extends BaseAPI {
+    /**
+     * 
+     * @param {string} [appId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingItemApi
+     */
+    public apiAppAppPricingItemGet(appId?: string, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemGet(appId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingItemApi
+     */
+    public apiAppAppPricingItemIdDelete(id: string, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingItemApi
+     */
+    public apiAppAppPricingItemIdGet(id: string, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {object} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingItemApi
+     */
+    public apiAppAppPricingItemIdPut(id: string, body?: object, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {object} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingItemApi
+     */
+    public apiAppAppPricingItemPost(body?: object, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
