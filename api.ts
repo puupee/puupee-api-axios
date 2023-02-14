@@ -394,10 +394,10 @@ export interface AppPricingDto {
     'deletionTime'?: string;
     /**
      * 
-     * @type {PriceNaming}
+     * @type {string}
      * @memberof AppPricingDto
      */
-    'naming'?: PriceNaming;
+    'naming'?: string;
     /**
      * 
      * @type {string}
@@ -476,6 +476,25 @@ export interface AppPricingDto {
      * @memberof AppPricingDto
      */
     'items'?: Array<AppPricingItemDto>;
+}
+/**
+ * 
+ * @export
+ * @interface AppPricingDtoPagedResultDto
+ */
+export interface AppPricingDtoPagedResultDto {
+    /**
+     * 
+     * @type {Array<AppPricingDto>}
+     * @memberof AppPricingDtoPagedResultDto
+     */
+    'items'?: Array<AppPricingDto>;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingDtoPagedResultDto
+     */
+    'totalCount'?: number;
 }
 /**
  * 
@@ -1478,10 +1497,10 @@ export interface CreateOrUpdateAppFeatureDto {
 export interface CreateOrUpdateAppPricingDto {
     /**
      * 
-     * @type {PriceNaming}
+     * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'naming'?: PriceNaming;
+    'naming'?: string;
     /**
      * 
      * @type {string}
@@ -3975,25 +3994,6 @@ export interface PermissionGroupDto {
      * @memberof PermissionGroupDto
      */
     'permissions'?: Array<PermissionGrantInfoDto>;
-}
-/**
- * 
- * @export
- * @interface PriceNaming
- */
-export interface PriceNaming {
-    /**
-     * 
-     * @type {string}
-     * @memberof PriceNaming
-     */
-    'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PriceNaming
-     */
-    'value'?: string;
 }
 /**
  * 
@@ -7474,11 +7474,50 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
     return {
         /**
          * 
-         * @param {string} [appId] 
+         * @param {string} appId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingGet: async (appId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingByAppIdAppIdGet: async (appId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'appId' is not null or undefined
+            assertParamExists('apiAppAppPricingByAppIdAppIdGet', 'appId', appId)
+            const localVarPath = `/api/app/app-pricing/by-app-id/{appId}`
+                .replace(`{${"appId"}}`, encodeURIComponent(String(appId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingGet: async (sorting?: string, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-pricing`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -7495,8 +7534,16 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
 
-            if (appId !== undefined) {
-                localVarQueryParameter['appId'] = appId;
+            if (sorting !== undefined) {
+                localVarQueryParameter['Sorting'] = sorting;
+            }
+
+            if (skipCount !== undefined) {
+                localVarQueryParameter['SkipCount'] = skipCount;
+            }
+
+            if (maxResultCount !== undefined) {
+                localVarQueryParameter['MaxResultCount'] = maxResultCount;
             }
 
 
@@ -7674,12 +7721,24 @@ export const AppPricingApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {string} [appId] 
+         * @param {string} appId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingGet(appId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AppPricingDto>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingGet(appId, options);
+        async apiAppAppPricingByAppIdAppIdGet(appId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AppPricingDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingByAppIdAppIdGet(appId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPricingGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingGet(sorting, skipCount, maxResultCount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7735,12 +7794,23 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {string} [appId] 
+         * @param {string} appId 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingGet(appId?: string, options?: any): AxiosPromise<Array<AppPricingDto>> {
-            return localVarFp.apiAppAppPricingGet(appId, options).then((request) => request(axios, basePath));
+        apiAppAppPricingByAppIdAppIdGet(appId: string, options?: any): AxiosPromise<Array<AppPricingDto>> {
+            return localVarFp.apiAppAppPricingByAppIdAppIdGet(appId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPricingGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppPricingDtoPagedResultDto> {
+            return localVarFp.apiAppAppPricingGet(sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7791,13 +7861,26 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
 export class AppPricingApi extends BaseAPI {
     /**
      * 
-     * @param {string} [appId] 
+     * @param {string} appId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingGet(appId?: string, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingGet(appId, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingByAppIdAppIdGet(appId: string, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingByAppIdAppIdGet(appId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [sorting] 
+     * @param {number} [skipCount] 
+     * @param {number} [maxResultCount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppPricingApi
+     */
+    public apiAppAppPricingGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingGet(sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
