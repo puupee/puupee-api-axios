@@ -394,10 +394,10 @@ export interface AppPricingDto {
     'deletionTime'?: string;
     /**
      * 
-     * @type {string}
+     * @type {PriceNaming}
      * @memberof AppPricingDto
      */
-    'displayName'?: string;
+    'naming'?: PriceNaming;
     /**
      * 
      * @type {string}
@@ -536,13 +536,19 @@ export interface AppPricingItemDto {
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'displayName'?: string;
+    'name'?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof AppPricingItemDto
      */
-    'count'?: number;
+    'display'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof AppPricingItemDto
+     */
+    'values'?: Array<string>;
     /**
      * 
      * @type {string}
@@ -1472,10 +1478,10 @@ export interface CreateOrUpdateAppFeatureDto {
 export interface CreateOrUpdateAppPricingDto {
     /**
      * 
-     * @type {string}
+     * @type {PriceNaming}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'displayName'?: string;
+    'naming'?: PriceNaming;
     /**
      * 
      * @type {string}
@@ -1554,6 +1560,37 @@ export interface CreateOrUpdateAppPricingDto {
      * @memberof CreateOrUpdateAppPricingDto
      */
     'items'?: Array<AppPricingItemDto>;
+}
+/**
+ * 
+ * @export
+ * @interface CreateOrUpdateAppPricingItemDto
+ */
+export interface CreateOrUpdateAppPricingItemDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'display'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'hasValue'?: boolean;
 }
 /**
  * 
@@ -3610,6 +3647,12 @@ export interface LanguageInfo {
      * @type {string}
      * @memberof LanguageInfo
      */
+    'twoLetterISOLanguageName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LanguageInfo
+     */
     'flagIcon'?: string;
 }
 /**
@@ -3932,6 +3975,25 @@ export interface PermissionGroupDto {
      * @memberof PermissionGroupDto
      */
     'permissions'?: Array<PermissionGrantInfoDto>;
+}
+/**
+ * 
+ * @export
+ * @interface PriceNaming
+ */
+export interface PriceNaming {
+    /**
+     * 
+     * @type {string}
+     * @memberof PriceNaming
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PriceNaming
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -7906,11 +7968,11 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
         /**
          * 
          * @param {string} id 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdPut: async (id: string, body?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingItemIdPut: async (id: string, body?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppPricingItemIdPut', 'id', id)
             const localVarPath = `/api/app/app-pricing-item/{id}`
@@ -7946,11 +8008,11 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemPost: async (body?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingItemPost: async (body?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-pricing-item`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -8024,21 +8086,21 @@ export const AppPricingItemApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingItemIdPut(id: string, body?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+        async apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdPut(id, body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingItemPost(body?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+        async apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -8082,20 +8144,20 @@ export const AppPricingItemApiFactory = function (configuration?: Configuration,
         /**
          * 
          * @param {string} id 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdPut(id: string, body?: object, options?: any): AxiosPromise<AppPricingItemDto> {
+        apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: any): AxiosPromise<AppPricingItemDto> {
             return localVarFp.apiAppAppPricingItemIdPut(id, body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {object} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemPost(body?: object, options?: any): AxiosPromise<AppPricingItemDto> {
+        apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: any): AxiosPromise<AppPricingItemDto> {
             return localVarFp.apiAppAppPricingItemPost(body, options).then((request) => request(axios, basePath));
         },
     };
@@ -8144,23 +8206,23 @@ export class AppPricingItemApi extends BaseAPI {
     /**
      * 
      * @param {string} id 
-     * @param {object} [body] 
+     * @param {CreateOrUpdateAppPricingItemDto} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemIdPut(id: string, body?: object, options?: AxiosRequestConfig) {
+    public apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig) {
         return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {object} [body] 
+     * @param {CreateOrUpdateAppPricingItemDto} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemPost(body?: object, options?: AxiosRequestConfig) {
+    public apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig) {
         return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(body, options).then((request) => request(this.axios, this.basePath));
     }
 }
