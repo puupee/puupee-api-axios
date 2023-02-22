@@ -199,6 +199,12 @@ export interface AppDto {
     'icon'?: string;
     /**
      * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'homePage'?: string;
+    /**
+     * 
      * @type {number}
      * @memberof AppDto
      */
@@ -1433,6 +1439,12 @@ export interface CreateOrUpdateAppDto {
      * @memberof CreateOrUpdateAppDto
      */
     'icon'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'homePage'?: string;
     /**
      * 
      * @type {number}
@@ -6578,11 +6590,10 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} [developerAccount] 
-         * @param {boolean} [isEnabled] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppByDeveloperGet: async (developerAccount?: string, isEnabled?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppByDeveloperGet: async (developerAccount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app/by-developer`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6601,10 +6612,6 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
 
             if (developerAccount !== undefined) {
                 localVarQueryParameter['developerAccount'] = developerAccount;
-            }
-
-            if (isEnabled !== undefined) {
-                localVarQueryParameter['isEnabled'] = isEnabled;
             }
 
 
@@ -6912,12 +6919,11 @@ export const AppApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} [developerAccount] 
-         * @param {boolean} [isEnabled] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppByDeveloperGet(developerAccount?: string, isEnabled?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppByDeveloperGet(developerAccount, isEnabled, options);
+        async apiAppAppByDeveloperGet(developerAccount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppByDeveloperGet(developerAccount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -7007,12 +7013,11 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
         /**
          * 
          * @param {string} [developerAccount] 
-         * @param {boolean} [isEnabled] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppByDeveloperGet(developerAccount?: string, isEnabled?: boolean, options?: any): AxiosPromise<AppDtoPagedResultDto> {
-            return localVarFp.apiAppAppByDeveloperGet(developerAccount, isEnabled, options).then((request) => request(axios, basePath));
+        apiAppAppByDeveloperGet(developerAccount?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppByDeveloperGet(developerAccount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7094,13 +7099,12 @@ export class AppApi extends BaseAPI {
     /**
      * 
      * @param {string} [developerAccount] 
-     * @param {boolean} [isEnabled] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppByDeveloperGet(developerAccount?: string, isEnabled?: boolean, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppByDeveloperGet(developerAccount, isEnabled, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppByDeveloperGet(developerAccount?: string, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppByDeveloperGet(developerAccount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8528,6 +8532,64 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {string} [appName] 
+         * @param {string} [name] 
+         * @param {string} [value] 
+         * @param {string} [name2] 
+         * @param {string} [value2] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppReleaseLatestGet: async (appName?: string, name?: string, value?: string, name2?: string, value2?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app-release/latest`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (appName !== undefined) {
+                localVarQueryParameter['appName'] = appName;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['Name'] = name;
+            }
+
+            if (value !== undefined) {
+                localVarQueryParameter['Value'] = value;
+            }
+
+            if (name2 !== undefined) {
+                localVarQueryParameter['Name'] = name2;
+            }
+
+            if (value2 !== undefined) {
+                localVarQueryParameter['Value'] = value2;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {CreateOrUpdateAppReleaseDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8622,6 +8684,20 @@ export const AppReleaseApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [appName] 
+         * @param {string} [name] 
+         * @param {string} [value] 
+         * @param {string} [name2] 
+         * @param {string} [value2] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppReleaseLatestGet(appName?: string, name?: string, value?: string, name2?: string, value2?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleaseLatestGet(appName, name, value, name2, value2, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {CreateOrUpdateAppReleaseDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8682,6 +8758,19 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
          */
         apiAppAppReleaseIdPut(id: string, body?: CreateOrUpdateAppReleaseDto, options?: any): AxiosPromise<AppReleaseDto> {
             return localVarFp.apiAppAppReleaseIdPut(id, body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [appName] 
+         * @param {string} [name] 
+         * @param {string} [value] 
+         * @param {string} [name2] 
+         * @param {string} [value2] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppReleaseLatestGet(appName?: string, name?: string, value?: string, name2?: string, value2?: string, options?: any): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleaseLatestGet(appName, name, value, name2, value2, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8751,6 +8840,21 @@ export class AppReleaseApi extends BaseAPI {
      */
     public apiAppAppReleaseIdPut(id: string, body?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig) {
         return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [appName] 
+     * @param {string} [name] 
+     * @param {string} [value] 
+     * @param {string} [name2] 
+     * @param {string} [value2] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppReleaseApi
+     */
+    public apiAppAppReleaseLatestGet(appName?: string, name?: string, value?: string, name2?: string, value2?: string, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseLatestGet(appName, name, value, name2, value2, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
