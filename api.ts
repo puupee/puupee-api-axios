@@ -1432,18 +1432,6 @@ export interface CreateMessageTemplateReleaseDto {
      * @type {string}
      * @memberof CreateMessageTemplateReleaseDto
      */
-    'templateName'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateMessageTemplateReleaseDto
-     */
-    'version'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateMessageTemplateReleaseDto
-     */
     'content'?: string;
     /**
      * 
@@ -4016,10 +4004,10 @@ export interface MessagePublishDto {
     'template'?: string;
     /**
      * 
-     * @type {object}
+     * @type {{ [key: string]: object | undefined; }}
      * @memberof MessagePublishDto
      */
-    'data'?: object;
+    'data'?: { [key: string]: object | undefined; };
 }
 /**
  * 
@@ -4058,6 +4046,54 @@ export interface MessageTemplateDto {
      * @type {string}
      * @memberof MessageTemplateDto
      */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageTemplateDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateDto
+     */
     'name'?: string;
     /**
      * 
@@ -4071,6 +4107,85 @@ export interface MessageTemplateDto {
      * @memberof MessageTemplateDto
      */
     'latestVersion'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface MessageTemplateReleaseDto
+ */
+export interface MessageTemplateReleaseDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'templateName'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'version'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'content'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseDto
+     */
+    'templateId'?: string;
 }
 /**
  * 
@@ -7417,6 +7532,64 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
+         * @param {string} [type] 
+         * @param {string} [searchKey] 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPublicGet: async (type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app/public`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (type !== undefined) {
+                localVarQueryParameter['Type'] = type;
+            }
+
+            if (searchKey !== undefined) {
+                localVarQueryParameter['SearchKey'] = searchKey;
+            }
+
+            if (sorting !== undefined) {
+                localVarQueryParameter['Sorting'] = sorting;
+            }
+
+            if (skipCount !== undefined) {
+                localVarQueryParameter['SkipCount'] = skipCount;
+            }
+
+            if (maxResultCount !== undefined) {
+                localVarQueryParameter['MaxResultCount'] = maxResultCount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} [key] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7549,6 +7722,20 @@ export const AppApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [type] 
+         * @param {string} [searchKey] 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} [key] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7642,6 +7829,19 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          */
         apiAppAppPost(body?: CreateOrUpdateAppDto, options?: any): AxiosPromise<AppDto> {
             return localVarFp.apiAppAppPost(body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [type] 
+         * @param {string} [searchKey] 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -7752,6 +7952,21 @@ export class AppApi extends BaseAPI {
      */
     public apiAppAppPost(body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig) {
         return AppApiFp(this.configuration).apiAppAppPost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [type] 
+     * @param {string} [searchKey] 
+     * @param {string} [sorting] 
+     * @param {number} [skipCount] 
+     * @param {number} [maxResultCount] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -12612,7 +12827,7 @@ export const MessageTemplateReleaseApiFp = function(configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplateReleaseGet(templateId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<object>>> {
+        async apiAppMessageTemplateReleaseGet(templateId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageTemplateReleaseDto>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateReleaseGet(templateId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -12622,7 +12837,7 @@ export const MessageTemplateReleaseApiFp = function(configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplateReleaseIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async apiAppMessageTemplateReleaseIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateReleaseDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateReleaseIdGet(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -12632,7 +12847,7 @@ export const MessageTemplateReleaseApiFp = function(configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateReleaseDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateReleasePost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -12652,7 +12867,7 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleaseGet(templateId?: string, options?: any): AxiosPromise<Array<object>> {
+        apiAppMessageTemplateReleaseGet(templateId?: string, options?: any): AxiosPromise<Array<MessageTemplateReleaseDto>> {
             return localVarFp.apiAppMessageTemplateReleaseGet(templateId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -12661,7 +12876,7 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleaseIdGet(id: string, options?: any): AxiosPromise<object> {
+        apiAppMessageTemplateReleaseIdGet(id: string, options?: any): AxiosPromise<MessageTemplateReleaseDto> {
             return localVarFp.apiAppMessageTemplateReleaseIdGet(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -12670,7 +12885,7 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: any): AxiosPromise<object> {
+        apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: any): AxiosPromise<MessageTemplateReleaseDto> {
             return localVarFp.apiAppMessageTemplateReleasePost(body, options).then((request) => request(axios, basePath));
         },
     };
