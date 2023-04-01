@@ -4709,6 +4709,182 @@ export interface ProviderInfoDto {
 /**
  * 
  * @export
+ * @interface PublicAppDto
+ */
+export interface PublicAppDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PublicAppDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'displayName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'framework'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'appType'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'icon'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'homePage'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof PublicAppDto
+     */
+    'sortIndex'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'gitRepository'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'gitRepositoryType'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PublicAppDto
+     */
+    'isEnabled'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PublicAppDto
+     */
+    'isPublished'?: boolean;
+    /**
+     * 
+     * @type {Array<AppReleaseDto>}
+     * @memberof PublicAppDto
+     */
+    'latestReleases'?: Array<AppReleaseDto>;
+    /**
+     * 
+     * @type {IdentityUserDto}
+     * @memberof PublicAppDto
+     */
+    'creator'?: IdentityUserDto;
+    /**
+     * 
+     * @type {Array<AppFeatureDto>}
+     * @memberof PublicAppDto
+     */
+    'features'?: Array<AppFeatureDto>;
+    /**
+     * 
+     * @type {Array<AppSdkDto>}
+     * @memberof PublicAppDto
+     */
+    'sdks'?: Array<AppSdkDto>;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PublicAppDto
+     */
+    'subscribed'?: boolean;
+}
+/**
+ * 
+ * @export
+ * @interface PublicAppDtoPagedResultDto
+ */
+export interface PublicAppDtoPagedResultDto {
+    /**
+     * 
+     * @type {Array<PublicAppDto>}
+     * @memberof PublicAppDtoPagedResultDto
+     */
+    'items'?: Array<PublicAppDto>;
+    /**
+     * 
+     * @type {number}
+     * @memberof PublicAppDtoPagedResultDto
+     */
+    'totalCount'?: number;
+}
+/**
+ * 
+ * @export
  * @interface PuupeeChangedEto
  */
 export interface PuupeeChangedEto {
@@ -7730,7 +7906,7 @@ export const AppApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
+        async apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PublicAppDtoPagedResultDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -7840,7 +8016,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppDtoPagedResultDto> {
+        apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<PublicAppDtoPagedResultDto> {
             return localVarFp.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
