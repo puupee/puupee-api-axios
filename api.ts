@@ -7799,6 +7799,44 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
+         * @param {string} [key] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppUploadCredentialsGet: async (key?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app/upload-credentials`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (key !== undefined) {
+                localVarQueryParameter['key'] = key;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} [type] 
          * @param {string} [searchKey] 
          * @param {string} [sorting] 
@@ -7807,8 +7845,8 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPublicGet: async (type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/app/app/public`;
+        apiAppAppWithUserGet: async (type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app/with-user`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -7842,44 +7880,6 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
 
             if (maxResultCount !== undefined) {
                 localVarQueryParameter['MaxResultCount'] = maxResultCount;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [key] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppUploadCredentialsGet: async (key?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/app/app/upload-credentials`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication oauth2 required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
-
-            if (key !== undefined) {
-                localVarQueryParameter['key'] = key;
             }
 
 
@@ -7999,6 +7999,16 @@ export const AppApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [key] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppUploadCredentialsGet(key?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StorageObjectCredentials>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppUploadCredentialsGet(key, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} [type] 
          * @param {string} [searchKey] 
          * @param {string} [sorting] 
@@ -8007,18 +8017,8 @@ export const AppApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppWithUserDtoPagedResultDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [key] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiAppAppUploadCredentialsGet(key?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StorageObjectCredentials>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppUploadCredentialsGet(key, options);
+        async apiAppAppWithUserGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppWithUserDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppWithUserGet(type, searchKey, sorting, skipCount, maxResultCount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -8118,6 +8118,15 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
         },
         /**
          * 
+         * @param {string} [key] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppUploadCredentialsGet(key?: string, options?: any): AxiosPromise<StorageObjectCredentials> {
+            return localVarFp.apiAppAppUploadCredentialsGet(key, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} [type] 
          * @param {string} [searchKey] 
          * @param {string} [sorting] 
@@ -8126,17 +8135,8 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppWithUserDtoPagedResultDto> {
-            return localVarFp.apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [key] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppUploadCredentialsGet(key?: string, options?: any): AxiosPromise<StorageObjectCredentials> {
-            return localVarFp.apiAppAppUploadCredentialsGet(key, options).then((request) => request(axios, basePath));
+        apiAppAppWithUserGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppWithUserDtoPagedResultDto> {
+            return localVarFp.apiAppAppWithUserGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -8253,6 +8253,17 @@ export class AppApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} [key] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppUploadCredentialsGet(key?: string, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppUploadCredentialsGet(key, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} [type] 
      * @param {string} [searchKey] 
      * @param {string} [sorting] 
@@ -8262,19 +8273,8 @@ export class AppApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppPublicGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppPublicGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [key] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AppApi
-     */
-    public apiAppAppUploadCredentialsGet(key?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppUploadCredentialsGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppWithUserGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppWithUserGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
