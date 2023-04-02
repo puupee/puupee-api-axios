@@ -235,6 +235,24 @@ export interface AppDto {
     'isPublished'?: boolean;
     /**
      * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'webhookUrl'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'businessDomain'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'businessUrl'?: string;
+    /**
+     * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppDto
      */
@@ -1591,6 +1609,24 @@ export interface CreateOrUpdateAppDto {
      * @memberof CreateOrUpdateAppDto
      */
     'isEnabled'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'webhookUrl'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'businessDomain'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'businessUrl'?: string;
     /**
      * 
      * @type {boolean}
@@ -4832,6 +4868,24 @@ export interface PublicAppDto {
      * @memberof PublicAppDto
      */
     'isPublished'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'webhookUrl'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'businessDomain'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PublicAppDto
+     */
+    'businessUrl'?: string;
     /**
      * 
      * @type {Array<AppReleaseDto>}
