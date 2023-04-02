@@ -7685,43 +7685,6 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppIdPublicGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('apiAppAppIdPublicGet', 'id', id)
-            const localVarPath = `/api/app/app/{id}/public`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication oauth2 required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id 
          * @param {CreateOrUpdateAppDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7754,6 +7717,43 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppIdWithUserGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppIdWithUserGet', 'id', id)
+            const localVarPath = `/api/app/app/{id}/with-user`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -7969,22 +7969,22 @@ export const AppApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiAppAppIdPublicGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PublicAppDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdPublicGet(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id 
          * @param {CreateOrUpdateAppDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdPut(id, body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppIdWithUserGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PublicAppDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdWithUserGet(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -8091,21 +8091,21 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
         /**
          * 
          * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppIdPublicGet(id: string, options?: any): AxiosPromise<PublicAppDto> {
-            return localVarFp.apiAppAppIdPublicGet(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id 
          * @param {CreateOrUpdateAppDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: any): AxiosPromise<AppDto> {
             return localVarFp.apiAppAppIdPut(id, body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppIdWithUserGet(id: string, options?: any): AxiosPromise<PublicAppDto> {
+            return localVarFp.apiAppAppIdWithUserGet(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8220,17 +8220,6 @@ export class AppApi extends BaseAPI {
     /**
      * 
      * @param {string} id 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AppApi
-     */
-    public apiAppAppIdPublicGet(id: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdPublicGet(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id 
      * @param {CreateOrUpdateAppDto} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -8238,6 +8227,17 @@ export class AppApi extends BaseAPI {
      */
     public apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig) {
         return AppApiFp(this.configuration).apiAppAppIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppIdWithUserGet(id: string, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdWithUserGet(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
