@@ -24,6 +24,19 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
+ * @interface ANV2
+ */
+export interface ANV2 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ANV2
+     */
+    'signedPayload'?: string;
+}
+/**
+ * 
+ * @export
  * @interface AbpLoginResult
  */
 export interface AbpLoginResult {
@@ -251,6 +264,12 @@ export interface AppDto {
      * @memberof AppDto
      */
     'businessUrl'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppDto
+     */
+    'subscriptionEnabled'?: boolean;
     /**
      * 
      * @type {Array<AppReleaseDto>}
@@ -1143,6 +1162,12 @@ export interface AppWithUserDto {
     'businessUrl'?: string;
     /**
      * 
+     * @type {boolean}
+     * @memberof AppWithUserDto
+     */
+    'subscriptionEnabled'?: boolean;
+    /**
+     * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppWithUserDto
      */
@@ -1821,6 +1846,12 @@ export interface CreateOrUpdateAppDto {
      * @memberof CreateOrUpdateAppDto
      */
     'businessUrl'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'subscriptionEnabled'?: boolean;
     /**
      * 
      * @type {boolean}
@@ -7481,44 +7512,6 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
-         * @param {string} [developerAccount] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppByDeveloperGet: async (developerAccount?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/app/app/by-developer`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication oauth2 required
-            // oauth required
-            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
-
-            if (developerAccount !== undefined) {
-                localVarQueryParameter['developerAccount'] = developerAccount;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} [name] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7799,6 +7792,54 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
+         * @param {string} [type] 
+         * @param {string} [developerAccount] 
+         * @param {string} [currentAppName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPublicGet: async (type?: string, developerAccount?: string, currentAppName?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app/public`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (type !== undefined) {
+                localVarQueryParameter['Type'] = type;
+            }
+
+            if (developerAccount !== undefined) {
+                localVarQueryParameter['DeveloperAccount'] = developerAccount;
+            }
+
+            if (currentAppName !== undefined) {
+                localVarQueryParameter['CurrentAppName'] = currentAppName;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} [key] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7915,16 +7956,6 @@ export const AppApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} [developerAccount] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiAppAppByDeveloperGet(developerAccount?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppByDeveloperGet(developerAccount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} [name] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -7999,6 +8030,18 @@ export const AppApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [type] 
+         * @param {string} [developerAccount] 
+         * @param {string} [currentAppName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPublicGet(type, developerAccount, currentAppName, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} [key] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8039,15 +8082,6 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          */
         apiAppAppByDeveloperAllGet(developerAccount?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
             return localVarFp.apiAppAppByDeveloperAllGet(developerAccount, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [developerAccount] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAppAppByDeveloperGet(developerAccount?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
-            return localVarFp.apiAppAppByDeveloperGet(developerAccount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -8118,6 +8152,17 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
         },
         /**
          * 
+         * @param {string} [type] 
+         * @param {string} [developerAccount] 
+         * @param {string} [currentAppName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppPublicGet(type, developerAccount, currentAppName, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} [key] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8157,17 +8202,6 @@ export class AppApi extends BaseAPI {
      */
     public apiAppAppByDeveloperAllGet(developerAccount?: string, options?: AxiosRequestConfig) {
         return AppApiFp(this.configuration).apiAppAppByDeveloperAllGet(developerAccount, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [developerAccount] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AppApi
-     */
-    public apiAppAppByDeveloperGet(developerAccount?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppByDeveloperGet(developerAccount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8249,6 +8283,19 @@ export class AppApi extends BaseAPI {
      */
     public apiAppAppPost(body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig) {
         return AppApiFp(this.configuration).apiAppAppPost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [type] 
+     * @param {string} [developerAccount] 
+     * @param {string} [currentAppName] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppPublicGet(type, developerAccount, currentAppName, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15462,12 +15509,12 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {object} [body] 
+         * @param {ANV2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionVerifyApplePost: async (body?: object, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/app/subscription/verify-apple`;
+        apiAppSubscriptionAppleNotificationsPost: async (body?: ANV2, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/subscription/apple-notifications`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -15509,12 +15556,12 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {object} [body] 
+         * @param {ANV2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionVerifyApplePost(body?: object, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionVerifyApplePost(body, options);
+        async apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -15529,12 +15576,12 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {object} [body] 
+         * @param {ANV2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionVerifyApplePost(body?: object, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppSubscriptionVerifyApplePost(body, options).then((request) => request(axios, basePath));
+        apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -15548,13 +15595,13 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
 export class SubscriptionApi extends BaseAPI {
     /**
      * 
-     * @param {object} [body] 
+     * @param {ANV2} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionVerifyApplePost(body?: object, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyApplePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
