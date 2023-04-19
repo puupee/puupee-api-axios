@@ -464,7 +464,13 @@ export interface AppPricingDto {
      * @type {string}
      * @memberof AppPricingDto
      */
-    'productId'?: string;
+    'monthProductId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
+    'yearProductId'?: string;
     /**
      * 
      * @type {string}
@@ -1937,7 +1943,13 @@ export interface CreateOrUpdateAppPricingDto {
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'productId'?: string;
+    'monthProductId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'yearProductId'?: string;
     /**
      * 
      * @type {string}
