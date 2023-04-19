@@ -464,6 +464,12 @@ export interface AppPricingDto {
      * @type {string}
      * @memberof AppPricingDto
      */
+    'productId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingDto
+     */
     'description'?: string;
     /**
      * 
@@ -1926,6 +1932,12 @@ export interface CreateOrUpdateAppPricingDto {
      * @memberof CreateOrUpdateAppPricingDto
      */
     'naming'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'productId'?: string;
     /**
      * 
      * @type {string}
