@@ -272,6 +272,12 @@ export interface AppDto {
     'subscriptionEnabled'?: boolean;
     /**
      * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'subscriptionPlatforms'?: string;
+    /**
+     * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppDto
      */
@@ -1180,6 +1186,12 @@ export interface AppWithUserDto {
     'subscriptionEnabled'?: boolean;
     /**
      * 
+     * @type {string}
+     * @memberof AppWithUserDto
+     */
+    'subscriptionPlatforms'?: string;
+    /**
+     * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppWithUserDto
      */
@@ -1227,6 +1239,55 @@ export interface AppWithUserDtoPagedResultDto {
      * @memberof AppWithUserDtoPagedResultDto
      */
     'totalCount'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface AppleVerifyReceiptResult
+ */
+export interface AppleVerifyReceiptResult {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'environment'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'is_retryable'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'status'?: number;
+    /**
+     * 
+     * @type {Array<LatestReceiptInfo>}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'latest_receipt_info'?: Array<LatestReceiptInfo>;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'latest_receipt'?: string;
+    /**
+     * 
+     * @type {Array<PendingRenewalInfo>}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'pending_renewal_info'?: Array<PendingRenewalInfo>;
+    /**
+     * 
+     * @type {Receipt}
+     * @memberof AppleVerifyReceiptResult
+     */
+    'receipt'?: Receipt;
 }
 /**
  * 
@@ -1771,6 +1832,25 @@ export interface CreateOpenIddictApplicationDto {
 /**
  * 
  * @export
+ * @interface CreateOrGetSubscriptionOrderDto
+ */
+export interface CreateOrGetSubscriptionOrderDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'pricingId'?: string;
+}
+/**
+ * 
+ * @export
  * @interface CreateOrUpdateAppDto
  */
 export interface CreateOrUpdateAppDto {
@@ -1864,6 +1944,12 @@ export interface CreateOrUpdateAppDto {
      * @memberof CreateOrUpdateAppDto
      */
     'subscriptionEnabled'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'subscriptionPlatforms'?: string;
     /**
      * 
      * @type {boolean}
@@ -2537,7 +2623,7 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'app'?: string;
+    'appName'?: string;
     /**
      * 
      * @type {boolean}
@@ -4112,6 +4198,109 @@ export interface IdentityUserUpdateRolesDto {
 /**
  * 
  * @export
+ * @interface InApp
+ */
+export interface InApp {
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'quantity'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'product_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'transaction_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'original_transaction_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'purchase_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'purchase_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'purchase_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'original_purchase_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'original_purchase_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'original_purchase_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'expires_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'expires_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'expires_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'web_order_line_item_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'is_trial_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof InApp
+     */
+    'is_in_intro_offer_period'?: string;
+}
+/**
+ * 
+ * @export
  * @interface Int32KeyValue
  */
 export interface Int32KeyValue {
@@ -4220,6 +4409,109 @@ export interface LanguageInfo {
      * @memberof LanguageInfo
      */
     'flagIcon'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface LatestReceiptInfo
+ */
+export interface LatestReceiptInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'quantity'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'product_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'transaction_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'original_transaction_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'purchase_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'purchase_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'purchase_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'original_purchase_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'original_purchase_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'original_purchase_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'expires_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'expires_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'expires_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'web_order_line_item_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'is_trial_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof LatestReceiptInfo
+     */
+    'is_in_intro_offer_period'?: string;
 }
 /**
  * 
@@ -4763,6 +5055,73 @@ export interface ParameterApiDescriptionModel {
      * @memberof ParameterApiDescriptionModel
      */
     'descriptorName'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface PendingRenewalInfo
+ */
+export interface PendingRenewalInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'auto_renew_product_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'auto_renew_status'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'is_in_billing_retry_period'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'original_transaction_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'product_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'expiration_intent'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'price_consent_status'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'grace_period_expires_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'grace_period_expires_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PendingRenewalInfo
+     */
+    'grace_period_expires_date_pst'?: string;
 }
 /**
  * 
@@ -5321,7 +5680,7 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'app'?: string;
+    'appName'?: string;
     /**
      * 
      * @type {number}
@@ -5347,6 +5706,121 @@ export interface PuupeeDtoPagedResultDto {
      * @memberof PuupeeDtoPagedResultDto
      */
     'totalCount'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface Receipt
+ */
+export interface Receipt {
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'receipt_type'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof Receipt
+     */
+    'adam_id'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Receipt
+     */
+    'app_item_id'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'bundle_id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'application_version'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof Receipt
+     */
+    'download_id'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Receipt
+     */
+    'version_external_identifier'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'receipt_creation_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'receipt_creation_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'receipt_creation_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'request_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'request_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'request_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'original_purchase_date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'original_purchase_date_ms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'original_purchase_date_pst'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Receipt
+     */
+    'original_application_version'?: string;
+    /**
+     * 
+     * @type {Array<InApp>}
+     * @memberof Receipt
+     */
+    'in_app'?: Array<InApp>;
 }
 /**
  * 
@@ -5965,6 +6439,202 @@ export interface StringSetKeyValueDto {
      * @memberof StringSetKeyValueDto
      */
     'durationSeconds'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface SubscriptionDto
+ */
+export interface SubscriptionDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SubscriptionDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'expireAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'priceNaming'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionDto
+     */
+    'pricingId'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface SubscriptionOrderDto
+ */
+export interface SubscriptionOrderDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SubscriptionOrderDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {SubscriptionOrderType}
+     * @memberof SubscriptionOrderDto
+     */
+    'type'?: SubscriptionOrderType;
+    /**
+     * 
+     * @type {SubscriptionOrderStatus}
+     * @memberof SubscriptionOrderDto
+     */
+    'status'?: SubscriptionOrderStatus;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'pricingId'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface SubscriptionOrderStatus
+ */
+export interface SubscriptionOrderStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderStatus
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderStatus
+     */
+    'value'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface SubscriptionOrderType
+ */
+export interface SubscriptionOrderType {
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderType
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderType
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -6609,6 +7279,56 @@ export interface VerifyPasswordResetTokenInput {
      * @memberof VerifyPasswordResetTokenInput
      */
     'resetToken': string;
+}
+/**
+ * 
+ * @export
+ * @interface VerifyReceiptDto
+ */
+export interface VerifyReceiptDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'orderId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'receiptData'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface VerifyReceiptResult
+ */
+export interface VerifyReceiptResult {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof VerifyReceiptResult
+     */
+    'ok'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'statusCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'message'?: string;
+    /**
+     * 
+     * @type {AppleVerifyReceiptResult}
+     * @memberof VerifyReceiptResult
+     */
+    'appleVerifyReceiptResult'?: AppleVerifyReceiptResult;
 }
 /**
  * 
@@ -9695,10 +10415,11 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} [appName] 
          * @param {string} [platform] 
          * @param {string} [productType] 
+         * @param {string} [environment] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseLatestGet: async (appName?: string, platform?: string, productType?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppReleaseLatestGet: async (appName?: string, platform?: string, productType?: string, environment?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-release/latest`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9725,6 +10446,10 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
 
             if (productType !== undefined) {
                 localVarQueryParameter['ProductType'] = productType;
+            }
+
+            if (environment !== undefined) {
+                localVarQueryParameter['Environment'] = environment;
             }
 
 
@@ -9837,11 +10562,12 @@ export const AppReleaseApiFp = function(configuration?: Configuration) {
          * @param {string} [appName] 
          * @param {string} [platform] 
          * @param {string} [productType] 
+         * @param {string} [environment] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleaseLatestGet(appName, platform, productType, options);
+        async apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, environment?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleaseLatestGet(appName, platform, productType, environment, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -9912,11 +10638,12 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
          * @param {string} [appName] 
          * @param {string} [platform] 
          * @param {string} [productType] 
+         * @param {string} [environment] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, options?: any): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleaseLatestGet(appName, platform, productType, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, environment?: string, options?: any): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleaseLatestGet(appName, platform, productType, environment, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9993,12 +10720,13 @@ export class AppReleaseApi extends BaseAPI {
      * @param {string} [appName] 
      * @param {string} [platform] 
      * @param {string} [productType] 
+     * @param {string} [environment] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseLatestGet(appName, platform, productType, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, environment?: string, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseLatestGet(appName, platform, productType, environment, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14065,13 +14793,14 @@ export const PuupeeApiAxiosParamCreator = function (configuration?: Configuratio
     return {
         /**
          * 
+         * @param {string} [appName] 
          * @param {number} [afterVersion] 
          * @param {number} [skipCount] 
          * @param {number} [maxResultCount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppPuupeePullGet: async (afterVersion?: number, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppPuupeePullGet: async (appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/puupee/pull`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14087,6 +14816,10 @@ export const PuupeeApiAxiosParamCreator = function (configuration?: Configuratio
             // authentication oauth2 required
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (appName !== undefined) {
+                localVarQueryParameter['appName'] = appName;
+            }
 
             if (afterVersion !== undefined) {
                 localVarQueryParameter['afterVersion'] = afterVersion;
@@ -14160,14 +14893,15 @@ export const PuupeeApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @param {string} [appName] 
          * @param {number} [afterVersion] 
          * @param {number} [skipCount] 
          * @param {number} [maxResultCount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppPuupeePullGet(afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PuupeeDtoPagedResultDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppPuupeePullGet(afterVersion, skipCount, maxResultCount, options);
+        async apiAppPuupeePullGet(appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PuupeeDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppPuupeePullGet(appName, afterVersion, skipCount, maxResultCount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -14192,14 +14926,15 @@ export const PuupeeApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          * 
+         * @param {string} [appName] 
          * @param {number} [afterVersion] 
          * @param {number} [skipCount] 
          * @param {number} [maxResultCount] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppPuupeePullGet(afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<PuupeeDtoPagedResultDto> {
-            return localVarFp.apiAppPuupeePullGet(afterVersion, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppPuupeePullGet(appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<PuupeeDtoPagedResultDto> {
+            return localVarFp.apiAppPuupeePullGet(appName, afterVersion, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14222,6 +14957,7 @@ export const PuupeeApiFactory = function (configuration?: Configuration, basePat
 export class PuupeeApi extends BaseAPI {
     /**
      * 
+     * @param {string} [appName] 
      * @param {number} [afterVersion] 
      * @param {number} [skipCount] 
      * @param {number} [maxResultCount] 
@@ -14229,8 +14965,8 @@ export class PuupeeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PuupeeApi
      */
-    public apiAppPuupeePullGet(afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return PuupeeApiFp(this.configuration).apiAppPuupeePullGet(afterVersion, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppPuupeePullGet(appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
+        return PuupeeApiFp(this.configuration).apiAppPuupeePullGet(appName, afterVersion, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15568,6 +16304,118 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionGet: async (appId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/subscription`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (appId !== undefined) {
+                localVarQueryParameter['appId'] = appId;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionOrderPost: async (body?: CreateOrGetSubscriptionOrderDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/subscription/order`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {VerifyReceiptDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionVerifyReceiptPost: async (body?: VerifyReceiptDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/subscription/verify-receipt`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -15586,6 +16434,36 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
          */
         async apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppSubscriptionGet(appId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionGet(appId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionOrderDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionOrderPost(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {VerifyReceiptDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VerifyReceiptResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionVerifyReceiptPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -15607,6 +16485,33 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
         apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: any): AxiosPromise<void> {
             return localVarFp.apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(axios, basePath));
         },
+        /**
+         * 
+         * @param {string} [appId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionGet(appId?: string, options?: any): AxiosPromise<SubscriptionDto> {
+            return localVarFp.apiAppSubscriptionGet(appId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: any): AxiosPromise<SubscriptionOrderDto> {
+            return localVarFp.apiAppSubscriptionOrderPost(body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {VerifyReceiptDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: any): AxiosPromise<VerifyReceiptResult> {
+            return localVarFp.apiAppSubscriptionVerifyReceiptPost(body, options).then((request) => request(axios, basePath));
+        },
     };
 };
 
@@ -15626,6 +16531,39 @@ export class SubscriptionApi extends BaseAPI {
      */
     public apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig) {
         return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [appId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SubscriptionApi
+     */
+    public apiAppSubscriptionGet(appId?: string, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionGet(appId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {CreateOrGetSubscriptionOrderDto} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SubscriptionApi
+     */
+    public apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionOrderPost(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {VerifyReceiptDto} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SubscriptionApi
+     */
+    public apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyReceiptPost(body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
