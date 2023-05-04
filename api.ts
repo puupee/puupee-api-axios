@@ -24,19 +24,6 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
- * @interface ANV2
- */
-export interface ANV2 {
-    /**
-     * 
-     * @type {string}
-     * @memberof ANV2
-     */
-    'signedPayload'?: string;
-}
-/**
- * 
- * @export
  * @interface AbpLoginResult
  */
 export interface AbpLoginResult {
@@ -119,6 +106,19 @@ export interface ActionApiDescriptionModel {
      * @memberof ActionApiDescriptionModel
      */
     'implementFrom'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Anv2
+ */
+export interface Anv2 {
+    /**
+     * 
+     * @type {string}
+     * @memberof Anv2
+     */
+    'signedPayload'?: string;
 }
 /**
  * 
@@ -1555,7 +1555,7 @@ export interface BindDeviceDto {
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'type'?: string;
+    'platform'?: string;
     /**
      * 
      * @type {string}
@@ -1835,6 +1835,54 @@ export interface CreateOpenIddictApplicationDto {
  * @interface CreateOrGetSubscriptionOrderDto
  */
 export interface CreateOrGetSubscriptionOrderDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'deletionTime'?: string;
     /**
      * 
      * @type {string}
@@ -7291,6 +7339,54 @@ export interface VerifyReceiptDto {
      * @type {string}
      * @memberof VerifyReceiptDto
      */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof VerifyReceiptDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
     'orderId'?: string;
     /**
      * 
@@ -7298,6 +7394,18 @@ export interface VerifyReceiptDto {
      * @memberof VerifyReceiptDto
      */
     'receiptData'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'platform'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptDto
+     */
+    'deviceToken'?: string;
 }
 /**
  * 
@@ -16269,11 +16377,11 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {ANV2} [body] 
+         * @param {Anv2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionAppleNotificationsPost: async (body?: ANV2, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSubscriptionAppleNotificationsPost: async (body?: Anv2, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/subscription/apple-notifications`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16428,11 +16536,11 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {ANV2} [body] 
+         * @param {Anv2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -16478,11 +16586,11 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {ANV2} [body] 
+         * @param {Anv2} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: any): AxiosPromise<void> {
+        apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: any): AxiosPromise<void> {
             return localVarFp.apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -16524,12 +16632,12 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
 export class SubscriptionApi extends BaseAPI {
     /**
      * 
-     * @param {ANV2} [body] 
+     * @param {Anv2} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionAppleNotificationsPost(body?: ANV2, options?: AxiosRequestConfig) {
+    public apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: AxiosRequestConfig) {
         return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(this.axios, this.basePath));
     }
 
