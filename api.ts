@@ -555,6 +555,12 @@ export interface AppPricingDto {
     'yearDiscountEndAt'?: string;
     /**
      * 
+     * @type {number}
+     * @memberof AppPricingDto
+     */
+    'sortIndex'?: number;
+    /**
+     * 
      * @type {Array<AppPricingItemDto>}
      * @memberof AppPricingDto
      */
@@ -669,6 +675,12 @@ export interface AppPricingItemDto {
      * @memberof AppPricingItemDto
      */
     'hasValue'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingItemDto
+     */
+    'sortIndex'?: number;
 }
 /**
  * 
@@ -2164,10 +2176,16 @@ export interface CreateOrUpdateAppPricingDto {
     'yearDiscountEndAt'?: string;
     /**
      * 
-     * @type {Array<AppPricingItemDto>}
+     * @type {number}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'items'?: Array<AppPricingItemDto>;
+    'sortIndex'?: number;
+    /**
+     * 
+     * @type {Array<CreateOrUpdateAppPricingItemDto>}
+     * @memberof CreateOrUpdateAppPricingDto
+     */
+    'items'?: Array<CreateOrUpdateAppPricingItemDto>;
 }
 /**
  * 
@@ -2198,7 +2216,19 @@ export interface CreateOrUpdateAppPricingItemDto {
      * @type {boolean}
      * @memberof CreateOrUpdateAppPricingItemDto
      */
+    'isAvailable'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
     'hasValue'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'sortIndex'?: number;
 }
 /**
  * 
