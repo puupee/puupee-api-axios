@@ -7536,15 +7536,29 @@ export const AbpApiDefinitionApiFactory = function (configuration?: Configuratio
     return {
         /**
          * 
-         * @param {boolean} [includeTypes] 
+         * @param {AbpApiDefinitionApiApiAbpApiDefinitionGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAbpApiDefinitionGet(includeTypes?: boolean, options?: any): AxiosPromise<ApplicationApiDescriptionModel> {
-            return localVarFp.apiAbpApiDefinitionGet(includeTypes, options).then((request) => request(axios, basePath));
+        apiAbpApiDefinitionGet(requestParameters: AbpApiDefinitionApiApiAbpApiDefinitionGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ApplicationApiDescriptionModel> {
+            return localVarFp.apiAbpApiDefinitionGet(requestParameters.includeTypes, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAbpApiDefinitionGet operation in AbpApiDefinitionApi.
+ * @export
+ * @interface AbpApiDefinitionApiApiAbpApiDefinitionGetRequest
+ */
+export interface AbpApiDefinitionApiApiAbpApiDefinitionGetRequest {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AbpApiDefinitionApiApiAbpApiDefinitionGet
+     */
+    readonly includeTypes?: boolean
+}
 
 /**
  * AbpApiDefinitionApi - object-oriented interface
@@ -7555,13 +7569,13 @@ export const AbpApiDefinitionApiFactory = function (configuration?: Configuratio
 export class AbpApiDefinitionApi extends BaseAPI {
     /**
      * 
-     * @param {boolean} [includeTypes] 
+     * @param {AbpApiDefinitionApiApiAbpApiDefinitionGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpApiDefinitionApi
      */
-    public apiAbpApiDefinitionGet(includeTypes?: boolean, options?: AxiosRequestConfig) {
-        return AbpApiDefinitionApiFp(this.configuration).apiAbpApiDefinitionGet(includeTypes, options).then((request) => request(this.axios, this.basePath));
+    public apiAbpApiDefinitionGet(requestParameters: AbpApiDefinitionApiApiAbpApiDefinitionGetRequest = {}, options?: AxiosRequestConfig) {
+        return AbpApiDefinitionApiFp(this.configuration).apiAbpApiDefinitionGet(requestParameters.includeTypes, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7642,15 +7656,29 @@ export const AbpApplicationConfigurationApiFactory = function (configuration?: C
     return {
         /**
          * 
-         * @param {boolean} [includeLocalizationResources] 
+         * @param {AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAbpApplicationConfigurationGet(includeLocalizationResources?: boolean, options?: any): AxiosPromise<ApplicationConfigurationDto> {
-            return localVarFp.apiAbpApplicationConfigurationGet(includeLocalizationResources, options).then((request) => request(axios, basePath));
+        apiAbpApplicationConfigurationGet(requestParameters: AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ApplicationConfigurationDto> {
+            return localVarFp.apiAbpApplicationConfigurationGet(requestParameters.includeLocalizationResources, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAbpApplicationConfigurationGet operation in AbpApplicationConfigurationApi.
+ * @export
+ * @interface AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest
+ */
+export interface AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AbpApplicationConfigurationApiApiAbpApplicationConfigurationGet
+     */
+    readonly includeLocalizationResources?: boolean
+}
 
 /**
  * AbpApplicationConfigurationApi - object-oriented interface
@@ -7661,13 +7689,13 @@ export const AbpApplicationConfigurationApiFactory = function (configuration?: C
 export class AbpApplicationConfigurationApi extends BaseAPI {
     /**
      * 
-     * @param {boolean} [includeLocalizationResources] 
+     * @param {AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpApplicationConfigurationApi
      */
-    public apiAbpApplicationConfigurationGet(includeLocalizationResources?: boolean, options?: AxiosRequestConfig) {
-        return AbpApplicationConfigurationApiFp(this.configuration).apiAbpApplicationConfigurationGet(includeLocalizationResources, options).then((request) => request(this.axios, this.basePath));
+    public apiAbpApplicationConfigurationGet(requestParameters: AbpApplicationConfigurationApiApiAbpApplicationConfigurationGetRequest = {}, options?: AxiosRequestConfig) {
+        return AbpApplicationConfigurationApiFp(this.configuration).apiAbpApplicationConfigurationGet(requestParameters.includeLocalizationResources, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7756,16 +7784,36 @@ export const AbpApplicationLocalizationApiFactory = function (configuration?: Co
     return {
         /**
          * 
-         * @param {string} cultureName 
-         * @param {boolean} [onlyDynamics] 
+         * @param {AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAbpApplicationLocalizationGet(cultureName: string, onlyDynamics?: boolean, options?: any): AxiosPromise<ApplicationLocalizationDto> {
-            return localVarFp.apiAbpApplicationLocalizationGet(cultureName, onlyDynamics, options).then((request) => request(axios, basePath));
+        apiAbpApplicationLocalizationGet(requestParameters: AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest, options?: AxiosRequestConfig): AxiosPromise<ApplicationLocalizationDto> {
+            return localVarFp.apiAbpApplicationLocalizationGet(requestParameters.cultureName, requestParameters.onlyDynamics, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAbpApplicationLocalizationGet operation in AbpApplicationLocalizationApi.
+ * @export
+ * @interface AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest
+ */
+export interface AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AbpApplicationLocalizationApiApiAbpApplicationLocalizationGet
+     */
+    readonly cultureName: string
+
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AbpApplicationLocalizationApiApiAbpApplicationLocalizationGet
+     */
+    readonly onlyDynamics?: boolean
+}
 
 /**
  * AbpApplicationLocalizationApi - object-oriented interface
@@ -7776,14 +7824,13 @@ export const AbpApplicationLocalizationApiFactory = function (configuration?: Co
 export class AbpApplicationLocalizationApi extends BaseAPI {
     /**
      * 
-     * @param {string} cultureName 
-     * @param {boolean} [onlyDynamics] 
+     * @param {AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpApplicationLocalizationApi
      */
-    public apiAbpApplicationLocalizationGet(cultureName: string, onlyDynamics?: boolean, options?: AxiosRequestConfig) {
-        return AbpApplicationLocalizationApiFp(this.configuration).apiAbpApplicationLocalizationGet(cultureName, onlyDynamics, options).then((request) => request(this.axios, this.basePath));
+    public apiAbpApplicationLocalizationGet(requestParameters: AbpApplicationLocalizationApiApiAbpApplicationLocalizationGetRequest, options?: AxiosRequestConfig) {
+        return AbpApplicationLocalizationApiFp(this.configuration).apiAbpApplicationLocalizationGet(requestParameters.cultureName, requestParameters.onlyDynamics, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7910,24 +7957,52 @@ export const AbpTenantApiFactory = function (configuration?: Configuration, base
     return {
         /**
          * 
-         * @param {string} id 
+         * @param {AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAbpMultiTenancyTenantsByIdIdGet(id: string, options?: any): AxiosPromise<FindTenantResultDto> {
-            return localVarFp.apiAbpMultiTenancyTenantsByIdIdGet(id, options).then((request) => request(axios, basePath));
+        apiAbpMultiTenancyTenantsByIdIdGet(requestParameters: AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<FindTenantResultDto> {
+            return localVarFp.apiAbpMultiTenancyTenantsByIdIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} name 
+         * @param {AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAbpMultiTenancyTenantsByNameNameGet(name: string, options?: any): AxiosPromise<FindTenantResultDto> {
-            return localVarFp.apiAbpMultiTenancyTenantsByNameNameGet(name, options).then((request) => request(axios, basePath));
+        apiAbpMultiTenancyTenantsByNameNameGet(requestParameters: AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest, options?: AxiosRequestConfig): AxiosPromise<FindTenantResultDto> {
+            return localVarFp.apiAbpMultiTenancyTenantsByNameNameGet(requestParameters.name, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAbpMultiTenancyTenantsByIdIdGet operation in AbpTenantApi.
+ * @export
+ * @interface AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest
+ */
+export interface AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAbpMultiTenancyTenantsByNameNameGet operation in AbpTenantApi.
+ * @export
+ * @interface AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest
+ */
+export interface AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGet
+     */
+    readonly name: string
+}
 
 /**
  * AbpTenantApi - object-oriented interface
@@ -7938,24 +8013,24 @@ export const AbpTenantApiFactory = function (configuration?: Configuration, base
 export class AbpTenantApi extends BaseAPI {
     /**
      * 
-     * @param {string} id 
+     * @param {AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpTenantApi
      */
-    public apiAbpMultiTenancyTenantsByIdIdGet(id: string, options?: AxiosRequestConfig) {
-        return AbpTenantApiFp(this.configuration).apiAbpMultiTenancyTenantsByIdIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAbpMultiTenancyTenantsByIdIdGet(requestParameters: AbpTenantApiApiAbpMultiTenancyTenantsByIdIdGetRequest, options?: AxiosRequestConfig) {
+        return AbpTenantApiFp(this.configuration).apiAbpMultiTenancyTenantsByIdIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} name 
+     * @param {AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpTenantApi
      */
-    public apiAbpMultiTenancyTenantsByNameNameGet(name: string, options?: AxiosRequestConfig) {
-        return AbpTenantApiFp(this.configuration).apiAbpMultiTenancyTenantsByNameNameGet(name, options).then((request) => request(this.axios, this.basePath));
+    public apiAbpMultiTenancyTenantsByNameNameGet(requestParameters: AbpTenantApiApiAbpMultiTenancyTenantsByNameNameGetRequest, options?: AxiosRequestConfig) {
+        return AbpTenantApiFp(this.configuration).apiAbpMultiTenancyTenantsByNameNameGet(requestParameters.name, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -8218,50 +8293,106 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
     return {
         /**
          * 
-         * @param {RegisterDto} [body] 
+         * @param {AccountApiApiAccountRegisterPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountRegisterPost(body?: RegisterDto, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiAccountRegisterPost(body, options).then((request) => request(axios, basePath));
+        apiAccountRegisterPost(requestParameters: AccountApiApiAccountRegisterPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiAccountRegisterPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {ResetPasswordDto} [body] 
+         * @param {AccountApiApiAccountResetPasswordPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountResetPasswordPost(body?: ResetPasswordDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAccountResetPasswordPost(body, options).then((request) => request(axios, basePath));
+        apiAccountResetPasswordPost(requestParameters: AccountApiApiAccountResetPasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAccountResetPasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {SendPasswordResetCodeDto} [body] 
+         * @param {AccountApiApiAccountSendPasswordResetCodePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountSendPasswordResetCodePost(body?: SendPasswordResetCodeDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAccountSendPasswordResetCodePost(body, options).then((request) => request(axios, basePath));
+        apiAccountSendPasswordResetCodePost(requestParameters: AccountApiApiAccountSendPasswordResetCodePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAccountSendPasswordResetCodePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {VerifyPasswordResetTokenInput} [body] 
+         * @param {AccountApiApiAccountVerifyPasswordResetTokenPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountVerifyPasswordResetTokenPost(body?: VerifyPasswordResetTokenInput, options?: any): AxiosPromise<boolean> {
-            return localVarFp.apiAccountVerifyPasswordResetTokenPost(body, options).then((request) => request(axios, basePath));
+        apiAccountVerifyPasswordResetTokenPost(requestParameters: AccountApiApiAccountVerifyPasswordResetTokenPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<boolean> {
+            return localVarFp.apiAccountVerifyPasswordResetTokenPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAccountDelete(options?: any): AxiosPromise<void> {
+        apiAppAccountDelete(options?: AxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.apiAppAccountDelete(options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAccountRegisterPost operation in AccountApi.
+ * @export
+ * @interface AccountApiApiAccountRegisterPostRequest
+ */
+export interface AccountApiApiAccountRegisterPostRequest {
+    /**
+     * 
+     * @type {RegisterDto}
+     * @memberof AccountApiApiAccountRegisterPost
+     */
+    readonly body?: RegisterDto
+}
+
+/**
+ * Request parameters for apiAccountResetPasswordPost operation in AccountApi.
+ * @export
+ * @interface AccountApiApiAccountResetPasswordPostRequest
+ */
+export interface AccountApiApiAccountResetPasswordPostRequest {
+    /**
+     * 
+     * @type {ResetPasswordDto}
+     * @memberof AccountApiApiAccountResetPasswordPost
+     */
+    readonly body?: ResetPasswordDto
+}
+
+/**
+ * Request parameters for apiAccountSendPasswordResetCodePost operation in AccountApi.
+ * @export
+ * @interface AccountApiApiAccountSendPasswordResetCodePostRequest
+ */
+export interface AccountApiApiAccountSendPasswordResetCodePostRequest {
+    /**
+     * 
+     * @type {SendPasswordResetCodeDto}
+     * @memberof AccountApiApiAccountSendPasswordResetCodePost
+     */
+    readonly body?: SendPasswordResetCodeDto
+}
+
+/**
+ * Request parameters for apiAccountVerifyPasswordResetTokenPost operation in AccountApi.
+ * @export
+ * @interface AccountApiApiAccountVerifyPasswordResetTokenPostRequest
+ */
+export interface AccountApiApiAccountVerifyPasswordResetTokenPostRequest {
+    /**
+     * 
+     * @type {VerifyPasswordResetTokenInput}
+     * @memberof AccountApiApiAccountVerifyPasswordResetTokenPost
+     */
+    readonly body?: VerifyPasswordResetTokenInput
+}
 
 /**
  * AccountApi - object-oriented interface
@@ -8272,46 +8403,46 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
 export class AccountApi extends BaseAPI {
     /**
      * 
-     * @param {RegisterDto} [body] 
+     * @param {AccountApiApiAccountRegisterPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    public apiAccountRegisterPost(body?: RegisterDto, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountRegisterPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountRegisterPost(requestParameters: AccountApiApiAccountRegisterPostRequest = {}, options?: AxiosRequestConfig) {
+        return AccountApiFp(this.configuration).apiAccountRegisterPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {ResetPasswordDto} [body] 
+     * @param {AccountApiApiAccountResetPasswordPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    public apiAccountResetPasswordPost(body?: ResetPasswordDto, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountResetPasswordPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountResetPasswordPost(requestParameters: AccountApiApiAccountResetPasswordPostRequest = {}, options?: AxiosRequestConfig) {
+        return AccountApiFp(this.configuration).apiAccountResetPasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {SendPasswordResetCodeDto} [body] 
+     * @param {AccountApiApiAccountSendPasswordResetCodePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    public apiAccountSendPasswordResetCodePost(body?: SendPasswordResetCodeDto, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountSendPasswordResetCodePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountSendPasswordResetCodePost(requestParameters: AccountApiApiAccountSendPasswordResetCodePostRequest = {}, options?: AxiosRequestConfig) {
+        return AccountApiFp(this.configuration).apiAccountSendPasswordResetCodePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {VerifyPasswordResetTokenInput} [body] 
+     * @param {AccountApiApiAccountVerifyPasswordResetTokenPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    public apiAccountVerifyPasswordResetTokenPost(body?: VerifyPasswordResetTokenInput, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountVerifyPasswordResetTokenPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountVerifyPasswordResetTokenPost(requestParameters: AccountApiApiAccountVerifyPasswordResetTokenPostRequest = {}, options?: AxiosRequestConfig) {
+        return AccountApiFp(this.configuration).apiAccountVerifyPasswordResetTokenPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8936,115 +9067,329 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
     return {
         /**
          * 
-         * @param {string} [developerAccount] 
+         * @param {AppApiApiAppAppByDeveloperAllGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppByDeveloperAllGet(developerAccount?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
-            return localVarFp.apiAppAppByDeveloperAllGet(developerAccount, options).then((request) => request(axios, basePath));
+        apiAppAppByDeveloperAllGet(requestParameters: AppApiApiAppAppByDeveloperAllGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppByDeveloperAllGet(requestParameters.developerAccount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [name] 
+         * @param {AppApiApiAppAppByNameGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppByNameGet(name?: string, options?: any): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppByNameGet(name, options).then((request) => request(axios, basePath));
+        apiAppAppByNameGet(requestParameters: AppApiApiAppAppByNameGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
+            return localVarFp.apiAppAppByNameGet(requestParameters.name, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [creatorId] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {AppApiApiAppAppGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppGet(creatorId?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppDtoPagedResultDto> {
-            return localVarFp.apiAppAppGet(creatorId, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppAppGet(requestParameters: AppApiApiAppAppGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppGet(requestParameters.creatorId, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppApiApiAppAppIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppIdDelete(requestParameters: AppApiApiAppAppIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppApiApiAppAppIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdGet(id: string, options?: any): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppAppIdGet(requestParameters: AppApiApiAppAppIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
+            return localVarFp.apiAppAppIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {AppApiApiAppAppIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: any): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppIdPut(requestParameters: AppApiApiAppAppIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
+            return localVarFp.apiAppAppIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppApiApiAppAppIdWithUserGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdWithUserGet(id: string, options?: any): AxiosPromise<AppWithUserDto> {
-            return localVarFp.apiAppAppIdWithUserGet(id, options).then((request) => request(axios, basePath));
+        apiAppAppIdWithUserGet(requestParameters: AppApiApiAppAppIdWithUserGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppWithUserDto> {
+            return localVarFp.apiAppAppIdWithUserGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {AppApiApiAppAppPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPost(body?: CreateOrUpdateAppDto, options?: any): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppPost(body, options).then((request) => request(axios, basePath));
+        apiAppAppPost(requestParameters: AppApiApiAppAppPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
+            return localVarFp.apiAppAppPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [type] 
-         * @param {string} [developerAccount] 
-         * @param {string} [currentAppName] 
+         * @param {AppApiApiAppAppPublicGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: any): AxiosPromise<AppDtoPagedResultDto> {
-            return localVarFp.apiAppAppPublicGet(type, developerAccount, currentAppName, options).then((request) => request(axios, basePath));
+        apiAppAppPublicGet(requestParameters: AppApiApiAppAppPublicGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDtoPagedResultDto> {
+            return localVarFp.apiAppAppPublicGet(requestParameters.type, requestParameters.developerAccount, requestParameters.currentAppName, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {AppApiApiAppAppUploadCredentialsGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppUploadCredentialsGet(key?: string, options?: any): AxiosPromise<StorageObjectCredentials> {
-            return localVarFp.apiAppAppUploadCredentialsGet(key, options).then((request) => request(axios, basePath));
+        apiAppAppUploadCredentialsGet(requestParameters: AppApiApiAppAppUploadCredentialsGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<StorageObjectCredentials> {
+            return localVarFp.apiAppAppUploadCredentialsGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [type] 
-         * @param {string} [searchKey] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {AppApiApiAppAppWithUserGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppWithUserGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppWithUserDtoPagedResultDto> {
-            return localVarFp.apiAppAppWithUserGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppAppWithUserGet(requestParameters: AppApiApiAppAppWithUserGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppWithUserDtoPagedResultDto> {
+            return localVarFp.apiAppAppWithUserGet(requestParameters.type, requestParameters.searchKey, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppByDeveloperAllGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppByDeveloperAllGetRequest
+ */
+export interface AppApiApiAppAppByDeveloperAllGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppByDeveloperAllGet
+     */
+    readonly developerAccount?: string
+}
+
+/**
+ * Request parameters for apiAppAppByNameGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppByNameGetRequest
+ */
+export interface AppApiApiAppAppByNameGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppByNameGet
+     */
+    readonly name?: string
+}
+
+/**
+ * Request parameters for apiAppAppGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppGetRequest
+ */
+export interface AppApiApiAppAppGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppGet
+     */
+    readonly creatorId?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppApiApiAppAppGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppApiApiAppAppGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppAppIdDelete operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppIdDeleteRequest
+ */
+export interface AppApiApiAppAppIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppIdGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppIdGetRequest
+ */
+export interface AppApiApiAppAppIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppIdPut operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppIdPutRequest
+ */
+export interface AppApiApiAppAppIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppDto}
+     * @memberof AppApiApiAppAppIdPut
+     */
+    readonly body?: CreateOrUpdateAppDto
+}
+
+/**
+ * Request parameters for apiAppAppIdWithUserGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppIdWithUserGetRequest
+ */
+export interface AppApiApiAppAppIdWithUserGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdWithUserGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppPost operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppPostRequest
+ */
+export interface AppApiApiAppAppPostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppDto}
+     * @memberof AppApiApiAppAppPost
+     */
+    readonly body?: CreateOrUpdateAppDto
+}
+
+/**
+ * Request parameters for apiAppAppPublicGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppPublicGetRequest
+ */
+export interface AppApiApiAppAppPublicGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppPublicGet
+     */
+    readonly type?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppPublicGet
+     */
+    readonly developerAccount?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppPublicGet
+     */
+    readonly currentAppName?: string
+}
+
+/**
+ * Request parameters for apiAppAppUploadCredentialsGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppUploadCredentialsGetRequest
+ */
+export interface AppApiApiAppAppUploadCredentialsGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppUploadCredentialsGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppAppWithUserGet operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppWithUserGetRequest
+ */
+export interface AppApiApiAppAppWithUserGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppWithUserGet
+     */
+    readonly type?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppWithUserGet
+     */
+    readonly searchKey?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppWithUserGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppApiApiAppAppWithUserGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppApiApiAppAppWithUserGet
+     */
+    readonly maxResultCount?: number
+}
 
 /**
  * AppApi - object-oriented interface
@@ -9055,133 +9400,123 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
 export class AppApi extends BaseAPI {
     /**
      * 
-     * @param {string} [developerAccount] 
+     * @param {AppApiApiAppAppByDeveloperAllGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppByDeveloperAllGet(developerAccount?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppByDeveloperAllGet(developerAccount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppByDeveloperAllGet(requestParameters: AppApiApiAppAppByDeveloperAllGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppByDeveloperAllGet(requestParameters.developerAccount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [name] 
+     * @param {AppApiApiAppAppByNameGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppByNameGet(name?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppByNameGet(name, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppByNameGet(requestParameters: AppApiApiAppAppByNameGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppByNameGet(requestParameters.name, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [creatorId] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {AppApiApiAppAppGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppGet(creatorId?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppGet(creatorId, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppGet(requestParameters: AppApiApiAppAppGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppGet(requestParameters.creatorId, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppApiApiAppAppIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppIdDelete(requestParameters: AppApiApiAppAppIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppApiApiAppAppIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppIdGet(id: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppIdGet(requestParameters: AppApiApiAppAppIdGetRequest, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppDto} [body] 
+     * @param {AppApiApiAppAppIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppIdPut(requestParameters: AppApiApiAppAppIdPutRequest, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppApiApiAppAppIdWithUserGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppIdWithUserGet(id: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdWithUserGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppIdWithUserGet(requestParameters: AppApiApiAppAppIdWithUserGetRequest, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdWithUserGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppDto} [body] 
+     * @param {AppApiApiAppAppPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppPost(body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPost(requestParameters: AppApiApiAppAppPostRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [type] 
-     * @param {string} [developerAccount] 
-     * @param {string} [currentAppName] 
+     * @param {AppApiApiAppAppPublicGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppPublicGet(type, developerAccount, currentAppName, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPublicGet(requestParameters: AppApiApiAppAppPublicGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppPublicGet(requestParameters.type, requestParameters.developerAccount, requestParameters.currentAppName, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {AppApiApiAppAppUploadCredentialsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppUploadCredentialsGet(key?: string, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppUploadCredentialsGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppUploadCredentialsGet(requestParameters: AppApiApiAppAppUploadCredentialsGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppUploadCredentialsGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [type] 
-     * @param {string} [searchKey] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {AppApiApiAppAppWithUserGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppApi
      */
-    public apiAppAppWithUserGet(type?: string, searchKey?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppWithUserGet(type, searchKey, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppWithUserGet(requestParameters: AppApiApiAppAppWithUserGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppWithUserGet(requestParameters.type, requestParameters.searchKey, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -9405,39 +9740,87 @@ export const AppFeatureApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeatureGet(options?: any): AxiosPromise<Array<AppFeatureDto>> {
+        apiAppAppFeatureGet(options?: AxiosRequestConfig): AxiosPromise<Array<AppFeatureDto>> {
             return localVarFp.apiAppAppFeatureGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppFeatureApiApiAppAppFeatureIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeatureIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppFeatureIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppFeatureIdDelete(requestParameters: AppFeatureApiApiAppAppFeatureIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppFeatureIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {AppFeatureApiApiAppAppFeatureIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeatureIdPut(id: string, body?: CreateOrUpdateAppFeatureDto, options?: any): AxiosPromise<AppFeatureDto> {
-            return localVarFp.apiAppAppFeatureIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppFeatureIdPut(requestParameters: AppFeatureApiApiAppAppFeatureIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppFeatureDto> {
+            return localVarFp.apiAppAppFeatureIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {AppFeatureApiApiAppAppFeaturePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeaturePost(body?: CreateOrUpdateAppFeatureDto, options?: any): AxiosPromise<AppFeatureDto> {
-            return localVarFp.apiAppAppFeaturePost(body, options).then((request) => request(axios, basePath));
+        apiAppAppFeaturePost(requestParameters: AppFeatureApiApiAppAppFeaturePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppFeatureDto> {
+            return localVarFp.apiAppAppFeaturePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppFeatureIdDelete operation in AppFeatureApi.
+ * @export
+ * @interface AppFeatureApiApiAppAppFeatureIdDeleteRequest
+ */
+export interface AppFeatureApiApiAppAppFeatureIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppFeatureApiApiAppAppFeatureIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppFeatureIdPut operation in AppFeatureApi.
+ * @export
+ * @interface AppFeatureApiApiAppAppFeatureIdPutRequest
+ */
+export interface AppFeatureApiApiAppAppFeatureIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppFeatureApiApiAppAppFeatureIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppFeatureDto}
+     * @memberof AppFeatureApiApiAppAppFeatureIdPut
+     */
+    readonly body?: CreateOrUpdateAppFeatureDto
+}
+
+/**
+ * Request parameters for apiAppAppFeaturePost operation in AppFeatureApi.
+ * @export
+ * @interface AppFeatureApiApiAppAppFeaturePostRequest
+ */
+export interface AppFeatureApiApiAppAppFeaturePostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppFeatureDto}
+     * @memberof AppFeatureApiApiAppAppFeaturePost
+     */
+    readonly body?: CreateOrUpdateAppFeatureDto
+}
 
 /**
  * AppFeatureApi - object-oriented interface
@@ -9458,36 +9841,35 @@ export class AppFeatureApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppFeatureApiApiAppAppFeatureIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppFeatureApi
      */
-    public apiAppAppFeatureIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppFeatureIdDelete(requestParameters: AppFeatureApiApiAppAppFeatureIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppFeatureDto} [body] 
+     * @param {AppFeatureApiApiAppAppFeatureIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppFeatureApi
      */
-    public apiAppAppFeatureIdPut(id: string, body?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig) {
-        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppFeatureIdPut(requestParameters: AppFeatureApiApiAppAppFeatureIdPutRequest, options?: AxiosRequestConfig) {
+        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppFeatureDto} [body] 
+     * @param {AppFeatureApiApiAppAppFeaturePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppFeatureApi
      */
-    public apiAppAppFeaturePost(body?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig) {
-        return AppFeatureApiFp(this.configuration).apiAppAppFeaturePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppFeaturePost(requestParameters: AppFeatureApiApiAppAppFeaturePostRequest = {}, options?: AxiosRequestConfig) {
+        return AppFeatureApiFp(this.configuration).apiAppAppFeaturePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -9820,63 +10202,165 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {string} appId 
+         * @param {AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingByAppIdAppIdGet(appId: string, options?: any): AxiosPromise<Array<AppPricingDto>> {
-            return localVarFp.apiAppAppPricingByAppIdAppIdGet(appId, options).then((request) => request(axios, basePath));
+        apiAppAppPricingByAppIdAppIdGet(requestParameters: AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<Array<AppPricingDto>> {
+            return localVarFp.apiAppAppPricingByAppIdAppIdGet(requestParameters.appId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {AppPricingApiApiAppAppPricingGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppPricingDtoPagedResultDto> {
-            return localVarFp.apiAppAppPricingGet(sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppAppPricingGet(requestParameters: AppPricingApiApiAppAppPricingGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppPricingDtoPagedResultDto> {
+            return localVarFp.apiAppAppPricingGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppPricingApiApiAppAppPricingIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppPricingIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppPricingIdDelete(requestParameters: AppPricingApiApiAppAppPricingIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppPricingIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppPricingApiApiAppAppPricingIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingIdGet(id: string, options?: any): AxiosPromise<AppPricingDto> {
-            return localVarFp.apiAppAppPricingIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppAppPricingIdGet(requestParameters: AppPricingApiApiAppAppPricingIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {AppPricingApiApiAppAppPricingIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: any): AxiosPromise<AppPricingDto> {
-            return localVarFp.apiAppAppPricingIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppPricingIdPut(requestParameters: AppPricingApiApiAppAppPricingIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {AppPricingApiApiAppAppPricingPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: any): AxiosPromise<AppPricingDto> {
-            return localVarFp.apiAppAppPricingPost(body, options).then((request) => request(axios, basePath));
+        apiAppAppPricingPost(requestParameters: AppPricingApiApiAppAppPricingPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppPricingDto> {
+            return localVarFp.apiAppAppPricingPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppPricingByAppIdAppIdGet operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest
+ */
+export interface AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingApiApiAppAppPricingByAppIdAppIdGet
+     */
+    readonly appId: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingGet operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingGetRequest
+ */
+export interface AppPricingApiApiAppAppPricingGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingApiApiAppAppPricingGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingApiApiAppAppPricingGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppPricingApiApiAppAppPricingGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppAppPricingIdDelete operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingIdDeleteRequest
+ */
+export interface AppPricingApiApiAppAppPricingIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingApiApiAppAppPricingIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingIdGet operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingIdGetRequest
+ */
+export interface AppPricingApiApiAppAppPricingIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingApiApiAppAppPricingIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingIdPut operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingIdPutRequest
+ */
+export interface AppPricingApiApiAppAppPricingIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingApiApiAppAppPricingIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppPricingDto}
+     * @memberof AppPricingApiApiAppAppPricingIdPut
+     */
+    readonly body?: CreateOrUpdateAppPricingDto
+}
+
+/**
+ * Request parameters for apiAppAppPricingPost operation in AppPricingApi.
+ * @export
+ * @interface AppPricingApiApiAppAppPricingPostRequest
+ */
+export interface AppPricingApiApiAppAppPricingPostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppPricingDto}
+     * @memberof AppPricingApiApiAppAppPricingPost
+     */
+    readonly body?: CreateOrUpdateAppPricingDto
+}
 
 /**
  * AppPricingApi - object-oriented interface
@@ -9887,71 +10371,68 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
 export class AppPricingApi extends BaseAPI {
     /**
      * 
-     * @param {string} appId 
+     * @param {AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingByAppIdAppIdGet(appId: string, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingByAppIdAppIdGet(appId, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingByAppIdAppIdGet(requestParameters: AppPricingApiApiAppAppPricingByAppIdAppIdGetRequest, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingByAppIdAppIdGet(requestParameters.appId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {AppPricingApiApiAppAppPricingGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingGet(sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingGet(requestParameters: AppPricingApiApiAppAppPricingGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppPricingApiApiAppAppPricingIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingIdDelete(requestParameters: AppPricingApiApiAppAppPricingIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppPricingApiApiAppAppPricingIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingIdGet(id: string, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingIdGet(requestParameters: AppPricingApiApiAppAppPricingIdGetRequest, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppPricingDto} [body] 
+     * @param {AppPricingApiApiAppAppPricingIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingIdPut(requestParameters: AppPricingApiApiAppAppPricingIdPutRequest, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppPricingDto} [body] 
+     * @param {AppPricingApiApiAppAppPricingPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingApi
      */
-    public apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingPost(requestParameters: AppPricingApiApiAppAppPricingPostRequest = {}, options?: AxiosRequestConfig) {
+        return AppPricingApiFp(this.configuration).apiAppAppPricingPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -10225,52 +10706,128 @@ export const AppPricingItemApiFactory = function (configuration?: Configuration,
     return {
         /**
          * 
-         * @param {string} [appId] 
+         * @param {AppPricingItemApiApiAppAppPricingItemGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemGet(appId?: string, options?: any): AxiosPromise<Array<AppPricingItemDto>> {
-            return localVarFp.apiAppAppPricingItemGet(appId, options).then((request) => request(axios, basePath));
+        apiAppAppPricingItemGet(requestParameters: AppPricingItemApiApiAppAppPricingItemGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<Array<AppPricingItemDto>> {
+            return localVarFp.apiAppAppPricingItemGet(requestParameters.appId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppPricingItemApiApiAppAppPricingItemIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppPricingItemIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppPricingItemIdDelete(requestParameters: AppPricingItemApiApiAppAppPricingItemIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppPricingItemIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppPricingItemApiApiAppAppPricingItemIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdGet(id: string, options?: any): AxiosPromise<AppPricingItemDto> {
-            return localVarFp.apiAppAppPricingItemIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppAppPricingItemIdGet(requestParameters: AppPricingItemApiApiAppAppPricingItemIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {AppPricingItemApiApiAppAppPricingItemIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: any): AxiosPromise<AppPricingItemDto> {
-            return localVarFp.apiAppAppPricingItemIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppPricingItemIdPut(requestParameters: AppPricingItemApiApiAppAppPricingItemIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {AppPricingItemApiApiAppAppPricingItemPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: any): AxiosPromise<AppPricingItemDto> {
-            return localVarFp.apiAppAppPricingItemPost(body, options).then((request) => request(axios, basePath));
+        apiAppAppPricingItemPost(requestParameters: AppPricingItemApiApiAppAppPricingItemPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppPricingItemDto> {
+            return localVarFp.apiAppAppPricingItemPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppPricingItemGet operation in AppPricingItemApi.
+ * @export
+ * @interface AppPricingItemApiApiAppAppPricingItemGetRequest
+ */
+export interface AppPricingItemApiApiAppAppPricingItemGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemApiApiAppAppPricingItemGet
+     */
+    readonly appId?: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingItemIdDelete operation in AppPricingItemApi.
+ * @export
+ * @interface AppPricingItemApiApiAppAppPricingItemIdDeleteRequest
+ */
+export interface AppPricingItemApiApiAppAppPricingItemIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemApiApiAppAppPricingItemIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingItemIdGet operation in AppPricingItemApi.
+ * @export
+ * @interface AppPricingItemApiApiAppAppPricingItemIdGetRequest
+ */
+export interface AppPricingItemApiApiAppAppPricingItemIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemApiApiAppAppPricingItemIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppPricingItemIdPut operation in AppPricingItemApi.
+ * @export
+ * @interface AppPricingItemApiApiAppAppPricingItemIdPutRequest
+ */
+export interface AppPricingItemApiApiAppAppPricingItemIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemApiApiAppAppPricingItemIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppPricingItemDto}
+     * @memberof AppPricingItemApiApiAppAppPricingItemIdPut
+     */
+    readonly body?: CreateOrUpdateAppPricingItemDto
+}
+
+/**
+ * Request parameters for apiAppAppPricingItemPost operation in AppPricingItemApi.
+ * @export
+ * @interface AppPricingItemApiApiAppAppPricingItemPostRequest
+ */
+export interface AppPricingItemApiApiAppAppPricingItemPostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppPricingItemDto}
+     * @memberof AppPricingItemApiApiAppAppPricingItemPost
+     */
+    readonly body?: CreateOrUpdateAppPricingItemDto
+}
 
 /**
  * AppPricingItemApi - object-oriented interface
@@ -10281,58 +10838,57 @@ export const AppPricingItemApiFactory = function (configuration?: Configuration,
 export class AppPricingItemApi extends BaseAPI {
     /**
      * 
-     * @param {string} [appId] 
+     * @param {AppPricingItemApiApiAppAppPricingItemGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemGet(appId?: string, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemGet(appId, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingItemGet(requestParameters: AppPricingItemApiApiAppAppPricingItemGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemGet(requestParameters.appId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppPricingItemApiApiAppAppPricingItemIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingItemIdDelete(requestParameters: AppPricingItemApiApiAppAppPricingItemIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppPricingItemApiApiAppAppPricingItemIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemIdGet(id: string, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingItemIdGet(requestParameters: AppPricingItemApiApiAppAppPricingItemIdGetRequest, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppPricingItemDto} [body] 
+     * @param {AppPricingItemApiApiAppAppPricingItemIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingItemIdPut(requestParameters: AppPricingItemApiApiAppAppPricingItemIdPutRequest, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppPricingItemDto} [body] 
+     * @param {AppPricingItemApiApiAppAppPricingItemPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppPricingItemApi
      */
-    public apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppPricingItemPost(requestParameters: AppPricingItemApiApiAppAppPricingItemPostRequest = {}, options?: AxiosRequestConfig) {
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -10708,70 +11264,214 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {string} [appId] 
-         * @param {string} [environment] 
-         * @param {string} [platformName] 
-         * @param {string} [platformValue] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {AppReleaseApiApiAppAppReleaseGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseGet(appId?: string, environment?: string, platformName?: string, platformValue?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<AppReleaseDtoPagedResultDto> {
-            return localVarFp.apiAppAppReleaseGet(appId, environment, platformName, platformValue, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseGet(requestParameters: AppReleaseApiApiAppAppReleaseGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDtoPagedResultDto> {
+            return localVarFp.apiAppAppReleaseGet(requestParameters.appId, requestParameters.environment, requestParameters.platformName, requestParameters.platformValue, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppReleaseApiApiAppAppReleaseIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppReleaseIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseIdDelete(requestParameters: AppReleaseApiApiAppAppReleaseIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppReleaseIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppReleaseApiApiAppAppReleaseIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseIdGet(id: string, options?: any): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleaseIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseIdGet(requestParameters: AppReleaseApiApiAppAppReleaseIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleaseIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {AppReleaseApiApiAppAppReleaseIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseIdPut(id: string, body?: CreateOrUpdateAppReleaseDto, options?: any): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleaseIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseIdPut(requestParameters: AppReleaseApiApiAppAppReleaseIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleaseIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [appName] 
-         * @param {string} [platform] 
-         * @param {string} [productType] 
-         * @param {string} [environment] 
+         * @param {AppReleaseApiApiAppAppReleaseLatestGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, environment?: string, options?: any): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleaseLatestGet(appName, platform, productType, environment, options).then((request) => request(axios, basePath));
+        apiAppAppReleaseLatestGet(requestParameters: AppReleaseApiApiAppAppReleaseLatestGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleaseLatestGet(requestParameters.appName, requestParameters.platform, requestParameters.productType, requestParameters.environment, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {AppReleaseApiApiAppAppReleasePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleasePost(body?: CreateOrUpdateAppReleaseDto, options?: any): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleasePost(body, options).then((request) => request(axios, basePath));
+        apiAppAppReleasePost(requestParameters: AppReleaseApiApiAppAppReleasePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
+            return localVarFp.apiAppAppReleasePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppReleaseGet operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleaseGetRequest
+ */
+export interface AppReleaseApiApiAppAppReleaseGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly appId?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly environment?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly platformName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly platformValue?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof AppReleaseApiApiAppAppReleaseGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppAppReleaseIdDelete operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleaseIdDeleteRequest
+ */
+export interface AppReleaseApiApiAppAppReleaseIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppReleaseIdGet operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleaseIdGetRequest
+ */
+export interface AppReleaseApiApiAppAppReleaseIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppReleaseIdPut operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleaseIdPutRequest
+ */
+export interface AppReleaseApiApiAppAppReleaseIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppReleaseDto}
+     * @memberof AppReleaseApiApiAppAppReleaseIdPut
+     */
+    readonly body?: CreateOrUpdateAppReleaseDto
+}
+
+/**
+ * Request parameters for apiAppAppReleaseLatestGet operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleaseLatestGetRequest
+ */
+export interface AppReleaseApiApiAppAppReleaseLatestGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseLatestGet
+     */
+    readonly appName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseLatestGet
+     */
+    readonly platform?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseLatestGet
+     */
+    readonly productType?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppReleaseApiApiAppAppReleaseLatestGet
+     */
+    readonly environment?: string
+}
+
+/**
+ * Request parameters for apiAppAppReleasePost operation in AppReleaseApi.
+ * @export
+ * @interface AppReleaseApiApiAppAppReleasePostRequest
+ */
+export interface AppReleaseApiApiAppAppReleasePostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppReleaseDto}
+     * @memberof AppReleaseApiApiAppAppReleasePost
+     */
+    readonly body?: CreateOrUpdateAppReleaseDto
+}
 
 /**
  * AppReleaseApi - object-oriented interface
@@ -10782,78 +11482,68 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
 export class AppReleaseApi extends BaseAPI {
     /**
      * 
-     * @param {string} [appId] 
-     * @param {string} [environment] 
-     * @param {string} [platformName] 
-     * @param {string} [platformValue] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {AppReleaseApiApiAppAppReleaseGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseGet(appId?: string, environment?: string, platformName?: string, platformValue?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseGet(appId, environment, platformName, platformValue, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseGet(requestParameters: AppReleaseApiApiAppAppReleaseGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseGet(requestParameters.appId, requestParameters.environment, requestParameters.platformName, requestParameters.platformValue, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppReleaseApiApiAppAppReleaseIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseIdDelete(requestParameters: AppReleaseApiApiAppAppReleaseIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppReleaseApiApiAppAppReleaseIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseIdGet(id: string, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseIdGet(requestParameters: AppReleaseApiApiAppAppReleaseIdGetRequest, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppReleaseDto} [body] 
+     * @param {AppReleaseApiApiAppAppReleaseIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseIdPut(id: string, body?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseIdPut(requestParameters: AppReleaseApiApiAppAppReleaseIdPutRequest, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [appName] 
-     * @param {string} [platform] 
-     * @param {string} [productType] 
-     * @param {string} [environment] 
+     * @param {AppReleaseApiApiAppAppReleaseLatestGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleaseLatestGet(appName?: string, platform?: string, productType?: string, environment?: string, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseLatestGet(appName, platform, productType, environment, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleaseLatestGet(requestParameters: AppReleaseApiApiAppAppReleaseLatestGetRequest = {}, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseLatestGet(requestParameters.appName, requestParameters.platform, requestParameters.productType, requestParameters.environment, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppReleaseDto} [body] 
+     * @param {AppReleaseApiApiAppAppReleasePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppReleaseApi
      */
-    public apiAppAppReleasePost(body?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleasePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppReleasePost(requestParameters: AppReleaseApiApiAppAppReleasePostRequest = {}, options?: AxiosRequestConfig) {
+        return AppReleaseApiFp(this.configuration).apiAppAppReleasePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11077,39 +11767,87 @@ export const AppSdkApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkGet(options?: any): AxiosPromise<Array<AppSdkDto>> {
+        apiAppAppSdkGet(options?: AxiosRequestConfig): AxiosPromise<Array<AppSdkDto>> {
             return localVarFp.apiAppAppSdkGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {AppSdkApiApiAppAppSdkIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppAppSdkIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppAppSdkIdDelete(requestParameters: AppSdkApiApiAppAppSdkIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppAppSdkIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {AppSdkApiApiAppAppSdkIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkIdPut(id: string, body?: CreateOrUpdateAppSdkDto, options?: any): AxiosPromise<AppSdkDto> {
-            return localVarFp.apiAppAppSdkIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppAppSdkIdPut(requestParameters: AppSdkApiApiAppAppSdkIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppSdkDto> {
+            return localVarFp.apiAppAppSdkIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {AppSdkApiApiAppAppSdkPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkPost(body?: CreateOrUpdateAppSdkDto, options?: any): AxiosPromise<AppSdkDto> {
-            return localVarFp.apiAppAppSdkPost(body, options).then((request) => request(axios, basePath));
+        apiAppAppSdkPost(requestParameters: AppSdkApiApiAppAppSdkPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppSdkDto> {
+            return localVarFp.apiAppAppSdkPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppSdkIdDelete operation in AppSdkApi.
+ * @export
+ * @interface AppSdkApiApiAppAppSdkIdDeleteRequest
+ */
+export interface AppSdkApiApiAppAppSdkIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppSdkApiApiAppAppSdkIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppAppSdkIdPut operation in AppSdkApi.
+ * @export
+ * @interface AppSdkApiApiAppAppSdkIdPutRequest
+ */
+export interface AppSdkApiApiAppAppSdkIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppSdkApiApiAppAppSdkIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateAppSdkDto}
+     * @memberof AppSdkApiApiAppAppSdkIdPut
+     */
+    readonly body?: CreateOrUpdateAppSdkDto
+}
+
+/**
+ * Request parameters for apiAppAppSdkPost operation in AppSdkApi.
+ * @export
+ * @interface AppSdkApiApiAppAppSdkPostRequest
+ */
+export interface AppSdkApiApiAppAppSdkPostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppSdkDto}
+     * @memberof AppSdkApiApiAppAppSdkPost
+     */
+    readonly body?: CreateOrUpdateAppSdkDto
+}
 
 /**
  * AppSdkApi - object-oriented interface
@@ -11130,36 +11868,35 @@ export class AppSdkApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id 
+     * @param {AppSdkApiApiAppAppSdkIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppSdkApi
      */
-    public apiAppAppSdkIdDelete(id: string, options?: AxiosRequestConfig) {
-        return AppSdkApiFp(this.configuration).apiAppAppSdkIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppSdkIdDelete(requestParameters: AppSdkApiApiAppAppSdkIdDeleteRequest, options?: AxiosRequestConfig) {
+        return AppSdkApiFp(this.configuration).apiAppAppSdkIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateAppSdkDto} [body] 
+     * @param {AppSdkApiApiAppAppSdkIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppSdkApi
      */
-    public apiAppAppSdkIdPut(id: string, body?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig) {
-        return AppSdkApiFp(this.configuration).apiAppAppSdkIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppSdkIdPut(requestParameters: AppSdkApiApiAppAppSdkIdPutRequest, options?: AxiosRequestConfig) {
+        return AppSdkApiFp(this.configuration).apiAppAppSdkIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateAppSdkDto} [body] 
+     * @param {AppSdkApiApiAppAppSdkPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppSdkApi
      */
-    public apiAppAppSdkPost(body?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig) {
-        return AppSdkApiFp(this.configuration).apiAppAppSdkPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppSdkPost(requestParameters: AppSdkApiApiAppAppSdkPostRequest = {}, options?: AxiosRequestConfig) {
+        return AppSdkApiFp(this.configuration).apiAppAppSdkPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11239,15 +11976,29 @@ export const AppUserScoreApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {CreateOrUpdateAppUserScoreDto} [body] 
+         * @param {AppUserScoreApiApiAppAppUserScorePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppUserScorePost(body?: CreateOrUpdateAppUserScoreDto, options?: any): AxiosPromise<AppUserScoreDto> {
-            return localVarFp.apiAppAppUserScorePost(body, options).then((request) => request(axios, basePath));
+        apiAppAppUserScorePost(requestParameters: AppUserScoreApiApiAppAppUserScorePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppUserScoreDto> {
+            return localVarFp.apiAppAppUserScorePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppAppUserScorePost operation in AppUserScoreApi.
+ * @export
+ * @interface AppUserScoreApiApiAppAppUserScorePostRequest
+ */
+export interface AppUserScoreApiApiAppAppUserScorePostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateAppUserScoreDto}
+     * @memberof AppUserScoreApiApiAppAppUserScorePost
+     */
+    readonly body?: CreateOrUpdateAppUserScoreDto
+}
 
 /**
  * AppUserScoreApi - object-oriented interface
@@ -11258,13 +12009,13 @@ export const AppUserScoreApiFactory = function (configuration?: Configuration, b
 export class AppUserScoreApi extends BaseAPI {
     /**
      * 
-     * @param {CreateOrUpdateAppUserScoreDto} [body] 
+     * @param {AppUserScoreApiApiAppAppUserScorePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppUserScoreApi
      */
-    public apiAppAppUserScorePost(body?: CreateOrUpdateAppUserScoreDto, options?: AxiosRequestConfig) {
-        return AppUserScoreApiFp(this.configuration).apiAppAppUserScorePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppAppUserScorePost(requestParameters: AppUserScoreApiApiAppAppUserScorePostRequest = {}, options?: AxiosRequestConfig) {
+        return AppUserScoreApiFp(this.configuration).apiAppAppUserScorePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11499,44 +12250,112 @@ export const DeviceApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          * 
-         * @param {BindDeviceDto} [body] 
+         * @param {DeviceApiApiAppDeviceBindPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceBindPost(body?: BindDeviceDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppDeviceBindPost(body, options).then((request) => request(axios, basePath));
+        apiAppDeviceBindPost(requestParameters: DeviceApiApiAppDeviceBindPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppDeviceBindPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [token] 
+         * @param {DeviceApiApiAppDeviceDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceDelete(token?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppDeviceDelete(token, options).then((request) => request(axios, basePath));
+        apiAppDeviceDelete(requestParameters: DeviceApiApiAppDeviceDeleteRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppDeviceDelete(requestParameters.token, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {DeviceApiApiAppDeviceGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<DeviceDtoPagedResultDto> {
-            return localVarFp.apiAppDeviceGet(sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppDeviceGet(requestParameters: DeviceApiApiAppDeviceGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<DeviceDtoPagedResultDto> {
+            return localVarFp.apiAppDeviceGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {RefreshDeviceStatusDto} [body] 
+         * @param {DeviceApiApiAppDeviceRefreshPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceRefreshPost(body?: RefreshDeviceStatusDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppDeviceRefreshPost(body, options).then((request) => request(axios, basePath));
+        apiAppDeviceRefreshPost(requestParameters: DeviceApiApiAppDeviceRefreshPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppDeviceRefreshPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppDeviceBindPost operation in DeviceApi.
+ * @export
+ * @interface DeviceApiApiAppDeviceBindPostRequest
+ */
+export interface DeviceApiApiAppDeviceBindPostRequest {
+    /**
+     * 
+     * @type {BindDeviceDto}
+     * @memberof DeviceApiApiAppDeviceBindPost
+     */
+    readonly body?: BindDeviceDto
+}
+
+/**
+ * Request parameters for apiAppDeviceDelete operation in DeviceApi.
+ * @export
+ * @interface DeviceApiApiAppDeviceDeleteRequest
+ */
+export interface DeviceApiApiAppDeviceDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceApiApiAppDeviceDelete
+     */
+    readonly token?: string
+}
+
+/**
+ * Request parameters for apiAppDeviceGet operation in DeviceApi.
+ * @export
+ * @interface DeviceApiApiAppDeviceGetRequest
+ */
+export interface DeviceApiApiAppDeviceGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceApiApiAppDeviceGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof DeviceApiApiAppDeviceGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof DeviceApiApiAppDeviceGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppDeviceRefreshPost operation in DeviceApi.
+ * @export
+ * @interface DeviceApiApiAppDeviceRefreshPostRequest
+ */
+export interface DeviceApiApiAppDeviceRefreshPostRequest {
+    /**
+     * 
+     * @type {RefreshDeviceStatusDto}
+     * @memberof DeviceApiApiAppDeviceRefreshPost
+     */
+    readonly body?: RefreshDeviceStatusDto
+}
 
 /**
  * DeviceApi - object-oriented interface
@@ -11547,48 +12366,46 @@ export const DeviceApiFactory = function (configuration?: Configuration, basePat
 export class DeviceApi extends BaseAPI {
     /**
      * 
-     * @param {BindDeviceDto} [body] 
+     * @param {DeviceApiApiAppDeviceBindPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DeviceApi
      */
-    public apiAppDeviceBindPost(body?: BindDeviceDto, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceBindPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppDeviceBindPost(requestParameters: DeviceApiApiAppDeviceBindPostRequest = {}, options?: AxiosRequestConfig) {
+        return DeviceApiFp(this.configuration).apiAppDeviceBindPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [token] 
+     * @param {DeviceApiApiAppDeviceDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DeviceApi
      */
-    public apiAppDeviceDelete(token?: string, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceDelete(token, options).then((request) => request(this.axios, this.basePath));
+    public apiAppDeviceDelete(requestParameters: DeviceApiApiAppDeviceDeleteRequest = {}, options?: AxiosRequestConfig) {
+        return DeviceApiFp(this.configuration).apiAppDeviceDelete(requestParameters.token, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {DeviceApiApiAppDeviceGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DeviceApi
      */
-    public apiAppDeviceGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceGet(sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppDeviceGet(requestParameters: DeviceApiApiAppDeviceGetRequest = {}, options?: AxiosRequestConfig) {
+        return DeviceApiFp(this.configuration).apiAppDeviceGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {RefreshDeviceStatusDto} [body] 
+     * @param {DeviceApiApiAppDeviceRefreshPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DeviceApi
      */
-    public apiAppDeviceRefreshPost(body?: RefreshDeviceStatusDto, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceRefreshPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppDeviceRefreshPost(requestParameters: DeviceApiApiAppDeviceRefreshPostRequest = {}, options?: AxiosRequestConfig) {
+        return DeviceApiFp(this.configuration).apiAppDeviceRefreshPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11760,29 +12577,57 @@ export const EmailSettingsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSettingManagementEmailingGet(options?: any): AxiosPromise<EmailSettingsDto> {
+        apiSettingManagementEmailingGet(options?: AxiosRequestConfig): AxiosPromise<EmailSettingsDto> {
             return localVarFp.apiSettingManagementEmailingGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UpdateEmailSettingsDto} [body] 
+         * @param {EmailSettingsApiApiSettingManagementEmailingPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSettingManagementEmailingPost(body?: UpdateEmailSettingsDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiSettingManagementEmailingPost(body, options).then((request) => request(axios, basePath));
+        apiSettingManagementEmailingPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiSettingManagementEmailingPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {SendTestEmailInput} [body] 
+         * @param {EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSettingManagementEmailingSendTestEmailPost(body?: SendTestEmailInput, options?: any): AxiosPromise<void> {
-            return localVarFp.apiSettingManagementEmailingSendTestEmailPost(body, options).then((request) => request(axios, basePath));
+        apiSettingManagementEmailingSendTestEmailPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiSettingManagementEmailingSendTestEmailPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiSettingManagementEmailingPost operation in EmailSettingsApi.
+ * @export
+ * @interface EmailSettingsApiApiSettingManagementEmailingPostRequest
+ */
+export interface EmailSettingsApiApiSettingManagementEmailingPostRequest {
+    /**
+     * 
+     * @type {UpdateEmailSettingsDto}
+     * @memberof EmailSettingsApiApiSettingManagementEmailingPost
+     */
+    readonly body?: UpdateEmailSettingsDto
+}
+
+/**
+ * Request parameters for apiSettingManagementEmailingSendTestEmailPost operation in EmailSettingsApi.
+ * @export
+ * @interface EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest
+ */
+export interface EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest {
+    /**
+     * 
+     * @type {SendTestEmailInput}
+     * @memberof EmailSettingsApiApiSettingManagementEmailingSendTestEmailPost
+     */
+    readonly body?: SendTestEmailInput
+}
 
 /**
  * EmailSettingsApi - object-oriented interface
@@ -11803,24 +12648,24 @@ export class EmailSettingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {UpdateEmailSettingsDto} [body] 
+     * @param {EmailSettingsApiApiSettingManagementEmailingPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EmailSettingsApi
      */
-    public apiSettingManagementEmailingPost(body?: UpdateEmailSettingsDto, options?: AxiosRequestConfig) {
-        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiSettingManagementEmailingPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingPostRequest = {}, options?: AxiosRequestConfig) {
+        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {SendTestEmailInput} [body] 
+     * @param {EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EmailSettingsApi
      */
-    public apiSettingManagementEmailingSendTestEmailPost(body?: SendTestEmailInput, options?: AxiosRequestConfig) {
-        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingSendTestEmailPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiSettingManagementEmailingSendTestEmailPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest = {}, options?: AxiosRequestConfig) {
+        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingSendTestEmailPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -12020,37 +12865,103 @@ export const FeaturesApiFactory = function (configuration?: Configuration, baseP
     return {
         /**
          * 
-         * @param {string} [providerName] 
-         * @param {string} [providerKey] 
+         * @param {FeaturesApiApiFeatureManagementFeaturesDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFeatureManagementFeaturesDelete(providerName?: string, providerKey?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiFeatureManagementFeaturesDelete(providerName, providerKey, options).then((request) => request(axios, basePath));
+        apiFeatureManagementFeaturesDelete(requestParameters: FeaturesApiApiFeatureManagementFeaturesDeleteRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiFeatureManagementFeaturesDelete(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [providerName] 
-         * @param {string} [providerKey] 
+         * @param {FeaturesApiApiFeatureManagementFeaturesGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFeatureManagementFeaturesGet(providerName?: string, providerKey?: string, options?: any): AxiosPromise<GetFeatureListResultDto> {
-            return localVarFp.apiFeatureManagementFeaturesGet(providerName, providerKey, options).then((request) => request(axios, basePath));
+        apiFeatureManagementFeaturesGet(requestParameters: FeaturesApiApiFeatureManagementFeaturesGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<GetFeatureListResultDto> {
+            return localVarFp.apiFeatureManagementFeaturesGet(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [providerName] 
-         * @param {string} [providerKey] 
-         * @param {UpdateFeaturesDto} [body] 
+         * @param {FeaturesApiApiFeatureManagementFeaturesPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFeatureManagementFeaturesPut(providerName?: string, providerKey?: string, body?: UpdateFeaturesDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiFeatureManagementFeaturesPut(providerName, providerKey, body, options).then((request) => request(axios, basePath));
+        apiFeatureManagementFeaturesPut(requestParameters: FeaturesApiApiFeatureManagementFeaturesPutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiFeatureManagementFeaturesDelete operation in FeaturesApi.
+ * @export
+ * @interface FeaturesApiApiFeatureManagementFeaturesDeleteRequest
+ */
+export interface FeaturesApiApiFeatureManagementFeaturesDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesDelete
+     */
+    readonly providerName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesDelete
+     */
+    readonly providerKey?: string
+}
+
+/**
+ * Request parameters for apiFeatureManagementFeaturesGet operation in FeaturesApi.
+ * @export
+ * @interface FeaturesApiApiFeatureManagementFeaturesGetRequest
+ */
+export interface FeaturesApiApiFeatureManagementFeaturesGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesGet
+     */
+    readonly providerName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesGet
+     */
+    readonly providerKey?: string
+}
+
+/**
+ * Request parameters for apiFeatureManagementFeaturesPut operation in FeaturesApi.
+ * @export
+ * @interface FeaturesApiApiFeatureManagementFeaturesPutRequest
+ */
+export interface FeaturesApiApiFeatureManagementFeaturesPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesPut
+     */
+    readonly providerName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesPut
+     */
+    readonly providerKey?: string
+
+    /**
+     * 
+     * @type {UpdateFeaturesDto}
+     * @memberof FeaturesApiApiFeatureManagementFeaturesPut
+     */
+    readonly body?: UpdateFeaturesDto
+}
 
 /**
  * FeaturesApi - object-oriented interface
@@ -12061,39 +12972,35 @@ export const FeaturesApiFactory = function (configuration?: Configuration, baseP
 export class FeaturesApi extends BaseAPI {
     /**
      * 
-     * @param {string} [providerName] 
-     * @param {string} [providerKey] 
+     * @param {FeaturesApiApiFeatureManagementFeaturesDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FeaturesApi
      */
-    public apiFeatureManagementFeaturesDelete(providerName?: string, providerKey?: string, options?: AxiosRequestConfig) {
-        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesDelete(providerName, providerKey, options).then((request) => request(this.axios, this.basePath));
+    public apiFeatureManagementFeaturesDelete(requestParameters: FeaturesApiApiFeatureManagementFeaturesDeleteRequest = {}, options?: AxiosRequestConfig) {
+        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesDelete(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [providerName] 
-     * @param {string} [providerKey] 
+     * @param {FeaturesApiApiFeatureManagementFeaturesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FeaturesApi
      */
-    public apiFeatureManagementFeaturesGet(providerName?: string, providerKey?: string, options?: AxiosRequestConfig) {
-        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesGet(providerName, providerKey, options).then((request) => request(this.axios, this.basePath));
+    public apiFeatureManagementFeaturesGet(requestParameters: FeaturesApiApiFeatureManagementFeaturesGetRequest = {}, options?: AxiosRequestConfig) {
+        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesGet(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [providerName] 
-     * @param {string} [providerKey] 
-     * @param {UpdateFeaturesDto} [body] 
+     * @param {FeaturesApiApiFeatureManagementFeaturesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FeaturesApi
      */
-    public apiFeatureManagementFeaturesPut(providerName?: string, providerKey?: string, body?: UpdateFeaturesDto, options?: AxiosRequestConfig) {
-        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesPut(providerName, providerKey, body, options).then((request) => request(this.axios, this.basePath));
+    public apiFeatureManagementFeaturesPut(requestParameters: FeaturesApiApiFeatureManagementFeaturesPutRequest = {}, options?: AxiosRequestConfig) {
+        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -12732,120 +13639,324 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
     return {
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueBoolGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueBoolGet(key?: string, options?: any): AxiosPromise<BooleanKeyValue> {
-            return localVarFp.apiAppKeyValueBoolGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueBoolGet(requestParameters: KeyValueApiApiAppKeyValueBoolGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<BooleanKeyValue> {
+            return localVarFp.apiAppKeyValueBoolGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueDateTimeGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueDateTimeGet(key?: string, options?: any): AxiosPromise<DateTimeKeyValue> {
-            return localVarFp.apiAppKeyValueDateTimeGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueDateTimeGet(requestParameters: KeyValueApiApiAppKeyValueDateTimeGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<DateTimeKeyValue> {
+            return localVarFp.apiAppKeyValueDateTimeGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueDecimalGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueDecimalGet(key?: string, options?: any): AxiosPromise<DecimalKeyValue> {
-            return localVarFp.apiAppKeyValueDecimalGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueDecimalGet(requestParameters: KeyValueApiApiAppKeyValueDecimalGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<DecimalKeyValue> {
+            return localVarFp.apiAppKeyValueDecimalGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueDoubleGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueDoubleGet(key?: string, options?: any): AxiosPromise<DoubleKeyValue> {
-            return localVarFp.apiAppKeyValueDoubleGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueDoubleGet(requestParameters: KeyValueApiApiAppKeyValueDoubleGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<DoubleKeyValue> {
+            return localVarFp.apiAppKeyValueDoubleGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueIntGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueIntGet(key?: string, options?: any): AxiosPromise<Int32KeyValue> {
-            return localVarFp.apiAppKeyValueIntGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueIntGet(requestParameters: KeyValueApiApiAppKeyValueIntGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<Int32KeyValue> {
+            return localVarFp.apiAppKeyValueIntGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {BooleanSetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetBoolPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetBoolPost(key?: string, body?: BooleanSetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetBoolPost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetBoolPost(requestParameters: KeyValueApiApiAppKeyValueSetBoolPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {DateTimeSetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetDateTimePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDateTimePost(key?: string, body?: DateTimeSetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDateTimePost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetDateTimePost(requestParameters: KeyValueApiApiAppKeyValueSetDateTimePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {DecimalSetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetDecimalPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDecimalPost(key?: string, body?: DecimalSetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDecimalPost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetDecimalPost(requestParameters: KeyValueApiApiAppKeyValueSetDecimalPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {DoubleSetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetDoublePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDoublePost(key?: string, body?: DoubleSetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDoublePost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetDoublePost(requestParameters: KeyValueApiApiAppKeyValueSetDoublePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {Int32SetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetIntPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetIntPost(key?: string, body?: Int32SetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetIntPost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetIntPost(requestParameters: KeyValueApiApiAppKeyValueSetIntPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
-         * @param {StringSetKeyValueDto} [body] 
+         * @param {KeyValueApiApiAppKeyValueSetStringPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetStringPost(key?: string, body?: StringSetKeyValueDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetStringPost(key, body, options).then((request) => request(axios, basePath));
+        apiAppKeyValueSetStringPost(requestParameters: KeyValueApiApiAppKeyValueSetStringPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {KeyValueApiApiAppKeyValueStringGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueStringGet(key?: string, options?: any): AxiosPromise<StringKeyValue> {
-            return localVarFp.apiAppKeyValueStringGet(key, options).then((request) => request(axios, basePath));
+        apiAppKeyValueStringGet(requestParameters: KeyValueApiApiAppKeyValueStringGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<StringKeyValue> {
+            return localVarFp.apiAppKeyValueStringGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppKeyValueBoolGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueBoolGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueBoolGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueBoolGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppKeyValueDateTimeGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueDateTimeGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueDateTimeGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueDateTimeGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppKeyValueDecimalGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueDecimalGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueDecimalGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueDecimalGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppKeyValueDoubleGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueDoubleGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueDoubleGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueDoubleGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppKeyValueIntGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueIntGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueIntGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueIntGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetBoolPost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetBoolPostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetBoolPostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetBoolPost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {BooleanSetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetBoolPost
+     */
+    readonly body?: BooleanSetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetDateTimePost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetDateTimePostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetDateTimePostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetDateTimePost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {DateTimeSetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetDateTimePost
+     */
+    readonly body?: DateTimeSetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetDecimalPost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetDecimalPostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetDecimalPostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetDecimalPost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {DecimalSetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetDecimalPost
+     */
+    readonly body?: DecimalSetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetDoublePost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetDoublePostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetDoublePostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetDoublePost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {DoubleSetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetDoublePost
+     */
+    readonly body?: DoubleSetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetIntPost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetIntPostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetIntPostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetIntPost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {Int32SetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetIntPost
+     */
+    readonly body?: Int32SetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueSetStringPost operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueSetStringPostRequest
+ */
+export interface KeyValueApiApiAppKeyValueSetStringPostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueSetStringPost
+     */
+    readonly key?: string
+
+    /**
+     * 
+     * @type {StringSetKeyValueDto}
+     * @memberof KeyValueApiApiAppKeyValueSetStringPost
+     */
+    readonly body?: StringSetKeyValueDto
+}
+
+/**
+ * Request parameters for apiAppKeyValueStringGet operation in KeyValueApi.
+ * @export
+ * @interface KeyValueApiApiAppKeyValueStringGetRequest
+ */
+export interface KeyValueApiApiAppKeyValueStringGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof KeyValueApiApiAppKeyValueStringGet
+     */
+    readonly key?: string
+}
 
 /**
  * KeyValueApi - object-oriented interface
@@ -12856,140 +13967,134 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
 export class KeyValueApi extends BaseAPI {
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueBoolGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueBoolGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueBoolGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueBoolGet(requestParameters: KeyValueApiApiAppKeyValueBoolGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueBoolGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueDateTimeGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueDateTimeGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueDateTimeGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueDateTimeGet(requestParameters: KeyValueApiApiAppKeyValueDateTimeGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueDateTimeGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueDecimalGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueDecimalGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueDecimalGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueDecimalGet(requestParameters: KeyValueApiApiAppKeyValueDecimalGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueDecimalGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueDoubleGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueDoubleGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueDoubleGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueDoubleGet(requestParameters: KeyValueApiApiAppKeyValueDoubleGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueDoubleGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueIntGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueIntGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueIntGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueIntGet(requestParameters: KeyValueApiApiAppKeyValueIntGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueIntGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {BooleanSetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetBoolPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetBoolPost(key?: string, body?: BooleanSetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetBoolPost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetBoolPost(requestParameters: KeyValueApiApiAppKeyValueSetBoolPostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {DateTimeSetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetDateTimePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetDateTimePost(key?: string, body?: DateTimeSetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDateTimePost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetDateTimePost(requestParameters: KeyValueApiApiAppKeyValueSetDateTimePostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {DecimalSetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetDecimalPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetDecimalPost(key?: string, body?: DecimalSetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDecimalPost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetDecimalPost(requestParameters: KeyValueApiApiAppKeyValueSetDecimalPostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {DoubleSetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetDoublePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetDoublePost(key?: string, body?: DoubleSetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDoublePost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetDoublePost(requestParameters: KeyValueApiApiAppKeyValueSetDoublePostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {Int32SetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetIntPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetIntPost(key?: string, body?: Int32SetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetIntPost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetIntPost(requestParameters: KeyValueApiApiAppKeyValueSetIntPostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
-     * @param {StringSetKeyValueDto} [body] 
+     * @param {KeyValueApiApiAppKeyValueSetStringPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueSetStringPost(key?: string, body?: StringSetKeyValueDto, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetStringPost(key, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueSetStringPost(requestParameters: KeyValueApiApiAppKeyValueSetStringPostRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {KeyValueApiApiAppKeyValueStringGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KeyValueApi
      */
-    public apiAppKeyValueStringGet(key?: string, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueStringGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppKeyValueStringGet(requestParameters: KeyValueApiApiAppKeyValueStringGetRequest = {}, options?: AxiosRequestConfig) {
+        return KeyValueApiFp(this.configuration).apiAppKeyValueStringGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13158,32 +14263,60 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {LoginApiApiAccountCheckPasswordPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountCheckPasswordPost(body?: UserLoginInfo, options?: any): AxiosPromise<AbpLoginResult> {
-            return localVarFp.apiAccountCheckPasswordPost(body, options).then((request) => request(axios, basePath));
+        apiAccountCheckPasswordPost(requestParameters: LoginApiApiAccountCheckPasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AbpLoginResult> {
+            return localVarFp.apiAccountCheckPasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {LoginApiApiAccountLoginPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountLoginPost(body?: UserLoginInfo, options?: any): AxiosPromise<AbpLoginResult> {
-            return localVarFp.apiAccountLoginPost(body, options).then((request) => request(axios, basePath));
+        apiAccountLoginPost(requestParameters: LoginApiApiAccountLoginPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AbpLoginResult> {
+            return localVarFp.apiAccountLoginPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountLogoutGet(options?: any): AxiosPromise<void> {
+        apiAccountLogoutGet(options?: AxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.apiAccountLogoutGet(options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAccountCheckPasswordPost operation in LoginApi.
+ * @export
+ * @interface LoginApiApiAccountCheckPasswordPostRequest
+ */
+export interface LoginApiApiAccountCheckPasswordPostRequest {
+    /**
+     * 
+     * @type {UserLoginInfo}
+     * @memberof LoginApiApiAccountCheckPasswordPost
+     */
+    readonly body?: UserLoginInfo
+}
+
+/**
+ * Request parameters for apiAccountLoginPost operation in LoginApi.
+ * @export
+ * @interface LoginApiApiAccountLoginPostRequest
+ */
+export interface LoginApiApiAccountLoginPostRequest {
+    /**
+     * 
+     * @type {UserLoginInfo}
+     * @memberof LoginApiApiAccountLoginPost
+     */
+    readonly body?: UserLoginInfo
+}
 
 /**
  * LoginApi - object-oriented interface
@@ -13194,24 +14327,24 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
 export class LoginApi extends BaseAPI {
     /**
      * 
-     * @param {UserLoginInfo} [body] 
+     * @param {LoginApiApiAccountCheckPasswordPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    public apiAccountCheckPasswordPost(body?: UserLoginInfo, options?: AxiosRequestConfig) {
-        return LoginApiFp(this.configuration).apiAccountCheckPasswordPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountCheckPasswordPost(requestParameters: LoginApiApiAccountCheckPasswordPostRequest = {}, options?: AxiosRequestConfig) {
+        return LoginApiFp(this.configuration).apiAccountCheckPasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UserLoginInfo} [body] 
+     * @param {LoginApiApiAccountLoginPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    public apiAccountLoginPost(body?: UserLoginInfo, options?: AxiosRequestConfig) {
-        return LoginApiFp(this.configuration).apiAccountLoginPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountLoginPost(requestParameters: LoginApiApiAccountLoginPostRequest = {}, options?: AxiosRequestConfig) {
+        return LoginApiFp(this.configuration).apiAccountLoginPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13442,42 +14575,98 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
     return {
         /**
          * 
-         * @param {MessagePublishDto} [body] 
+         * @param {MessageApiApiAppMessagePublishPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessagePublishPost(body?: MessagePublishDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppMessagePublishPost(body, options).then((request) => request(axios, basePath));
+        apiAppMessagePublishPost(requestParameters: MessageApiApiAppMessagePublishPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessagePublishPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {MessageRecallDto} [body] 
+         * @param {MessageApiApiAppMessageRecallPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageRecallPost(body?: MessageRecallDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppMessageRecallPost(body, options).then((request) => request(axios, basePath));
+        apiAppMessageRecallPost(requestParameters: MessageApiApiAppMessageRecallPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageRecallPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {MessageSubscribeDto} [body] 
+         * @param {MessageApiApiAppMessageSubscribePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageSubscribePost(body?: MessageSubscribeDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppMessageSubscribePost(body, options).then((request) => request(axios, basePath));
+        apiAppMessageSubscribePost(requestParameters: MessageApiApiAppMessageSubscribePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSubscribePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {MessageUnsubscribeDto} [body] 
+         * @param {MessageApiApiAppMessageUnsubscribePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageUnsubscribePost(body?: MessageUnsubscribeDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppMessageUnsubscribePost(body, options).then((request) => request(axios, basePath));
+        apiAppMessageUnsubscribePost(requestParameters: MessageApiApiAppMessageUnsubscribePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageUnsubscribePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppMessagePublishPost operation in MessageApi.
+ * @export
+ * @interface MessageApiApiAppMessagePublishPostRequest
+ */
+export interface MessageApiApiAppMessagePublishPostRequest {
+    /**
+     * 
+     * @type {MessagePublishDto}
+     * @memberof MessageApiApiAppMessagePublishPost
+     */
+    readonly body?: MessagePublishDto
+}
+
+/**
+ * Request parameters for apiAppMessageRecallPost operation in MessageApi.
+ * @export
+ * @interface MessageApiApiAppMessageRecallPostRequest
+ */
+export interface MessageApiApiAppMessageRecallPostRequest {
+    /**
+     * 
+     * @type {MessageRecallDto}
+     * @memberof MessageApiApiAppMessageRecallPost
+     */
+    readonly body?: MessageRecallDto
+}
+
+/**
+ * Request parameters for apiAppMessageSubscribePost operation in MessageApi.
+ * @export
+ * @interface MessageApiApiAppMessageSubscribePostRequest
+ */
+export interface MessageApiApiAppMessageSubscribePostRequest {
+    /**
+     * 
+     * @type {MessageSubscribeDto}
+     * @memberof MessageApiApiAppMessageSubscribePost
+     */
+    readonly body?: MessageSubscribeDto
+}
+
+/**
+ * Request parameters for apiAppMessageUnsubscribePost operation in MessageApi.
+ * @export
+ * @interface MessageApiApiAppMessageUnsubscribePostRequest
+ */
+export interface MessageApiApiAppMessageUnsubscribePostRequest {
+    /**
+     * 
+     * @type {MessageUnsubscribeDto}
+     * @memberof MessageApiApiAppMessageUnsubscribePost
+     */
+    readonly body?: MessageUnsubscribeDto
+}
 
 /**
  * MessageApi - object-oriented interface
@@ -13488,46 +14677,46 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
 export class MessageApi extends BaseAPI {
     /**
      * 
-     * @param {MessagePublishDto} [body] 
+     * @param {MessageApiApiAppMessagePublishPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageApi
      */
-    public apiAppMessagePublishPost(body?: MessagePublishDto, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessagePublishPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessagePublishPost(requestParameters: MessageApiApiAppMessagePublishPostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageApiFp(this.configuration).apiAppMessagePublishPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {MessageRecallDto} [body] 
+     * @param {MessageApiApiAppMessageRecallPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageApi
      */
-    public apiAppMessageRecallPost(body?: MessageRecallDto, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageRecallPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageRecallPost(requestParameters: MessageApiApiAppMessageRecallPostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageApiFp(this.configuration).apiAppMessageRecallPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {MessageSubscribeDto} [body] 
+     * @param {MessageApiApiAppMessageSubscribePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageApi
      */
-    public apiAppMessageSubscribePost(body?: MessageSubscribeDto, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageSubscribePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageSubscribePost(requestParameters: MessageApiApiAppMessageSubscribePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageApiFp(this.configuration).apiAppMessageSubscribePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {MessageUnsubscribeDto} [body] 
+     * @param {MessageApiApiAppMessageUnsubscribePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageApi
      */
-    public apiAppMessageUnsubscribePost(body?: MessageUnsubscribeDto, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageUnsubscribePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageUnsubscribePost(requestParameters: MessageApiApiAppMessageUnsubscribePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageApiFp(this.configuration).apiAppMessageUnsubscribePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13798,48 +14987,110 @@ export const MessageTemplateApiFactory = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateGet(options?: any): AxiosPromise<Array<MessageTemplateDto>> {
+        apiAppMessageTemplateGet(options?: AxiosRequestConfig): AxiosPromise<Array<MessageTemplateDto>> {
             return localVarFp.apiAppMessageTemplateGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {MessageTemplateApiApiAppMessageTemplateIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppMessageTemplateIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateIdDelete(requestParameters: MessageTemplateApiApiAppMessageTemplateIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageTemplateIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {MessageTemplateApiApiAppMessageTemplateIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateIdGet(id: string, options?: any): AxiosPromise<MessageTemplateDto> {
-            return localVarFp.apiAppMessageTemplateIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateIdGet(requestParameters: MessageTemplateApiApiAppMessageTemplateIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateDto> {
+            return localVarFp.apiAppMessageTemplateIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {MessageTemplateApiApiAppMessageTemplateIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateIdPut(id: string, body?: CreateOrUpdateMessageTemplateDto, options?: any): AxiosPromise<MessageTemplateDto> {
-            return localVarFp.apiAppMessageTemplateIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateIdPut(requestParameters: MessageTemplateApiApiAppMessageTemplateIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateDto> {
+            return localVarFp.apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {MessageTemplateApiApiAppMessageTemplatePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplatePost(body?: CreateOrUpdateMessageTemplateDto, options?: any): AxiosPromise<MessageTemplateDto> {
-            return localVarFp.apiAppMessageTemplatePost(body, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplatePost(requestParameters: MessageTemplateApiApiAppMessageTemplatePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateDto> {
+            return localVarFp.apiAppMessageTemplatePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppMessageTemplateIdDelete operation in MessageTemplateApi.
+ * @export
+ * @interface MessageTemplateApiApiAppMessageTemplateIdDeleteRequest
+ */
+export interface MessageTemplateApiApiAppMessageTemplateIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateApiApiAppMessageTemplateIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageTemplateIdGet operation in MessageTemplateApi.
+ * @export
+ * @interface MessageTemplateApiApiAppMessageTemplateIdGetRequest
+ */
+export interface MessageTemplateApiApiAppMessageTemplateIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateApiApiAppMessageTemplateIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageTemplateIdPut operation in MessageTemplateApi.
+ * @export
+ * @interface MessageTemplateApiApiAppMessageTemplateIdPutRequest
+ */
+export interface MessageTemplateApiApiAppMessageTemplateIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateApiApiAppMessageTemplateIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateOrUpdateMessageTemplateDto}
+     * @memberof MessageTemplateApiApiAppMessageTemplateIdPut
+     */
+    readonly body?: CreateOrUpdateMessageTemplateDto
+}
+
+/**
+ * Request parameters for apiAppMessageTemplatePost operation in MessageTemplateApi.
+ * @export
+ * @interface MessageTemplateApiApiAppMessageTemplatePostRequest
+ */
+export interface MessageTemplateApiApiAppMessageTemplatePostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdateMessageTemplateDto}
+     * @memberof MessageTemplateApiApiAppMessageTemplatePost
+     */
+    readonly body?: CreateOrUpdateMessageTemplateDto
+}
 
 /**
  * MessageTemplateApi - object-oriented interface
@@ -13860,47 +15111,46 @@ export class MessageTemplateApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id 
+     * @param {MessageTemplateApiApiAppMessageTemplateIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateApi
      */
-    public apiAppMessageTemplateIdDelete(id: string, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateIdDelete(requestParameters: MessageTemplateApiApiAppMessageTemplateIdDeleteRequest, options?: AxiosRequestConfig) {
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {MessageTemplateApiApiAppMessageTemplateIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateApi
      */
-    public apiAppMessageTemplateIdGet(id: string, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateIdGet(requestParameters: MessageTemplateApiApiAppMessageTemplateIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {CreateOrUpdateMessageTemplateDto} [body] 
+     * @param {MessageTemplateApiApiAppMessageTemplateIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateApi
      */
-    public apiAppMessageTemplateIdPut(id: string, body?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateIdPut(requestParameters: MessageTemplateApiApiAppMessageTemplateIdPutRequest, options?: AxiosRequestConfig) {
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdateMessageTemplateDto} [body] 
+     * @param {MessageTemplateApiApiAppMessageTemplatePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateApi
      */
-    public apiAppMessageTemplatePost(body?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplatePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplatePost(requestParameters: MessageTemplateApiApiAppMessageTemplatePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplatePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14075,33 +15325,75 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
     return {
         /**
          * 
-         * @param {string} [templateId] 
+         * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleaseGet(templateId?: string, options?: any): AxiosPromise<Array<MessageTemplateReleaseDto>> {
-            return localVarFp.apiAppMessageTemplateReleaseGet(templateId, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateReleaseGet(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<Array<MessageTemplateReleaseDto>> {
+            return localVarFp.apiAppMessageTemplateReleaseGet(requestParameters.templateId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleaseIdGet(id: string, options?: any): AxiosPromise<MessageTemplateReleaseDto> {
-            return localVarFp.apiAppMessageTemplateReleaseIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateReleaseIdGet(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateReleaseDto> {
+            return localVarFp.apiAppMessageTemplateReleaseIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateMessageTemplateReleaseDto} [body] 
+         * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: any): AxiosPromise<MessageTemplateReleaseDto> {
-            return localVarFp.apiAppMessageTemplateReleasePost(body, options).then((request) => request(axios, basePath));
+        apiAppMessageTemplateReleasePost(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateReleaseDto> {
+            return localVarFp.apiAppMessageTemplateReleasePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppMessageTemplateReleaseGet operation in MessageTemplateReleaseApi.
+ * @export
+ * @interface MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest
+ */
+export interface MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseApiApiAppMessageTemplateReleaseGet
+     */
+    readonly templateId?: string
+}
+
+/**
+ * Request parameters for apiAppMessageTemplateReleaseIdGet operation in MessageTemplateReleaseApi.
+ * @export
+ * @interface MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest
+ */
+export interface MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageTemplateReleasePost operation in MessageTemplateReleaseApi.
+ * @export
+ * @interface MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest
+ */
+export interface MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest {
+    /**
+     * 
+     * @type {CreateMessageTemplateReleaseDto}
+     * @memberof MessageTemplateReleaseApiApiAppMessageTemplateReleasePost
+     */
+    readonly body?: CreateMessageTemplateReleaseDto
+}
 
 /**
  * MessageTemplateReleaseApi - object-oriented interface
@@ -14112,35 +15404,35 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
 export class MessageTemplateReleaseApi extends BaseAPI {
     /**
      * 
-     * @param {string} [templateId] 
+     * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateReleaseApi
      */
-    public apiAppMessageTemplateReleaseGet(templateId?: string, options?: AxiosRequestConfig) {
-        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleaseGet(templateId, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateReleaseGet(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleaseGetRequest = {}, options?: AxiosRequestConfig) {
+        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleaseGet(requestParameters.templateId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateReleaseApi
      */
-    public apiAppMessageTemplateReleaseIdGet(id: string, options?: AxiosRequestConfig) {
-        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleaseIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateReleaseIdGet(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleaseIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleaseIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateMessageTemplateReleaseDto} [body] 
+     * @param {MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MessageTemplateReleaseApi
      */
-    public apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: AxiosRequestConfig) {
-        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleasePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppMessageTemplateReleasePost(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleasePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14380,44 +15672,152 @@ export const NotificationApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {string} apiKey 
-         * @param {string} message 
-         * @param {number} [automaticallyCopy] 
-         * @param {string} [copy] 
-         * @param {string} [url] 
-         * @param {string} [isArchive] 
-         * @param {string} [group] 
-         * @param {string} [icon] 
-         * @param {string} [name] 
-         * @param {string} [value] 
+         * @param {NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppNotificationBarkApiKeyMessageGet(apiKey: string, message: string, automaticallyCopy?: number, copy?: string, url?: string, isArchive?: string, group?: string, icon?: string, name?: string, value?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppNotificationBarkApiKeyMessageGet(apiKey, message, automaticallyCopy, copy, url, isArchive, group, icon, name, value, options).then((request) => request(axios, basePath));
+        apiAppNotificationBarkApiKeyMessageGet(requestParameters: NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppNotificationBarkApiKeyMessageGet(requestParameters.apiKey, requestParameters.message, requestParameters.automaticallyCopy, requestParameters.copy, requestParameters.url, requestParameters.isArchive, requestParameters.group, requestParameters.icon, requestParameters.name, requestParameters.value, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {NotificationApiApiAppNotificationGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppNotificationGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<NotificationInfoDtoPagedResultDto> {
-            return localVarFp.apiAppNotificationGet(sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppNotificationGet(requestParameters: NotificationApiApiAppNotificationGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<NotificationInfoDtoPagedResultDto> {
+            return localVarFp.apiAppNotificationGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreatePushNotificationDto} [body] 
+         * @param {NotificationApiApiAppNotificationPushPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppNotificationPushPost(body?: CreatePushNotificationDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppNotificationPushPost(body, options).then((request) => request(axios, basePath));
+        apiAppNotificationPushPost(requestParameters: NotificationApiApiAppNotificationPushPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppNotificationPushPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppNotificationBarkApiKeyMessageGet operation in NotificationApi.
+ * @export
+ * @interface NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest
+ */
+export interface NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly apiKey: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly message: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly automaticallyCopy?: number
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly copy?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly url?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly isArchive?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly group?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly icon?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly name?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationBarkApiKeyMessageGet
+     */
+    readonly value?: string
+}
+
+/**
+ * Request parameters for apiAppNotificationGet operation in NotificationApi.
+ * @export
+ * @interface NotificationApiApiAppNotificationGetRequest
+ */
+export interface NotificationApiApiAppNotificationGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof NotificationApiApiAppNotificationGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof NotificationApiApiAppNotificationGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof NotificationApiApiAppNotificationGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppNotificationPushPost operation in NotificationApi.
+ * @export
+ * @interface NotificationApiApiAppNotificationPushPostRequest
+ */
+export interface NotificationApiApiAppNotificationPushPostRequest {
+    /**
+     * 
+     * @type {CreatePushNotificationDto}
+     * @memberof NotificationApiApiAppNotificationPushPost
+     */
+    readonly body?: CreatePushNotificationDto
+}
 
 /**
  * NotificationApi - object-oriented interface
@@ -14428,46 +15828,35 @@ export const NotificationApiFactory = function (configuration?: Configuration, b
 export class NotificationApi extends BaseAPI {
     /**
      * 
-     * @param {string} apiKey 
-     * @param {string} message 
-     * @param {number} [automaticallyCopy] 
-     * @param {string} [copy] 
-     * @param {string} [url] 
-     * @param {string} [isArchive] 
-     * @param {string} [group] 
-     * @param {string} [icon] 
-     * @param {string} [name] 
-     * @param {string} [value] 
+     * @param {NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
      */
-    public apiAppNotificationBarkApiKeyMessageGet(apiKey: string, message: string, automaticallyCopy?: number, copy?: string, url?: string, isArchive?: string, group?: string, icon?: string, name?: string, value?: string, options?: AxiosRequestConfig) {
-        return NotificationApiFp(this.configuration).apiAppNotificationBarkApiKeyMessageGet(apiKey, message, automaticallyCopy, copy, url, isArchive, group, icon, name, value, options).then((request) => request(this.axios, this.basePath));
+    public apiAppNotificationBarkApiKeyMessageGet(requestParameters: NotificationApiApiAppNotificationBarkApiKeyMessageGetRequest, options?: AxiosRequestConfig) {
+        return NotificationApiFp(this.configuration).apiAppNotificationBarkApiKeyMessageGet(requestParameters.apiKey, requestParameters.message, requestParameters.automaticallyCopy, requestParameters.copy, requestParameters.url, requestParameters.isArchive, requestParameters.group, requestParameters.icon, requestParameters.name, requestParameters.value, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {NotificationApiApiAppNotificationGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
      */
-    public apiAppNotificationGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return NotificationApiFp(this.configuration).apiAppNotificationGet(sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppNotificationGet(requestParameters: NotificationApiApiAppNotificationGetRequest = {}, options?: AxiosRequestConfig) {
+        return NotificationApiFp(this.configuration).apiAppNotificationGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreatePushNotificationDto} [body] 
+     * @param {NotificationApiApiAppNotificationPushPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
      */
-    public apiAppNotificationPushPost(body?: CreatePushNotificationDto, options?: AxiosRequestConfig) {
-        return NotificationApiFp(this.configuration).apiAppNotificationPushPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppNotificationPushPost(requestParameters: NotificationApiApiAppNotificationPushPostRequest = {}, options?: AxiosRequestConfig) {
+        return NotificationApiFp(this.configuration).apiAppNotificationPushPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14613,27 +16002,73 @@ export const PermissionsApiFactory = function (configuration?: Configuration, ba
     return {
         /**
          * 
-         * @param {string} [providerName] 
-         * @param {string} [providerKey] 
+         * @param {PermissionsApiApiPermissionManagementPermissionsGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiPermissionManagementPermissionsGet(providerName?: string, providerKey?: string, options?: any): AxiosPromise<GetPermissionListResultDto> {
-            return localVarFp.apiPermissionManagementPermissionsGet(providerName, providerKey, options).then((request) => request(axios, basePath));
+        apiPermissionManagementPermissionsGet(requestParameters: PermissionsApiApiPermissionManagementPermissionsGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<GetPermissionListResultDto> {
+            return localVarFp.apiPermissionManagementPermissionsGet(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [providerName] 
-         * @param {string} [providerKey] 
-         * @param {UpdatePermissionsDto} [body] 
+         * @param {PermissionsApiApiPermissionManagementPermissionsPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiPermissionManagementPermissionsPut(providerName?: string, providerKey?: string, body?: UpdatePermissionsDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiPermissionManagementPermissionsPut(providerName, providerKey, body, options).then((request) => request(axios, basePath));
+        apiPermissionManagementPermissionsPut(requestParameters: PermissionsApiApiPermissionManagementPermissionsPutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiPermissionManagementPermissionsGet operation in PermissionsApi.
+ * @export
+ * @interface PermissionsApiApiPermissionManagementPermissionsGetRequest
+ */
+export interface PermissionsApiApiPermissionManagementPermissionsGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof PermissionsApiApiPermissionManagementPermissionsGet
+     */
+    readonly providerName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof PermissionsApiApiPermissionManagementPermissionsGet
+     */
+    readonly providerKey?: string
+}
+
+/**
+ * Request parameters for apiPermissionManagementPermissionsPut operation in PermissionsApi.
+ * @export
+ * @interface PermissionsApiApiPermissionManagementPermissionsPutRequest
+ */
+export interface PermissionsApiApiPermissionManagementPermissionsPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof PermissionsApiApiPermissionManagementPermissionsPut
+     */
+    readonly providerName?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof PermissionsApiApiPermissionManagementPermissionsPut
+     */
+    readonly providerKey?: string
+
+    /**
+     * 
+     * @type {UpdatePermissionsDto}
+     * @memberof PermissionsApiApiPermissionManagementPermissionsPut
+     */
+    readonly body?: UpdatePermissionsDto
+}
 
 /**
  * PermissionsApi - object-oriented interface
@@ -14644,27 +16079,24 @@ export const PermissionsApiFactory = function (configuration?: Configuration, ba
 export class PermissionsApi extends BaseAPI {
     /**
      * 
-     * @param {string} [providerName] 
-     * @param {string} [providerKey] 
+     * @param {PermissionsApiApiPermissionManagementPermissionsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionsApi
      */
-    public apiPermissionManagementPermissionsGet(providerName?: string, providerKey?: string, options?: AxiosRequestConfig) {
-        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsGet(providerName, providerKey, options).then((request) => request(this.axios, this.basePath));
+    public apiPermissionManagementPermissionsGet(requestParameters: PermissionsApiApiPermissionManagementPermissionsGetRequest = {}, options?: AxiosRequestConfig) {
+        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsGet(requestParameters.providerName, requestParameters.providerKey, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [providerName] 
-     * @param {string} [providerKey] 
-     * @param {UpdatePermissionsDto} [body] 
+     * @param {PermissionsApiApiPermissionManagementPermissionsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionsApi
      */
-    public apiPermissionManagementPermissionsPut(providerName?: string, providerKey?: string, body?: UpdatePermissionsDto, options?: AxiosRequestConfig) {
-        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsPut(providerName, providerKey, body, options).then((request) => request(this.axios, this.basePath));
+    public apiPermissionManagementPermissionsPut(requestParameters: PermissionsApiApiPermissionManagementPermissionsPutRequest = {}, options?: AxiosRequestConfig) {
+        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14833,32 +16265,60 @@ export const ProfileApiFactory = function (configuration?: Configuration, basePa
     return {
         /**
          * 
-         * @param {ChangePasswordInput} [body] 
+         * @param {ProfileApiApiAccountMyProfileChangePasswordPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountMyProfileChangePasswordPost(body?: ChangePasswordInput, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAccountMyProfileChangePasswordPost(body, options).then((request) => request(axios, basePath));
+        apiAccountMyProfileChangePasswordPost(requestParameters: ProfileApiApiAccountMyProfileChangePasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAccountMyProfileChangePasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountMyProfileGet(options?: any): AxiosPromise<ProfileDto> {
+        apiAccountMyProfileGet(options?: AxiosRequestConfig): AxiosPromise<ProfileDto> {
             return localVarFp.apiAccountMyProfileGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UpdateProfileDto} [body] 
+         * @param {ProfileApiApiAccountMyProfilePutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountMyProfilePut(body?: UpdateProfileDto, options?: any): AxiosPromise<ProfileDto> {
-            return localVarFp.apiAccountMyProfilePut(body, options).then((request) => request(axios, basePath));
+        apiAccountMyProfilePut(requestParameters: ProfileApiApiAccountMyProfilePutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ProfileDto> {
+            return localVarFp.apiAccountMyProfilePut(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAccountMyProfileChangePasswordPost operation in ProfileApi.
+ * @export
+ * @interface ProfileApiApiAccountMyProfileChangePasswordPostRequest
+ */
+export interface ProfileApiApiAccountMyProfileChangePasswordPostRequest {
+    /**
+     * 
+     * @type {ChangePasswordInput}
+     * @memberof ProfileApiApiAccountMyProfileChangePasswordPost
+     */
+    readonly body?: ChangePasswordInput
+}
+
+/**
+ * Request parameters for apiAccountMyProfilePut operation in ProfileApi.
+ * @export
+ * @interface ProfileApiApiAccountMyProfilePutRequest
+ */
+export interface ProfileApiApiAccountMyProfilePutRequest {
+    /**
+     * 
+     * @type {UpdateProfileDto}
+     * @memberof ProfileApiApiAccountMyProfilePut
+     */
+    readonly body?: UpdateProfileDto
+}
 
 /**
  * ProfileApi - object-oriented interface
@@ -14869,13 +16329,13 @@ export const ProfileApiFactory = function (configuration?: Configuration, basePa
 export class ProfileApi extends BaseAPI {
     /**
      * 
-     * @param {ChangePasswordInput} [body] 
+     * @param {ProfileApiApiAccountMyProfileChangePasswordPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public apiAccountMyProfileChangePasswordPost(body?: ChangePasswordInput, options?: AxiosRequestConfig) {
-        return ProfileApiFp(this.configuration).apiAccountMyProfileChangePasswordPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountMyProfileChangePasswordPost(requestParameters: ProfileApiApiAccountMyProfileChangePasswordPostRequest = {}, options?: AxiosRequestConfig) {
+        return ProfileApiFp(this.configuration).apiAccountMyProfileChangePasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -14890,13 +16350,13 @@ export class ProfileApi extends BaseAPI {
 
     /**
      * 
-     * @param {UpdateProfileDto} [body] 
+     * @param {ProfileApiApiAccountMyProfilePutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    public apiAccountMyProfilePut(body?: UpdateProfileDto, options?: AxiosRequestConfig) {
-        return ProfileApiFp(this.configuration).apiAccountMyProfilePut(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountMyProfilePut(requestParameters: ProfileApiApiAccountMyProfilePutRequest = {}, options?: AxiosRequestConfig) {
+        return ProfileApiFp(this.configuration).apiAccountMyProfilePut(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15042,27 +16502,73 @@ export const PuupeeApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          * 
-         * @param {string} [appName] 
-         * @param {number} [afterVersion] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {PuupeeApiApiAppPuupeePullGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppPuupeePullGet(appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<PuupeeDtoPagedResultDto> {
-            return localVarFp.apiAppPuupeePullGet(appName, afterVersion, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppPuupeePullGet(requestParameters: PuupeeApiApiAppPuupeePullGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<PuupeeDtoPagedResultDto> {
+            return localVarFp.apiAppPuupeePullGet(requestParameters.appName, requestParameters.afterVersion, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrUpdatePuupeeDto} [body] 
+         * @param {PuupeeApiApiAppPuupeePushPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppPuupeePushPost(body?: CreateOrUpdatePuupeeDto, options?: any): AxiosPromise<PuupeeDto> {
-            return localVarFp.apiAppPuupeePushPost(body, options).then((request) => request(axios, basePath));
+        apiAppPuupeePushPost(requestParameters: PuupeeApiApiAppPuupeePushPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<PuupeeDto> {
+            return localVarFp.apiAppPuupeePushPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppPuupeePullGet operation in PuupeeApi.
+ * @export
+ * @interface PuupeeApiApiAppPuupeePullGetRequest
+ */
+export interface PuupeeApiApiAppPuupeePullGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof PuupeeApiApiAppPuupeePullGet
+     */
+    readonly appName?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof PuupeeApiApiAppPuupeePullGet
+     */
+    readonly afterVersion?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof PuupeeApiApiAppPuupeePullGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof PuupeeApiApiAppPuupeePullGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppPuupeePushPost operation in PuupeeApi.
+ * @export
+ * @interface PuupeeApiApiAppPuupeePushPostRequest
+ */
+export interface PuupeeApiApiAppPuupeePushPostRequest {
+    /**
+     * 
+     * @type {CreateOrUpdatePuupeeDto}
+     * @memberof PuupeeApiApiAppPuupeePushPost
+     */
+    readonly body?: CreateOrUpdatePuupeeDto
+}
 
 /**
  * PuupeeApi - object-oriented interface
@@ -15073,27 +16579,24 @@ export const PuupeeApiFactory = function (configuration?: Configuration, basePat
 export class PuupeeApi extends BaseAPI {
     /**
      * 
-     * @param {string} [appName] 
-     * @param {number} [afterVersion] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {PuupeeApiApiAppPuupeePullGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PuupeeApi
      */
-    public apiAppPuupeePullGet(appName?: string, afterVersion?: number, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return PuupeeApiFp(this.configuration).apiAppPuupeePullGet(appName, afterVersion, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppPuupeePullGet(requestParameters: PuupeeApiApiAppPuupeePullGetRequest = {}, options?: AxiosRequestConfig) {
+        return PuupeeApiFp(this.configuration).apiAppPuupeePullGet(requestParameters.appName, requestParameters.afterVersion, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrUpdatePuupeeDto} [body] 
+     * @param {PuupeeApiApiAppPuupeePushPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PuupeeApi
      */
-    public apiAppPuupeePushPost(body?: CreateOrUpdatePuupeeDto, options?: AxiosRequestConfig) {
-        return PuupeeApiFp(this.configuration).apiAppPuupeePushPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppPuupeePushPost(requestParameters: PuupeeApiApiAppPuupeePushPostRequest = {}, options?: AxiosRequestConfig) {
+        return PuupeeApiFp(this.configuration).apiAppPuupeePushPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15430,60 +16933,154 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesAllGet(options?: any): AxiosPromise<IdentityRoleDtoListResultDto> {
+        apiIdentityRolesAllGet(options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDtoListResultDto> {
             return localVarFp.apiIdentityRolesAllGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [filter] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {RoleApiApiIdentityRolesGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<IdentityRoleDtoPagedResultDto> {
-            return localVarFp.apiIdentityRolesGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiIdentityRolesGet(requestParameters: RoleApiApiIdentityRolesGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDtoPagedResultDto> {
+            return localVarFp.apiIdentityRolesGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {RoleApiApiIdentityRolesIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiIdentityRolesIdDelete(id, options).then((request) => request(axios, basePath));
+        apiIdentityRolesIdDelete(requestParameters: RoleApiApiIdentityRolesIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiIdentityRolesIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {RoleApiApiIdentityRolesIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesIdGet(id: string, options?: any): AxiosPromise<IdentityRoleDto> {
-            return localVarFp.apiIdentityRolesIdGet(id, options).then((request) => request(axios, basePath));
+        apiIdentityRolesIdGet(requestParameters: RoleApiApiIdentityRolesIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDto> {
+            return localVarFp.apiIdentityRolesIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {IdentityRoleUpdateDto} [body] 
+         * @param {RoleApiApiIdentityRolesIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesIdPut(id: string, body?: IdentityRoleUpdateDto, options?: any): AxiosPromise<IdentityRoleDto> {
-            return localVarFp.apiIdentityRolesIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiIdentityRolesIdPut(requestParameters: RoleApiApiIdentityRolesIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDto> {
+            return localVarFp.apiIdentityRolesIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {IdentityRoleCreateDto} [body] 
+         * @param {RoleApiApiIdentityRolesPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesPost(body?: IdentityRoleCreateDto, options?: any): AxiosPromise<IdentityRoleDto> {
-            return localVarFp.apiIdentityRolesPost(body, options).then((request) => request(axios, basePath));
+        apiIdentityRolesPost(requestParameters: RoleApiApiIdentityRolesPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDto> {
+            return localVarFp.apiIdentityRolesPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiIdentityRolesGet operation in RoleApi.
+ * @export
+ * @interface RoleApiApiIdentityRolesGetRequest
+ */
+export interface RoleApiApiIdentityRolesGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof RoleApiApiIdentityRolesGet
+     */
+    readonly filter?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof RoleApiApiIdentityRolesGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof RoleApiApiIdentityRolesGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof RoleApiApiIdentityRolesGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiIdentityRolesIdDelete operation in RoleApi.
+ * @export
+ * @interface RoleApiApiIdentityRolesIdDeleteRequest
+ */
+export interface RoleApiApiIdentityRolesIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof RoleApiApiIdentityRolesIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityRolesIdGet operation in RoleApi.
+ * @export
+ * @interface RoleApiApiIdentityRolesIdGetRequest
+ */
+export interface RoleApiApiIdentityRolesIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof RoleApiApiIdentityRolesIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityRolesIdPut operation in RoleApi.
+ * @export
+ * @interface RoleApiApiIdentityRolesIdPutRequest
+ */
+export interface RoleApiApiIdentityRolesIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof RoleApiApiIdentityRolesIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {IdentityRoleUpdateDto}
+     * @memberof RoleApiApiIdentityRolesIdPut
+     */
+    readonly body?: IdentityRoleUpdateDto
+}
+
+/**
+ * Request parameters for apiIdentityRolesPost operation in RoleApi.
+ * @export
+ * @interface RoleApiApiIdentityRolesPostRequest
+ */
+export interface RoleApiApiIdentityRolesPostRequest {
+    /**
+     * 
+     * @type {IdentityRoleCreateDto}
+     * @memberof RoleApiApiIdentityRolesPost
+     */
+    readonly body?: IdentityRoleCreateDto
+}
 
 /**
  * RoleApi - object-oriented interface
@@ -15504,61 +17101,57 @@ export class RoleApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} [filter] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {RoleApiApiIdentityRolesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public apiIdentityRolesGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityRolesGet(requestParameters: RoleApiApiIdentityRolesGetRequest = {}, options?: AxiosRequestConfig) {
+        return RoleApiFp(this.configuration).apiIdentityRolesGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {RoleApiApiIdentityRolesIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public apiIdentityRolesIdDelete(id: string, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityRolesIdDelete(requestParameters: RoleApiApiIdentityRolesIdDeleteRequest, options?: AxiosRequestConfig) {
+        return RoleApiFp(this.configuration).apiIdentityRolesIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {RoleApiApiIdentityRolesIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public apiIdentityRolesIdGet(id: string, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityRolesIdGet(requestParameters: RoleApiApiIdentityRolesIdGetRequest, options?: AxiosRequestConfig) {
+        return RoleApiFp(this.configuration).apiIdentityRolesIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {IdentityRoleUpdateDto} [body] 
+     * @param {RoleApiApiIdentityRolesIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public apiIdentityRolesIdPut(id: string, body?: IdentityRoleUpdateDto, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityRolesIdPut(requestParameters: RoleApiApiIdentityRolesIdPutRequest, options?: AxiosRequestConfig) {
+        return RoleApiFp(this.configuration).apiIdentityRolesIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {IdentityRoleCreateDto} [body] 
+     * @param {RoleApiApiIdentityRolesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public apiIdentityRolesPost(body?: IdentityRoleCreateDto, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityRolesPost(requestParameters: RoleApiApiIdentityRolesPostRequest = {}, options?: AxiosRequestConfig) {
+        return RoleApiFp(this.configuration).apiIdentityRolesPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15683,20 +17276,34 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSettingsGet(options?: any): AxiosPromise<SettingsDto> {
+        apiAppSettingsGet(options?: AxiosRequestConfig): AxiosPromise<SettingsDto> {
             return localVarFp.apiAppSettingsGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {SettingsDto} [body] 
+         * @param {SettingsApiApiAppSettingsSetPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSettingsSetPost(body?: SettingsDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppSettingsSetPost(body, options).then((request) => request(axios, basePath));
+        apiAppSettingsSetPost(requestParameters: SettingsApiApiAppSettingsSetPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppSettingsSetPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppSettingsSetPost operation in SettingsApi.
+ * @export
+ * @interface SettingsApiApiAppSettingsSetPostRequest
+ */
+export interface SettingsApiApiAppSettingsSetPostRequest {
+    /**
+     * 
+     * @type {SettingsDto}
+     * @memberof SettingsApiApiAppSettingsSetPost
+     */
+    readonly body?: SettingsDto
+}
 
 /**
  * SettingsApi - object-oriented interface
@@ -15717,13 +17324,13 @@ export class SettingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {SettingsDto} [body] 
+     * @param {SettingsApiApiAppSettingsSetPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SettingsApi
      */
-    public apiAppSettingsSetPost(body?: SettingsDto, options?: AxiosRequestConfig) {
-        return SettingsApiFp(this.configuration).apiAppSettingsSetPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSettingsSetPost(requestParameters: SettingsApiApiAppSettingsSetPostRequest = {}, options?: AxiosRequestConfig) {
+        return SettingsApiFp(this.configuration).apiAppSettingsSetPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15963,45 +17570,119 @@ export const SimpleDataApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {string} [collection] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {SimpleDataApiApiAppSimpleDataGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSimpleDataGet(collection?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<SimpleDataDtoPagedResultDto> {
-            return localVarFp.apiAppSimpleDataGet(collection, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiAppSimpleDataGet(requestParameters: SimpleDataApiApiAppSimpleDataGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SimpleDataDtoPagedResultDto> {
+            return localVarFp.apiAppSimpleDataGet(requestParameters.collection, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {SimpleDataApiApiAppSimpleDataIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSimpleDataIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppSimpleDataIdDelete(id, options).then((request) => request(axios, basePath));
+        apiAppSimpleDataIdDelete(requestParameters: SimpleDataApiApiAppSimpleDataIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppSimpleDataIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {SimpleDataApiApiAppSimpleDataIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSimpleDataIdGet(id: string, options?: any): AxiosPromise<SimpleDataDto> {
-            return localVarFp.apiAppSimpleDataIdGet(id, options).then((request) => request(axios, basePath));
+        apiAppSimpleDataIdGet(requestParameters: SimpleDataApiApiAppSimpleDataIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<SimpleDataDto> {
+            return localVarFp.apiAppSimpleDataIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {SimpleDataDto} [body] 
+         * @param {SimpleDataApiApiAppSimpleDataSavePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSimpleDataSavePost(body?: SimpleDataDto, options?: any): AxiosPromise<SimpleDataDto> {
-            return localVarFp.apiAppSimpleDataSavePost(body, options).then((request) => request(axios, basePath));
+        apiAppSimpleDataSavePost(requestParameters: SimpleDataApiApiAppSimpleDataSavePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SimpleDataDto> {
+            return localVarFp.apiAppSimpleDataSavePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppSimpleDataGet operation in SimpleDataApi.
+ * @export
+ * @interface SimpleDataApiApiAppSimpleDataGetRequest
+ */
+export interface SimpleDataApiApiAppSimpleDataGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof SimpleDataApiApiAppSimpleDataGet
+     */
+    readonly collection?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof SimpleDataApiApiAppSimpleDataGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof SimpleDataApiApiAppSimpleDataGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof SimpleDataApiApiAppSimpleDataGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiAppSimpleDataIdDelete operation in SimpleDataApi.
+ * @export
+ * @interface SimpleDataApiApiAppSimpleDataIdDeleteRequest
+ */
+export interface SimpleDataApiApiAppSimpleDataIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof SimpleDataApiApiAppSimpleDataIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppSimpleDataIdGet operation in SimpleDataApi.
+ * @export
+ * @interface SimpleDataApiApiAppSimpleDataIdGetRequest
+ */
+export interface SimpleDataApiApiAppSimpleDataIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof SimpleDataApiApiAppSimpleDataIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppSimpleDataSavePost operation in SimpleDataApi.
+ * @export
+ * @interface SimpleDataApiApiAppSimpleDataSavePostRequest
+ */
+export interface SimpleDataApiApiAppSimpleDataSavePostRequest {
+    /**
+     * 
+     * @type {SimpleDataDto}
+     * @memberof SimpleDataApiApiAppSimpleDataSavePost
+     */
+    readonly body?: SimpleDataDto
+}
 
 /**
  * SimpleDataApi - object-oriented interface
@@ -16012,49 +17693,46 @@ export const SimpleDataApiFactory = function (configuration?: Configuration, bas
 export class SimpleDataApi extends BaseAPI {
     /**
      * 
-     * @param {string} [collection] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {SimpleDataApiApiAppSimpleDataGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimpleDataApi
      */
-    public apiAppSimpleDataGet(collection?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return SimpleDataApiFp(this.configuration).apiAppSimpleDataGet(collection, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSimpleDataGet(requestParameters: SimpleDataApiApiAppSimpleDataGetRequest = {}, options?: AxiosRequestConfig) {
+        return SimpleDataApiFp(this.configuration).apiAppSimpleDataGet(requestParameters.collection, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {SimpleDataApiApiAppSimpleDataIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimpleDataApi
      */
-    public apiAppSimpleDataIdDelete(id: string, options?: AxiosRequestConfig) {
-        return SimpleDataApiFp(this.configuration).apiAppSimpleDataIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSimpleDataIdDelete(requestParameters: SimpleDataApiApiAppSimpleDataIdDeleteRequest, options?: AxiosRequestConfig) {
+        return SimpleDataApiFp(this.configuration).apiAppSimpleDataIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {SimpleDataApiApiAppSimpleDataIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimpleDataApi
      */
-    public apiAppSimpleDataIdGet(id: string, options?: AxiosRequestConfig) {
-        return SimpleDataApiFp(this.configuration).apiAppSimpleDataIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSimpleDataIdGet(requestParameters: SimpleDataApiApiAppSimpleDataIdGetRequest, options?: AxiosRequestConfig) {
+        return SimpleDataApiFp(this.configuration).apiAppSimpleDataIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {SimpleDataDto} [body] 
+     * @param {SimpleDataApiApiAppSimpleDataSavePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimpleDataApi
      */
-    public apiAppSimpleDataSavePost(body?: SimpleDataDto, options?: AxiosRequestConfig) {
-        return SimpleDataApiFp(this.configuration).apiAppSimpleDataSavePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSimpleDataSavePost(requestParameters: SimpleDataApiApiAppSimpleDataSavePostRequest = {}, options?: AxiosRequestConfig) {
+        return SimpleDataApiFp(this.configuration).apiAppSimpleDataSavePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16285,43 +17963,105 @@ export const StorageObjectApiFactory = function (configuration?: Configuration, 
     return {
         /**
          * 
-         * @param {string} [key] 
+         * @param {StorageObjectApiApiAppStorageObjectFileGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppStorageObjectFileGet(key?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppStorageObjectFileGet(key, options).then((request) => request(axios, basePath));
+        apiAppStorageObjectFileGet(requestParameters: StorageObjectApiApiAppStorageObjectFileGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppStorageObjectFileGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [rapidCode] 
-         * @param {string} [key] 
+         * @param {StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppStorageObjectFileOrCredentialsGet(rapidCode?: string, key?: string, options?: any): AxiosPromise<StorageObjectOrCredentialsDto> {
-            return localVarFp.apiAppStorageObjectFileOrCredentialsGet(rapidCode, key, options).then((request) => request(axios, basePath));
+        apiAppStorageObjectFileOrCredentialsGet(requestParameters: StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<StorageObjectOrCredentialsDto> {
+            return localVarFp.apiAppStorageObjectFileOrCredentialsGet(requestParameters.rapidCode, requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppStorageObjectPreSignUrlPost(key?: string, options?: any): AxiosPromise<string> {
-            return localVarFp.apiAppStorageObjectPreSignUrlPost(key, options).then((request) => request(axios, basePath));
+        apiAppStorageObjectPreSignUrlPost(requestParameters: StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<string> {
+            return localVarFp.apiAppStorageObjectPreSignUrlPost(requestParameters.key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [key] 
+         * @param {StorageObjectApiApiAppStorageObjectThumbGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppStorageObjectThumbGet(key?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppStorageObjectThumbGet(key, options).then((request) => request(axios, basePath));
+        apiAppStorageObjectThumbGet(requestParameters: StorageObjectApiApiAppStorageObjectThumbGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppStorageObjectThumbGet(requestParameters.key, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppStorageObjectFileGet operation in StorageObjectApi.
+ * @export
+ * @interface StorageObjectApiApiAppStorageObjectFileGetRequest
+ */
+export interface StorageObjectApiApiAppStorageObjectFileGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof StorageObjectApiApiAppStorageObjectFileGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppStorageObjectFileOrCredentialsGet operation in StorageObjectApi.
+ * @export
+ * @interface StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest
+ */
+export interface StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof StorageObjectApiApiAppStorageObjectFileOrCredentialsGet
+     */
+    readonly rapidCode?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof StorageObjectApiApiAppStorageObjectFileOrCredentialsGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppStorageObjectPreSignUrlPost operation in StorageObjectApi.
+ * @export
+ * @interface StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest
+ */
+export interface StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof StorageObjectApiApiAppStorageObjectPreSignUrlPost
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppStorageObjectThumbGet operation in StorageObjectApi.
+ * @export
+ * @interface StorageObjectApiApiAppStorageObjectThumbGetRequest
+ */
+export interface StorageObjectApiApiAppStorageObjectThumbGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof StorageObjectApiApiAppStorageObjectThumbGet
+     */
+    readonly key?: string
+}
 
 /**
  * StorageObjectApi - object-oriented interface
@@ -16332,47 +18072,46 @@ export const StorageObjectApiFactory = function (configuration?: Configuration, 
 export class StorageObjectApi extends BaseAPI {
     /**
      * 
-     * @param {string} [key] 
+     * @param {StorageObjectApiApiAppStorageObjectFileGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StorageObjectApi
      */
-    public apiAppStorageObjectFileGet(key?: string, options?: AxiosRequestConfig) {
-        return StorageObjectApiFp(this.configuration).apiAppStorageObjectFileGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppStorageObjectFileGet(requestParameters: StorageObjectApiApiAppStorageObjectFileGetRequest = {}, options?: AxiosRequestConfig) {
+        return StorageObjectApiFp(this.configuration).apiAppStorageObjectFileGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [rapidCode] 
-     * @param {string} [key] 
+     * @param {StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StorageObjectApi
      */
-    public apiAppStorageObjectFileOrCredentialsGet(rapidCode?: string, key?: string, options?: AxiosRequestConfig) {
-        return StorageObjectApiFp(this.configuration).apiAppStorageObjectFileOrCredentialsGet(rapidCode, key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppStorageObjectFileOrCredentialsGet(requestParameters: StorageObjectApiApiAppStorageObjectFileOrCredentialsGetRequest = {}, options?: AxiosRequestConfig) {
+        return StorageObjectApiFp(this.configuration).apiAppStorageObjectFileOrCredentialsGet(requestParameters.rapidCode, requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StorageObjectApi
      */
-    public apiAppStorageObjectPreSignUrlPost(key?: string, options?: AxiosRequestConfig) {
-        return StorageObjectApiFp(this.configuration).apiAppStorageObjectPreSignUrlPost(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppStorageObjectPreSignUrlPost(requestParameters: StorageObjectApiApiAppStorageObjectPreSignUrlPostRequest = {}, options?: AxiosRequestConfig) {
+        return StorageObjectApiFp(this.configuration).apiAppStorageObjectPreSignUrlPost(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [key] 
+     * @param {StorageObjectApiApiAppStorageObjectThumbGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StorageObjectApi
      */
-    public apiAppStorageObjectThumbGet(key?: string, options?: AxiosRequestConfig) {
-        return StorageObjectApiFp(this.configuration).apiAppStorageObjectThumbGet(key, options).then((request) => request(this.axios, this.basePath));
+    public apiAppStorageObjectThumbGet(requestParameters: StorageObjectApiApiAppStorageObjectThumbGetRequest = {}, options?: AxiosRequestConfig) {
+        return StorageObjectApiFp(this.configuration).apiAppStorageObjectThumbGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16594,42 +18333,98 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {Anv2} [body] 
+         * @param {SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(axios, basePath));
+        apiAppSubscriptionAppleNotificationsPost(requestParameters: SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppSubscriptionAppleNotificationsPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [appId] 
+         * @param {SubscriptionApiApiAppSubscriptionGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionGet(appId?: string, options?: any): AxiosPromise<SubscriptionDto> {
-            return localVarFp.apiAppSubscriptionGet(appId, options).then((request) => request(axios, basePath));
+        apiAppSubscriptionGet(requestParameters: SubscriptionApiApiAppSubscriptionGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SubscriptionDto> {
+            return localVarFp.apiAppSubscriptionGet(requestParameters.appId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {SubscriptionApiApiAppSubscriptionOrderPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: any): AxiosPromise<SubscriptionOrderDto> {
-            return localVarFp.apiAppSubscriptionOrderPost(body, options).then((request) => request(axios, basePath));
+        apiAppSubscriptionOrderPost(requestParameters: SubscriptionApiApiAppSubscriptionOrderPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SubscriptionOrderDto> {
+            return localVarFp.apiAppSubscriptionOrderPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {VerifyReceiptDto} [body] 
+         * @param {SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: any): AxiosPromise<VerifyReceiptResult> {
-            return localVarFp.apiAppSubscriptionVerifyReceiptPost(body, options).then((request) => request(axios, basePath));
+        apiAppSubscriptionVerifyReceiptPost(requestParameters: SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<VerifyReceiptResult> {
+            return localVarFp.apiAppSubscriptionVerifyReceiptPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppSubscriptionAppleNotificationsPost operation in SubscriptionApi.
+ * @export
+ * @interface SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest
+ */
+export interface SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest {
+    /**
+     * 
+     * @type {Anv2}
+     * @memberof SubscriptionApiApiAppSubscriptionAppleNotificationsPost
+     */
+    readonly body?: Anv2
+}
+
+/**
+ * Request parameters for apiAppSubscriptionGet operation in SubscriptionApi.
+ * @export
+ * @interface SubscriptionApiApiAppSubscriptionGetRequest
+ */
+export interface SubscriptionApiApiAppSubscriptionGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionApiApiAppSubscriptionGet
+     */
+    readonly appId?: string
+}
+
+/**
+ * Request parameters for apiAppSubscriptionOrderPost operation in SubscriptionApi.
+ * @export
+ * @interface SubscriptionApiApiAppSubscriptionOrderPostRequest
+ */
+export interface SubscriptionApiApiAppSubscriptionOrderPostRequest {
+    /**
+     * 
+     * @type {CreateOrGetSubscriptionOrderDto}
+     * @memberof SubscriptionApiApiAppSubscriptionOrderPost
+     */
+    readonly body?: CreateOrGetSubscriptionOrderDto
+}
+
+/**
+ * Request parameters for apiAppSubscriptionVerifyReceiptPost operation in SubscriptionApi.
+ * @export
+ * @interface SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest
+ */
+export interface SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest {
+    /**
+     * 
+     * @type {VerifyReceiptDto}
+     * @memberof SubscriptionApiApiAppSubscriptionVerifyReceiptPost
+     */
+    readonly body?: VerifyReceiptDto
+}
 
 /**
  * SubscriptionApi - object-oriented interface
@@ -16640,46 +18435,46 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
 export class SubscriptionApi extends BaseAPI {
     /**
      * 
-     * @param {Anv2} [body] 
+     * @param {SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSubscriptionAppleNotificationsPost(requestParameters: SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest = {}, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [appId] 
+     * @param {SubscriptionApiApiAppSubscriptionGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionGet(appId?: string, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionGet(appId, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSubscriptionGet(requestParameters: SubscriptionApiApiAppSubscriptionGetRequest = {}, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionGet(requestParameters.appId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {CreateOrGetSubscriptionOrderDto} [body] 
+     * @param {SubscriptionApiApiAppSubscriptionOrderPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionOrderPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSubscriptionOrderPost(requestParameters: SubscriptionApiApiAppSubscriptionOrderPostRequest = {}, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionOrderPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {VerifyReceiptDto} [body] 
+     * @param {SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionApi
      */
-    public apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyReceiptPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppSubscriptionVerifyReceiptPost(requestParameters: SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest = {}, options?: AxiosRequestConfig) {
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyReceiptPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16799,7 +18594,7 @@ export const SyncStateApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSyncStateGet(options?: any): AxiosPromise<SyncStateDto> {
+        apiAppSyncStateGet(options?: AxiosRequestConfig): AxiosPromise<SyncStateDto> {
             return localVarFp.apiAppSyncStateGet(options).then((request) => request(axios, basePath));
         },
         /**
@@ -16807,7 +18602,7 @@ export const SyncStateApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSyncStatePuupeeChangedEtoPost(options?: any): AxiosPromise<PuupeeChangedEto> {
+        apiAppSyncStatePuupeeChangedEtoPost(options?: AxiosRequestConfig): AxiosPromise<PuupeeChangedEto> {
             return localVarFp.apiAppSyncStatePuupeeChangedEtoPost(options).then((request) => request(axios, basePath));
         },
     };
@@ -17276,83 +19071,225 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
     return {
         /**
          * 
-         * @param {string} [filter] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {TenantApiApiMultiTenancyTenantsGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<TenantDtoPagedResultDto> {
-            return localVarFp.apiMultiTenancyTenantsGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsGet(requestParameters: TenantApiApiMultiTenancyTenantsGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<TenantDtoPagedResultDto> {
+            return localVarFp.apiMultiTenancyTenantsGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdDefaultConnectionStringDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringDelete(id, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdDefaultConnectionStringDelete(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdDefaultConnectionStringGet(id: string, options?: any): AxiosPromise<string> {
-            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringGet(id, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdDefaultConnectionStringGet(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest, options?: AxiosRequestConfig): AxiosPromise<string> {
+            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {string} [defaultConnectionString] 
+         * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdDefaultConnectionStringPut(id: string, defaultConnectionString?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringPut(id, defaultConnectionString, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdDefaultConnectionStringPut(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiMultiTenancyTenantsIdDefaultConnectionStringPut(requestParameters.id, requestParameters.defaultConnectionString, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {TenantApiApiMultiTenancyTenantsIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiMultiTenancyTenantsIdDelete(id, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdDelete(requestParameters: TenantApiApiMultiTenancyTenantsIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiMultiTenancyTenantsIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {TenantApiApiMultiTenancyTenantsIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdGet(id: string, options?: any): AxiosPromise<TenantDto> {
-            return localVarFp.apiMultiTenancyTenantsIdGet(id, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdGet(requestParameters: TenantApiApiMultiTenancyTenantsIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<TenantDto> {
+            return localVarFp.apiMultiTenancyTenantsIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {TenantUpdateDto} [body] 
+         * @param {TenantApiApiMultiTenancyTenantsIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdPut(id: string, body?: TenantUpdateDto, options?: any): AxiosPromise<TenantDto> {
-            return localVarFp.apiMultiTenancyTenantsIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsIdPut(requestParameters: TenantApiApiMultiTenancyTenantsIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<TenantDto> {
+            return localVarFp.apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {TenantCreateDto} [body] 
+         * @param {TenantApiApiMultiTenancyTenantsPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsPost(body?: TenantCreateDto, options?: any): AxiosPromise<TenantDto> {
-            return localVarFp.apiMultiTenancyTenantsPost(body, options).then((request) => request(axios, basePath));
+        apiMultiTenancyTenantsPost(requestParameters: TenantApiApiMultiTenancyTenantsPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<TenantDto> {
+            return localVarFp.apiMultiTenancyTenantsPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiMultiTenancyTenantsGet operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsGetRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsGet
+     */
+    readonly filter?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof TenantApiApiMultiTenancyTenantsGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof TenantApiApiMultiTenancyTenantsGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdDefaultConnectionStringDelete operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdDefaultConnectionStringGet operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdDefaultConnectionStringPut operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPut
+     */
+    readonly defaultConnectionString?: string
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdDelete operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdDeleteRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdGet operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdGetRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsIdPut operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsIdPutRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof TenantApiApiMultiTenancyTenantsIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {TenantUpdateDto}
+     * @memberof TenantApiApiMultiTenancyTenantsIdPut
+     */
+    readonly body?: TenantUpdateDto
+}
+
+/**
+ * Request parameters for apiMultiTenancyTenantsPost operation in TenantApi.
+ * @export
+ * @interface TenantApiApiMultiTenancyTenantsPostRequest
+ */
+export interface TenantApiApiMultiTenancyTenantsPostRequest {
+    /**
+     * 
+     * @type {TenantCreateDto}
+     * @memberof TenantApiApiMultiTenancyTenantsPost
+     */
+    readonly body?: TenantCreateDto
+}
 
 /**
  * TenantApi - object-oriented interface
@@ -17363,95 +19300,90 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
 export class TenantApi extends BaseAPI {
     /**
      * 
-     * @param {string} [filter] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {TenantApiApiMultiTenancyTenantsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsGet(requestParameters: TenantApiApiMultiTenancyTenantsGetRequest = {}, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdDefaultConnectionStringDelete(id: string, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdDefaultConnectionStringDelete(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringDeleteRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdDefaultConnectionStringGet(id: string, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdDefaultConnectionStringGet(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringGetRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {string} [defaultConnectionString] 
+     * @param {TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdDefaultConnectionStringPut(id: string, defaultConnectionString?: string, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringPut(id, defaultConnectionString, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdDefaultConnectionStringPut(requestParameters: TenantApiApiMultiTenancyTenantsIdDefaultConnectionStringPutRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDefaultConnectionStringPut(requestParameters.id, requestParameters.defaultConnectionString, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {TenantApiApiMultiTenancyTenantsIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdDelete(id: string, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdDelete(requestParameters: TenantApiApiMultiTenancyTenantsIdDeleteRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {TenantApiApiMultiTenancyTenantsIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdGet(id: string, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdGet(requestParameters: TenantApiApiMultiTenancyTenantsIdGetRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {TenantUpdateDto} [body] 
+     * @param {TenantApiApiMultiTenancyTenantsIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsIdPut(id: string, body?: TenantUpdateDto, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsIdPut(requestParameters: TenantApiApiMultiTenancyTenantsIdPutRequest, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {TenantCreateDto} [body] 
+     * @param {TenantApiApiMultiTenancyTenantsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TenantApi
      */
-    public apiMultiTenancyTenantsPost(body?: TenantCreateDto, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiMultiTenancyTenantsPost(requestParameters: TenantApiApiMultiTenancyTenantsPostRequest = {}, options?: AxiosRequestConfig) {
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -17529,7 +19461,7 @@ export const TestApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTestDatetimeGet(options?: any): AxiosPromise<TestDateTime> {
+        apiTestDatetimeGet(options?: AxiosRequestConfig): AxiosPromise<TestDateTime> {
             return localVarFp.apiTestDatetimeGet(options).then((request) => request(axios, basePath));
         },
     };
@@ -18079,97 +20011,253 @@ export const UserApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersAssignableRolesGet(options?: any): AxiosPromise<IdentityRoleDtoListResultDto> {
+        apiIdentityUsersAssignableRolesGet(options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDtoListResultDto> {
             return localVarFp.apiIdentityUsersAssignableRolesGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} email 
+         * @param {UserApiApiIdentityUsersByEmailEmailGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersByEmailEmailGet(email: string, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersByEmailEmailGet(email, options).then((request) => request(axios, basePath));
+        apiIdentityUsersByEmailEmailGet(requestParameters: UserApiApiIdentityUsersByEmailEmailGetRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiIdentityUsersByEmailEmailGet(requestParameters.email, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} userName 
+         * @param {UserApiApiIdentityUsersByUsernameUserNameGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersByUsernameUserNameGet(userName: string, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersByUsernameUserNameGet(userName, options).then((request) => request(axios, basePath));
+        apiIdentityUsersByUsernameUserNameGet(requestParameters: UserApiApiIdentityUsersByUsernameUserNameGetRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiIdentityUsersByUsernameUserNameGet(requestParameters.userName, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [filter] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {UserApiApiIdentityUsersGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<IdentityUserDtoPagedResultDto> {
-            return localVarFp.apiIdentityUsersGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiIdentityUsersGet(requestParameters: UserApiApiIdentityUsersGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDtoPagedResultDto> {
+            return localVarFp.apiIdentityUsersGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {UserApiApiIdentityUsersIdDeleteRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdDelete(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiIdentityUsersIdDelete(id, options).then((request) => request(axios, basePath));
+        apiIdentityUsersIdDelete(requestParameters: UserApiApiIdentityUsersIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiIdentityUsersIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {UserApiApiIdentityUsersIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdGet(id: string, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersIdGet(id, options).then((request) => request(axios, basePath));
+        apiIdentityUsersIdGet(requestParameters: UserApiApiIdentityUsersIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiIdentityUsersIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {IdentityUserUpdateDto} [body] 
+         * @param {UserApiApiIdentityUsersIdPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdPut(id: string, body?: IdentityUserUpdateDto, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersIdPut(id, body, options).then((request) => request(axios, basePath));
+        apiIdentityUsersIdPut(requestParameters: UserApiApiIdentityUsersIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiIdentityUsersIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {UserApiApiIdentityUsersIdRolesGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdRolesGet(id: string, options?: any): AxiosPromise<IdentityRoleDtoListResultDto> {
-            return localVarFp.apiIdentityUsersIdRolesGet(id, options).then((request) => request(axios, basePath));
+        apiIdentityUsersIdRolesGet(requestParameters: UserApiApiIdentityUsersIdRolesGetRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDtoListResultDto> {
+            return localVarFp.apiIdentityUsersIdRolesGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
-         * @param {IdentityUserUpdateRolesDto} [body] 
+         * @param {UserApiApiIdentityUsersIdRolesPutRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdRolesPut(id: string, body?: IdentityUserUpdateRolesDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiIdentityUsersIdRolesPut(id, body, options).then((request) => request(axios, basePath));
+        apiIdentityUsersIdRolesPut(requestParameters: UserApiApiIdentityUsersIdRolesPutRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {IdentityUserCreateDto} [body] 
+         * @param {UserApiApiIdentityUsersPostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersPost(body?: IdentityUserCreateDto, options?: any): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersPost(body, options).then((request) => request(axios, basePath));
+        apiIdentityUsersPost(requestParameters: UserApiApiIdentityUsersPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
+            return localVarFp.apiIdentityUsersPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiIdentityUsersByEmailEmailGet operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersByEmailEmailGetRequest
+ */
+export interface UserApiApiIdentityUsersByEmailEmailGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersByEmailEmailGet
+     */
+    readonly email: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersByUsernameUserNameGet operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersByUsernameUserNameGetRequest
+ */
+export interface UserApiApiIdentityUsersByUsernameUserNameGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersByUsernameUserNameGet
+     */
+    readonly userName: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersGet operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersGetRequest
+ */
+export interface UserApiApiIdentityUsersGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersGet
+     */
+    readonly filter?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof UserApiApiIdentityUsersGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof UserApiApiIdentityUsersGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiIdentityUsersIdDelete operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersIdDeleteRequest
+ */
+export interface UserApiApiIdentityUsersIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersIdGet operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersIdGetRequest
+ */
+export interface UserApiApiIdentityUsersIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersIdPut operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersIdPutRequest
+ */
+export interface UserApiApiIdentityUsersIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {IdentityUserUpdateDto}
+     * @memberof UserApiApiIdentityUsersIdPut
+     */
+    readonly body?: IdentityUserUpdateDto
+}
+
+/**
+ * Request parameters for apiIdentityUsersIdRolesGet operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersIdRolesGetRequest
+ */
+export interface UserApiApiIdentityUsersIdRolesGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersIdRolesGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersIdRolesPut operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersIdRolesPutRequest
+ */
+export interface UserApiApiIdentityUsersIdRolesPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserApiApiIdentityUsersIdRolesPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {IdentityUserUpdateRolesDto}
+     * @memberof UserApiApiIdentityUsersIdRolesPut
+     */
+    readonly body?: IdentityUserUpdateRolesDto
+}
+
+/**
+ * Request parameters for apiIdentityUsersPost operation in UserApi.
+ * @export
+ * @interface UserApiApiIdentityUsersPostRequest
+ */
+export interface UserApiApiIdentityUsersPostRequest {
+    /**
+     * 
+     * @type {IdentityUserCreateDto}
+     * @memberof UserApiApiIdentityUsersPost
+     */
+    readonly body?: IdentityUserCreateDto
+}
 
 /**
  * UserApi - object-oriented interface
@@ -18190,106 +20278,101 @@ export class UserApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} email 
+     * @param {UserApiApiIdentityUsersByEmailEmailGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersByEmailEmailGet(email: string, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersByEmailEmailGet(email, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersByEmailEmailGet(requestParameters: UserApiApiIdentityUsersByEmailEmailGetRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersByEmailEmailGet(requestParameters.email, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} userName 
+     * @param {UserApiApiIdentityUsersByUsernameUserNameGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersByUsernameUserNameGet(userName: string, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersByUsernameUserNameGet(userName, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersByUsernameUserNameGet(requestParameters: UserApiApiIdentityUsersByUsernameUserNameGetRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersByUsernameUserNameGet(requestParameters.userName, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [filter] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {UserApiApiIdentityUsersGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersGet(requestParameters: UserApiApiIdentityUsersGetRequest = {}, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {UserApiApiIdentityUsersIdDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersIdDelete(id: string, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdDelete(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersIdDelete(requestParameters: UserApiApiIdentityUsersIdDeleteRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {UserApiApiIdentityUsersIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersIdGet(id: string, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersIdGet(requestParameters: UserApiApiIdentityUsersIdGetRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {IdentityUserUpdateDto} [body] 
+     * @param {UserApiApiIdentityUsersIdPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersIdPut(id: string, body?: IdentityUserUpdateDto, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersIdPut(requestParameters: UserApiApiIdentityUsersIdPutRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {UserApiApiIdentityUsersIdRolesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersIdRolesGet(id: string, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdRolesGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersIdRolesGet(requestParameters: UserApiApiIdentityUsersIdRolesGetRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersIdRolesGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
-     * @param {IdentityUserUpdateRolesDto} [body] 
+     * @param {UserApiApiIdentityUsersIdRolesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersIdRolesPut(id: string, body?: IdentityUserUpdateRolesDto, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdRolesPut(id, body, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersIdRolesPut(requestParameters: UserApiApiIdentityUsersIdRolesPutRequest, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {IdentityUserCreateDto} [body] 
+     * @param {UserApiApiIdentityUsersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    public apiIdentityUsersPost(body?: IdentityUserCreateDto, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersPost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersPost(requestParameters: UserApiApiIdentityUsersPostRequest = {}, options?: AxiosRequestConfig) {
+        return UserApiFp(this.configuration).apiIdentityUsersPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -18530,45 +20613,119 @@ export const UserLookupApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {string} userName 
+         * @param {UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersLookupByUsernameUserNameGet(userName: string, options?: any): AxiosPromise<UserData> {
-            return localVarFp.apiIdentityUsersLookupByUsernameUserNameGet(userName, options).then((request) => request(axios, basePath));
+        apiIdentityUsersLookupByUsernameUserNameGet(requestParameters: UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest, options?: AxiosRequestConfig): AxiosPromise<UserData> {
+            return localVarFp.apiIdentityUsersLookupByUsernameUserNameGet(requestParameters.userName, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [filter] 
+         * @param {UserLookupApiApiIdentityUsersLookupCountGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersLookupCountGet(filter?: string, options?: any): AxiosPromise<number> {
-            return localVarFp.apiIdentityUsersLookupCountGet(filter, options).then((request) => request(axios, basePath));
+        apiIdentityUsersLookupCountGet(requestParameters: UserLookupApiApiIdentityUsersLookupCountGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<number> {
+            return localVarFp.apiIdentityUsersLookupCountGet(requestParameters.filter, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} id 
+         * @param {UserLookupApiApiIdentityUsersLookupIdGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersLookupIdGet(id: string, options?: any): AxiosPromise<UserData> {
-            return localVarFp.apiIdentityUsersLookupIdGet(id, options).then((request) => request(axios, basePath));
+        apiIdentityUsersLookupIdGet(requestParameters: UserLookupApiApiIdentityUsersLookupIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<UserData> {
+            return localVarFp.apiIdentityUsersLookupIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [filter] 
-         * @param {string} [sorting] 
-         * @param {number} [skipCount] 
-         * @param {number} [maxResultCount] 
+         * @param {UserLookupApiApiIdentityUsersLookupSearchGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersLookupSearchGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: any): AxiosPromise<UserDataListResultDto> {
-            return localVarFp.apiIdentityUsersLookupSearchGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(axios, basePath));
+        apiIdentityUsersLookupSearchGet(requestParameters: UserLookupApiApiIdentityUsersLookupSearchGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<UserDataListResultDto> {
+            return localVarFp.apiIdentityUsersLookupSearchGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiIdentityUsersLookupByUsernameUserNameGet operation in UserLookupApi.
+ * @export
+ * @interface UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest
+ */
+export interface UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserLookupApiApiIdentityUsersLookupByUsernameUserNameGet
+     */
+    readonly userName: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersLookupCountGet operation in UserLookupApi.
+ * @export
+ * @interface UserLookupApiApiIdentityUsersLookupCountGetRequest
+ */
+export interface UserLookupApiApiIdentityUsersLookupCountGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserLookupApiApiIdentityUsersLookupCountGet
+     */
+    readonly filter?: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersLookupIdGet operation in UserLookupApi.
+ * @export
+ * @interface UserLookupApiApiIdentityUsersLookupIdGetRequest
+ */
+export interface UserLookupApiApiIdentityUsersLookupIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserLookupApiApiIdentityUsersLookupIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiIdentityUsersLookupSearchGet operation in UserLookupApi.
+ * @export
+ * @interface UserLookupApiApiIdentityUsersLookupSearchGetRequest
+ */
+export interface UserLookupApiApiIdentityUsersLookupSearchGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserLookupApiApiIdentityUsersLookupSearchGet
+     */
+    readonly filter?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof UserLookupApiApiIdentityUsersLookupSearchGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof UserLookupApiApiIdentityUsersLookupSearchGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof UserLookupApiApiIdentityUsersLookupSearchGet
+     */
+    readonly maxResultCount?: number
+}
 
 /**
  * UserLookupApi - object-oriented interface
@@ -18579,49 +20736,46 @@ export const UserLookupApiFactory = function (configuration?: Configuration, bas
 export class UserLookupApi extends BaseAPI {
     /**
      * 
-     * @param {string} userName 
+     * @param {UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLookupApi
      */
-    public apiIdentityUsersLookupByUsernameUserNameGet(userName: string, options?: AxiosRequestConfig) {
-        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupByUsernameUserNameGet(userName, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersLookupByUsernameUserNameGet(requestParameters: UserLookupApiApiIdentityUsersLookupByUsernameUserNameGetRequest, options?: AxiosRequestConfig) {
+        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupByUsernameUserNameGet(requestParameters.userName, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [filter] 
+     * @param {UserLookupApiApiIdentityUsersLookupCountGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLookupApi
      */
-    public apiIdentityUsersLookupCountGet(filter?: string, options?: AxiosRequestConfig) {
-        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupCountGet(filter, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersLookupCountGet(requestParameters: UserLookupApiApiIdentityUsersLookupCountGetRequest = {}, options?: AxiosRequestConfig) {
+        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupCountGet(requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} id 
+     * @param {UserLookupApiApiIdentityUsersLookupIdGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLookupApi
      */
-    public apiIdentityUsersLookupIdGet(id: string, options?: AxiosRequestConfig) {
-        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupIdGet(id, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersLookupIdGet(requestParameters: UserLookupApiApiIdentityUsersLookupIdGetRequest, options?: AxiosRequestConfig) {
+        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} [filter] 
-     * @param {string} [sorting] 
-     * @param {number} [skipCount] 
-     * @param {number} [maxResultCount] 
+     * @param {UserLookupApiApiIdentityUsersLookupSearchGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLookupApi
      */
-    public apiIdentityUsersLookupSearchGet(filter?: string, sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig) {
-        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupSearchGet(filter, sorting, skipCount, maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    public apiIdentityUsersLookupSearchGet(requestParameters: UserLookupApiApiIdentityUsersLookupSearchGetRequest = {}, options?: AxiosRequestConfig) {
+        return UserLookupApiFp(this.configuration).apiIdentityUsersLookupSearchGet(requestParameters.filter, requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -18699,7 +20853,7 @@ export const UserStorageApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppUserStorageGet(options?: any): AxiosPromise<UserStorageDto> {
+        apiAppUserStorageGet(options?: AxiosRequestConfig): AxiosPromise<UserStorageDto> {
             return localVarFp.apiAppUserStorageGet(options).then((request) => request(axios, basePath));
         },
     };
@@ -18799,15 +20953,29 @@ export const VerificationApiFactory = function (configuration?: Configuration, b
     return {
         /**
          * 
-         * @param {SendVerificationCodeDto} [body] 
+         * @param {VerificationApiApiAppVerificationSendCodePostRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppVerificationSendCodePost(body?: SendVerificationCodeDto, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAppVerificationSendCodePost(body, options).then((request) => request(axios, basePath));
+        apiAppVerificationSendCodePost(requestParameters: VerificationApiApiAppVerificationSendCodePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppVerificationSendCodePost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
     };
 };
+
+/**
+ * Request parameters for apiAppVerificationSendCodePost operation in VerificationApi.
+ * @export
+ * @interface VerificationApiApiAppVerificationSendCodePostRequest
+ */
+export interface VerificationApiApiAppVerificationSendCodePostRequest {
+    /**
+     * 
+     * @type {SendVerificationCodeDto}
+     * @memberof VerificationApiApiAppVerificationSendCodePost
+     */
+    readonly body?: SendVerificationCodeDto
+}
 
 /**
  * VerificationApi - object-oriented interface
@@ -18818,13 +20986,13 @@ export const VerificationApiFactory = function (configuration?: Configuration, b
 export class VerificationApi extends BaseAPI {
     /**
      * 
-     * @param {SendVerificationCodeDto} [body] 
+     * @param {VerificationApiApiAppVerificationSendCodePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof VerificationApi
      */
-    public apiAppVerificationSendCodePost(body?: SendVerificationCodeDto, options?: AxiosRequestConfig) {
-        return VerificationApiFp(this.configuration).apiAppVerificationSendCodePost(body, options).then((request) => request(this.axios, this.basePath));
+    public apiAppVerificationSendCodePost(requestParameters: VerificationApiApiAppVerificationSendCodePostRequest = {}, options?: AxiosRequestConfig) {
+        return VerificationApiFp(this.configuration).apiAppVerificationSendCodePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
