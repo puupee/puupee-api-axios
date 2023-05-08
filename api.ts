@@ -114,19 +114,6 @@ export interface ActionApiDescriptionModel {
 /**
  * 
  * @export
- * @interface Anv2
- */
-export interface Anv2 {
-    /**
-     * 
-     * @type {string}
-     * @memberof Anv2
-     */
-    'signedPayload'?: string;
-}
-/**
- * 
- * @export
  * @interface AppDto
  */
 export interface AppDto {
@@ -280,6 +267,12 @@ export interface AppDto {
      * @memberof AppDto
      */
     'subscriptionPlatforms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'specJsonSchema'?: string;
     /**
      * 
      * @type {Array<AppReleaseDto>}
@@ -650,6 +643,18 @@ export interface AppPricingItemDto {
      * @type {string}
      * @memberof AppPricingItemDto
      */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
+    'linkUrl'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppPricingItemDto
+     */
     'display'?: string;
     /**
      * 
@@ -857,6 +862,298 @@ export interface AppReleaseDtoPagedResultDto {
      * @memberof AppReleaseDtoPagedResultDto
      */
     'totalCount'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface AppRunDto
+ */
+export interface AppRunDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppRunDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunDto
+     */
+    'appName'?: string;
+    /**
+     * 
+     * @type {{ [key: string]: object | undefined; }}
+     * @memberof AppRunDto
+     */
+    'args'?: { [key: string]: object | undefined; };
+    /**
+     * 
+     * @type {{ [key: string]: object | undefined; }}
+     * @memberof AppRunDto
+     */
+    'envs'?: { [key: string]: object | undefined; };
+}
+/**
+ * 
+ * @export
+ * @interface AppRunRecordDto
+ */
+export interface AppRunRecordDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppRunRecordDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'appId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'appName'?: string;
+    /**
+     * 
+     * @type {{ [key: string]: object | undefined; }}
+     * @memberof AppRunRecordDto
+     */
+    'args'?: { [key: string]: object | undefined; };
+    /**
+     * 
+     * @type {{ [key: string]: object | undefined; }}
+     * @memberof AppRunRecordDto
+     */
+    'envs'?: { [key: string]: object | undefined; };
+    /**
+     * 
+     * @type {AppRunStatus}
+     * @memberof AppRunRecordDto
+     */
+    'status'?: AppRunStatus;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'result'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'finishAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'output'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AppRunRecordUpdateDto
+ */
+export interface AppRunRecordUpdateDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {AppRunStatus}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'status'?: AppRunStatus;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'result'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'finishAt'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'output'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AppRunStatus
+ */
+export interface AppRunStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunStatus
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunStatus
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -1210,6 +1507,12 @@ export interface AppWithUserDto {
     'subscriptionPlatforms'?: string;
     /**
      * 
+     * @type {string}
+     * @memberof AppWithUserDto
+     */
+    'specJsonSchema'?: string;
+    /**
+     * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppWithUserDto
      */
@@ -1261,6 +1564,86 @@ export interface AppWithUserDtoPagedResultDto {
 /**
  * 
  * @export
+ * @interface AppleNotificaionDto
+ */
+export interface AppleNotificaionDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AppleNotificaionDto
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleNotificaionDto
+     */
+    'signedPayload'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AppleVerifyRecceiptStatus
+ */
+export interface AppleVerifyRecceiptStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppleVerifyRecceiptStatus
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof AppleVerifyRecceiptStatus
+     */
+    'value'?: number;
+}
+/**
+ * 
+ * @export
  * @interface AppleVerifyReceiptResult
  */
 export interface AppleVerifyReceiptResult {
@@ -1278,10 +1661,10 @@ export interface AppleVerifyReceiptResult {
     'is_retryable'?: boolean;
     /**
      * 
-     * @type {number}
+     * @type {AppleVerifyRecceiptStatus}
      * @memberof AppleVerifyReceiptResult
      */
-    'status'?: number;
+    'status'?: AppleVerifyRecceiptStatus;
     /**
      * 
      * @type {Array<LatestReceiptInfo>}
@@ -1913,6 +2296,18 @@ export interface CreateOrGetSubscriptionOrderDto {
      * @memberof CreateOrGetSubscriptionOrderDto
      */
     'pricingId'?: string;
+    /**
+     * 
+     * @type {SubscriptionOrderType}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'type'?: SubscriptionOrderType;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrGetSubscriptionOrderDto
+     */
+    'productId'?: string;
 }
 /**
  * 
@@ -2016,6 +2411,12 @@ export interface CreateOrUpdateAppDto {
      * @memberof CreateOrUpdateAppDto
      */
     'subscriptionPlatforms'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'specJsonSchema'?: string;
     /**
      * 
      * @type {boolean}
@@ -2199,6 +2600,18 @@ export interface CreateOrUpdateAppPricingItemDto {
      * @memberof CreateOrUpdateAppPricingItemDto
      */
     'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppPricingItemDto
+     */
+    'linkUrl'?: string;
     /**
      * 
      * @type {string}
@@ -3977,6 +4390,266 @@ export interface IdentityRoleUpdateDto {
 /**
  * 
  * @export
+ * @interface IdentityUser
+ */
+export interface IdentityUser {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {{ [key: string]: object | undefined; }}
+     * @memberof IdentityUser
+     */
+    'extraProperties'?: { [key: string]: object | undefined; };
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'concurrencyStamp'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'userName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'normalizedUserName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'surname'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'email'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'normalizedEmail'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'emailConfirmed'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'passwordHash'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'securityStamp'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'isExternal'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'phoneNumber'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'phoneNumberConfirmed'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'isActive'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'twoFactorEnabled'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'lockoutEnd'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'lockoutEnabled'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentityUser
+     */
+    'accessFailedCount'?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof IdentityUser
+     */
+    'shouldChangePasswordOnNextLogin'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentityUser
+     */
+    'entityVersion'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUser
+     */
+    'lastPasswordChangeTime'?: string;
+    /**
+     * 
+     * @type {Array<IdentityUserRole>}
+     * @memberof IdentityUser
+     */
+    'roles'?: Array<IdentityUserRole>;
+    /**
+     * 
+     * @type {Array<IdentityUserClaim>}
+     * @memberof IdentityUser
+     */
+    'claims'?: Array<IdentityUserClaim>;
+    /**
+     * 
+     * @type {Array<IdentityUserLogin>}
+     * @memberof IdentityUser
+     */
+    'logins'?: Array<IdentityUserLogin>;
+    /**
+     * 
+     * @type {Array<IdentityUserToken>}
+     * @memberof IdentityUser
+     */
+    'tokens'?: Array<IdentityUserToken>;
+    /**
+     * 
+     * @type {Array<IdentityUserOrganizationUnit>}
+     * @memberof IdentityUser
+     */
+    'organizationUnits'?: Array<IdentityUserOrganizationUnit>;
+}
+/**
+ * 
+ * @export
+ * @interface IdentityUserClaim
+ */
+export interface IdentityUserClaim {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserClaim
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserClaim
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserClaim
+     */
+    'claimType'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserClaim
+     */
+    'claimValue'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserClaim
+     */
+    'userId'?: string;
+}
+/**
+ * 
+ * @export
  * @interface IdentityUserCreateDto
  */
 export interface IdentityUserCreateDto {
@@ -4173,6 +4846,12 @@ export interface IdentityUserDto {
      * @memberof IdentityUserDto
      */
     'concurrencyStamp'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof IdentityUserDto
+     */
+    'entityVersion'?: number;
 }
 /**
  * 
@@ -4192,6 +4871,142 @@ export interface IdentityUserDtoPagedResultDto {
      * @memberof IdentityUserDtoPagedResultDto
      */
     'totalCount'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface IdentityUserLogin
+ */
+export interface IdentityUserLogin {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserLogin
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserLogin
+     */
+    'userId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserLogin
+     */
+    'loginProvider'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserLogin
+     */
+    'providerKey'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserLogin
+     */
+    'providerDisplayName'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface IdentityUserOrganizationUnit
+ */
+export interface IdentityUserOrganizationUnit {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserOrganizationUnit
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserOrganizationUnit
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserOrganizationUnit
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserOrganizationUnit
+     */
+    'userId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserOrganizationUnit
+     */
+    'organizationUnitId'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface IdentityUserRole
+ */
+export interface IdentityUserRole {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserRole
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserRole
+     */
+    'userId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserRole
+     */
+    'roleId'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface IdentityUserToken
+ */
+export interface IdentityUserToken {
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserToken
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserToken
+     */
+    'userId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserToken
+     */
+    'loginProvider'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserToken
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof IdentityUserToken
+     */
+    'value'?: string;
 }
 /**
  * 
@@ -6681,6 +7496,12 @@ export interface SubscriptionOrderDto {
      * @memberof SubscriptionOrderDto
      */
     'pricingId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SubscriptionOrderDto
+     */
+    'productId'?: string;
 }
 /**
  * 
@@ -7425,25 +8246,25 @@ export interface VerifyReceiptDto {
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'receiptData'?: string;
+    'receiptData': string;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'platform'?: string;
+    'platform': string;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'deviceToken'?: string;
+    'deviceToken': string;
 }
 /**
  * 
@@ -7451,6 +8272,96 @@ export interface VerifyReceiptDto {
  * @interface VerifyReceiptResult
  */
 export interface VerifyReceiptResult {
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'creationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'creatorId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'lastModificationTime'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'lastModifierId'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof VerifyReceiptResult
+     */
+    'isDeleted'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'deleterId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'deletionTime'?: string;
+    /**
+     * 
+     * @type {IdentityUser}
+     * @memberof VerifyReceiptResult
+     */
+    'deleter'?: IdentityUser;
+    /**
+     * 
+     * @type {IdentityUser}
+     * @memberof VerifyReceiptResult
+     */
+    'creator'?: IdentityUser;
+    /**
+     * 
+     * @type {IdentityUser}
+     * @memberof VerifyReceiptResult
+     */
+    'lastModifier'?: IdentityUser;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'orderId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'receiptData'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'platform'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'deviceToken'?: string;
     /**
      * 
      * @type {boolean}
@@ -7469,6 +8380,18 @@ export interface VerifyReceiptResult {
      * @memberof VerifyReceiptResult
      */
     'message'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'resultData'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VerifyReceiptResult
+     */
+    'recordId'?: string;
     /**
      * 
      * @type {AppleVerifyReceiptResult}
@@ -8740,6 +9663,47 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
+         * @param {AppRunRecordUpdateDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppIdRunStatePut: async (id: string, body?: AppRunRecordUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppAppIdRunStatePut', 'id', id)
+            const localVarPath = `/api/app/app/{id}/run-state`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -8853,6 +9817,43 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {AppRunDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppRunPost: async (body?: AppRunDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/app/run`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9032,6 +10033,17 @@ export const AppApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
+         * @param {AppRunRecordUpdateDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppIdRunStatePut(id: string, body?: AppRunRecordUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdRunStatePut(id, body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -9059,6 +10071,16 @@ export const AppApiFp = function(configuration?: Configuration) {
          */
         async apiAppAppPublicGet(type?: string, developerAccount?: string, currentAppName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDtoPagedResultDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPublicGet(type, developerAccount, currentAppName, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {AppRunDto} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAppRunPost(body?: AppRunDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppRunPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -9151,6 +10173,15 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
         },
         /**
          * 
+         * @param {AppApiApiAppAppIdRunStatePutRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppIdRunStatePut(requestParameters: AppApiApiAppAppIdRunStatePutRequest, options?: AxiosRequestConfig): AxiosPromise<AppRunRecordDto> {
+            return localVarFp.apiAppAppIdRunStatePut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {AppApiApiAppAppIdWithUserGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -9175,6 +10206,15 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          */
         apiAppAppPublicGet(requestParameters: AppApiApiAppAppPublicGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDtoPagedResultDto> {
             return localVarFp.apiAppAppPublicGet(requestParameters.type, requestParameters.developerAccount, requestParameters.currentAppName, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {AppApiApiAppAppRunPostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAppRunPost(requestParameters: AppApiApiAppAppRunPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppRunRecordDto> {
+            return localVarFp.apiAppAppRunPost(requestParameters.body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9310,6 +10350,27 @@ export interface AppApiApiAppAppIdPutRequest {
 }
 
 /**
+ * Request parameters for apiAppAppIdRunStatePut operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppIdRunStatePutRequest
+ */
+export interface AppApiApiAppAppIdRunStatePutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdRunStatePut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {AppRunRecordUpdateDto}
+     * @memberof AppApiApiAppAppIdRunStatePut
+     */
+    readonly body?: AppRunRecordUpdateDto
+}
+
+/**
  * Request parameters for apiAppAppIdWithUserGet operation in AppApi.
  * @export
  * @interface AppApiApiAppAppIdWithUserGetRequest
@@ -9363,6 +10424,20 @@ export interface AppApiApiAppAppPublicGetRequest {
      * @memberof AppApiApiAppAppPublicGet
      */
     readonly currentAppName?: string
+}
+
+/**
+ * Request parameters for apiAppAppRunPost operation in AppApi.
+ * @export
+ * @interface AppApiApiAppAppRunPostRequest
+ */
+export interface AppApiApiAppAppRunPostRequest {
+    /**
+     * 
+     * @type {AppRunDto}
+     * @memberof AppApiApiAppAppRunPost
+     */
+    readonly body?: AppRunDto
 }
 
 /**
@@ -9496,6 +10571,17 @@ export class AppApi extends BaseAPI {
 
     /**
      * 
+     * @param {AppApiApiAppAppIdRunStatePutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppIdRunStatePut(requestParameters: AppApiApiAppAppIdRunStatePutRequest, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppIdRunStatePut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {AppApiApiAppAppIdWithUserGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -9525,6 +10611,17 @@ export class AppApi extends BaseAPI {
      */
     public apiAppAppPublicGet(requestParameters: AppApiApiAppAppPublicGetRequest = {}, options?: AxiosRequestConfig) {
         return AppApiFp(this.configuration).apiAppAppPublicGet(requestParameters.type, requestParameters.developerAccount, requestParameters.currentAppName, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {AppApiApiAppAppRunPostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AppApi
+     */
+    public apiAppAppRunPost(requestParameters: AppApiApiAppAppRunPostRequest = {}, options?: AxiosRequestConfig) {
+        return AppApiFp(this.configuration).apiAppAppRunPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -18154,11 +19251,11 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {Anv2} [body] 
+         * @param {AppleNotificaionDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionAppleNotificationsPost: async (body?: Anv2, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSubscriptionAppleNotificationsPost: async (body?: AppleNotificaionDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/subscription/apple-notifications`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -18313,11 +19410,11 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Anv2} [body] 
+         * @param {AppleNotificaionDto} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionAppleNotificationsPost(body?: Anv2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiAppSubscriptionAppleNotificationsPost(body?: AppleNotificaionDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(body, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -18408,10 +19505,10 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
 export interface SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest {
     /**
      * 
-     * @type {Anv2}
+     * @type {AppleNotificaionDto}
      * @memberof SubscriptionApiApiAppSubscriptionAppleNotificationsPost
      */
-    readonly body?: Anv2
+    readonly body?: AppleNotificaionDto
 }
 
 /**
