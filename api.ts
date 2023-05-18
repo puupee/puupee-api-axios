@@ -40,7 +40,7 @@ export interface AbpLoginResult {
      * @type {string}
      * @memberof AbpLoginResult
      */
-    'description'?: string;
+    'description'?: string | null;
 }
 
 
@@ -55,43 +55,43 @@ export interface ActionApiDescriptionModel {
      * @type {string}
      * @memberof ActionApiDescriptionModel
      */
-    'uniqueName'?: string;
+    'uniqueName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ActionApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ActionApiDescriptionModel
      */
-    'httpMethod'?: string;
+    'httpMethod'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ActionApiDescriptionModel
      */
-    'url'?: string;
+    'url'?: string | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof ActionApiDescriptionModel
      */
-    'supportedVersions'?: Array<string>;
+    'supportedVersions'?: Array<string> | null;
     /**
      * 
      * @type {Array<MethodParameterApiDescriptionModel>}
      * @memberof ActionApiDescriptionModel
      */
-    'parametersOnMethod'?: Array<MethodParameterApiDescriptionModel>;
+    'parametersOnMethod'?: Array<MethodParameterApiDescriptionModel> | null;
     /**
      * 
      * @type {Array<ParameterApiDescriptionModel>}
      * @memberof ActionApiDescriptionModel
      */
-    'parameters'?: Array<ParameterApiDescriptionModel>;
+    'parameters'?: Array<ParameterApiDescriptionModel> | null;
     /**
      * 
      * @type {ReturnValueApiDescriptionModel}
@@ -103,13 +103,13 @@ export interface ActionApiDescriptionModel {
      * @type {boolean}
      * @memberof ActionApiDescriptionModel
      */
-    'allowAnonymous'?: boolean;
+    'allowAnonymous'?: boolean | null;
     /**
      * 
      * @type {string}
      * @memberof ActionApiDescriptionModel
      */
-    'implementFrom'?: string;
+    'implementFrom'?: string | null;
 }
 /**
  * 
@@ -134,19 +134,19 @@ export interface AppDto {
      * @type {string}
      * @memberof AppDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -158,55 +158,55 @@ export interface AppDto {
      * @type {string}
      * @memberof AppDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'framework'?: string;
+    'framework'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'appType'?: string;
+    'appType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'icon'?: string;
+    'icon'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'homePage'?: string;
+    'homePage'?: string | null;
     /**
      * 
      * @type {number}
@@ -218,13 +218,13 @@ export interface AppDto {
      * @type {string}
      * @memberof AppDto
      */
-    'gitRepository'?: string;
+    'gitRepository'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'gitRepositoryType'?: string;
+    'gitRepositoryType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -242,43 +242,43 @@ export interface AppDto {
      * @type {string}
      * @memberof AppDto
      */
-    'webhookUrl'?: string;
+    'webhookUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'businessDomain'?: string;
+    'businessDomain'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'businessUrl'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AppDto
-     */
-    'subscriptionEnabled'?: boolean;
+    'businessUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'subscriptionPlatforms'?: string;
+    'subscriptionPlatforms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppDto
      */
-    'specJsonSchema'?: string;
+    'freePlatforms'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppDto
+     */
+    'specJsonSchema'?: string | null;
     /**
      * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppDto
      */
-    'latestReleases'?: Array<AppReleaseDto>;
+    'latestReleases'?: Array<AppReleaseDto> | null;
     /**
      * 
      * @type {IdentityUserDto}
@@ -290,13 +290,13 @@ export interface AppDto {
      * @type {Array<AppFeatureDto>}
      * @memberof AppDto
      */
-    'features'?: Array<AppFeatureDto>;
+    'features'?: Array<AppFeatureDto> | null;
     /**
      * 
      * @type {Array<AppSdkDto>}
      * @memberof AppDto
      */
-    'sdks'?: Array<AppSdkDto>;
+    'sdks'?: Array<AppSdkDto> | null;
 }
 /**
  * 
@@ -309,7 +309,7 @@ export interface AppDtoPagedResultDto {
      * @type {Array<AppDto>}
      * @memberof AppDtoPagedResultDto
      */
-    'items'?: Array<AppDto>;
+    'items'?: Array<AppDto> | null;
     /**
      * 
      * @type {number}
@@ -340,19 +340,19 @@ export interface AppFeatureDto {
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -364,43 +364,43 @@ export interface AppFeatureDto {
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'details'?: string;
+    'details'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppFeatureDto
      */
-    'screenshotKeys'?: string;
+    'screenshotKeys'?: string | null;
 }
 /**
  * 
@@ -425,19 +425,19 @@ export interface AppPricingDto {
      * @type {string}
      * @memberof AppPricingDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -449,37 +449,37 @@ export interface AppPricingDto {
      * @type {string}
      * @memberof AppPricingDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'naming'?: string;
+    'naming'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'monthProductId'?: string;
+    'monthProductId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'yearProductId'?: string;
+    'yearProductId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
@@ -497,25 +497,25 @@ export interface AppPricingDto {
      * @type {number}
      * @memberof AppPricingDto
      */
-    'monthDiscount'?: number;
+    'monthDiscount'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof AppPricingDto
      */
-    'monthDiscountPrice'?: number;
+    'monthDiscountPrice'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'monthDiscountStartAt'?: string;
+    'monthDiscountStartAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'monthDiscountEndAt'?: string;
+    'monthDiscountEndAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -527,25 +527,25 @@ export interface AppPricingDto {
      * @type {number}
      * @memberof AppPricingDto
      */
-    'yearDiscount'?: number;
+    'yearDiscount'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof AppPricingDto
      */
-    'yearDiscountPrice'?: number;
+    'yearDiscountPrice'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'yearDiscountStartAt'?: string;
+    'yearDiscountStartAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingDto
      */
-    'yearDiscountEndAt'?: string;
+    'yearDiscountEndAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -557,7 +557,7 @@ export interface AppPricingDto {
      * @type {Array<AppPricingItemDto>}
      * @memberof AppPricingDto
      */
-    'items'?: Array<AppPricingItemDto>;
+    'items'?: Array<AppPricingItemDto> | null;
 }
 /**
  * 
@@ -570,7 +570,7 @@ export interface AppPricingDtoPagedResultDto {
      * @type {Array<AppPricingDto>}
      * @memberof AppPricingDtoPagedResultDto
      */
-    'items'?: Array<AppPricingDto>;
+    'items'?: Array<AppPricingDto> | null;
     /**
      * 
      * @type {number}
@@ -601,19 +601,19 @@ export interface AppPricingItemDto {
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -625,43 +625,43 @@ export interface AppPricingItemDto {
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'linkUrl'?: string;
+    'linkUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppPricingItemDto
      */
-    'display'?: string;
+    'display'?: string | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof AppPricingItemDto
      */
-    'values'?: Array<string>;
+    'values'?: Array<string> | null;
     /**
      * 
      * @type {string}
@@ -710,19 +710,19 @@ export interface AppReleaseDto {
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -734,25 +734,25 @@ export interface AppReleaseDto {
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'version'?: string;
+    'version'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'versionName'?: string;
+    'versionName'?: string | null;
     /**
      * 
      * @type {number}
@@ -764,55 +764,55 @@ export interface AppReleaseDto {
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'notes'?: string;
+    'notes'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'platform'?: string;
+    'platform'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'key'?: string;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'rapidCode'?: string;
+    'rapidCode'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof AppReleaseDto
      */
-    'size'?: number;
+    'size'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'md5'?: string;
+    'md5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'sliceMd5'?: string;
+    'sliceMd5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'downloadUrl'?: string;
+    'downloadUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'productType'?: string;
+    'productType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -836,13 +836,13 @@ export interface AppReleaseDto {
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'channel'?: string;
+    'channel'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppReleaseDto
      */
-    'environment'?: string;
+    'environment'?: string | null;
 }
 /**
  * 
@@ -855,7 +855,7 @@ export interface AppReleaseDtoPagedResultDto {
      * @type {Array<AppReleaseDto>}
      * @memberof AppReleaseDtoPagedResultDto
      */
-    'items'?: Array<AppReleaseDto>;
+    'items'?: Array<AppReleaseDto> | null;
     /**
      * 
      * @type {number}
@@ -886,19 +886,19 @@ export interface AppRunDto {
      * @type {string}
      * @memberof AppRunDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -910,37 +910,37 @@ export interface AppRunDto {
      * @type {string}
      * @memberof AppRunDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunDto
      */
-    'appId'?: string;
+    'appId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunDto
      */
-    'appName'?: string;
+    'appName'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {any}
      * @memberof AppRunDto
      */
-    'args'?: { [key: string]: object | undefined; };
+    'args'?: any | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {any}
      * @memberof AppRunDto
      */
-    'envs'?: { [key: string]: object | undefined; };
+    'envs'?: any | null;
 }
 /**
  * 
@@ -965,19 +965,19 @@ export interface AppRunRecordDto {
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -989,13 +989,13 @@ export interface AppRunRecordDto {
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
@@ -1007,49 +1007,61 @@ export interface AppRunRecordDto {
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'appName'?: string;
+    'appName'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {any}
      * @memberof AppRunRecordDto
      */
-    'args'?: { [key: string]: object | undefined; };
+    'args'?: any | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {any}
      * @memberof AppRunRecordDto
      */
-    'envs'?: { [key: string]: object | undefined; };
-    /**
-     * 
-     * @type {AppRunStatus}
-     * @memberof AppRunRecordDto
-     */
-    'status'?: AppRunStatus;
+    'envs'?: any | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'result'?: string;
+    'status'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'error'?: string;
+    'result'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'finishAt'?: string;
+    'error'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordDto
      */
-    'output'?: string;
+    'finishAt'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'output'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'workerId'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordDto
+     */
+    'workerName'?: string | null;
 }
 /**
  * 
@@ -1074,19 +1086,19 @@ export interface AppRunRecordUpdateDto {
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1098,62 +1110,55 @@ export interface AppRunRecordUpdateDto {
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'deletionTime'?: string;
-    /**
-     * 
-     * @type {AppRunStatus}
-     * @memberof AppRunRecordUpdateDto
-     */
-    'status'?: AppRunStatus;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'result'?: string;
+    'status': string;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'error'?: string;
+    'result'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'finishAt'?: string;
+    'error'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppRunRecordUpdateDto
      */
-    'output'?: string;
-}
-/**
- * 
- * @export
- * @interface AppRunStatus
- */
-export interface AppRunStatus {
+    'finishAt'?: string | null;
     /**
      * 
      * @type {string}
-     * @memberof AppRunStatus
+     * @memberof AppRunRecordUpdateDto
      */
-    'name'?: string;
+    'output'?: string | null;
     /**
      * 
      * @type {string}
-     * @memberof AppRunStatus
+     * @memberof AppRunRecordUpdateDto
      */
-    'value'?: string;
+    'workerId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppRunRecordUpdateDto
+     */
+    'workerName': string;
 }
 /**
  * 
@@ -1178,19 +1183,19 @@ export interface AppSdkDto {
      * @type {string}
      * @memberof AppSdkDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1202,43 +1207,43 @@ export interface AppSdkDto {
      * @type {string}
      * @memberof AppSdkDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'privacy'?: string;
+    'privacy'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'privacyUrl'?: string;
+    'privacyUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppSdkDto
      */
-    'homePage'?: string;
+    'homePage'?: string | null;
 }
 /**
  * 
@@ -1251,7 +1256,7 @@ export interface AppTheme {
      * @type {string}
      * @memberof AppTheme
      */
-    'sourceColor'?: string;
+    'sourceColor'?: string | null;
     /**
      * 
      * @type {AppThemeMode}
@@ -1299,19 +1304,19 @@ export interface AppUserScoreDto {
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1323,19 +1328,19 @@ export interface AppUserScoreDto {
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'appId'?: string;
+    'appId'?: string | null;
     /**
      * 
      * @type {number}
@@ -1347,7 +1352,7 @@ export interface AppUserScoreDto {
      * @type {string}
      * @memberof AppUserScoreDto
      */
-    'comment'?: string;
+    'comment'?: string | null;
 }
 /**
  * 
@@ -1372,19 +1377,19 @@ export interface AppWithUserDto {
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1396,55 +1401,55 @@ export interface AppWithUserDto {
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'framework'?: string;
+    'framework'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'appType'?: string;
+    'appType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'icon'?: string;
+    'icon'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'homePage'?: string;
+    'homePage'?: string | null;
     /**
      * 
      * @type {number}
@@ -1456,13 +1461,13 @@ export interface AppWithUserDto {
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'gitRepository'?: string;
+    'gitRepository'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'gitRepositoryType'?: string;
+    'gitRepositoryType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1480,43 +1485,43 @@ export interface AppWithUserDto {
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'webhookUrl'?: string;
+    'webhookUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'businessDomain'?: string;
+    'businessDomain'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'businessUrl'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AppWithUserDto
-     */
-    'subscriptionEnabled'?: boolean;
+    'businessUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'subscriptionPlatforms'?: string;
+    'subscriptionPlatforms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppWithUserDto
      */
-    'specJsonSchema'?: string;
+    'freePlatforms'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AppWithUserDto
+     */
+    'specJsonSchema'?: string | null;
     /**
      * 
      * @type {Array<AppReleaseDto>}
      * @memberof AppWithUserDto
      */
-    'latestReleases'?: Array<AppReleaseDto>;
+    'latestReleases'?: Array<AppReleaseDto> | null;
     /**
      * 
      * @type {IdentityUserDto}
@@ -1528,13 +1533,13 @@ export interface AppWithUserDto {
      * @type {Array<AppFeatureDto>}
      * @memberof AppWithUserDto
      */
-    'features'?: Array<AppFeatureDto>;
+    'features'?: Array<AppFeatureDto> | null;
     /**
      * 
      * @type {Array<AppSdkDto>}
      * @memberof AppWithUserDto
      */
-    'sdks'?: Array<AppSdkDto>;
+    'sdks'?: Array<AppSdkDto> | null;
     /**
      * 
      * @type {boolean}
@@ -1553,7 +1558,7 @@ export interface AppWithUserDtoPagedResultDto {
      * @type {Array<AppWithUserDto>}
      * @memberof AppWithUserDtoPagedResultDto
      */
-    'items'?: Array<AppWithUserDto>;
+    'items'?: Array<AppWithUserDto> | null;
     /**
      * 
      * @type {number}
@@ -1584,19 +1589,19 @@ export interface AppleNotificaionDto {
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1608,19 +1613,19 @@ export interface AppleNotificaionDto {
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AppleNotificaionDto
      */
-    'signedPayload'?: string;
+    'signedPayload'?: string | null;
 }
 /**
  * 
@@ -1633,7 +1638,7 @@ export interface AppleVerifyRecceiptStatus {
      * @type {string}
      * @memberof AppleVerifyRecceiptStatus
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {number}
@@ -1652,7 +1657,7 @@ export interface AppleVerifyReceiptResult {
      * @type {string}
      * @memberof AppleVerifyReceiptResult
      */
-    'environment'?: string;
+    'environment'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1670,19 +1675,19 @@ export interface AppleVerifyReceiptResult {
      * @type {Array<LatestReceiptInfo>}
      * @memberof AppleVerifyReceiptResult
      */
-    'latest_receipt_info'?: Array<LatestReceiptInfo>;
+    'latest_receipt_info'?: Array<LatestReceiptInfo> | null;
     /**
      * 
      * @type {string}
      * @memberof AppleVerifyReceiptResult
      */
-    'latest_receipt'?: string;
+    'latest_receipt'?: string | null;
     /**
      * 
      * @type {Array<PendingRenewalInfo>}
      * @memberof AppleVerifyReceiptResult
      */
-    'pending_renewal_info'?: Array<PendingRenewalInfo>;
+    'pending_renewal_info'?: Array<PendingRenewalInfo> | null;
     /**
      * 
      * @type {Receipt}
@@ -1701,13 +1706,13 @@ export interface ApplicationApiDescriptionModel {
      * @type {{ [key: string]: ModuleApiDescriptionModel | undefined; }}
      * @memberof ApplicationApiDescriptionModel
      */
-    'modules'?: { [key: string]: ModuleApiDescriptionModel | undefined; };
+    'modules'?: { [key: string]: ModuleApiDescriptionModel | undefined; } | null;
     /**
      * 
      * @type {{ [key: string]: TypeApiDescriptionModel | undefined; }}
      * @memberof ApplicationApiDescriptionModel
      */
-    'types'?: { [key: string]: TypeApiDescriptionModel | undefined; };
+    'types'?: { [key: string]: TypeApiDescriptionModel | undefined; } | null;
 }
 /**
  * 
@@ -1720,7 +1725,7 @@ export interface ApplicationAuthConfigurationDto {
      * @type {{ [key: string]: boolean | undefined; }}
      * @memberof ApplicationAuthConfigurationDto
      */
-    'grantedPolicies'?: { [key: string]: boolean | undefined; };
+    'grantedPolicies'?: { [key: string]: boolean | undefined; } | null;
 }
 /**
  * 
@@ -1796,10 +1801,10 @@ export interface ApplicationConfigurationDto {
     'objectExtensions'?: ObjectExtensionsDto;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof ApplicationConfigurationDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -1812,7 +1817,7 @@ export interface ApplicationFeatureConfigurationDto {
      * @type {{ [key: string]: string | undefined; }}
      * @memberof ApplicationFeatureConfigurationDto
      */
-    'values'?: { [key: string]: string | undefined; };
+    'values'?: { [key: string]: string | undefined; } | null;
 }
 /**
  * 
@@ -1825,7 +1830,7 @@ export interface ApplicationGlobalFeatureConfigurationDto {
      * @type {Set<string>}
      * @memberof ApplicationGlobalFeatureConfigurationDto
      */
-    'enabledFeatures'?: Set<string>;
+    'enabledFeatures'?: Set<string> | null;
 }
 /**
  * 
@@ -1838,19 +1843,19 @@ export interface ApplicationLocalizationConfigurationDto {
      * @type {{ [key: string]: { [key: string]: string | undefined; } | undefined; }}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'values'?: { [key: string]: { [key: string]: string | undefined; } | undefined; };
+    'values'?: { [key: string]: { [key: string]: string | undefined; } | undefined; } | null;
     /**
      * 
      * @type {{ [key: string]: ApplicationLocalizationResourceDto | undefined; }}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'resources'?: { [key: string]: ApplicationLocalizationResourceDto | undefined; };
+    'resources'?: { [key: string]: ApplicationLocalizationResourceDto | undefined; } | null;
     /**
      * 
      * @type {Array<LanguageInfo>}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'languages'?: Array<LanguageInfo>;
+    'languages'?: Array<LanguageInfo> | null;
     /**
      * 
      * @type {CurrentCultureDto}
@@ -1862,19 +1867,19 @@ export interface ApplicationLocalizationConfigurationDto {
      * @type {string}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'defaultResourceName'?: string;
+    'defaultResourceName'?: string | null;
     /**
      * 
      * @type {{ [key: string]: Array<NameValue> | undefined; }}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'languagesMap'?: { [key: string]: Array<NameValue> | undefined; };
+    'languagesMap'?: { [key: string]: Array<NameValue> | undefined; } | null;
     /**
      * 
      * @type {{ [key: string]: Array<NameValue> | undefined; }}
      * @memberof ApplicationLocalizationConfigurationDto
      */
-    'languageFilesMap'?: { [key: string]: Array<NameValue> | undefined; };
+    'languageFilesMap'?: { [key: string]: Array<NameValue> | undefined; } | null;
 }
 /**
  * 
@@ -1887,7 +1892,7 @@ export interface ApplicationLocalizationDto {
      * @type {{ [key: string]: ApplicationLocalizationResourceDto | undefined; }}
      * @memberof ApplicationLocalizationDto
      */
-    'resources'?: { [key: string]: ApplicationLocalizationResourceDto | undefined; };
+    'resources'?: { [key: string]: ApplicationLocalizationResourceDto | undefined; } | null;
 }
 /**
  * 
@@ -1900,13 +1905,13 @@ export interface ApplicationLocalizationResourceDto {
      * @type {{ [key: string]: string | undefined; }}
      * @memberof ApplicationLocalizationResourceDto
      */
-    'texts'?: { [key: string]: string | undefined; };
+    'texts'?: { [key: string]: string | undefined; } | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof ApplicationLocalizationResourceDto
      */
-    'baseResources'?: Array<string>;
+    'baseResources'?: Array<string> | null;
 }
 /**
  * 
@@ -1919,7 +1924,20 @@ export interface ApplicationSettingConfigurationDto {
      * @type {{ [key: string]: string | undefined; }}
      * @memberof ApplicationSettingConfigurationDto
      */
-    'values'?: { [key: string]: string | undefined; };
+    'values'?: { [key: string]: string | undefined; } | null;
+}
+/**
+ * 
+ * @export
+ * @interface AvatarDto
+ */
+export interface AvatarDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AvatarDto
+     */
+    'key'?: string | null;
 }
 /**
  * 
@@ -1932,13 +1950,13 @@ export interface BindDeviceDto {
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'token'?: string;
+    'token'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'tpnsToken'?: string;
+    'tpnsToken'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -1950,25 +1968,25 @@ export interface BindDeviceDto {
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'platform'?: string;
+    'platform'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'brand'?: string;
+    'brand'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BindDeviceDto
      */
-    'systemVersion'?: string;
+    'systemVersion'?: string | null;
 }
 /**
  * 
@@ -1987,19 +2005,19 @@ export interface BooleanKeyValue {
      * @type {number}
      * @memberof BooleanKeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof BooleanKeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BooleanKeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -2018,7 +2036,7 @@ export interface BooleanSetKeyValueDto {
      * @type {number}
      * @memberof BooleanSetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -2031,7 +2049,7 @@ export interface ChangePasswordInput {
      * @type {string}
      * @memberof ChangePasswordInput
      */
-    'currentPassword'?: string;
+    'currentPassword'?: string | null;
     /**
      * 
      * @type {string}
@@ -2050,7 +2068,7 @@ export interface ClockDto {
      * @type {string}
      * @memberof ClockDto
      */
-    'kind'?: string;
+    'kind'?: string | null;
 }
 /**
  * 
@@ -2063,13 +2081,13 @@ export interface ControllerApiDescriptionModel {
      * @type {string}
      * @memberof ControllerApiDescriptionModel
      */
-    'controllerName'?: string;
+    'controllerName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ControllerApiDescriptionModel
      */
-    'controllerGroupName'?: string;
+    'controllerGroupName'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -2087,25 +2105,25 @@ export interface ControllerApiDescriptionModel {
      * @type {string}
      * @memberof ControllerApiDescriptionModel
      */
-    'apiVersion'?: string;
+    'apiVersion'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ControllerApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {Array<ControllerInterfaceApiDescriptionModel>}
      * @memberof ControllerApiDescriptionModel
      */
-    'interfaces'?: Array<ControllerInterfaceApiDescriptionModel>;
+    'interfaces'?: Array<ControllerInterfaceApiDescriptionModel> | null;
     /**
      * 
      * @type {{ [key: string]: ActionApiDescriptionModel | undefined; }}
      * @memberof ControllerApiDescriptionModel
      */
-    'actions'?: { [key: string]: ActionApiDescriptionModel | undefined; };
+    'actions'?: { [key: string]: ActionApiDescriptionModel | undefined; } | null;
 }
 /**
  * 
@@ -2118,19 +2136,32 @@ export interface ControllerInterfaceApiDescriptionModel {
      * @type {string}
      * @memberof ControllerInterfaceApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ControllerInterfaceApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {Array<InterfaceMethodApiDescriptionModel>}
      * @memberof ControllerInterfaceApiDescriptionModel
      */
-    'methods'?: Array<InterfaceMethodApiDescriptionModel>;
+    'methods'?: Array<InterfaceMethodApiDescriptionModel> | null;
+}
+/**
+ * 
+ * @export
+ * @interface CreateAvatarDto
+ */
+export interface CreateAvatarDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateAvatarDto
+     */
+    'key'?: string | null;
 }
 /**
  * 
@@ -2143,7 +2174,7 @@ export interface CreateMessageTemplateReleaseDto {
      * @type {string}
      * @memberof CreateMessageTemplateReleaseDto
      */
-    'content'?: string;
+    'content'?: string | null;
     /**
      * 
      * @type {string}
@@ -2162,73 +2193,73 @@ export interface CreateOpenIddictApplicationDto {
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'displayNames'?: string;
+    'displayNames'?: string | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'permissions'?: Array<string>;
+    'permissions'?: Array<string> | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'postLogoutRedirectUris'?: string;
+    'postLogoutRedirectUris'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'properties'?: string;
+    'properties'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'redirectUris'?: string;
+    'redirectUris'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'requirements'?: string;
+    'requirements'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'clientUri'?: string;
+    'clientUri'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'logoUri'?: string;
+    'logoUri'?: string | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'grantTypes'?: Array<string>;
+    'grantTypes'?: Array<string> | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof CreateOpenIddictApplicationDto
      */
-    'scopes'?: Array<string>;
+    'scopes'?: Array<string> | null;
 }
 /**
  * 
@@ -2253,19 +2284,19 @@ export interface CreateOrGetSubscriptionOrderDto {
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -2277,13 +2308,13 @@ export interface CreateOrGetSubscriptionOrderDto {
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
@@ -2307,7 +2338,7 @@ export interface CreateOrGetSubscriptionOrderDto {
      * @type {string}
      * @memberof CreateOrGetSubscriptionOrderDto
      */
-    'productId'?: string;
+    'productId'?: string | null;
 }
 /**
  * 
@@ -2320,43 +2351,43 @@ export interface CreateOrUpdateAppDto {
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'framework'?: string;
+    'framework'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'appType'?: string;
+    'appType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'icon'?: string;
+    'icon'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'homePage'?: string;
+    'homePage'?: string | null;
     /**
      * 
      * @type {number}
@@ -2368,13 +2399,13 @@ export interface CreateOrUpdateAppDto {
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'gitRepository'?: string;
+    'gitRepository'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'gitRepositoryType'?: string;
+    'gitRepositoryType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -2386,37 +2417,49 @@ export interface CreateOrUpdateAppDto {
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'webhookUrl'?: string;
+    'webhookUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'businessDomain'?: string;
+    'businessDomain'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'businessUrl'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof CreateOrUpdateAppDto
-     */
-    'subscriptionEnabled'?: boolean;
+    'businessUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'subscriptionPlatforms'?: string;
+    'subscriptionPlatforms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppDto
      */
-    'specJsonSchema'?: string;
+    'freePlatforms'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'specJsonSchema'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'defaultStorageSize'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateOrUpdateAppDto
+     */
+    'defaultSingleFileMaxSize'?: number;
     /**
      * 
      * @type {boolean}
@@ -2428,13 +2471,13 @@ export interface CreateOrUpdateAppDto {
      * @type {Array<AppFeatureDto>}
      * @memberof CreateOrUpdateAppDto
      */
-    'features'?: Array<AppFeatureDto>;
+    'features'?: Array<AppFeatureDto> | null;
     /**
      * 
      * @type {Array<AppSdkDto>}
      * @memberof CreateOrUpdateAppDto
      */
-    'sdks'?: Array<AppSdkDto>;
+    'sdks'?: Array<AppSdkDto> | null;
     /**
      * 
      * @type {CreateOpenIddictApplicationDto}
@@ -2453,31 +2496,31 @@ export interface CreateOrUpdateAppFeatureDto {
      * @type {string}
      * @memberof CreateOrUpdateAppFeatureDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppFeatureDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppFeatureDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppFeatureDto
      */
-    'details'?: string;
+    'details'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppFeatureDto
      */
-    'screenshotKeys'?: string;
+    'screenshotKeys'?: string | null;
 }
 /**
  * 
@@ -2490,25 +2533,25 @@ export interface CreateOrUpdateAppPricingDto {
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'naming'?: string;
+    'naming'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'monthProductId'?: string;
+    'monthProductId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'yearProductId'?: string;
+    'yearProductId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
@@ -2526,25 +2569,25 @@ export interface CreateOrUpdateAppPricingDto {
      * @type {number}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'monthDiscount'?: number;
+    'monthDiscount'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'monthDiscountPrice'?: number;
+    'monthDiscountPrice'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'monthDiscountStartAt'?: string;
+    'monthDiscountStartAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'monthDiscountEndAt'?: string;
+    'monthDiscountEndAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -2556,25 +2599,25 @@ export interface CreateOrUpdateAppPricingDto {
      * @type {number}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'yearDiscount'?: number;
+    'yearDiscount'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'yearDiscountPrice'?: number;
+    'yearDiscountPrice'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'yearDiscountStartAt'?: string;
+    'yearDiscountStartAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'yearDiscountEndAt'?: string;
+    'yearDiscountEndAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -2586,7 +2629,7 @@ export interface CreateOrUpdateAppPricingDto {
      * @type {Array<CreateOrUpdateAppPricingItemDto>}
      * @memberof CreateOrUpdateAppPricingDto
      */
-    'items'?: Array<CreateOrUpdateAppPricingItemDto>;
+    'items'?: Array<CreateOrUpdateAppPricingItemDto> | null;
 }
 /**
  * 
@@ -2599,25 +2642,25 @@ export interface CreateOrUpdateAppPricingItemDto {
      * @type {string}
      * @memberof CreateOrUpdateAppPricingItemDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingItemDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingItemDto
      */
-    'linkUrl'?: string;
+    'linkUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppPricingItemDto
      */
-    'display'?: string;
+    'display'?: string | null;
     /**
      * 
      * @type {string}
@@ -2654,13 +2697,13 @@ export interface CreateOrUpdateAppReleaseDto {
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'version'?: string;
+    'version'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'versionName'?: string;
+    'versionName'?: string | null;
     /**
      * 
      * @type {number}
@@ -2672,49 +2715,49 @@ export interface CreateOrUpdateAppReleaseDto {
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'notes'?: string;
+    'notes'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'platform'?: string;
+    'platform'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'key'?: string;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'rapidCode'?: string;
+    'rapidCode'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'size'?: number;
+    'size'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'md5'?: string;
+    'md5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'sliceMd5'?: string;
+    'sliceMd5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'productType'?: string;
+    'productType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -2738,13 +2781,13 @@ export interface CreateOrUpdateAppReleaseDto {
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'channel'?: string;
+    'channel'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppReleaseDto
      */
-    'environment'?: string;
+    'environment'?: string | null;
 }
 /**
  * 
@@ -2757,31 +2800,31 @@ export interface CreateOrUpdateAppSdkDto {
      * @type {string}
      * @memberof CreateOrUpdateAppSdkDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppSdkDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppSdkDto
      */
-    'privacy'?: string;
+    'privacy'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppSdkDto
      */
-    'privacyUrl'?: string;
+    'privacyUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateAppSdkDto
      */
-    'homePage'?: string;
+    'homePage'?: string | null;
 }
 /**
  * 
@@ -2794,7 +2837,7 @@ export interface CreateOrUpdateAppUserScoreDto {
      * @type {string}
      * @memberof CreateOrUpdateAppUserScoreDto
      */
-    'appId'?: string;
+    'appId'?: string | null;
     /**
      * 
      * @type {number}
@@ -2806,7 +2849,7 @@ export interface CreateOrUpdateAppUserScoreDto {
      * @type {string}
      * @memberof CreateOrUpdateAppUserScoreDto
      */
-    'comment'?: string;
+    'comment'?: string | null;
 }
 /**
  * 
@@ -2819,13 +2862,13 @@ export interface CreateOrUpdateMessageTemplateDto {
      * @type {string}
      * @memberof CreateOrUpdateMessageTemplateDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdateMessageTemplateDto
      */
-    'description'?: string;
+    'description'?: string | null;
 }
 /**
  * 
@@ -2850,7 +2893,7 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'title'?: string;
+    'title'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -2862,103 +2905,103 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'text'?: string;
+    'text'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'content'?: string;
+    'content'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'format'?: string;
+    'format'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'password'?: string;
+    'password'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'parentId'?: string;
+    'parentId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'key'?: string;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'md5'?: string;
+    'md5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'sliceMd5'?: string;
+    'sliceMd5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'rapidCode'?: string;
+    'rapidCode'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'contentType'?: string;
+    'contentType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'displayStyle'?: string;
+    'displayStyle'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'extension'?: string;
+    'extension'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'storageClass'?: string;
+    'storageClass'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'storageObjectCreatedAt'?: string;
+    'storageObjectCreatedAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'storageObjectUpdatedAt'?: string;
+    'storageObjectUpdatedAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -2976,7 +3019,7 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
@@ -2988,73 +3031,73 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'priority'?: number;
+    'priority'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'startAt'?: string;
+    'startAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'endAt'?: string;
+    'endAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'notifyAt'?: string;
+    'notifyAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'notifyTimingType'?: string;
+    'notifyTimingType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'notifyTimingUnit'?: string;
+    'notifyTimingUnit'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'notifyTimingValue'?: number;
+    'notifyTimingValue'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'repeat'?: string;
+    'repeat'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'repeatOffAt'?: string;
+    'repeatOffAt'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'repeatOffTimes'?: number;
+    'repeatOffTimes'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'repetitions'?: number;
+    'repetitions'?: number | null;
     /**
      * 
      * @type {boolean}
@@ -3066,37 +3109,37 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'doneAt'?: string;
+    'doneAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'tagging'?: string;
+    'tagging'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'url'?: string;
+    'url'?: string | null;
     /**
      * 
      * @type {number}
@@ -3108,19 +3151,19 @@ export interface CreateOrUpdatePuupeeDto {
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'lastModifierDeviceToken'?: string;
+    'lastModifierDeviceToken'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'lastModifierDevice'?: string;
+    'lastModifierDevice'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreateOrUpdatePuupeeDto
      */
-    'appName'?: string;
+    'appName'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3145,31 +3188,160 @@ export interface CreatePushNotificationDto {
      * @type {string}
      * @memberof CreatePushNotificationDto
      */
-    'title'?: string;
+    'title'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreatePushNotificationDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreatePushNotificationDto
      */
-    'puupeeId'?: string;
+    'puupeeId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreatePushNotificationDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CreatePushNotificationDto
      */
-    'app'?: string;
+    'app'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface CreateUpdateMessageSourceDto
+ */
+export interface CreateUpdateMessageSourceDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceDto
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceDto
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateUpdateMessageSourceDto
+     */
+    'isPublished'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceDto
+     */
+    'iconUrl'?: string | null;
+    /**
+     * 
+     * @type {Array<CreateUpdateMessageSourceRouteSubDto>}
+     * @memberof CreateUpdateMessageSourceDto
+     */
+    'routes'?: Array<CreateUpdateMessageSourceRouteSubDto> | null;
+}
+/**
+ * 
+ * @export
+ * @interface CreateUpdateMessageSourceRouteDto
+ */
+export interface CreateUpdateMessageSourceRouteDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'path'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'sourceId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'extra'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'anticrawler'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'radar'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'rssbud'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'isPublished'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteDto
+     */
+    'iconUrl'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface CreateUpdateMessageSourceRouteSubDto
+ */
+export interface CreateUpdateMessageSourceRouteSubDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteSubDto
+     */
+    'routeId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateUpdateMessageSourceRouteSubDto
+     */
+    'path'?: string | null;
+    /**
+     * 
+     * @type {any}
+     * @memberof CreateUpdateMessageSourceRouteSubDto
+     */
+    'values'?: any | null;
 }
 /**
  * 
@@ -3182,25 +3354,25 @@ export interface CurrentCultureDto {
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'englishName'?: string;
+    'englishName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'threeLetterIsoLanguageName'?: string;
+    'threeLetterIsoLanguageName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'twoLetterIsoLanguageName'?: string;
+    'twoLetterIsoLanguageName'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3212,19 +3384,19 @@ export interface CurrentCultureDto {
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'cultureName'?: string;
+    'cultureName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentCultureDto
      */
-    'nativeName'?: string;
+    'nativeName'?: string | null;
     /**
      * 
      * @type {DateTimeFormatDto}
@@ -3243,13 +3415,13 @@ export interface CurrentTenantDto {
      * @type {string}
      * @memberof CurrentTenantDto
      */
-    'id'?: string;
+    'id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentTenantDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3274,61 +3446,61 @@ export interface CurrentUserDto {
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'id'?: string;
+    'id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'impersonatorUserId'?: string;
+    'impersonatorUserId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'impersonatorTenantId'?: string;
+    'impersonatorTenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'impersonatorUserName'?: string;
+    'impersonatorUserName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'impersonatorTenantName'?: string;
+    'impersonatorTenantName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'surName'?: string;
+    'surName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3340,7 +3512,7 @@ export interface CurrentUserDto {
      * @type {string}
      * @memberof CurrentUserDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3352,7 +3524,7 @@ export interface CurrentUserDto {
      * @type {Array<string>}
      * @memberof CurrentUserDto
      */
-    'roles'?: Array<string>;
+    'roles'?: Array<string> | null;
 }
 /**
  * 
@@ -3365,43 +3537,43 @@ export interface DateTimeFormatDto {
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'calendarAlgorithmType'?: string;
+    'calendarAlgorithmType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'dateTimeFormatLong'?: string;
+    'dateTimeFormatLong'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'shortDatePattern'?: string;
+    'shortDatePattern'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'fullDateTimePattern'?: string;
+    'fullDateTimePattern'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'dateSeparator'?: string;
+    'dateSeparator'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'shortTimePattern'?: string;
+    'shortTimePattern'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeFormatDto
      */
-    'longTimePattern'?: string;
+    'longTimePattern'?: string | null;
 }
 /**
  * 
@@ -3420,19 +3592,19 @@ export interface DateTimeKeyValue {
      * @type {number}
      * @memberof DateTimeKeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeKeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DateTimeKeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -3451,7 +3623,7 @@ export interface DateTimeSetKeyValueDto {
      * @type {number}
      * @memberof DateTimeSetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -3470,19 +3642,19 @@ export interface DecimalKeyValue {
      * @type {number}
      * @memberof DecimalKeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof DecimalKeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DecimalKeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -3501,7 +3673,7 @@ export interface DecimalSetKeyValueDto {
      * @type {number}
      * @memberof DecimalSetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -3526,19 +3698,19 @@ export interface DeviceDto {
      * @type {string}
      * @memberof DeviceDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3550,25 +3722,25 @@ export interface DeviceDto {
      * @type {string}
      * @memberof DeviceDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'token'?: string;
+    'token'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'tpnsToken'?: string;
+    'tpnsToken'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3580,25 +3752,25 @@ export interface DeviceDto {
      * @type {string}
      * @memberof DeviceDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'platform'?: string;
+    'platform'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'brand'?: string;
+    'brand'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DeviceDto
      */
-    'systemVersion'?: string;
+    'systemVersion'?: string | null;
 }
 /**
  * 
@@ -3611,7 +3783,7 @@ export interface DeviceDtoPagedResultDto {
      * @type {Array<DeviceDto>}
      * @memberof DeviceDtoPagedResultDto
      */
-    'items'?: Array<DeviceDto>;
+    'items'?: Array<DeviceDto> | null;
     /**
      * 
      * @type {number}
@@ -3636,19 +3808,19 @@ export interface DoubleKeyValue {
      * @type {number}
      * @memberof DoubleKeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof DoubleKeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof DoubleKeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -3667,7 +3839,7 @@ export interface DoubleSetKeyValueDto {
      * @type {number}
      * @memberof DoubleSetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -3680,7 +3852,7 @@ export interface EmailSettingsDto {
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'smtpHost'?: string;
+    'smtpHost'?: string | null;
     /**
      * 
      * @type {number}
@@ -3692,19 +3864,19 @@ export interface EmailSettingsDto {
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'smtpUserName'?: string;
+    'smtpUserName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'smtpPassword'?: string;
+    'smtpPassword'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'smtpDomain'?: string;
+    'smtpDomain'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -3722,13 +3894,13 @@ export interface EmailSettingsDto {
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'defaultFromAddress'?: string;
+    'defaultFromAddress'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof EmailSettingsDto
      */
-    'defaultFromDisplayName'?: string;
+    'defaultFromDisplayName'?: string | null;
 }
 /**
  * 
@@ -3741,13 +3913,13 @@ export interface EntityExtensionDto {
      * @type {{ [key: string]: ExtensionPropertyDto | undefined; }}
      * @memberof EntityExtensionDto
      */
-    'properties'?: { [key: string]: ExtensionPropertyDto | undefined; };
+    'properties'?: { [key: string]: ExtensionPropertyDto | undefined; } | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof EntityExtensionDto
      */
-    'configuration'?: { [key: string]: object | undefined; };
+    'configuration'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -3760,13 +3932,13 @@ export interface ExtensionEnumDto {
      * @type {Array<ExtensionEnumFieldDto>}
      * @memberof ExtensionEnumDto
      */
-    'fields'?: Array<ExtensionEnumFieldDto>;
+    'fields'?: Array<ExtensionEnumFieldDto> | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionEnumDto
      */
-    'localizationResource'?: string;
+    'localizationResource'?: string | null;
 }
 /**
  * 
@@ -3779,13 +3951,13 @@ export interface ExtensionEnumFieldDto {
      * @type {string}
      * @memberof ExtensionEnumFieldDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
-     * @type {object}
+     * @type {any}
      * @memberof ExtensionEnumFieldDto
      */
-    'value'?: object;
+    'value'?: any | null;
 }
 /**
  * 
@@ -3862,13 +4034,13 @@ export interface ExtensionPropertyAttributeDto {
      * @type {string}
      * @memberof ExtensionPropertyAttributeDto
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof ExtensionPropertyAttributeDto
      */
-    'config'?: { [key: string]: object | undefined; };
+    'config'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -3881,13 +4053,13 @@ export interface ExtensionPropertyDto {
      * @type {string}
      * @memberof ExtensionPropertyDto
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionPropertyDto
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
     /**
      * 
      * @type {LocalizableStringDto}
@@ -3911,19 +4083,19 @@ export interface ExtensionPropertyDto {
      * @type {Array<ExtensionPropertyAttributeDto>}
      * @memberof ExtensionPropertyDto
      */
-    'attributes'?: Array<ExtensionPropertyAttributeDto>;
+    'attributes'?: Array<ExtensionPropertyAttributeDto> | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof ExtensionPropertyDto
      */
-    'configuration'?: { [key: string]: object | undefined; };
+    'configuration'?: { [key: string]: any | undefined; } | null;
     /**
      * 
-     * @type {object}
+     * @type {any}
      * @memberof ExtensionPropertyDto
      */
-    'defaultValue'?: object;
+    'defaultValue'?: any | null;
 }
 /**
  * 
@@ -3980,31 +4152,31 @@ export interface ExtensionPropertyUiLookupDto {
      * @type {string}
      * @memberof ExtensionPropertyUiLookupDto
      */
-    'url'?: string;
+    'url'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionPropertyUiLookupDto
      */
-    'resultListPropertyName'?: string;
+    'resultListPropertyName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionPropertyUiLookupDto
      */
-    'displayPropertyName'?: string;
+    'displayPropertyName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionPropertyUiLookupDto
      */
-    'valuePropertyName'?: string;
+    'valuePropertyName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ExtensionPropertyUiLookupDto
      */
-    'filterParamName'?: string;
+    'filterParamName'?: string | null;
 }
 /**
  * 
@@ -4030,19 +4202,19 @@ export interface FeatureDto {
      * @type {string}
      * @memberof FeatureDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof FeatureDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof FeatureDto
      */
-    'value'?: string;
+    'value'?: string | null;
     /**
      * 
      * @type {FeatureProviderDto}
@@ -4054,7 +4226,7 @@ export interface FeatureDto {
      * @type {string}
      * @memberof FeatureDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {IStringValueType}
@@ -4072,7 +4244,7 @@ export interface FeatureDto {
      * @type {string}
      * @memberof FeatureDto
      */
-    'parentName'?: string;
+    'parentName'?: string | null;
 }
 /**
  * 
@@ -4085,19 +4257,19 @@ export interface FeatureGroupDto {
      * @type {string}
      * @memberof FeatureGroupDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof FeatureGroupDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {Array<FeatureDto>}
      * @memberof FeatureGroupDto
      */
-    'features'?: Array<FeatureDto>;
+    'features'?: Array<FeatureDto> | null;
 }
 /**
  * 
@@ -4110,13 +4282,13 @@ export interface FeatureProviderDto {
      * @type {string}
      * @memberof FeatureProviderDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof FeatureProviderDto
      */
-    'key'?: string;
+    'key'?: string | null;
 }
 /**
  * 
@@ -4135,13 +4307,13 @@ export interface FindTenantResultDto {
      * @type {string}
      * @memberof FindTenantResultDto
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof FindTenantResultDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4160,7 +4332,7 @@ export interface GetFeatureListResultDto {
      * @type {Array<FeatureGroupDto>}
      * @memberof GetFeatureListResultDto
      */
-    'groups'?: Array<FeatureGroupDto>;
+    'groups'?: Array<FeatureGroupDto> | null;
 }
 /**
  * 
@@ -4173,13 +4345,13 @@ export interface GetPermissionListResultDto {
      * @type {string}
      * @memberof GetPermissionListResultDto
      */
-    'entityDisplayName'?: string;
+    'entityDisplayName'?: string | null;
     /**
      * 
      * @type {Array<PermissionGroupDto>}
      * @memberof GetPermissionListResultDto
      */
-    'groups'?: Array<PermissionGroupDto>;
+    'groups'?: Array<PermissionGroupDto> | null;
 }
 /**
  * 
@@ -4192,13 +4364,13 @@ export interface IStringValueType {
      * @type {string}
      * @memberof IStringValueType
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IStringValueType
      */
-    'properties'?: { [key: string]: object | undefined; };
+    'properties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {IValueValidator}
@@ -4217,13 +4389,13 @@ export interface IValueValidator {
      * @type {string}
      * @memberof IValueValidator
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IValueValidator
      */
-    'properties'?: { [key: string]: object | undefined; };
+    'properties'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -4236,7 +4408,7 @@ export interface IanaTimeZone {
      * @type {string}
      * @memberof IanaTimeZone
      */
-    'timeZoneName'?: string;
+    'timeZoneName'?: string | null;
 }
 /**
  * 
@@ -4246,10 +4418,10 @@ export interface IanaTimeZone {
 export interface IdentityRoleCreateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityRoleCreateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -4277,10 +4449,10 @@ export interface IdentityRoleCreateDto {
 export interface IdentityRoleDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityRoleDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -4292,7 +4464,7 @@ export interface IdentityRoleDto {
      * @type {string}
      * @memberof IdentityRoleDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4316,7 +4488,7 @@ export interface IdentityRoleDto {
      * @type {string}
      * @memberof IdentityRoleDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -4329,7 +4501,7 @@ export interface IdentityRoleDtoListResultDto {
      * @type {Array<IdentityRoleDto>}
      * @memberof IdentityRoleDtoListResultDto
      */
-    'items'?: Array<IdentityRoleDto>;
+    'items'?: Array<IdentityRoleDto> | null;
 }
 /**
  * 
@@ -4342,7 +4514,7 @@ export interface IdentityRoleDtoPagedResultDto {
      * @type {Array<IdentityRoleDto>}
      * @memberof IdentityRoleDtoPagedResultDto
      */
-    'items'?: Array<IdentityRoleDto>;
+    'items'?: Array<IdentityRoleDto> | null;
     /**
      * 
      * @type {number}
@@ -4358,10 +4530,10 @@ export interface IdentityRoleDtoPagedResultDto {
 export interface IdentityRoleUpdateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityRoleUpdateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -4385,7 +4557,7 @@ export interface IdentityRoleUpdateDto {
      * @type {string}
      * @memberof IdentityRoleUpdateDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -4401,16 +4573,16 @@ export interface IdentityUser {
     'id'?: string;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityUser
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
     /**
      * 
      * @type {string}
@@ -4422,19 +4594,19 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4446,55 +4618,55 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'normalizedUserName'?: string;
+    'normalizedUserName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'normalizedEmail'?: string;
+    'normalizedEmail'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4506,13 +4678,13 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'passwordHash'?: string;
+    'passwordHash'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUser
      */
-    'securityStamp'?: string;
+    'securityStamp'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4524,7 +4696,7 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4548,7 +4720,7 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'lockoutEnd'?: string;
+    'lockoutEnd'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4578,37 +4750,37 @@ export interface IdentityUser {
      * @type {string}
      * @memberof IdentityUser
      */
-    'lastPasswordChangeTime'?: string;
+    'lastPasswordChangeTime'?: string | null;
     /**
      * 
      * @type {Array<IdentityUserRole>}
      * @memberof IdentityUser
      */
-    'roles'?: Array<IdentityUserRole>;
+    'roles'?: Array<IdentityUserRole> | null;
     /**
      * 
      * @type {Array<IdentityUserClaim>}
      * @memberof IdentityUser
      */
-    'claims'?: Array<IdentityUserClaim>;
+    'claims'?: Array<IdentityUserClaim> | null;
     /**
      * 
      * @type {Array<IdentityUserLogin>}
      * @memberof IdentityUser
      */
-    'logins'?: Array<IdentityUserLogin>;
+    'logins'?: Array<IdentityUserLogin> | null;
     /**
      * 
      * @type {Array<IdentityUserToken>}
      * @memberof IdentityUser
      */
-    'tokens'?: Array<IdentityUserToken>;
+    'tokens'?: Array<IdentityUserToken> | null;
     /**
      * 
      * @type {Array<IdentityUserOrganizationUnit>}
      * @memberof IdentityUser
      */
-    'organizationUnits'?: Array<IdentityUserOrganizationUnit>;
+    'organizationUnits'?: Array<IdentityUserOrganizationUnit> | null;
 }
 /**
  * 
@@ -4627,19 +4799,19 @@ export interface IdentityUserClaim {
      * @type {string}
      * @memberof IdentityUserClaim
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserClaim
      */
-    'claimType'?: string;
+    'claimType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserClaim
      */
-    'claimValue'?: string;
+    'claimValue'?: string | null;
     /**
      * 
      * @type {string}
@@ -4655,10 +4827,10 @@ export interface IdentityUserClaim {
 export interface IdentityUserCreateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityUserCreateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -4670,13 +4842,13 @@ export interface IdentityUserCreateDto {
      * @type {string}
      * @memberof IdentityUserCreateDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserCreateDto
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
@@ -4688,7 +4860,7 @@ export interface IdentityUserCreateDto {
      * @type {string}
      * @memberof IdentityUserCreateDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4706,7 +4878,7 @@ export interface IdentityUserCreateDto {
      * @type {Array<string>}
      * @memberof IdentityUserCreateDto
      */
-    'roleNames'?: Array<string>;
+    'roleNames'?: Array<string> | null;
     /**
      * 
      * @type {string}
@@ -4722,10 +4894,10 @@ export interface IdentityUserCreateDto {
 export interface IdentityUserDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityUserDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -4743,19 +4915,19 @@ export interface IdentityUserDto {
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4767,43 +4939,43 @@ export interface IdentityUserDto {
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4815,7 +4987,7 @@ export interface IdentityUserDto {
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4839,13 +5011,13 @@ export interface IdentityUserDto {
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'lockoutEnd'?: string;
+    'lockoutEnd'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
     /**
      * 
      * @type {number}
@@ -4864,7 +5036,7 @@ export interface IdentityUserDtoPagedResultDto {
      * @type {Array<IdentityUserDto>}
      * @memberof IdentityUserDtoPagedResultDto
      */
-    'items'?: Array<IdentityUserDto>;
+    'items'?: Array<IdentityUserDto> | null;
     /**
      * 
      * @type {number}
@@ -4883,7 +5055,7 @@ export interface IdentityUserLogin {
      * @type {string}
      * @memberof IdentityUserLogin
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
@@ -4895,19 +5067,19 @@ export interface IdentityUserLogin {
      * @type {string}
      * @memberof IdentityUserLogin
      */
-    'loginProvider'?: string;
+    'loginProvider'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserLogin
      */
-    'providerKey'?: string;
+    'providerKey'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserLogin
      */
-    'providerDisplayName'?: string;
+    'providerDisplayName'?: string | null;
 }
 /**
  * 
@@ -4926,13 +5098,13 @@ export interface IdentityUserOrganizationUnit {
      * @type {string}
      * @memberof IdentityUserOrganizationUnit
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserOrganizationUnit
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
@@ -4957,7 +5129,7 @@ export interface IdentityUserRole {
      * @type {string}
      * @memberof IdentityUserRole
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
@@ -4982,7 +5154,7 @@ export interface IdentityUserToken {
      * @type {string}
      * @memberof IdentityUserToken
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
@@ -4994,19 +5166,19 @@ export interface IdentityUserToken {
      * @type {string}
      * @memberof IdentityUserToken
      */
-    'loginProvider'?: string;
+    'loginProvider'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserToken
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserToken
      */
-    'value'?: string;
+    'value'?: string | null;
 }
 /**
  * 
@@ -5016,10 +5188,10 @@ export interface IdentityUserToken {
 export interface IdentityUserUpdateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof IdentityUserUpdateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -5031,13 +5203,13 @@ export interface IdentityUserUpdateDto {
      * @type {string}
      * @memberof IdentityUserUpdateDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserUpdateDto
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
@@ -5049,7 +5221,7 @@ export interface IdentityUserUpdateDto {
      * @type {string}
      * @memberof IdentityUserUpdateDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5067,19 +5239,19 @@ export interface IdentityUserUpdateDto {
      * @type {Array<string>}
      * @memberof IdentityUserUpdateDto
      */
-    'roleNames'?: Array<string>;
+    'roleNames'?: Array<string> | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserUpdateDto
      */
-    'password'?: string;
+    'password'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof IdentityUserUpdateDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -5105,97 +5277,97 @@ export interface InApp {
      * @type {string}
      * @memberof InApp
      */
-    'quantity'?: string;
+    'quantity'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'product_id'?: string;
+    'product_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'transaction_id'?: string;
+    'transaction_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'original_transaction_id'?: string;
+    'original_transaction_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'purchase_date'?: string;
+    'purchase_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'purchase_date_ms'?: string;
+    'purchase_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'purchase_date_pst'?: string;
+    'purchase_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'original_purchase_date'?: string;
+    'original_purchase_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'original_purchase_date_ms'?: string;
+    'original_purchase_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'original_purchase_date_pst'?: string;
+    'original_purchase_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'expires_date'?: string;
+    'expires_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'expires_date_ms'?: string;
+    'expires_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'expires_date_pst'?: string;
+    'expires_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'web_order_line_item_id'?: string;
+    'web_order_line_item_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'is_trial_period'?: string;
+    'is_trial_period'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof InApp
      */
-    'is_in_intro_offer_period'?: string;
+    'is_in_intro_offer_period'?: string | null;
 }
 /**
  * 
@@ -5214,19 +5386,19 @@ export interface Int32KeyValue {
      * @type {number}
      * @memberof Int32KeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof Int32KeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Int32KeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -5245,7 +5417,7 @@ export interface Int32SetKeyValueDto {
      * @type {number}
      * @memberof Int32SetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -5258,13 +5430,13 @@ export interface InterfaceMethodApiDescriptionModel {
      * @type {string}
      * @memberof InterfaceMethodApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {Array<MethodParameterApiDescriptionModel>}
      * @memberof InterfaceMethodApiDescriptionModel
      */
-    'parametersOnMethod'?: Array<MethodParameterApiDescriptionModel>;
+    'parametersOnMethod'?: Array<MethodParameterApiDescriptionModel> | null;
     /**
      * 
      * @type {ReturnValueApiDescriptionModel}
@@ -5283,31 +5455,31 @@ export interface LanguageInfo {
      * @type {string}
      * @memberof LanguageInfo
      */
-    'cultureName'?: string;
+    'cultureName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LanguageInfo
      */
-    'uiCultureName'?: string;
+    'uiCultureName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LanguageInfo
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LanguageInfo
      */
-    'twoLetterISOLanguageName'?: string;
+    'twoLetterISOLanguageName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LanguageInfo
      */
-    'flagIcon'?: string;
+    'flagIcon'?: string | null;
 }
 /**
  * 
@@ -5320,97 +5492,97 @@ export interface LatestReceiptInfo {
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'quantity'?: string;
+    'quantity'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'product_id'?: string;
+    'product_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'transaction_id'?: string;
+    'transaction_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'original_transaction_id'?: string;
+    'original_transaction_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'purchase_date'?: string;
+    'purchase_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'purchase_date_ms'?: string;
+    'purchase_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'purchase_date_pst'?: string;
+    'purchase_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'original_purchase_date'?: string;
+    'original_purchase_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'original_purchase_date_ms'?: string;
+    'original_purchase_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'original_purchase_date_pst'?: string;
+    'original_purchase_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'expires_date'?: string;
+    'expires_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'expires_date_ms'?: string;
+    'expires_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'expires_date_pst'?: string;
+    'expires_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'web_order_line_item_id'?: string;
+    'web_order_line_item_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'is_trial_period'?: string;
+    'is_trial_period'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LatestReceiptInfo
      */
-    'is_in_intro_offer_period'?: string;
+    'is_in_intro_offer_period'?: string | null;
 }
 /**
  * 
@@ -5423,13 +5595,13 @@ export interface LocalizableStringDto {
      * @type {string}
      * @memberof LocalizableStringDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof LocalizableStringDto
      */
-    'resource'?: string;
+    'resource'?: string | null;
 }
 /**
  * 
@@ -5459,13 +5631,13 @@ export interface MessagePublishDto {
      * @type {string}
      * @memberof MessagePublishDto
      */
-    'title'?: string;
+    'title'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessagePublishDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
@@ -5477,13 +5649,13 @@ export interface MessagePublishDto {
      * @type {string}
      * @memberof MessagePublishDto
      */
-    'template'?: string;
+    'template'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof MessagePublishDto
      */
-    'data'?: { [key: string]: object | undefined; };
+    'data'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -5497,6 +5669,154 @@ export interface MessageRecallDto {
      * @memberof MessageRecallDto
      */
     'puupeeId'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface MessageSourceCategoryDto
+ */
+export interface MessageSourceCategoryDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceCategoryDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceCategoryDto
+     */
+    'title'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface MessageSourceDto
+ */
+export interface MessageSourceDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceDto
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceDto
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageSourceDto
+     */
+    'isPublished'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceDto
+     */
+    'iconUrl'?: string | null;
+    /**
+     * 
+     * @type {Array<MessageSourceRouteSubDto>}
+     * @memberof MessageSourceDto
+     */
+    'routes'?: Array<MessageSourceRouteSubDto> | null;
+}
+/**
+ * 
+ * @export
+ * @interface MessageSourceRouteDto
+ */
+export interface MessageSourceRouteDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'path'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'sourceId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'extra'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageSourceRouteDto
+     */
+    'anticrawler'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageSourceRouteDto
+     */
+    'radar'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageSourceRouteDto
+     */
+    'rssbud'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MessageSourceRouteDto
+     */
+    'isPublished'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteDto
+     */
+    'iconUrl'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface MessageSourceRouteSubDto
+ */
+export interface MessageSourceRouteSubDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteSubDto
+     */
+    'routeId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteSubDto
+     */
+    'path'?: string | null;
+    /**
+     * 
+     * @type {any}
+     * @memberof MessageSourceRouteSubDto
+     */
+    'values'?: any | null;
 }
 /**
  * 
@@ -5534,19 +5854,19 @@ export interface MessageTemplateDto {
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5558,25 +5878,25 @@ export interface MessageTemplateDto {
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {number}
@@ -5607,19 +5927,19 @@ export interface MessageTemplateReleaseDto {
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5631,19 +5951,19 @@ export interface MessageTemplateReleaseDto {
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'templateName'?: string;
+    'templateName'?: string | null;
     /**
      * 
      * @type {number}
@@ -5655,7 +5975,7 @@ export interface MessageTemplateReleaseDto {
      * @type {string}
      * @memberof MessageTemplateReleaseDto
      */
-    'content'?: string;
+    'content'?: string | null;
     /**
      * 
      * @type {string}
@@ -5687,25 +6007,25 @@ export interface MethodParameterApiDescriptionModel {
      * @type {string}
      * @memberof MethodParameterApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MethodParameterApiDescriptionModel
      */
-    'typeAsString'?: string;
+    'typeAsString'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MethodParameterApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof MethodParameterApiDescriptionModel
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5714,10 +6034,10 @@ export interface MethodParameterApiDescriptionModel {
     'isOptional'?: boolean;
     /**
      * 
-     * @type {object}
+     * @type {any}
      * @memberof MethodParameterApiDescriptionModel
      */
-    'defaultValue'?: object;
+    'defaultValue'?: any | null;
 }
 /**
  * 
@@ -5730,19 +6050,19 @@ export interface ModuleApiDescriptionModel {
      * @type {string}
      * @memberof ModuleApiDescriptionModel
      */
-    'rootPath'?: string;
+    'rootPath'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModuleApiDescriptionModel
      */
-    'remoteServiceName'?: string;
+    'remoteServiceName'?: string | null;
     /**
      * 
      * @type {{ [key: string]: ControllerApiDescriptionModel | undefined; }}
      * @memberof ModuleApiDescriptionModel
      */
-    'controllers'?: { [key: string]: ControllerApiDescriptionModel | undefined; };
+    'controllers'?: { [key: string]: ControllerApiDescriptionModel | undefined; } | null;
 }
 /**
  * 
@@ -5755,13 +6075,13 @@ export interface ModuleExtensionDto {
      * @type {{ [key: string]: EntityExtensionDto | undefined; }}
      * @memberof ModuleExtensionDto
      */
-    'entities'?: { [key: string]: EntityExtensionDto | undefined; };
+    'entities'?: { [key: string]: EntityExtensionDto | undefined; } | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof ModuleExtensionDto
      */
-    'configuration'?: { [key: string]: object | undefined; };
+    'configuration'?: { [key: string]: any | undefined; } | null;
 }
 /**
  * 
@@ -5787,13 +6107,13 @@ export interface NameValue {
      * @type {string}
      * @memberof NameValue
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof NameValue
      */
-    'value'?: string;
+    'value'?: string | null;
 }
 /**
  * 
@@ -5818,19 +6138,19 @@ export interface NotificationInfoDto {
      * @type {string}
      * @memberof NotificationInfoDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof NotificationInfoDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof NotificationInfoDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5842,13 +6162,13 @@ export interface NotificationInfoDto {
      * @type {string}
      * @memberof NotificationInfoDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof NotificationInfoDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
 }
 /**
  * 
@@ -5861,7 +6181,7 @@ export interface NotificationInfoDtoPagedResultDto {
      * @type {Array<NotificationInfoDto>}
      * @memberof NotificationInfoDtoPagedResultDto
      */
-    'items'?: Array<NotificationInfoDto>;
+    'items'?: Array<NotificationInfoDto> | null;
     /**
      * 
      * @type {number}
@@ -5880,13 +6200,13 @@ export interface ObjectExtensionsDto {
      * @type {{ [key: string]: ModuleExtensionDto | undefined; }}
      * @memberof ObjectExtensionsDto
      */
-    'modules'?: { [key: string]: ModuleExtensionDto | undefined; };
+    'modules'?: { [key: string]: ModuleExtensionDto | undefined; } | null;
     /**
      * 
      * @type {{ [key: string]: ExtensionEnumDto | undefined; }}
      * @memberof ObjectExtensionsDto
      */
-    'enums'?: { [key: string]: ExtensionEnumDto | undefined; };
+    'enums'?: { [key: string]: ExtensionEnumDto | undefined; } | null;
 }
 /**
  * 
@@ -5899,31 +6219,31 @@ export interface ParameterApiDescriptionModel {
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'nameOnMethod'?: string;
+    'nameOnMethod'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'jsonName'?: string;
+    'jsonName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5932,28 +6252,28 @@ export interface ParameterApiDescriptionModel {
     'isOptional'?: boolean;
     /**
      * 
-     * @type {object}
+     * @type {any}
      * @memberof ParameterApiDescriptionModel
      */
-    'defaultValue'?: object;
+    'defaultValue'?: any | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof ParameterApiDescriptionModel
      */
-    'constraintTypes'?: Array<string>;
+    'constraintTypes'?: Array<string> | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'bindingSourceId'?: string;
+    'bindingSourceId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ParameterApiDescriptionModel
      */
-    'descriptorName'?: string;
+    'descriptorName'?: string | null;
 }
 /**
  * 
@@ -5966,61 +6286,61 @@ export interface PendingRenewalInfo {
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'auto_renew_product_id'?: string;
+    'auto_renew_product_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'auto_renew_status'?: string;
+    'auto_renew_status'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'is_in_billing_retry_period'?: string;
+    'is_in_billing_retry_period'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'original_transaction_id'?: string;
+    'original_transaction_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'product_id'?: string;
+    'product_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'expiration_intent'?: string;
+    'expiration_intent'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'price_consent_status'?: string;
+    'price_consent_status'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'grace_period_expires_date'?: string;
+    'grace_period_expires_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'grace_period_expires_date_ms'?: string;
+    'grace_period_expires_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PendingRenewalInfo
      */
-    'grace_period_expires_date_pst'?: string;
+    'grace_period_expires_date_pst'?: string | null;
 }
 /**
  * 
@@ -6033,19 +6353,19 @@ export interface PermissionGrantInfoDto {
      * @type {string}
      * @memberof PermissionGrantInfoDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PermissionGrantInfoDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PermissionGrantInfoDto
      */
-    'parentName'?: string;
+    'parentName'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -6057,13 +6377,13 @@ export interface PermissionGrantInfoDto {
      * @type {Array<string>}
      * @memberof PermissionGrantInfoDto
      */
-    'allowedProviders'?: Array<string>;
+    'allowedProviders'?: Array<string> | null;
     /**
      * 
      * @type {Array<ProviderInfoDto>}
      * @memberof PermissionGrantInfoDto
      */
-    'grantedProviders'?: Array<ProviderInfoDto>;
+    'grantedProviders'?: Array<ProviderInfoDto> | null;
 }
 /**
  * 
@@ -6076,31 +6396,31 @@ export interface PermissionGroupDto {
      * @type {string}
      * @memberof PermissionGroupDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PermissionGroupDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PermissionGroupDto
      */
-    'displayNameKey'?: string;
+    'displayNameKey'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PermissionGroupDto
      */
-    'displayNameResource'?: string;
+    'displayNameResource'?: string | null;
     /**
      * 
      * @type {Array<PermissionGrantInfoDto>}
      * @memberof PermissionGroupDto
      */
-    'permissions'?: Array<PermissionGrantInfoDto>;
+    'permissions'?: Array<PermissionGrantInfoDto> | null;
 }
 /**
  * 
@@ -6110,40 +6430,40 @@ export interface PermissionGroupDto {
 export interface ProfileDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof ProfileDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
      * @memberof ProfileDto
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ProfileDto
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ProfileDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ProfileDto
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ProfileDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -6161,7 +6481,7 @@ export interface ProfileDto {
      * @type {string}
      * @memberof ProfileDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -6174,25 +6494,25 @@ export interface PropertyApiDescriptionModel {
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'jsonName'?: string;
+    'jsonName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -6204,31 +6524,31 @@ export interface PropertyApiDescriptionModel {
      * @type {number}
      * @memberof PropertyApiDescriptionModel
      */
-    'minLength'?: number;
+    'minLength'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof PropertyApiDescriptionModel
      */
-    'maxLength'?: number;
+    'maxLength'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'minimum'?: string;
+    'minimum'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'maximum'?: string;
+    'maximum'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PropertyApiDescriptionModel
      */
-    'regex'?: string;
+    'regex'?: string | null;
 }
 /**
  * 
@@ -6241,13 +6561,13 @@ export interface ProviderInfoDto {
      * @type {string}
      * @memberof ProviderInfoDto
      */
-    'providerName'?: string;
+    'providerName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ProviderInfoDto
      */
-    'providerKey'?: string;
+    'providerKey'?: string | null;
 }
 /**
  * 
@@ -6291,19 +6611,19 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -6315,73 +6635,73 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'title'?: string;
+    'title'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'description'?: string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'text'?: string;
+    'text'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'content'?: string;
+    'content'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'format'?: string;
+    'format'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'password'?: string;
+    'password'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'parentId'?: string;
+    'parentId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'key'?: string;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'url'?: string;
+    'url'?: string | null;
     /**
      * 
      * @type {number}
@@ -6393,67 +6713,67 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'md5'?: string;
+    'md5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'sliceMd5'?: string;
+    'sliceMd5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'rapidCode'?: string;
+    'rapidCode'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'contentType'?: string;
+    'contentType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'displayStyle'?: string;
+    'displayStyle'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'extension'?: string;
+    'extension'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'storageClass'?: string;
+    'storageClass'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'storageObjectCreatedAt'?: string;
+    'storageObjectCreatedAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'storageObjectUpdatedAt'?: string;
+    'storageObjectUpdatedAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'storageObjectId'?: string;
+    'storageObjectId'?: string | null;
     /**
      * 
      * @type {StorageObjectDto}
@@ -6471,13 +6791,13 @@ export interface PuupeeDto {
      * @type {number}
      * @memberof PuupeeDto
      */
-    'priority'?: number;
+    'priority'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'doneAt'?: string;
+    'doneAt'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -6489,61 +6809,61 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'startAt'?: string;
+    'startAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'endAt'?: string;
+    'endAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'notifyAt'?: string;
+    'notifyAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'notifyTimingType'?: string;
+    'notifyTimingType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'notifyTimingUnit'?: string;
+    'notifyTimingUnit'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof PuupeeDto
      */
-    'notifyTimingValue'?: number;
+    'notifyTimingValue'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'repeat'?: string;
+    'repeat'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'repeatOffAt'?: string;
+    'repeatOffAt'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof PuupeeDto
      */
-    'repeatOffTimes'?: number;
+    'repeatOffTimes'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof PuupeeDto
      */
-    'repetitions'?: number;
+    'repetitions'?: number | null;
     /**
      * 
      * @type {number}
@@ -6561,25 +6881,25 @@ export interface PuupeeDto {
      * @type {string}
      * @memberof PuupeeDto
      */
-    'tagging'?: string;
+    'tagging'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'lastModifierDeviceToken'?: string;
+    'lastModifierDeviceToken'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'lastModifierDevice'?: string;
+    'lastModifierDevice'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PuupeeDto
      */
-    'appName'?: string;
+    'appName'?: string | null;
     /**
      * 
      * @type {number}
@@ -6598,7 +6918,7 @@ export interface PuupeeDtoPagedResultDto {
      * @type {Array<PuupeeDto>}
      * @memberof PuupeeDtoPagedResultDto
      */
-    'items'?: Array<PuupeeDto>;
+    'items'?: Array<PuupeeDto> | null;
     /**
      * 
      * @type {number}
@@ -6617,7 +6937,7 @@ export interface Receipt {
      * @type {string}
      * @memberof Receipt
      */
-    'receipt_type'?: string;
+    'receipt_type'?: string | null;
     /**
      * 
      * @type {number}
@@ -6635,13 +6955,13 @@ export interface Receipt {
      * @type {string}
      * @memberof Receipt
      */
-    'bundle_id'?: string;
+    'bundle_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'application_version'?: string;
+    'application_version'?: string | null;
     /**
      * 
      * @type {number}
@@ -6659,67 +6979,67 @@ export interface Receipt {
      * @type {string}
      * @memberof Receipt
      */
-    'receipt_creation_date'?: string;
+    'receipt_creation_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'receipt_creation_date_ms'?: string;
+    'receipt_creation_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'receipt_creation_date_pst'?: string;
+    'receipt_creation_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'request_date'?: string;
+    'request_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'request_date_ms'?: string;
+    'request_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'request_date_pst'?: string;
+    'request_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'original_purchase_date'?: string;
+    'original_purchase_date'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'original_purchase_date_ms'?: string;
+    'original_purchase_date_ms'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'original_purchase_date_pst'?: string;
+    'original_purchase_date_pst'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Receipt
      */
-    'original_application_version'?: string;
+    'original_application_version'?: string | null;
     /**
      * 
      * @type {Array<InApp>}
      * @memberof Receipt
      */
-    'in_app'?: Array<InApp>;
+    'in_app'?: Array<InApp> | null;
 }
 /**
  * 
@@ -6732,13 +7052,13 @@ export interface RefreshDeviceStatusDto {
      * @type {string}
      * @memberof RefreshDeviceStatusDto
      */
-    'token'?: string;
+    'token'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof RefreshDeviceStatusDto
      */
-    'status'?: string;
+    'status'?: string | null;
 }
 /**
  * 
@@ -6748,10 +7068,10 @@ export interface RefreshDeviceStatusDto {
 export interface RegisterDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof RegisterDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -6788,31 +7108,31 @@ export interface RemoteServiceErrorInfo {
      * @type {string}
      * @memberof RemoteServiceErrorInfo
      */
-    'code'?: string;
+    'code'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof RemoteServiceErrorInfo
      */
-    'message'?: string;
+    'message'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof RemoteServiceErrorInfo
      */
-    'details'?: string;
+    'details'?: string | null;
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof RemoteServiceErrorInfo
      */
-    'data'?: { [key: string]: object | undefined; };
+    'data'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {Array<RemoteServiceValidationErrorInfo>}
      * @memberof RemoteServiceErrorInfo
      */
-    'validationErrors'?: Array<RemoteServiceValidationErrorInfo>;
+    'validationErrors'?: Array<RemoteServiceValidationErrorInfo> | null;
 }
 /**
  * 
@@ -6838,13 +7158,13 @@ export interface RemoteServiceValidationErrorInfo {
      * @type {string}
      * @memberof RemoteServiceValidationErrorInfo
      */
-    'message'?: string;
+    'message'?: string | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof RemoteServiceValidationErrorInfo
      */
-    'members'?: Array<string>;
+    'members'?: Array<string> | null;
 }
 /**
  * 
@@ -6882,13 +7202,13 @@ export interface ReturnValueApiDescriptionModel {
      * @type {string}
      * @memberof ReturnValueApiDescriptionModel
      */
-    'type'?: string;
+    'type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ReturnValueApiDescriptionModel
      */
-    'typeSimple'?: string;
+    'typeSimple'?: string | null;
 }
 /**
  * 
@@ -6913,13 +7233,13 @@ export interface SendPasswordResetCodeDto {
      * @type {string}
      * @memberof SendPasswordResetCodeDto
      */
-    'returnUrl'?: string;
+    'returnUrl'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SendPasswordResetCodeDto
      */
-    'returnUrlHash'?: string;
+    'returnUrlHash'?: string | null;
 }
 /**
  * 
@@ -6950,7 +7270,7 @@ export interface SendTestEmailInput {
      * @type {string}
      * @memberof SendTestEmailInput
      */
-    'body'?: string;
+    'body'?: string | null;
 }
 /**
  * 
@@ -6963,19 +7283,19 @@ export interface SendVerificationCodeDto {
      * @type {string}
      * @memberof SendVerificationCodeDto
      */
-    'codeSender'?: string;
+    'codeSender'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SendVerificationCodeDto
      */
-    'account'?: string;
+    'account'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SendVerificationCodeDto
      */
-    'purpose'?: string;
+    'purpose'?: string | null;
 }
 /**
  * 
@@ -6994,7 +7314,7 @@ export interface SettingsDto {
      * @type {string}
      * @memberof SettingsDto
      */
-    'language'?: string;
+    'language'?: string | null;
     /**
      * 
      * @type {TodoSettingsDto}
@@ -7010,10 +7330,10 @@ export interface SettingsDto {
 export interface SimpleDataDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof SimpleDataDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -7031,13 +7351,13 @@ export interface SimpleDataDto {
      * @type {string}
      * @memberof SimpleDataDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SimpleDataDto
      */
-    'collection'?: string;
+    'collection'?: string | null;
 }
 /**
  * 
@@ -7050,7 +7370,7 @@ export interface SimpleDataDtoPagedResultDto {
      * @type {Array<SimpleDataDto>}
      * @memberof SimpleDataDtoPagedResultDto
      */
-    'items'?: Array<SimpleDataDto>;
+    'items'?: Array<SimpleDataDto> | null;
     /**
      * 
      * @type {number}
@@ -7069,55 +7389,55 @@ export interface StorageObjectCredentials {
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'storageClass'?: string;
+    'storageClass'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'endPoint'?: string;
+    'endPoint'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'protocal'?: string;
+    'protocal'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'bucketName'?: string;
+    'bucketName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'regionId'?: string;
+    'regionId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'securityToken'?: string;
+    'securityToken'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'accessKeyId'?: string;
+    'accessKeyId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'accessKeySecret'?: string;
+    'accessKeySecret'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'expiration'?: string;
+    'expiration'?: string | null;
     /**
      * 
      * @type {number}
@@ -7129,7 +7449,7 @@ export interface StorageObjectCredentials {
      * @type {string}
      * @memberof StorageObjectCredentials
      */
-    'appId'?: string;
+    'appId'?: string | null;
 }
 /**
  * 
@@ -7154,19 +7474,19 @@ export interface StorageObjectDto {
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7178,31 +7498,31 @@ export interface StorageObjectDto {
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'key'?: string;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'url'?: string;
+    'url'?: string | null;
     /**
      * 
      * @type {number}
@@ -7214,49 +7534,49 @@ export interface StorageObjectDto {
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'md5'?: string;
+    'md5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'sliceMd5'?: string;
+    'sliceMd5'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'rapidCode'?: string;
+    'rapidCode'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'contentType'?: string;
+    'contentType'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'extension'?: string;
+    'extension'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'storageClass'?: string;
+    'storageClass'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'storageObjectCreatedAt'?: string;
+    'storageObjectCreatedAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'storageObjectUpdatedAt'?: string;
+    'storageObjectUpdatedAt'?: string | null;
     /**
      * 
      * @type {number}
@@ -7268,7 +7588,7 @@ export interface StorageObjectDto {
      * @type {string}
      * @memberof StorageObjectDto
      */
-    'password'?: string;
+    'password'?: string | null;
 }
 /**
  * 
@@ -7300,25 +7620,25 @@ export interface StringKeyValue {
      * @type {string}
      * @memberof StringKeyValue
      */
-    'value'?: string;
+    'value'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof StringKeyValue
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof StringKeyValue
      */
-    'expiredAt'?: string;
+    'expiredAt'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof StringKeyValue
      */
-    'createdAt'?: string;
+    'createdAt'?: string | null;
 }
 /**
  * 
@@ -7331,13 +7651,13 @@ export interface StringSetKeyValueDto {
      * @type {string}
      * @memberof StringSetKeyValueDto
      */
-    'value'?: string;
+    'value'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof StringSetKeyValueDto
      */
-    'durationSeconds'?: number;
+    'durationSeconds'?: number | null;
 }
 /**
  * 
@@ -7362,19 +7682,19 @@ export interface SubscriptionDto {
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7386,19 +7706,19 @@ export interface SubscriptionDto {
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'expireAt'?: string;
+    'expireAt'?: string | null;
     /**
      * 
      * @type {string}
@@ -7410,7 +7730,7 @@ export interface SubscriptionDto {
      * @type {string}
      * @memberof SubscriptionDto
      */
-    'priceNaming'?: string;
+    'priceNaming'?: string | null;
     /**
      * 
      * @type {string}
@@ -7441,19 +7761,19 @@ export interface SubscriptionOrderDto {
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7465,13 +7785,13 @@ export interface SubscriptionOrderDto {
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {SubscriptionOrderType}
@@ -7501,7 +7821,7 @@ export interface SubscriptionOrderDto {
      * @type {string}
      * @memberof SubscriptionOrderDto
      */
-    'productId'?: string;
+    'productId'?: string | null;
 }
 /**
  * 
@@ -7514,13 +7834,13 @@ export interface SubscriptionOrderStatus {
      * @type {string}
      * @memberof SubscriptionOrderStatus
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionOrderStatus
      */
-    'value'?: string;
+    'value'?: string | null;
 }
 /**
  * 
@@ -7533,13 +7853,13 @@ export interface SubscriptionOrderType {
      * @type {string}
      * @memberof SubscriptionOrderType
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof SubscriptionOrderType
      */
-    'value'?: string;
+    'value'?: string | null;
 }
 /**
  * 
@@ -7568,10 +7888,10 @@ export interface SyncStateDto {
 export interface TenantCreateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof TenantCreateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -7599,10 +7919,10 @@ export interface TenantCreateDto {
 export interface TenantDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof TenantDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -7614,13 +7934,13 @@ export interface TenantDto {
      * @type {string}
      * @memberof TenantDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof TenantDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -7633,7 +7953,7 @@ export interface TenantDtoPagedResultDto {
      * @type {Array<TenantDto>}
      * @memberof TenantDtoPagedResultDto
      */
-    'items'?: Array<TenantDto>;
+    'items'?: Array<TenantDto> | null;
     /**
      * 
      * @type {number}
@@ -7649,10 +7969,10 @@ export interface TenantDtoPagedResultDto {
 export interface TenantUpdateDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof TenantUpdateDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
@@ -7664,7 +7984,7 @@ export interface TenantUpdateDto {
      * @type {string}
      * @memberof TenantUpdateDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -7777,7 +8097,7 @@ export interface TypeApiDescriptionModel {
      * @type {string}
      * @memberof TypeApiDescriptionModel
      */
-    'baseType'?: string;
+    'baseType'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7789,25 +8109,25 @@ export interface TypeApiDescriptionModel {
      * @type {Array<string>}
      * @memberof TypeApiDescriptionModel
      */
-    'enumNames'?: Array<string>;
+    'enumNames'?: Array<string> | null;
     /**
      * 
-     * @type {Array<object>}
+     * @type {Array<any>}
      * @memberof TypeApiDescriptionModel
      */
-    'enumValues'?: Array<object>;
+    'enumValues'?: Array<any> | null;
     /**
      * 
      * @type {Array<string>}
      * @memberof TypeApiDescriptionModel
      */
-    'genericArguments'?: Array<string>;
+    'genericArguments'?: Array<string> | null;
     /**
      * 
      * @type {Array<PropertyApiDescriptionModel>}
      * @memberof TypeApiDescriptionModel
      */
-    'properties'?: Array<PropertyApiDescriptionModel>;
+    'properties'?: Array<PropertyApiDescriptionModel> | null;
 }
 /**
  * 
@@ -7820,7 +8140,7 @@ export interface UpdateEmailSettingsDto {
      * @type {string}
      * @memberof UpdateEmailSettingsDto
      */
-    'smtpHost'?: string;
+    'smtpHost'?: string | null;
     /**
      * 
      * @type {number}
@@ -7832,19 +8152,19 @@ export interface UpdateEmailSettingsDto {
      * @type {string}
      * @memberof UpdateEmailSettingsDto
      */
-    'smtpUserName'?: string;
+    'smtpUserName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateEmailSettingsDto
      */
-    'smtpPassword'?: string;
+    'smtpPassword'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateEmailSettingsDto
      */
-    'smtpDomain'?: string;
+    'smtpDomain'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7881,13 +8201,13 @@ export interface UpdateFeatureDto {
      * @type {string}
      * @memberof UpdateFeatureDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateFeatureDto
      */
-    'value'?: string;
+    'value'?: string | null;
 }
 /**
  * 
@@ -7900,7 +8220,7 @@ export interface UpdateFeaturesDto {
      * @type {Array<UpdateFeatureDto>}
      * @memberof UpdateFeaturesDto
      */
-    'features'?: Array<UpdateFeatureDto>;
+    'features'?: Array<UpdateFeatureDto> | null;
 }
 /**
  * 
@@ -7913,7 +8233,7 @@ export interface UpdatePermissionDto {
      * @type {string}
      * @memberof UpdatePermissionDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -7932,7 +8252,7 @@ export interface UpdatePermissionsDto {
      * @type {Array<UpdatePermissionDto>}
      * @memberof UpdatePermissionsDto
      */
-    'permissions'?: Array<UpdatePermissionDto>;
+    'permissions'?: Array<UpdatePermissionDto> | null;
 }
 /**
  * 
@@ -7942,46 +8262,46 @@ export interface UpdatePermissionsDto {
 export interface UpdateProfileDto {
     /**
      * 
-     * @type {{ [key: string]: object | undefined; }}
+     * @type {{ [key: string]: any | undefined; }}
      * @memberof UpdateProfileDto
      */
-    'extraProperties'?: { [key: string]: object | undefined; };
+    'extraProperties'?: { [key: string]: any | undefined; } | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UpdateProfileDto
      */
-    'concurrencyStamp'?: string;
+    'concurrencyStamp'?: string | null;
 }
 /**
  * 
@@ -8000,25 +8320,25 @@ export interface UserData {
      * @type {string}
      * @memberof UserData
      */
-    'tenantId'?: string;
+    'tenantId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UserData
      */
-    'userName'?: string;
+    'userName'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UserData
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UserData
      */
-    'surname'?: string;
+    'surname'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8030,7 +8350,7 @@ export interface UserData {
      * @type {string}
      * @memberof UserData
      */
-    'email'?: string;
+    'email'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8042,7 +8362,7 @@ export interface UserData {
      * @type {string}
      * @memberof UserData
      */
-    'phoneNumber'?: string;
+    'phoneNumber'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8061,7 +8381,7 @@ export interface UserDataListResultDto {
      * @type {Array<UserData>}
      * @memberof UserDataListResultDto
      */
-    'items'?: Array<UserData>;
+    'items'?: Array<UserData> | null;
 }
 /**
  * 
@@ -8099,19 +8419,19 @@ export interface UserStorageDto {
      * @type {string}
      * @memberof UserStorageDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UserStorageDto
      */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
      * 
      * @type {number}
      * @memberof UserStorageDto
      */
-    'maxSize'?: number;
+    'size'?: number;
     /**
      * 
      * @type {number}
@@ -8135,7 +8455,7 @@ export interface UserStorageDto {
      * @type {Array<UserStorageItemDto>}
      * @memberof UserStorageDto
      */
-    'items'?: Array<UserStorageItemDto>;
+    'items'?: Array<UserStorageItemDto> | null;
 }
 /**
  * 
@@ -8148,13 +8468,13 @@ export interface UserStorageItemDto {
      * @type {string}
      * @memberof UserStorageItemDto
      */
-    'name'?: string;
+    'name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof UserStorageItemDto
      */
-    'title'?: string;
+    'title'?: string | null;
     /**
      * 
      * @type {number}
@@ -8210,19 +8530,19 @@ export interface VerifyReceiptDto {
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8234,13 +8554,13 @@ export interface VerifyReceiptDto {
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptDto
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {string}
@@ -8289,19 +8609,19 @@ export interface VerifyReceiptResult {
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'creatorId'?: string;
+    'creatorId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'lastModificationTime'?: string;
+    'lastModificationTime'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'lastModifierId'?: string;
+    'lastModifierId'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8313,13 +8633,13 @@ export interface VerifyReceiptResult {
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'deleterId'?: string;
+    'deleterId'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'deletionTime'?: string;
+    'deletionTime'?: string | null;
     /**
      * 
      * @type {IdentityUser}
@@ -8349,19 +8669,19 @@ export interface VerifyReceiptResult {
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'receiptData'?: string;
+    'receiptData'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'platform'?: string;
+    'platform'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'deviceToken'?: string;
+    'deviceToken'?: string | null;
     /**
      * 
      * @type {boolean}
@@ -8373,19 +8693,19 @@ export interface VerifyReceiptResult {
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'statusCode'?: string;
+    'statusCode'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'message'?: string;
+    'message'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof VerifyReceiptResult
      */
-    'resultData'?: string;
+    'resultData'?: string | null;
     /**
      * 
      * @type {string}
@@ -8410,7 +8730,7 @@ export interface WindowsTimeZone {
      * @type {string}
      * @memberof WindowsTimeZone
      */
-    'timeZoneId'?: string;
+    'timeZoneId'?: string | null;
 }
 
 /**
@@ -8996,11 +9316,11 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {RegisterDto} [body] 
+         * @param {RegisterDto} [registerDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountRegisterPost: async (body?: RegisterDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountRegisterPost: async (registerDto?: RegisterDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/register`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9024,7 +9344,7 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(registerDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9033,11 +9353,11 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {ResetPasswordDto} [body] 
+         * @param {ResetPasswordDto} [resetPasswordDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountResetPasswordPost: async (body?: ResetPasswordDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountResetPasswordPost: async (resetPasswordDto?: ResetPasswordDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/reset-password`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9061,7 +9381,7 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(resetPasswordDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9070,11 +9390,11 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {SendPasswordResetCodeDto} [body] 
+         * @param {SendPasswordResetCodeDto} [sendPasswordResetCodeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountSendPasswordResetCodePost: async (body?: SendPasswordResetCodeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountSendPasswordResetCodePost: async (sendPasswordResetCodeDto?: SendPasswordResetCodeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/send-password-reset-code`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9098,7 +9418,7 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(sendPasswordResetCodeDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9107,11 +9427,11 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {VerifyPasswordResetTokenInput} [body] 
+         * @param {VerifyPasswordResetTokenInput} [verifyPasswordResetTokenInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountVerifyPasswordResetTokenPost: async (body?: VerifyPasswordResetTokenInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountVerifyPasswordResetTokenPost: async (verifyPasswordResetTokenInput?: VerifyPasswordResetTokenInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/verify-password-reset-token`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9135,7 +9455,7 @@ export const AccountApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(verifyPasswordResetTokenInput, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9187,42 +9507,42 @@ export const AccountApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {RegisterDto} [body] 
+         * @param {RegisterDto} [registerDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountRegisterPost(body?: RegisterDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountRegisterPost(body, options);
+        async apiAccountRegisterPost(registerDto?: RegisterDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountRegisterPost(registerDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {ResetPasswordDto} [body] 
+         * @param {ResetPasswordDto} [resetPasswordDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountResetPasswordPost(body?: ResetPasswordDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountResetPasswordPost(body, options);
+        async apiAccountResetPasswordPost(resetPasswordDto?: ResetPasswordDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountResetPasswordPost(resetPasswordDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {SendPasswordResetCodeDto} [body] 
+         * @param {SendPasswordResetCodeDto} [sendPasswordResetCodeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountSendPasswordResetCodePost(body?: SendPasswordResetCodeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountSendPasswordResetCodePost(body, options);
+        async apiAccountSendPasswordResetCodePost(sendPasswordResetCodeDto?: SendPasswordResetCodeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountSendPasswordResetCodePost(sendPasswordResetCodeDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {VerifyPasswordResetTokenInput} [body] 
+         * @param {VerifyPasswordResetTokenInput} [verifyPasswordResetTokenInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountVerifyPasswordResetTokenPost(body?: VerifyPasswordResetTokenInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<boolean>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountVerifyPasswordResetTokenPost(body, options);
+        async apiAccountVerifyPasswordResetTokenPost(verifyPasswordResetTokenInput?: VerifyPasswordResetTokenInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<boolean>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountVerifyPasswordResetTokenPost(verifyPasswordResetTokenInput, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -9251,7 +9571,7 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountRegisterPost(requestParameters: AccountApiApiAccountRegisterPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiAccountRegisterPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountRegisterPost(requestParameters.registerDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9260,7 +9580,7 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountResetPasswordPost(requestParameters: AccountApiApiAccountResetPasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAccountResetPasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountResetPasswordPost(requestParameters.resetPasswordDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9269,7 +9589,7 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountSendPasswordResetCodePost(requestParameters: AccountApiApiAccountSendPasswordResetCodePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAccountSendPasswordResetCodePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountSendPasswordResetCodePost(requestParameters.sendPasswordResetCodeDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9278,7 +9598,7 @@ export const AccountApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountVerifyPasswordResetTokenPost(requestParameters: AccountApiApiAccountVerifyPasswordResetTokenPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<boolean> {
-            return localVarFp.apiAccountVerifyPasswordResetTokenPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountVerifyPasswordResetTokenPost(requestParameters.verifyPasswordResetTokenInput, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9302,7 +9622,7 @@ export interface AccountApiApiAccountRegisterPostRequest {
      * @type {RegisterDto}
      * @memberof AccountApiApiAccountRegisterPost
      */
-    readonly body?: RegisterDto
+    readonly registerDto?: RegisterDto
 }
 
 /**
@@ -9316,7 +9636,7 @@ export interface AccountApiApiAccountResetPasswordPostRequest {
      * @type {ResetPasswordDto}
      * @memberof AccountApiApiAccountResetPasswordPost
      */
-    readonly body?: ResetPasswordDto
+    readonly resetPasswordDto?: ResetPasswordDto
 }
 
 /**
@@ -9330,7 +9650,7 @@ export interface AccountApiApiAccountSendPasswordResetCodePostRequest {
      * @type {SendPasswordResetCodeDto}
      * @memberof AccountApiApiAccountSendPasswordResetCodePost
      */
-    readonly body?: SendPasswordResetCodeDto
+    readonly sendPasswordResetCodeDto?: SendPasswordResetCodeDto
 }
 
 /**
@@ -9344,7 +9664,7 @@ export interface AccountApiApiAccountVerifyPasswordResetTokenPostRequest {
      * @type {VerifyPasswordResetTokenInput}
      * @memberof AccountApiApiAccountVerifyPasswordResetTokenPost
      */
-    readonly body?: VerifyPasswordResetTokenInput
+    readonly verifyPasswordResetTokenInput?: VerifyPasswordResetTokenInput
 }
 
 /**
@@ -9362,7 +9682,7 @@ export class AccountApi extends BaseAPI {
      * @memberof AccountApi
      */
     public apiAccountRegisterPost(requestParameters: AccountApiApiAccountRegisterPostRequest = {}, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountRegisterPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AccountApiFp(this.configuration).apiAccountRegisterPost(requestParameters.registerDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9373,7 +9693,7 @@ export class AccountApi extends BaseAPI {
      * @memberof AccountApi
      */
     public apiAccountResetPasswordPost(requestParameters: AccountApiApiAccountResetPasswordPostRequest = {}, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountResetPasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AccountApiFp(this.configuration).apiAccountResetPasswordPost(requestParameters.resetPasswordDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9384,7 +9704,7 @@ export class AccountApi extends BaseAPI {
      * @memberof AccountApi
      */
     public apiAccountSendPasswordResetCodePost(requestParameters: AccountApiApiAccountSendPasswordResetCodePostRequest = {}, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountSendPasswordResetCodePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AccountApiFp(this.configuration).apiAccountSendPasswordResetCodePost(requestParameters.sendPasswordResetCodeDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9395,7 +9715,7 @@ export class AccountApi extends BaseAPI {
      * @memberof AccountApi
      */
     public apiAccountVerifyPasswordResetTokenPost(requestParameters: AccountApiApiAccountVerifyPasswordResetTokenPostRequest = {}, options?: AxiosRequestConfig) {
-        return AccountApiFp(this.configuration).apiAccountVerifyPasswordResetTokenPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AccountApiFp(this.configuration).apiAccountVerifyPasswordResetTokenPost(requestParameters.verifyPasswordResetTokenInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9457,10 +9777,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} [name] 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppByNameGet: async (name?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppByNameGet: async (name?: string, env?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app/by-name`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9479,6 +9800,10 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
+            }
+
+            if (env !== undefined) {
+                localVarQueryParameter['env'] = env;
             }
 
 
@@ -9585,10 +9910,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppIdGet: async (id: string, env?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppIdGet', 'id', id)
             const localVarPath = `/api/app/app/{id}`
@@ -9608,6 +9934,10 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
 
+            if (env !== undefined) {
+                localVarQueryParameter['env'] = env;
+            }
+
 
     
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -9622,11 +9952,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {CreateOrUpdateAppDto} [createOrUpdateAppDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdPut: async (id: string, body?: CreateOrUpdateAppDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppIdPut: async (id: string, createOrUpdateAppDto?: CreateOrUpdateAppDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppIdPut', 'id', id)
             const localVarPath = `/api/app/app/{id}`
@@ -9653,7 +9983,7 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9663,11 +9993,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
-         * @param {AppRunRecordUpdateDto} [body] 
+         * @param {AppRunRecordUpdateDto} [appRunRecordUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdRunStatePut: async (id: string, body?: AppRunRecordUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppIdRunStatePut: async (id: string, appRunRecordUpdateDto?: AppRunRecordUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppIdRunStatePut', 'id', id)
             const localVarPath = `/api/app/app/{id}/run-state`
@@ -9694,7 +10024,7 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(appRunRecordUpdateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9704,10 +10034,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         /**
          * 
          * @param {string} id 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppIdWithUserGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppIdWithUserGet: async (id: string, env?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppIdWithUserGet', 'id', id)
             const localVarPath = `/api/app/app/{id}/with-user`
@@ -9727,6 +10058,10 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             // oauth required
             await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
 
+            if (env !== undefined) {
+                localVarQueryParameter['env'] = env;
+            }
+
 
     
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -9740,11 +10075,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {CreateOrUpdateAppDto} [createOrUpdateAppDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPost: async (body?: CreateOrUpdateAppDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPost: async (createOrUpdateAppDto?: CreateOrUpdateAppDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9768,7 +10103,7 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9825,11 +10160,11 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
         },
         /**
          * 
-         * @param {AppRunDto} [body] 
+         * @param {AppRunDto} [appRunDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppRunPost: async (body?: AppRunDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppRunPost: async (appRunDto?: AppRunDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app/run`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -9853,7 +10188,7 @@ export const AppApiAxiosParamCreator = function (configuration?: Configuration) 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(appRunDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -9979,11 +10314,12 @@ export const AppApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} [name] 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppByNameGet(name?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppByNameGet(name, options);
+        async apiAppAppByNameGet(name?: string, env?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppByNameGet(name, env, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -10012,53 +10348,55 @@ export const AppApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdGet(id, options);
+        async apiAppAppIdGet(id: string, env?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdGet(id, env, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {CreateOrUpdateAppDto} [createOrUpdateAppDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppIdPut(id: string, body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdPut(id, body, options);
+        async apiAppAppIdPut(id: string, createOrUpdateAppDto?: CreateOrUpdateAppDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdPut(id, createOrUpdateAppDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id 
-         * @param {AppRunRecordUpdateDto} [body] 
+         * @param {AppRunRecordUpdateDto} [appRunRecordUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppIdRunStatePut(id: string, body?: AppRunRecordUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdRunStatePut(id, body, options);
+        async apiAppAppIdRunStatePut(id: string, appRunRecordUpdateDto?: AppRunRecordUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdRunStatePut(id, appRunRecordUpdateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id 
+         * @param {string} [env] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppIdWithUserGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppWithUserDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdWithUserGet(id, options);
+        async apiAppAppIdWithUserGet(id: string, env?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppWithUserDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppIdWithUserGet(id, env, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateAppDto} [body] 
+         * @param {CreateOrUpdateAppDto} [createOrUpdateAppDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPost(body?: CreateOrUpdateAppDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPost(body, options);
+        async apiAppAppPost(createOrUpdateAppDto?: CreateOrUpdateAppDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPost(createOrUpdateAppDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -10075,12 +10413,12 @@ export const AppApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {AppRunDto} [body] 
+         * @param {AppRunDto} [appRunDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppRunPost(body?: AppRunDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppRunPost(body, options);
+        async apiAppAppRunPost(appRunDto?: AppRunDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppRunRecordDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppRunPost(appRunDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -10133,7 +10471,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppByNameGet(requestParameters: AppApiApiAppAppByNameGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppByNameGet(requestParameters.name, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppByNameGet(requestParameters.name, requestParameters.env, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10160,7 +10498,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppIdGet(requestParameters: AppApiApiAppAppIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppIdGet(requestParameters.id, requestParameters.env, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10169,7 +10507,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppIdPut(requestParameters: AppApiApiAppAppIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppIdPut(requestParameters.id, requestParameters.createOrUpdateAppDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10178,7 +10516,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppIdRunStatePut(requestParameters: AppApiApiAppAppIdRunStatePutRequest, options?: AxiosRequestConfig): AxiosPromise<AppRunRecordDto> {
-            return localVarFp.apiAppAppIdRunStatePut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppIdRunStatePut(requestParameters.id, requestParameters.appRunRecordUpdateDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10187,7 +10525,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppIdWithUserGet(requestParameters: AppApiApiAppAppIdWithUserGetRequest, options?: AxiosRequestConfig): AxiosPromise<AppWithUserDto> {
-            return localVarFp.apiAppAppIdWithUserGet(requestParameters.id, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppIdWithUserGet(requestParameters.id, requestParameters.env, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10196,7 +10534,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppPost(requestParameters: AppApiApiAppAppPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppDto> {
-            return localVarFp.apiAppAppPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppPost(requestParameters.createOrUpdateAppDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10214,7 +10552,7 @@ export const AppApiFactory = function (configuration?: Configuration, basePath?:
          * @throws {RequiredError}
          */
         apiAppAppRunPost(requestParameters: AppApiApiAppAppRunPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppRunRecordDto> {
-            return localVarFp.apiAppAppRunPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppRunPost(requestParameters.appRunDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10263,6 +10601,13 @@ export interface AppApiApiAppAppByNameGetRequest {
      * @memberof AppApiApiAppAppByNameGet
      */
     readonly name?: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppByNameGet
+     */
+    readonly env?: string
 }
 
 /**
@@ -10326,6 +10671,13 @@ export interface AppApiApiAppAppIdGetRequest {
      * @memberof AppApiApiAppAppIdGet
      */
     readonly id: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdGet
+     */
+    readonly env?: string
 }
 
 /**
@@ -10346,7 +10698,7 @@ export interface AppApiApiAppAppIdPutRequest {
      * @type {CreateOrUpdateAppDto}
      * @memberof AppApiApiAppAppIdPut
      */
-    readonly body?: CreateOrUpdateAppDto
+    readonly createOrUpdateAppDto?: CreateOrUpdateAppDto
 }
 
 /**
@@ -10367,7 +10719,7 @@ export interface AppApiApiAppAppIdRunStatePutRequest {
      * @type {AppRunRecordUpdateDto}
      * @memberof AppApiApiAppAppIdRunStatePut
      */
-    readonly body?: AppRunRecordUpdateDto
+    readonly appRunRecordUpdateDto?: AppRunRecordUpdateDto
 }
 
 /**
@@ -10382,6 +10734,13 @@ export interface AppApiApiAppAppIdWithUserGetRequest {
      * @memberof AppApiApiAppAppIdWithUserGet
      */
     readonly id: string
+
+    /**
+     * 
+     * @type {string}
+     * @memberof AppApiApiAppAppIdWithUserGet
+     */
+    readonly env?: string
 }
 
 /**
@@ -10395,7 +10754,7 @@ export interface AppApiApiAppAppPostRequest {
      * @type {CreateOrUpdateAppDto}
      * @memberof AppApiApiAppAppPost
      */
-    readonly body?: CreateOrUpdateAppDto
+    readonly createOrUpdateAppDto?: CreateOrUpdateAppDto
 }
 
 /**
@@ -10437,7 +10796,7 @@ export interface AppApiApiAppAppRunPostRequest {
      * @type {AppRunDto}
      * @memberof AppApiApiAppAppRunPost
      */
-    readonly body?: AppRunDto
+    readonly appRunDto?: AppRunDto
 }
 
 /**
@@ -10522,7 +10881,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppByNameGet(requestParameters: AppApiApiAppAppByNameGetRequest = {}, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppByNameGet(requestParameters.name, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppByNameGet(requestParameters.name, requestParameters.env, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10555,7 +10914,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppIdGet(requestParameters: AppApiApiAppAppIdGetRequest, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppIdGet(requestParameters.id, requestParameters.env, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10566,7 +10925,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppIdPut(requestParameters: AppApiApiAppAppIdPutRequest, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppIdPut(requestParameters.id, requestParameters.createOrUpdateAppDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10577,7 +10936,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppIdRunStatePut(requestParameters: AppApiApiAppAppIdRunStatePutRequest, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdRunStatePut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppIdRunStatePut(requestParameters.id, requestParameters.appRunRecordUpdateDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10588,7 +10947,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppIdWithUserGet(requestParameters: AppApiApiAppAppIdWithUserGetRequest, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppIdWithUserGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppIdWithUserGet(requestParameters.id, requestParameters.env, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10599,7 +10958,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppPost(requestParameters: AppApiApiAppAppPostRequest = {}, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppPost(requestParameters.createOrUpdateAppDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10621,7 +10980,7 @@ export class AppApi extends BaseAPI {
      * @memberof AppApi
      */
     public apiAppAppRunPost(requestParameters: AppApiApiAppAppRunPostRequest = {}, options?: AxiosRequestConfig) {
-        return AppApiFp(this.configuration).apiAppAppRunPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppApiFp(this.configuration).apiAppAppRunPost(requestParameters.appRunDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10727,11 +11086,11 @@ export const AppFeatureApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {CreateOrUpdateAppFeatureDto} [createOrUpdateAppFeatureDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeatureIdPut: async (id: string, body?: CreateOrUpdateAppFeatureDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppFeatureIdPut: async (id: string, createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppFeatureIdPut', 'id', id)
             const localVarPath = `/api/app/app-feature/{id}`
@@ -10758,7 +11117,7 @@ export const AppFeatureApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppFeatureDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -10767,11 +11126,11 @@ export const AppFeatureApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {CreateOrUpdateAppFeatureDto} [createOrUpdateAppFeatureDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppFeaturePost: async (body?: CreateOrUpdateAppFeatureDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppFeaturePost: async (createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-feature`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -10795,7 +11154,7 @@ export const AppFeatureApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppFeatureDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -10834,22 +11193,22 @@ export const AppFeatureApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {CreateOrUpdateAppFeatureDto} [createOrUpdateAppFeatureDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppFeatureIdPut(id: string, body?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppFeatureDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppFeatureIdPut(id, body, options);
+        async apiAppAppFeatureIdPut(id: string, createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppFeatureDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppFeatureIdPut(id, createOrUpdateAppFeatureDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateAppFeatureDto} [body] 
+         * @param {CreateOrUpdateAppFeatureDto} [createOrUpdateAppFeatureDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppFeaturePost(body?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppFeatureDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppFeaturePost(body, options);
+        async apiAppAppFeaturePost(createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppFeatureDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppFeaturePost(createOrUpdateAppFeatureDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -10886,7 +11245,7 @@ export const AppFeatureApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppFeatureIdPut(requestParameters: AppFeatureApiApiAppAppFeatureIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppFeatureDto> {
-            return localVarFp.apiAppAppFeatureIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppFeatureIdPut(requestParameters.id, requestParameters.createOrUpdateAppFeatureDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -10895,7 +11254,7 @@ export const AppFeatureApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppFeaturePost(requestParameters: AppFeatureApiApiAppAppFeaturePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppFeatureDto> {
-            return localVarFp.apiAppAppFeaturePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppFeaturePost(requestParameters.createOrUpdateAppFeatureDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -10932,7 +11291,7 @@ export interface AppFeatureApiApiAppAppFeatureIdPutRequest {
      * @type {CreateOrUpdateAppFeatureDto}
      * @memberof AppFeatureApiApiAppAppFeatureIdPut
      */
-    readonly body?: CreateOrUpdateAppFeatureDto
+    readonly createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto
 }
 
 /**
@@ -10946,7 +11305,7 @@ export interface AppFeatureApiApiAppAppFeaturePostRequest {
      * @type {CreateOrUpdateAppFeatureDto}
      * @memberof AppFeatureApiApiAppAppFeaturePost
      */
-    readonly body?: CreateOrUpdateAppFeatureDto
+    readonly createOrUpdateAppFeatureDto?: CreateOrUpdateAppFeatureDto
 }
 
 /**
@@ -10985,7 +11344,7 @@ export class AppFeatureApi extends BaseAPI {
      * @memberof AppFeatureApi
      */
     public apiAppAppFeatureIdPut(requestParameters: AppFeatureApiApiAppAppFeatureIdPutRequest, options?: AxiosRequestConfig) {
-        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppFeatureApiFp(this.configuration).apiAppAppFeatureIdPut(requestParameters.id, requestParameters.createOrUpdateAppFeatureDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -10996,7 +11355,7 @@ export class AppFeatureApi extends BaseAPI {
      * @memberof AppFeatureApi
      */
     public apiAppAppFeaturePost(requestParameters: AppFeatureApiApiAppAppFeaturePostRequest = {}, options?: AxiosRequestConfig) {
-        return AppFeatureApiFp(this.configuration).apiAppAppFeaturePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppFeatureApiFp(this.configuration).apiAppAppFeaturePost(requestParameters.createOrUpdateAppFeatureDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11169,11 +11528,11 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {CreateOrUpdateAppPricingDto} [createOrUpdateAppPricingDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingIdPut: async (id: string, body?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingIdPut: async (id: string, createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppPricingIdPut', 'id', id)
             const localVarPath = `/api/app/app-pricing/{id}`
@@ -11200,7 +11559,7 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppPricingDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -11209,11 +11568,11 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {CreateOrUpdateAppPricingDto} [createOrUpdateAppPricingDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingPost: async (body?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingPost: async (createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-pricing`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -11237,7 +11596,7 @@ export const AppPricingApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppPricingDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -11299,22 +11658,22 @@ export const AppPricingApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {CreateOrUpdateAppPricingDto} [createOrUpdateAppPricingDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingIdPut(id: string, body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingIdPut(id, body, options);
+        async apiAppAppPricingIdPut(id: string, createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingIdPut(id, createOrUpdateAppPricingDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingDto} [body] 
+         * @param {CreateOrUpdateAppPricingDto} [createOrUpdateAppPricingDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingPost(body?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingPost(body, options);
+        async apiAppAppPricingPost(createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingPost(createOrUpdateAppPricingDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -11370,7 +11729,7 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppPricingIdPut(requestParameters: AppPricingApiApiAppAppPricingIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingDto> {
-            return localVarFp.apiAppAppPricingIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppPricingIdPut(requestParameters.id, requestParameters.createOrUpdateAppPricingDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -11379,7 +11738,7 @@ export const AppPricingApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppPricingPost(requestParameters: AppPricingApiApiAppAppPricingPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppPricingDto> {
-            return localVarFp.apiAppAppPricingPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppPricingPost(requestParameters.createOrUpdateAppPricingDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -11472,7 +11831,7 @@ export interface AppPricingApiApiAppAppPricingIdPutRequest {
      * @type {CreateOrUpdateAppPricingDto}
      * @memberof AppPricingApiApiAppAppPricingIdPut
      */
-    readonly body?: CreateOrUpdateAppPricingDto
+    readonly createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto
 }
 
 /**
@@ -11486,7 +11845,7 @@ export interface AppPricingApiApiAppAppPricingPostRequest {
      * @type {CreateOrUpdateAppPricingDto}
      * @memberof AppPricingApiApiAppAppPricingPost
      */
-    readonly body?: CreateOrUpdateAppPricingDto
+    readonly createOrUpdateAppPricingDto?: CreateOrUpdateAppPricingDto
 }
 
 /**
@@ -11548,7 +11907,7 @@ export class AppPricingApi extends BaseAPI {
      * @memberof AppPricingApi
      */
     public apiAppAppPricingIdPut(requestParameters: AppPricingApiApiAppAppPricingIdPutRequest, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppPricingApiFp(this.configuration).apiAppAppPricingIdPut(requestParameters.id, requestParameters.createOrUpdateAppPricingDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -11559,7 +11918,7 @@ export class AppPricingApi extends BaseAPI {
      * @memberof AppPricingApi
      */
     public apiAppAppPricingPost(requestParameters: AppPricingApiApiAppAppPricingPostRequest = {}, options?: AxiosRequestConfig) {
-        return AppPricingApiFp(this.configuration).apiAppAppPricingPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppPricingApiFp(this.configuration).apiAppAppPricingPost(requestParameters.createOrUpdateAppPricingDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -11685,11 +12044,11 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [createOrUpdateAppPricingItemDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemIdPut: async (id: string, body?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingItemIdPut: async (id: string, createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppPricingItemIdPut', 'id', id)
             const localVarPath = `/api/app/app-pricing-item/{id}`
@@ -11716,7 +12075,7 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppPricingItemDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -11725,11 +12084,11 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [createOrUpdateAppPricingItemDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppPricingItemPost: async (body?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppPricingItemPost: async (createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-pricing-item`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -11753,7 +12112,7 @@ export const AppPricingItemApiAxiosParamCreator = function (configuration?: Conf
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppPricingItemDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -11803,22 +12162,22 @@ export const AppPricingItemApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [createOrUpdateAppPricingItemDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingItemIdPut(id: string, body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdPut(id, body, options);
+        async apiAppAppPricingItemIdPut(id: string, createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemIdPut(id, createOrUpdateAppPricingItemDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateAppPricingItemDto} [body] 
+         * @param {CreateOrUpdateAppPricingItemDto} [createOrUpdateAppPricingItemDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppPricingItemPost(body?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemPost(body, options);
+        async apiAppAppPricingItemPost(createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppPricingItemDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppPricingItemPost(createOrUpdateAppPricingItemDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -11865,7 +12224,7 @@ export const AppPricingItemApiFactory = function (configuration?: Configuration,
          * @throws {RequiredError}
          */
         apiAppAppPricingItemIdPut(requestParameters: AppPricingItemApiApiAppAppPricingItemIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppPricingItemDto> {
-            return localVarFp.apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.createOrUpdateAppPricingItemDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -11874,7 +12233,7 @@ export const AppPricingItemApiFactory = function (configuration?: Configuration,
          * @throws {RequiredError}
          */
         apiAppAppPricingItemPost(requestParameters: AppPricingItemApiApiAppAppPricingItemPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppPricingItemDto> {
-            return localVarFp.apiAppAppPricingItemPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppPricingItemPost(requestParameters.createOrUpdateAppPricingItemDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -11939,7 +12298,7 @@ export interface AppPricingItemApiApiAppAppPricingItemIdPutRequest {
      * @type {CreateOrUpdateAppPricingItemDto}
      * @memberof AppPricingItemApiApiAppAppPricingItemIdPut
      */
-    readonly body?: CreateOrUpdateAppPricingItemDto
+    readonly createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto
 }
 
 /**
@@ -11953,7 +12312,7 @@ export interface AppPricingItemApiApiAppAppPricingItemPostRequest {
      * @type {CreateOrUpdateAppPricingItemDto}
      * @memberof AppPricingItemApiApiAppAppPricingItemPost
      */
-    readonly body?: CreateOrUpdateAppPricingItemDto
+    readonly createOrUpdateAppPricingItemDto?: CreateOrUpdateAppPricingItemDto
 }
 
 /**
@@ -12004,7 +12363,7 @@ export class AppPricingItemApi extends BaseAPI {
      * @memberof AppPricingItemApi
      */
     public apiAppAppPricingItemIdPut(requestParameters: AppPricingItemApiApiAppAppPricingItemIdPutRequest, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemIdPut(requestParameters.id, requestParameters.createOrUpdateAppPricingItemDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -12015,7 +12374,7 @@ export class AppPricingItemApi extends BaseAPI {
      * @memberof AppPricingItemApi
      */
     public apiAppAppPricingItemPost(requestParameters: AppPricingItemApiApiAppAppPricingItemPostRequest = {}, options?: AxiosRequestConfig) {
-        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppPricingItemApiFp(this.configuration).apiAppAppPricingItemPost(requestParameters.createOrUpdateAppPricingItemDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -12171,11 +12530,11 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {CreateOrUpdateAppReleaseDto} [createOrUpdateAppReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleaseIdPut: async (id: string, body?: CreateOrUpdateAppReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppReleaseIdPut: async (id: string, createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppReleaseIdPut', 'id', id)
             const localVarPath = `/api/app/app-release/{id}`
@@ -12202,7 +12561,7 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppReleaseDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -12264,11 +12623,11 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {CreateOrUpdateAppReleaseDto} [createOrUpdateAppReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppReleasePost: async (body?: CreateOrUpdateAppReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppReleasePost: async (createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-release`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -12292,7 +12651,7 @@ export const AppReleaseApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppReleaseDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -12348,12 +12707,12 @@ export const AppReleaseApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {CreateOrUpdateAppReleaseDto} [createOrUpdateAppReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppReleaseIdPut(id: string, body?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleaseIdPut(id, body, options);
+        async apiAppAppReleaseIdPut(id: string, createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleaseIdPut(id, createOrUpdateAppReleaseDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -12371,12 +12730,12 @@ export const AppReleaseApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {CreateOrUpdateAppReleaseDto} [body] 
+         * @param {CreateOrUpdateAppReleaseDto} [createOrUpdateAppReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppReleasePost(body?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleasePost(body, options);
+        async apiAppAppReleasePost(createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppReleaseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppReleasePost(createOrUpdateAppReleaseDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -12423,7 +12782,7 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppReleaseIdPut(requestParameters: AppReleaseApiApiAppAppReleaseIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleaseIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppReleaseIdPut(requestParameters.id, requestParameters.createOrUpdateAppReleaseDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -12441,7 +12800,7 @@ export const AppReleaseApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppAppReleasePost(requestParameters: AppReleaseApiApiAppAppReleasePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppReleaseDto> {
-            return localVarFp.apiAppAppReleasePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppReleasePost(requestParameters.createOrUpdateAppReleaseDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -12548,7 +12907,7 @@ export interface AppReleaseApiApiAppAppReleaseIdPutRequest {
      * @type {CreateOrUpdateAppReleaseDto}
      * @memberof AppReleaseApiApiAppAppReleaseIdPut
      */
-    readonly body?: CreateOrUpdateAppReleaseDto
+    readonly createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto
 }
 
 /**
@@ -12597,7 +12956,7 @@ export interface AppReleaseApiApiAppAppReleasePostRequest {
      * @type {CreateOrUpdateAppReleaseDto}
      * @memberof AppReleaseApiApiAppAppReleasePost
      */
-    readonly body?: CreateOrUpdateAppReleaseDto
+    readonly createOrUpdateAppReleaseDto?: CreateOrUpdateAppReleaseDto
 }
 
 /**
@@ -12648,7 +13007,7 @@ export class AppReleaseApi extends BaseAPI {
      * @memberof AppReleaseApi
      */
     public apiAppAppReleaseIdPut(requestParameters: AppReleaseApiApiAppAppReleaseIdPutRequest, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppReleaseApiFp(this.configuration).apiAppAppReleaseIdPut(requestParameters.id, requestParameters.createOrUpdateAppReleaseDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -12670,7 +13029,7 @@ export class AppReleaseApi extends BaseAPI {
      * @memberof AppReleaseApi
      */
     public apiAppAppReleasePost(requestParameters: AppReleaseApiApiAppAppReleasePostRequest = {}, options?: AxiosRequestConfig) {
-        return AppReleaseApiFp(this.configuration).apiAppAppReleasePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppReleaseApiFp(this.configuration).apiAppAppReleasePost(requestParameters.createOrUpdateAppReleaseDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -12754,11 +13113,11 @@ export const AppSdkApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {CreateOrUpdateAppSdkDto} [createOrUpdateAppSdkDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkIdPut: async (id: string, body?: CreateOrUpdateAppSdkDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppSdkIdPut: async (id: string, createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppAppSdkIdPut', 'id', id)
             const localVarPath = `/api/app/app-sdk/{id}`
@@ -12785,7 +13144,7 @@ export const AppSdkApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppSdkDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -12794,11 +13153,11 @@ export const AppSdkApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {CreateOrUpdateAppSdkDto} [createOrUpdateAppSdkDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppSdkPost: async (body?: CreateOrUpdateAppSdkDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppSdkPost: async (createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-sdk`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -12822,7 +13181,7 @@ export const AppSdkApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppSdkDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -12861,22 +13220,22 @@ export const AppSdkApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {CreateOrUpdateAppSdkDto} [createOrUpdateAppSdkDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppSdkIdPut(id: string, body?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppSdkDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppSdkIdPut(id, body, options);
+        async apiAppAppSdkIdPut(id: string, createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppSdkDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppSdkIdPut(id, createOrUpdateAppSdkDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateAppSdkDto} [body] 
+         * @param {CreateOrUpdateAppSdkDto} [createOrUpdateAppSdkDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppSdkPost(body?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppSdkDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppSdkPost(body, options);
+        async apiAppAppSdkPost(createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppSdkDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppSdkPost(createOrUpdateAppSdkDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -12913,7 +13272,7 @@ export const AppSdkApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiAppAppSdkIdPut(requestParameters: AppSdkApiApiAppAppSdkIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<AppSdkDto> {
-            return localVarFp.apiAppAppSdkIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppSdkIdPut(requestParameters.id, requestParameters.createOrUpdateAppSdkDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -12922,7 +13281,7 @@ export const AppSdkApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiAppAppSdkPost(requestParameters: AppSdkApiApiAppAppSdkPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppSdkDto> {
-            return localVarFp.apiAppAppSdkPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppSdkPost(requestParameters.createOrUpdateAppSdkDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -12959,7 +13318,7 @@ export interface AppSdkApiApiAppAppSdkIdPutRequest {
      * @type {CreateOrUpdateAppSdkDto}
      * @memberof AppSdkApiApiAppAppSdkIdPut
      */
-    readonly body?: CreateOrUpdateAppSdkDto
+    readonly createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto
 }
 
 /**
@@ -12973,7 +13332,7 @@ export interface AppSdkApiApiAppAppSdkPostRequest {
      * @type {CreateOrUpdateAppSdkDto}
      * @memberof AppSdkApiApiAppAppSdkPost
      */
-    readonly body?: CreateOrUpdateAppSdkDto
+    readonly createOrUpdateAppSdkDto?: CreateOrUpdateAppSdkDto
 }
 
 /**
@@ -13012,7 +13371,7 @@ export class AppSdkApi extends BaseAPI {
      * @memberof AppSdkApi
      */
     public apiAppAppSdkIdPut(requestParameters: AppSdkApiApiAppAppSdkIdPutRequest, options?: AxiosRequestConfig) {
-        return AppSdkApiFp(this.configuration).apiAppAppSdkIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppSdkApiFp(this.configuration).apiAppAppSdkIdPut(requestParameters.id, requestParameters.createOrUpdateAppSdkDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13023,7 +13382,7 @@ export class AppSdkApi extends BaseAPI {
      * @memberof AppSdkApi
      */
     public apiAppAppSdkPost(requestParameters: AppSdkApiApiAppAppSdkPostRequest = {}, options?: AxiosRequestConfig) {
-        return AppSdkApiFp(this.configuration).apiAppAppSdkPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppSdkApiFp(this.configuration).apiAppAppSdkPost(requestParameters.createOrUpdateAppSdkDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13036,11 +13395,11 @@ export const AppUserScoreApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {CreateOrUpdateAppUserScoreDto} [body] 
+         * @param {CreateOrUpdateAppUserScoreDto} [createOrUpdateAppUserScoreDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppAppUserScorePost: async (body?: CreateOrUpdateAppUserScoreDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppAppUserScorePost: async (createOrUpdateAppUserScoreDto?: CreateOrUpdateAppUserScoreDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/app-user-score`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13064,7 +13423,7 @@ export const AppUserScoreApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateAppUserScoreDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13083,12 +13442,12 @@ export const AppUserScoreApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {CreateOrUpdateAppUserScoreDto} [body] 
+         * @param {CreateOrUpdateAppUserScoreDto} [createOrUpdateAppUserScoreDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppAppUserScorePost(body?: CreateOrUpdateAppUserScoreDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppUserScoreDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppUserScorePost(body, options);
+        async apiAppAppUserScorePost(createOrUpdateAppUserScoreDto?: CreateOrUpdateAppUserScoreDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AppUserScoreDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAppUserScorePost(createOrUpdateAppUserScoreDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -13108,7 +13467,7 @@ export const AppUserScoreApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppAppUserScorePost(requestParameters: AppUserScoreApiApiAppAppUserScorePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AppUserScoreDto> {
-            return localVarFp.apiAppAppUserScorePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppAppUserScorePost(requestParameters.createOrUpdateAppUserScoreDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -13124,7 +13483,7 @@ export interface AppUserScoreApiApiAppAppUserScorePostRequest {
      * @type {CreateOrUpdateAppUserScoreDto}
      * @memberof AppUserScoreApiApiAppAppUserScorePost
      */
-    readonly body?: CreateOrUpdateAppUserScoreDto
+    readonly createOrUpdateAppUserScoreDto?: CreateOrUpdateAppUserScoreDto
 }
 
 /**
@@ -13142,7 +13501,208 @@ export class AppUserScoreApi extends BaseAPI {
      * @memberof AppUserScoreApi
      */
     public apiAppAppUserScorePost(requestParameters: AppUserScoreApiApiAppAppUserScorePostRequest = {}, options?: AxiosRequestConfig) {
-        return AppUserScoreApiFp(this.configuration).apiAppAppUserScorePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return AppUserScoreApiFp(this.configuration).apiAppAppUserScorePost(requestParameters.createOrUpdateAppUserScoreDto, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AvatarApi - axios parameter creator
+ * @export
+ */
+export const AvatarApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [key] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAvatarCredentialsGet: async (key?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/avatar/credentials`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (key !== undefined) {
+                localVarQueryParameter['key'] = key;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateAvatarDto} [createAvatarDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAvatarPost: async (createAvatarDto?: CreateAvatarDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/avatar`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createAvatarDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AvatarApi - functional programming interface
+ * @export
+ */
+export const AvatarApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AvatarApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [key] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAvatarCredentialsGet(key?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StorageObjectCredentials>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAvatarCredentialsGet(key, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateAvatarDto} [createAvatarDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppAvatarPost(createAvatarDto?: CreateAvatarDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AvatarDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppAvatarPost(createAvatarDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AvatarApi - factory interface
+ * @export
+ */
+export const AvatarApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AvatarApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {AvatarApiApiAppAvatarCredentialsGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAvatarCredentialsGet(requestParameters: AvatarApiApiAppAvatarCredentialsGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<StorageObjectCredentials> {
+            return localVarFp.apiAppAvatarCredentialsGet(requestParameters.key, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {AvatarApiApiAppAvatarPostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppAvatarPost(requestParameters: AvatarApiApiAppAvatarPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AvatarDto> {
+            return localVarFp.apiAppAvatarPost(requestParameters.createAvatarDto, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for apiAppAvatarCredentialsGet operation in AvatarApi.
+ * @export
+ * @interface AvatarApiApiAppAvatarCredentialsGetRequest
+ */
+export interface AvatarApiApiAppAvatarCredentialsGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof AvatarApiApiAppAvatarCredentialsGet
+     */
+    readonly key?: string
+}
+
+/**
+ * Request parameters for apiAppAvatarPost operation in AvatarApi.
+ * @export
+ * @interface AvatarApiApiAppAvatarPostRequest
+ */
+export interface AvatarApiApiAppAvatarPostRequest {
+    /**
+     * 
+     * @type {CreateAvatarDto}
+     * @memberof AvatarApiApiAppAvatarPost
+     */
+    readonly createAvatarDto?: CreateAvatarDto
+}
+
+/**
+ * AvatarApi - object-oriented interface
+ * @export
+ * @class AvatarApi
+ * @extends {BaseAPI}
+ */
+export class AvatarApi extends BaseAPI {
+    /**
+     * 
+     * @param {AvatarApiApiAppAvatarCredentialsGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AvatarApi
+     */
+    public apiAppAvatarCredentialsGet(requestParameters: AvatarApiApiAppAvatarCredentialsGetRequest = {}, options?: AxiosRequestConfig) {
+        return AvatarApiFp(this.configuration).apiAppAvatarCredentialsGet(requestParameters.key, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {AvatarApiApiAppAvatarPostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AvatarApi
+     */
+    public apiAppAvatarPost(requestParameters: AvatarApiApiAppAvatarPostRequest = {}, options?: AxiosRequestConfig) {
+        return AvatarApiFp(this.configuration).apiAppAvatarPost(requestParameters.createAvatarDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13155,11 +13715,11 @@ export const DeviceApiAxiosParamCreator = function (configuration?: Configuratio
     return {
         /**
          * 
-         * @param {BindDeviceDto} [body] 
+         * @param {BindDeviceDto} [bindDeviceDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceBindPost: async (body?: BindDeviceDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppDeviceBindPost: async (bindDeviceDto?: BindDeviceDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/device/bind`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13183,7 +13743,7 @@ export const DeviceApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(bindDeviceDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13278,11 +13838,11 @@ export const DeviceApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * 
-         * @param {RefreshDeviceStatusDto} [body] 
+         * @param {RefreshDeviceStatusDto} [refreshDeviceStatusDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppDeviceRefreshPost: async (body?: RefreshDeviceStatusDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppDeviceRefreshPost: async (refreshDeviceStatusDto?: RefreshDeviceStatusDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/device/refresh`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13306,7 +13866,7 @@ export const DeviceApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(refreshDeviceStatusDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13325,12 +13885,12 @@ export const DeviceApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {BindDeviceDto} [body] 
+         * @param {BindDeviceDto} [bindDeviceDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppDeviceBindPost(body?: BindDeviceDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppDeviceBindPost(body, options);
+        async apiAppDeviceBindPost(bindDeviceDto?: BindDeviceDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppDeviceBindPost(bindDeviceDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -13357,12 +13917,12 @@ export const DeviceApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {RefreshDeviceStatusDto} [body] 
+         * @param {RefreshDeviceStatusDto} [refreshDeviceStatusDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppDeviceRefreshPost(body?: RefreshDeviceStatusDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppDeviceRefreshPost(body, options);
+        async apiAppDeviceRefreshPost(refreshDeviceStatusDto?: RefreshDeviceStatusDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppDeviceRefreshPost(refreshDeviceStatusDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -13382,7 +13942,7 @@ export const DeviceApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiAppDeviceBindPost(requestParameters: DeviceApiApiAppDeviceBindPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppDeviceBindPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppDeviceBindPost(requestParameters.bindDeviceDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13409,7 +13969,7 @@ export const DeviceApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiAppDeviceRefreshPost(requestParameters: DeviceApiApiAppDeviceRefreshPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppDeviceRefreshPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppDeviceRefreshPost(requestParameters.refreshDeviceStatusDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -13425,7 +13985,7 @@ export interface DeviceApiApiAppDeviceBindPostRequest {
      * @type {BindDeviceDto}
      * @memberof DeviceApiApiAppDeviceBindPost
      */
-    readonly body?: BindDeviceDto
+    readonly bindDeviceDto?: BindDeviceDto
 }
 
 /**
@@ -13481,7 +14041,7 @@ export interface DeviceApiApiAppDeviceRefreshPostRequest {
      * @type {RefreshDeviceStatusDto}
      * @memberof DeviceApiApiAppDeviceRefreshPost
      */
-    readonly body?: RefreshDeviceStatusDto
+    readonly refreshDeviceStatusDto?: RefreshDeviceStatusDto
 }
 
 /**
@@ -13499,7 +14059,7 @@ export class DeviceApi extends BaseAPI {
      * @memberof DeviceApi
      */
     public apiAppDeviceBindPost(requestParameters: DeviceApiApiAppDeviceBindPostRequest = {}, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceBindPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return DeviceApiFp(this.configuration).apiAppDeviceBindPost(requestParameters.bindDeviceDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13532,7 +14092,7 @@ export class DeviceApi extends BaseAPI {
      * @memberof DeviceApi
      */
     public apiAppDeviceRefreshPost(requestParameters: DeviceApiApiAppDeviceRefreshPostRequest = {}, options?: AxiosRequestConfig) {
-        return DeviceApiFp(this.configuration).apiAppDeviceRefreshPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return DeviceApiFp(this.configuration).apiAppDeviceRefreshPost(requestParameters.refreshDeviceStatusDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13578,11 +14138,11 @@ export const EmailSettingsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {UpdateEmailSettingsDto} [body] 
+         * @param {UpdateEmailSettingsDto} [updateEmailSettingsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSettingManagementEmailingPost: async (body?: UpdateEmailSettingsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiSettingManagementEmailingPost: async (updateEmailSettingsDto?: UpdateEmailSettingsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/setting-management/emailing`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13606,7 +14166,7 @@ export const EmailSettingsApiAxiosParamCreator = function (configuration?: Confi
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(updateEmailSettingsDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13615,11 +14175,11 @@ export const EmailSettingsApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * 
-         * @param {SendTestEmailInput} [body] 
+         * @param {SendTestEmailInput} [sendTestEmailInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSettingManagementEmailingSendTestEmailPost: async (body?: SendTestEmailInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiSettingManagementEmailingSendTestEmailPost: async (sendTestEmailInput?: SendTestEmailInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/setting-management/emailing/send-test-email`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13643,7 +14203,7 @@ export const EmailSettingsApiAxiosParamCreator = function (configuration?: Confi
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(sendTestEmailInput, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13671,22 +14231,22 @@ export const EmailSettingsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {UpdateEmailSettingsDto} [body] 
+         * @param {UpdateEmailSettingsDto} [updateEmailSettingsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSettingManagementEmailingPost(body?: UpdateEmailSettingsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiSettingManagementEmailingPost(body, options);
+        async apiSettingManagementEmailingPost(updateEmailSettingsDto?: UpdateEmailSettingsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiSettingManagementEmailingPost(updateEmailSettingsDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {SendTestEmailInput} [body] 
+         * @param {SendTestEmailInput} [sendTestEmailInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSettingManagementEmailingSendTestEmailPost(body?: SendTestEmailInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiSettingManagementEmailingSendTestEmailPost(body, options);
+        async apiSettingManagementEmailingSendTestEmailPost(sendTestEmailInput?: SendTestEmailInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiSettingManagementEmailingSendTestEmailPost(sendTestEmailInput, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -13714,7 +14274,7 @@ export const EmailSettingsApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         apiSettingManagementEmailingPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiSettingManagementEmailingPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiSettingManagementEmailingPost(requestParameters.updateEmailSettingsDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -13723,7 +14283,7 @@ export const EmailSettingsApiFactory = function (configuration?: Configuration, 
          * @throws {RequiredError}
          */
         apiSettingManagementEmailingSendTestEmailPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiSettingManagementEmailingSendTestEmailPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiSettingManagementEmailingSendTestEmailPost(requestParameters.sendTestEmailInput, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -13739,7 +14299,7 @@ export interface EmailSettingsApiApiSettingManagementEmailingPostRequest {
      * @type {UpdateEmailSettingsDto}
      * @memberof EmailSettingsApiApiSettingManagementEmailingPost
      */
-    readonly body?: UpdateEmailSettingsDto
+    readonly updateEmailSettingsDto?: UpdateEmailSettingsDto
 }
 
 /**
@@ -13753,7 +14313,7 @@ export interface EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRe
      * @type {SendTestEmailInput}
      * @memberof EmailSettingsApiApiSettingManagementEmailingSendTestEmailPost
      */
-    readonly body?: SendTestEmailInput
+    readonly sendTestEmailInput?: SendTestEmailInput
 }
 
 /**
@@ -13781,7 +14341,7 @@ export class EmailSettingsApi extends BaseAPI {
      * @memberof EmailSettingsApi
      */
     public apiSettingManagementEmailingPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingPostRequest = {}, options?: AxiosRequestConfig) {
-        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingPost(requestParameters.updateEmailSettingsDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -13792,7 +14352,7 @@ export class EmailSettingsApi extends BaseAPI {
      * @memberof EmailSettingsApi
      */
     public apiSettingManagementEmailingSendTestEmailPost(requestParameters: EmailSettingsApiApiSettingManagementEmailingSendTestEmailPostRequest = {}, options?: AxiosRequestConfig) {
-        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingSendTestEmailPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return EmailSettingsApiFp(this.configuration).apiSettingManagementEmailingSendTestEmailPost(requestParameters.sendTestEmailInput, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -13893,11 +14453,11 @@ export const FeaturesApiAxiosParamCreator = function (configuration?: Configurat
          * 
          * @param {string} [providerName] 
          * @param {string} [providerKey] 
-         * @param {UpdateFeaturesDto} [body] 
+         * @param {UpdateFeaturesDto} [updateFeaturesDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFeatureManagementFeaturesPut: async (providerName?: string, providerKey?: string, body?: UpdateFeaturesDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiFeatureManagementFeaturesPut: async (providerName?: string, providerKey?: string, updateFeaturesDto?: UpdateFeaturesDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/feature-management/features`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -13929,7 +14489,7 @@ export const FeaturesApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(updateFeaturesDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -13972,12 +14532,12 @@ export const FeaturesApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [providerName] 
          * @param {string} [providerKey] 
-         * @param {UpdateFeaturesDto} [body] 
+         * @param {UpdateFeaturesDto} [updateFeaturesDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiFeatureManagementFeaturesPut(providerName?: string, providerKey?: string, body?: UpdateFeaturesDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiFeatureManagementFeaturesPut(providerName, providerKey, body, options);
+        async apiFeatureManagementFeaturesPut(providerName?: string, providerKey?: string, updateFeaturesDto?: UpdateFeaturesDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiFeatureManagementFeaturesPut(providerName, providerKey, updateFeaturesDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -14015,7 +14575,7 @@ export const FeaturesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiFeatureManagementFeaturesPut(requestParameters: FeaturesApiApiFeatureManagementFeaturesPutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.updateFeaturesDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -14087,7 +14647,7 @@ export interface FeaturesApiApiFeatureManagementFeaturesPutRequest {
      * @type {UpdateFeaturesDto}
      * @memberof FeaturesApiApiFeatureManagementFeaturesPut
      */
-    readonly body?: UpdateFeaturesDto
+    readonly updateFeaturesDto?: UpdateFeaturesDto
 }
 
 /**
@@ -14127,7 +14687,7 @@ export class FeaturesApi extends BaseAPI {
      * @memberof FeaturesApi
      */
     public apiFeatureManagementFeaturesPut(requestParameters: FeaturesApiApiFeatureManagementFeaturesPutRequest = {}, options?: AxiosRequestConfig) {
-        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return FeaturesApiFp(this.configuration).apiFeatureManagementFeaturesPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.updateFeaturesDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -14331,11 +14891,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {BooleanSetKeyValueDto} [body] 
+         * @param {BooleanSetKeyValueDto} [booleanSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetBoolPost: async (key?: string, body?: BooleanSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetBoolPost: async (key?: string, booleanSetKeyValueDto?: BooleanSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-bool`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14363,7 +14923,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(booleanSetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14373,11 +14933,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {DateTimeSetKeyValueDto} [body] 
+         * @param {DateTimeSetKeyValueDto} [dateTimeSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDateTimePost: async (key?: string, body?: DateTimeSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetDateTimePost: async (key?: string, dateTimeSetKeyValueDto?: DateTimeSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-date-time`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14405,7 +14965,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(dateTimeSetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14415,11 +14975,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {DecimalSetKeyValueDto} [body] 
+         * @param {DecimalSetKeyValueDto} [decimalSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDecimalPost: async (key?: string, body?: DecimalSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetDecimalPost: async (key?: string, decimalSetKeyValueDto?: DecimalSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-decimal`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14447,7 +15007,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(decimalSetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14457,11 +15017,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {DoubleSetKeyValueDto} [body] 
+         * @param {DoubleSetKeyValueDto} [doubleSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetDoublePost: async (key?: string, body?: DoubleSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetDoublePost: async (key?: string, doubleSetKeyValueDto?: DoubleSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-double`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14489,7 +15049,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(doubleSetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14499,11 +15059,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {Int32SetKeyValueDto} [body] 
+         * @param {Int32SetKeyValueDto} [int32SetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetIntPost: async (key?: string, body?: Int32SetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetIntPost: async (key?: string, int32SetKeyValueDto?: Int32SetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-int`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14531,7 +15091,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(int32SetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14541,11 +15101,11 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {string} [key] 
-         * @param {StringSetKeyValueDto} [body] 
+         * @param {StringSetKeyValueDto} [stringSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppKeyValueSetStringPost: async (key?: string, body?: StringSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppKeyValueSetStringPost: async (key?: string, stringSetKeyValueDto?: StringSetKeyValueDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/key-value/set-string`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -14573,7 +15133,7 @@ export const KeyValueApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(stringSetKeyValueDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -14681,67 +15241,67 @@ export const KeyValueApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} [key] 
-         * @param {BooleanSetKeyValueDto} [body] 
+         * @param {BooleanSetKeyValueDto} [booleanSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetBoolPost(key?: string, body?: BooleanSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetBoolPost(key, body, options);
+        async apiAppKeyValueSetBoolPost(key?: string, booleanSetKeyValueDto?: BooleanSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetBoolPost(key, booleanSetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} [key] 
-         * @param {DateTimeSetKeyValueDto} [body] 
+         * @param {DateTimeSetKeyValueDto} [dateTimeSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetDateTimePost(key?: string, body?: DateTimeSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDateTimePost(key, body, options);
+        async apiAppKeyValueSetDateTimePost(key?: string, dateTimeSetKeyValueDto?: DateTimeSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDateTimePost(key, dateTimeSetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} [key] 
-         * @param {DecimalSetKeyValueDto} [body] 
+         * @param {DecimalSetKeyValueDto} [decimalSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetDecimalPost(key?: string, body?: DecimalSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDecimalPost(key, body, options);
+        async apiAppKeyValueSetDecimalPost(key?: string, decimalSetKeyValueDto?: DecimalSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDecimalPost(key, decimalSetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} [key] 
-         * @param {DoubleSetKeyValueDto} [body] 
+         * @param {DoubleSetKeyValueDto} [doubleSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetDoublePost(key?: string, body?: DoubleSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDoublePost(key, body, options);
+        async apiAppKeyValueSetDoublePost(key?: string, doubleSetKeyValueDto?: DoubleSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetDoublePost(key, doubleSetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} [key] 
-         * @param {Int32SetKeyValueDto} [body] 
+         * @param {Int32SetKeyValueDto} [int32SetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetIntPost(key?: string, body?: Int32SetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetIntPost(key, body, options);
+        async apiAppKeyValueSetIntPost(key?: string, int32SetKeyValueDto?: Int32SetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetIntPost(key, int32SetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} [key] 
-         * @param {StringSetKeyValueDto} [body] 
+         * @param {StringSetKeyValueDto} [stringSetKeyValueDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppKeyValueSetStringPost(key?: string, body?: StringSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetStringPost(key, body, options);
+        async apiAppKeyValueSetStringPost(key?: string, stringSetKeyValueDto?: StringSetKeyValueDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppKeyValueSetStringPost(key, stringSetKeyValueDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -14816,7 +15376,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetBoolPost(requestParameters: KeyValueApiApiAppKeyValueSetBoolPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.booleanSetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14825,7 +15385,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetDateTimePost(requestParameters: KeyValueApiApiAppKeyValueSetDateTimePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.dateTimeSetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14834,7 +15394,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetDecimalPost(requestParameters: KeyValueApiApiAppKeyValueSetDecimalPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.decimalSetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14843,7 +15403,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetDoublePost(requestParameters: KeyValueApiApiAppKeyValueSetDoublePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.doubleSetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14852,7 +15412,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetIntPost(requestParameters: KeyValueApiApiAppKeyValueSetIntPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.int32SetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14861,7 +15421,7 @@ export const KeyValueApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppKeyValueSetStringPost(requestParameters: KeyValueApiApiAppKeyValueSetStringPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.stringSetKeyValueDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -14963,7 +15523,7 @@ export interface KeyValueApiApiAppKeyValueSetBoolPostRequest {
      * @type {BooleanSetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetBoolPost
      */
-    readonly body?: BooleanSetKeyValueDto
+    readonly booleanSetKeyValueDto?: BooleanSetKeyValueDto
 }
 
 /**
@@ -14984,7 +15544,7 @@ export interface KeyValueApiApiAppKeyValueSetDateTimePostRequest {
      * @type {DateTimeSetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetDateTimePost
      */
-    readonly body?: DateTimeSetKeyValueDto
+    readonly dateTimeSetKeyValueDto?: DateTimeSetKeyValueDto
 }
 
 /**
@@ -15005,7 +15565,7 @@ export interface KeyValueApiApiAppKeyValueSetDecimalPostRequest {
      * @type {DecimalSetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetDecimalPost
      */
-    readonly body?: DecimalSetKeyValueDto
+    readonly decimalSetKeyValueDto?: DecimalSetKeyValueDto
 }
 
 /**
@@ -15026,7 +15586,7 @@ export interface KeyValueApiApiAppKeyValueSetDoublePostRequest {
      * @type {DoubleSetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetDoublePost
      */
-    readonly body?: DoubleSetKeyValueDto
+    readonly doubleSetKeyValueDto?: DoubleSetKeyValueDto
 }
 
 /**
@@ -15047,7 +15607,7 @@ export interface KeyValueApiApiAppKeyValueSetIntPostRequest {
      * @type {Int32SetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetIntPost
      */
-    readonly body?: Int32SetKeyValueDto
+    readonly int32SetKeyValueDto?: Int32SetKeyValueDto
 }
 
 /**
@@ -15068,7 +15628,7 @@ export interface KeyValueApiApiAppKeyValueSetStringPostRequest {
      * @type {StringSetKeyValueDto}
      * @memberof KeyValueApiApiAppKeyValueSetStringPost
      */
-    readonly body?: StringSetKeyValueDto
+    readonly stringSetKeyValueDto?: StringSetKeyValueDto
 }
 
 /**
@@ -15155,7 +15715,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetBoolPost(requestParameters: KeyValueApiApiAppKeyValueSetBoolPostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetBoolPost(requestParameters.key, requestParameters.booleanSetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15166,7 +15726,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetDateTimePost(requestParameters: KeyValueApiApiAppKeyValueSetDateTimePostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDateTimePost(requestParameters.key, requestParameters.dateTimeSetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15177,7 +15737,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetDecimalPost(requestParameters: KeyValueApiApiAppKeyValueSetDecimalPostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDecimalPost(requestParameters.key, requestParameters.decimalSetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15188,7 +15748,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetDoublePost(requestParameters: KeyValueApiApiAppKeyValueSetDoublePostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetDoublePost(requestParameters.key, requestParameters.doubleSetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15199,7 +15759,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetIntPost(requestParameters: KeyValueApiApiAppKeyValueSetIntPostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetIntPost(requestParameters.key, requestParameters.int32SetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15210,7 +15770,7 @@ export class KeyValueApi extends BaseAPI {
      * @memberof KeyValueApi
      */
     public apiAppKeyValueSetStringPost(requestParameters: KeyValueApiApiAppKeyValueSetStringPostRequest = {}, options?: AxiosRequestConfig) {
-        return KeyValueApiFp(this.configuration).apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return KeyValueApiFp(this.configuration).apiAppKeyValueSetStringPost(requestParameters.key, requestParameters.stringSetKeyValueDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15234,11 +15794,11 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
     return {
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {UserLoginInfo} [userLoginInfo] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountCheckPasswordPost: async (body?: UserLoginInfo, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountCheckPasswordPost: async (userLoginInfo?: UserLoginInfo, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/check-password`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15262,7 +15822,7 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(userLoginInfo, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15271,11 +15831,11 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {UserLoginInfo} [userLoginInfo] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountLoginPost: async (body?: UserLoginInfo, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountLoginPost: async (userLoginInfo?: UserLoginInfo, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/login`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15299,7 +15859,7 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(userLoginInfo, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15351,22 +15911,22 @@ export const LoginApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {UserLoginInfo} [userLoginInfo] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountCheckPasswordPost(body?: UserLoginInfo, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AbpLoginResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountCheckPasswordPost(body, options);
+        async apiAccountCheckPasswordPost(userLoginInfo?: UserLoginInfo, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AbpLoginResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountCheckPasswordPost(userLoginInfo, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UserLoginInfo} [body] 
+         * @param {UserLoginInfo} [userLoginInfo] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountLoginPost(body?: UserLoginInfo, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AbpLoginResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountLoginPost(body, options);
+        async apiAccountLoginPost(userLoginInfo?: UserLoginInfo, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AbpLoginResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountLoginPost(userLoginInfo, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -15395,7 +15955,7 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiAccountCheckPasswordPost(requestParameters: LoginApiApiAccountCheckPasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AbpLoginResult> {
-            return localVarFp.apiAccountCheckPasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountCheckPasswordPost(requestParameters.userLoginInfo, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15404,7 +15964,7 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
          * @throws {RequiredError}
          */
         apiAccountLoginPost(requestParameters: LoginApiApiAccountLoginPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<AbpLoginResult> {
-            return localVarFp.apiAccountLoginPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountLoginPost(requestParameters.userLoginInfo, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15428,7 +15988,7 @@ export interface LoginApiApiAccountCheckPasswordPostRequest {
      * @type {UserLoginInfo}
      * @memberof LoginApiApiAccountCheckPasswordPost
      */
-    readonly body?: UserLoginInfo
+    readonly userLoginInfo?: UserLoginInfo
 }
 
 /**
@@ -15442,7 +16002,7 @@ export interface LoginApiApiAccountLoginPostRequest {
      * @type {UserLoginInfo}
      * @memberof LoginApiApiAccountLoginPost
      */
-    readonly body?: UserLoginInfo
+    readonly userLoginInfo?: UserLoginInfo
 }
 
 /**
@@ -15460,7 +16020,7 @@ export class LoginApi extends BaseAPI {
      * @memberof LoginApi
      */
     public apiAccountCheckPasswordPost(requestParameters: LoginApiApiAccountCheckPasswordPostRequest = {}, options?: AxiosRequestConfig) {
-        return LoginApiFp(this.configuration).apiAccountCheckPasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return LoginApiFp(this.configuration).apiAccountCheckPasswordPost(requestParameters.userLoginInfo, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15471,7 +16031,7 @@ export class LoginApi extends BaseAPI {
      * @memberof LoginApi
      */
     public apiAccountLoginPost(requestParameters: LoginApiApiAccountLoginPostRequest = {}, options?: AxiosRequestConfig) {
-        return LoginApiFp(this.configuration).apiAccountLoginPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return LoginApiFp(this.configuration).apiAccountLoginPost(requestParameters.userLoginInfo, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15494,11 +16054,11 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {MessagePublishDto} [body] 
+         * @param {MessagePublishDto} [messagePublishDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessagePublishPost: async (body?: MessagePublishDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessagePublishPost: async (messagePublishDto?: MessagePublishDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message/publish`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15522,7 +16082,7 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(messagePublishDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15531,11 +16091,11 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {MessageRecallDto} [body] 
+         * @param {MessageRecallDto} [messageRecallDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageRecallPost: async (body?: MessageRecallDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageRecallPost: async (messageRecallDto?: MessageRecallDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message/recall`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15559,7 +16119,7 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(messageRecallDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15568,11 +16128,11 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {MessageSubscribeDto} [body] 
+         * @param {MessageSubscribeDto} [messageSubscribeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageSubscribePost: async (body?: MessageSubscribeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageSubscribePost: async (messageSubscribeDto?: MessageSubscribeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message/subscribe`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15596,7 +16156,7 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(messageSubscribeDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15605,11 +16165,11 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {MessageUnsubscribeDto} [body] 
+         * @param {MessageUnsubscribeDto} [messageUnsubscribeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageUnsubscribePost: async (body?: MessageUnsubscribeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageUnsubscribePost: async (messageUnsubscribeDto?: MessageUnsubscribeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message/unsubscribe`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -15633,7 +16193,7 @@ export const MessageApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(messageUnsubscribeDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -15652,42 +16212,42 @@ export const MessageApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {MessagePublishDto} [body] 
+         * @param {MessagePublishDto} [messagePublishDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessagePublishPost(body?: MessagePublishDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessagePublishPost(body, options);
+        async apiAppMessagePublishPost(messagePublishDto?: MessagePublishDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessagePublishPost(messagePublishDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {MessageRecallDto} [body] 
+         * @param {MessageRecallDto} [messageRecallDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageRecallPost(body?: MessageRecallDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageRecallPost(body, options);
+        async apiAppMessageRecallPost(messageRecallDto?: MessageRecallDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageRecallPost(messageRecallDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {MessageSubscribeDto} [body] 
+         * @param {MessageSubscribeDto} [messageSubscribeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageSubscribePost(body?: MessageSubscribeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSubscribePost(body, options);
+        async apiAppMessageSubscribePost(messageSubscribeDto?: MessageSubscribeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSubscribePost(messageSubscribeDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {MessageUnsubscribeDto} [body] 
+         * @param {MessageUnsubscribeDto} [messageUnsubscribeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageUnsubscribePost(body?: MessageUnsubscribeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageUnsubscribePost(body, options);
+        async apiAppMessageUnsubscribePost(messageUnsubscribeDto?: MessageUnsubscribeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageUnsubscribePost(messageUnsubscribeDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -15707,7 +16267,7 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAppMessagePublishPost(requestParameters: MessageApiApiAppMessagePublishPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppMessagePublishPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessagePublishPost(requestParameters.messagePublishDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15716,7 +16276,7 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAppMessageRecallPost(requestParameters: MessageApiApiAppMessageRecallPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppMessageRecallPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageRecallPost(requestParameters.messageRecallDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15725,7 +16285,7 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAppMessageSubscribePost(requestParameters: MessageApiApiAppMessageSubscribePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppMessageSubscribePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageSubscribePost(requestParameters.messageSubscribeDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -15734,7 +16294,7 @@ export const MessageApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAppMessageUnsubscribePost(requestParameters: MessageApiApiAppMessageUnsubscribePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppMessageUnsubscribePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageUnsubscribePost(requestParameters.messageUnsubscribeDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -15750,7 +16310,7 @@ export interface MessageApiApiAppMessagePublishPostRequest {
      * @type {MessagePublishDto}
      * @memberof MessageApiApiAppMessagePublishPost
      */
-    readonly body?: MessagePublishDto
+    readonly messagePublishDto?: MessagePublishDto
 }
 
 /**
@@ -15764,7 +16324,7 @@ export interface MessageApiApiAppMessageRecallPostRequest {
      * @type {MessageRecallDto}
      * @memberof MessageApiApiAppMessageRecallPost
      */
-    readonly body?: MessageRecallDto
+    readonly messageRecallDto?: MessageRecallDto
 }
 
 /**
@@ -15778,7 +16338,7 @@ export interface MessageApiApiAppMessageSubscribePostRequest {
      * @type {MessageSubscribeDto}
      * @memberof MessageApiApiAppMessageSubscribePost
      */
-    readonly body?: MessageSubscribeDto
+    readonly messageSubscribeDto?: MessageSubscribeDto
 }
 
 /**
@@ -15792,7 +16352,7 @@ export interface MessageApiApiAppMessageUnsubscribePostRequest {
      * @type {MessageUnsubscribeDto}
      * @memberof MessageApiApiAppMessageUnsubscribePost
      */
-    readonly body?: MessageUnsubscribeDto
+    readonly messageUnsubscribeDto?: MessageUnsubscribeDto
 }
 
 /**
@@ -15810,7 +16370,7 @@ export class MessageApi extends BaseAPI {
      * @memberof MessageApi
      */
     public apiAppMessagePublishPost(requestParameters: MessageApiApiAppMessagePublishPostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessagePublishPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageApiFp(this.configuration).apiAppMessagePublishPost(requestParameters.messagePublishDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15821,7 +16381,7 @@ export class MessageApi extends BaseAPI {
      * @memberof MessageApi
      */
     public apiAppMessageRecallPost(requestParameters: MessageApiApiAppMessageRecallPostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageRecallPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageApiFp(this.configuration).apiAppMessageRecallPost(requestParameters.messageRecallDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15832,7 +16392,7 @@ export class MessageApi extends BaseAPI {
      * @memberof MessageApi
      */
     public apiAppMessageSubscribePost(requestParameters: MessageApiApiAppMessageSubscribePostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageSubscribePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageApiFp(this.configuration).apiAppMessageSubscribePost(requestParameters.messageSubscribeDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -15843,7 +16403,1449 @@ export class MessageApi extends BaseAPI {
      * @memberof MessageApi
      */
     public apiAppMessageUnsubscribePost(requestParameters: MessageApiApiAppMessageUnsubscribePostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageApiFp(this.configuration).apiAppMessageUnsubscribePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageApiFp(this.configuration).apiAppMessageUnsubscribePost(requestParameters.messageUnsubscribeDto, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * MessageSourceApi - axios parameter creator
+ * @export
+ */
+export const MessageSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceIdDelete', 'id', id)
+            const localVarPath = `/api/app/message-source/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceIdGet', 'id', id)
+            const localVarPath = `/api/app/message-source/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceDto} [createUpdateMessageSourceDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdPut: async (id: string, createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceIdPut', 'id', id)
+            const localVarPath = `/api/app/message-source/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceDto} [createUpdateMessageSourceDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourcePost: async (createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/message-source`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} categoryId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourcePublishedListCategoryIdGet: async (categoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'categoryId' is not null or undefined
+            assertParamExists('apiAppMessageSourcePublishedListCategoryIdGet', 'categoryId', categoryId)
+            const localVarPath = `/api/app/message-source/published-list/{categoryId}`
+                .replace(`{${"categoryId"}}`, encodeURIComponent(String(categoryId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * MessageSourceApi - functional programming interface
+ * @export
+ */
+export const MessageSourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = MessageSourceApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageSourceDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceDto} [createUpdateMessageSourceDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceIdPut(id: string, createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateUpdateMessageSourceDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceIdPut(id, createUpdateMessageSourceDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceDto} [createUpdateMessageSourceDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourcePost(createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateUpdateMessageSourceDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourcePost(createUpdateMessageSourceDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} categoryId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourcePublishedListCategoryIdGet(categoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageSourceDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourcePublishedListCategoryIdGet(categoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * MessageSourceApi - factory interface
+ * @export
+ */
+export const MessageSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = MessageSourceApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {MessageSourceApiApiAppMessageSourceIdDeleteRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdDelete(requestParameters: MessageSourceApiApiAppMessageSourceIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceApiApiAppMessageSourceIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdGet(requestParameters: MessageSourceApiApiAppMessageSourceIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<MessageSourceDto> {
+            return localVarFp.apiAppMessageSourceIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceApiApiAppMessageSourceIdPutRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceIdPut(requestParameters: MessageSourceApiApiAppMessageSourceIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<CreateUpdateMessageSourceDto> {
+            return localVarFp.apiAppMessageSourceIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceApiApiAppMessageSourcePostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourcePost(requestParameters: MessageSourceApiApiAppMessageSourcePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<CreateUpdateMessageSourceDto> {
+            return localVarFp.apiAppMessageSourcePost(requestParameters.createUpdateMessageSourceDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourcePublishedListCategoryIdGet(requestParameters: MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<Array<MessageSourceDto>> {
+            return localVarFp.apiAppMessageSourcePublishedListCategoryIdGet(requestParameters.categoryId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for apiAppMessageSourceIdDelete operation in MessageSourceApi.
+ * @export
+ * @interface MessageSourceApiApiAppMessageSourceIdDeleteRequest
+ */
+export interface MessageSourceApiApiAppMessageSourceIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceApiApiAppMessageSourceIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceIdGet operation in MessageSourceApi.
+ * @export
+ * @interface MessageSourceApiApiAppMessageSourceIdGetRequest
+ */
+export interface MessageSourceApiApiAppMessageSourceIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceApiApiAppMessageSourceIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceIdPut operation in MessageSourceApi.
+ * @export
+ * @interface MessageSourceApiApiAppMessageSourceIdPutRequest
+ */
+export interface MessageSourceApiApiAppMessageSourceIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceApiApiAppMessageSourceIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceDto}
+     * @memberof MessageSourceApiApiAppMessageSourceIdPut
+     */
+    readonly createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto
+}
+
+/**
+ * Request parameters for apiAppMessageSourcePost operation in MessageSourceApi.
+ * @export
+ * @interface MessageSourceApiApiAppMessageSourcePostRequest
+ */
+export interface MessageSourceApiApiAppMessageSourcePostRequest {
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceDto}
+     * @memberof MessageSourceApiApiAppMessageSourcePost
+     */
+    readonly createUpdateMessageSourceDto?: CreateUpdateMessageSourceDto
+}
+
+/**
+ * Request parameters for apiAppMessageSourcePublishedListCategoryIdGet operation in MessageSourceApi.
+ * @export
+ * @interface MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest
+ */
+export interface MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGet
+     */
+    readonly categoryId: string
+}
+
+/**
+ * MessageSourceApi - object-oriented interface
+ * @export
+ * @class MessageSourceApi
+ * @extends {BaseAPI}
+ */
+export class MessageSourceApi extends BaseAPI {
+    /**
+     * 
+     * @param {MessageSourceApiApiAppMessageSourceIdDeleteRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceApi
+     */
+    public apiAppMessageSourceIdDelete(requestParameters: MessageSourceApiApiAppMessageSourceIdDeleteRequest, options?: AxiosRequestConfig) {
+        return MessageSourceApiFp(this.configuration).apiAppMessageSourceIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceApiApiAppMessageSourceIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceApi
+     */
+    public apiAppMessageSourceIdGet(requestParameters: MessageSourceApiApiAppMessageSourceIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageSourceApiFp(this.configuration).apiAppMessageSourceIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceApiApiAppMessageSourceIdPutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceApi
+     */
+    public apiAppMessageSourceIdPut(requestParameters: MessageSourceApiApiAppMessageSourceIdPutRequest, options?: AxiosRequestConfig) {
+        return MessageSourceApiFp(this.configuration).apiAppMessageSourceIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceApiApiAppMessageSourcePostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceApi
+     */
+    public apiAppMessageSourcePost(requestParameters: MessageSourceApiApiAppMessageSourcePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageSourceApiFp(this.configuration).apiAppMessageSourcePost(requestParameters.createUpdateMessageSourceDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceApi
+     */
+    public apiAppMessageSourcePublishedListCategoryIdGet(requestParameters: MessageSourceApiApiAppMessageSourcePublishedListCategoryIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageSourceApiFp(this.configuration).apiAppMessageSourcePublishedListCategoryIdGet(requestParameters.categoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * MessageSourceCategoryApi - axios parameter creator
+ * @export
+ */
+export const MessageSourceCategoryApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceCategoryGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/message-source-category`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * MessageSourceCategoryApi - functional programming interface
+ * @export
+ */
+export const MessageSourceCategoryApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = MessageSourceCategoryApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceCategoryGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageSourceCategoryDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceCategoryGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * MessageSourceCategoryApi - factory interface
+ * @export
+ */
+export const MessageSourceCategoryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = MessageSourceCategoryApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceCategoryGet(options?: AxiosRequestConfig): AxiosPromise<Array<MessageSourceCategoryDto>> {
+            return localVarFp.apiAppMessageSourceCategoryGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * MessageSourceCategoryApi - object-oriented interface
+ * @export
+ * @class MessageSourceCategoryApi
+ * @extends {BaseAPI}
+ */
+export class MessageSourceCategoryApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceCategoryApi
+     */
+    public apiAppMessageSourceCategoryGet(options?: AxiosRequestConfig) {
+        return MessageSourceCategoryApiFp(this.configuration).apiAppMessageSourceCategoryGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * MessageSourceRouteApi - axios parameter creator
+ * @export
+ */
+export const MessageSourceRouteApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteIdDelete', 'id', id)
+            const localVarPath = `/api/app/message-source-route/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteIdGet', 'id', id)
+            const localVarPath = `/api/app/message-source-route/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceRouteDto} [createUpdateMessageSourceRouteDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdPut: async (id: string, createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteIdPut', 'id', id)
+            const localVarPath = `/api/app/message-source-route/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceRouteDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceRouteDto} [createUpdateMessageSourceRouteDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRoutePost: async (createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/message-source-route`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceRouteDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} sourceId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRoutePublishedListSourceIdGet: async (sourceId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'sourceId' is not null or undefined
+            assertParamExists('apiAppMessageSourceRoutePublishedListSourceIdGet', 'sourceId', sourceId)
+            const localVarPath = `/api/app/message-source-route/published-list/{sourceId}`
+                .replace(`{${"sourceId"}}`, encodeURIComponent(String(sourceId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * MessageSourceRouteApi - functional programming interface
+ * @export
+ */
+export const MessageSourceRouteApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = MessageSourceRouteApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageSourceRouteDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceRouteDto} [createUpdateMessageSourceRouteDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteIdPut(id: string, createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteIdPut(id, createUpdateMessageSourceRouteDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceRouteDto} [createUpdateMessageSourceRouteDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRoutePost(createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRoutePost(createUpdateMessageSourceRouteDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} sourceId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRoutePublishedListSourceIdGet(sourceId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageSourceRouteDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRoutePublishedListSourceIdGet(sourceId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * MessageSourceRouteApi - factory interface
+ * @export
+ */
+export const MessageSourceRouteApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = MessageSourceRouteApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdDelete(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRouteIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdGet(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<MessageSourceRouteDto> {
+            return localVarFp.apiAppMessageSourceRouteIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteIdPut(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRouteIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceRouteDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteApiApiAppMessageSourceRoutePostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRoutePost(requestParameters: MessageSourceRouteApiApiAppMessageSourceRoutePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRoutePost(requestParameters.createUpdateMessageSourceRouteDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRoutePublishedListSourceIdGet(requestParameters: MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<Array<MessageSourceRouteDto>> {
+            return localVarFp.apiAppMessageSourceRoutePublishedListSourceIdGet(requestParameters.sourceId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for apiAppMessageSourceRouteIdDelete operation in MessageSourceRouteApi.
+ * @export
+ * @interface MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest
+ */
+export interface MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRouteIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRouteIdGet operation in MessageSourceRouteApi.
+ * @export
+ * @interface MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest
+ */
+export interface MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRouteIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRouteIdPut operation in MessageSourceRouteApi.
+ * @export
+ * @interface MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest
+ */
+export interface MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRouteIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceRouteDto}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRouteIdPut
+     */
+    readonly createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRoutePost operation in MessageSourceRouteApi.
+ * @export
+ * @interface MessageSourceRouteApiApiAppMessageSourceRoutePostRequest
+ */
+export interface MessageSourceRouteApiApiAppMessageSourceRoutePostRequest {
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceRouteDto}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRoutePost
+     */
+    readonly createUpdateMessageSourceRouteDto?: CreateUpdateMessageSourceRouteDto
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRoutePublishedListSourceIdGet operation in MessageSourceRouteApi.
+ * @export
+ * @interface MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest
+ */
+export interface MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGet
+     */
+    readonly sourceId: string
+}
+
+/**
+ * MessageSourceRouteApi - object-oriented interface
+ * @export
+ * @class MessageSourceRouteApi
+ * @extends {BaseAPI}
+ */
+export class MessageSourceRouteApi extends BaseAPI {
+    /**
+     * 
+     * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteApi
+     */
+    public apiAppMessageSourceRouteIdDelete(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdDeleteRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteApiFp(this.configuration).apiAppMessageSourceRouteIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteApi
+     */
+    public apiAppMessageSourceRouteIdGet(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteApiFp(this.configuration).apiAppMessageSourceRouteIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteApi
+     */
+    public apiAppMessageSourceRouteIdPut(requestParameters: MessageSourceRouteApiApiAppMessageSourceRouteIdPutRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteApiFp(this.configuration).apiAppMessageSourceRouteIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceRouteDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteApiApiAppMessageSourceRoutePostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteApi
+     */
+    public apiAppMessageSourceRoutePost(requestParameters: MessageSourceRouteApiApiAppMessageSourceRoutePostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageSourceRouteApiFp(this.configuration).apiAppMessageSourceRoutePost(requestParameters.createUpdateMessageSourceRouteDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteApi
+     */
+    public apiAppMessageSourceRoutePublishedListSourceIdGet(requestParameters: MessageSourceRouteApiApiAppMessageSourceRoutePublishedListSourceIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteApiFp(this.configuration).apiAppMessageSourceRoutePublishedListSourceIdGet(requestParameters.sourceId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * MessageSourceRouteSubApi - axios parameter creator
+ * @export
+ */
+export const MessageSourceRouteSubApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/message-source-route-sub`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteSubIdDelete', 'id', id)
+            const localVarPath = `/api/app/message-source-route-sub/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteSubIdGet', 'id', id)
+            const localVarPath = `/api/app/message-source-route-sub/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceRouteSubDto} [createUpdateMessageSourceRouteSubDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdPut: async (id: string, createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiAppMessageSourceRouteSubIdPut', 'id', id)
+            const localVarPath = `/api/app/message-source-route-sub/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceRouteSubDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceRouteSubDto} [createUpdateMessageSourceRouteSubDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubPost: async (createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/app/message-source-route-sub`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createUpdateMessageSourceRouteSubDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * MessageSourceRouteSubApi - functional programming interface
+ * @export
+ */
+export const MessageSourceRouteSubApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = MessageSourceRouteSubApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteSubGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MessageSourceRouteSubDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteSubGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteSubIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteSubIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteSubIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageSourceRouteSubDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteSubIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {CreateUpdateMessageSourceRouteSubDto} [createUpdateMessageSourceRouteSubDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteSubIdPut(id: string, createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteSubIdPut(id, createUpdateMessageSourceRouteSubDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {CreateUpdateMessageSourceRouteSubDto} [createUpdateMessageSourceRouteSubDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAppMessageSourceRouteSubPost(createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageSourceRouteSubPost(createUpdateMessageSourceRouteSubDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * MessageSourceRouteSubApi - factory interface
+ * @export
+ */
+export const MessageSourceRouteSubApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = MessageSourceRouteSubApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubGet(options?: AxiosRequestConfig): AxiosPromise<Array<MessageSourceRouteSubDto>> {
+            return localVarFp.apiAppMessageSourceRouteSubGet(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdDelete(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRouteSubIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdGet(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<MessageSourceRouteSubDto> {
+            return localVarFp.apiAppMessageSourceRouteSubIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubIdPut(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRouteSubIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceRouteSubDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAppMessageSourceRouteSubPost(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiAppMessageSourceRouteSubPost(requestParameters.createUpdateMessageSourceRouteSubDto, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for apiAppMessageSourceRouteSubIdDelete operation in MessageSourceRouteSubApi.
+ * @export
+ * @interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest
+ */
+export interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRouteSubIdGet operation in MessageSourceRouteSubApi.
+ * @export
+ * @interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest
+ */
+export interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRouteSubIdPut operation in MessageSourceRouteSubApi.
+ * @export
+ * @interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest
+ */
+export interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceRouteSubDto}
+     * @memberof MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPut
+     */
+    readonly createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto
+}
+
+/**
+ * Request parameters for apiAppMessageSourceRouteSubPost operation in MessageSourceRouteSubApi.
+ * @export
+ * @interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest
+ */
+export interface MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest {
+    /**
+     * 
+     * @type {CreateUpdateMessageSourceRouteSubDto}
+     * @memberof MessageSourceRouteSubApiApiAppMessageSourceRouteSubPost
+     */
+    readonly createUpdateMessageSourceRouteSubDto?: CreateUpdateMessageSourceRouteSubDto
+}
+
+/**
+ * MessageSourceRouteSubApi - object-oriented interface
+ * @export
+ * @class MessageSourceRouteSubApi
+ * @extends {BaseAPI}
+ */
+export class MessageSourceRouteSubApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteSubApi
+     */
+    public apiAppMessageSourceRouteSubGet(options?: AxiosRequestConfig) {
+        return MessageSourceRouteSubApiFp(this.configuration).apiAppMessageSourceRouteSubGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteSubApi
+     */
+    public apiAppMessageSourceRouteSubIdDelete(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdDeleteRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteSubApiFp(this.configuration).apiAppMessageSourceRouteSubIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteSubApi
+     */
+    public apiAppMessageSourceRouteSubIdGet(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdGetRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteSubApiFp(this.configuration).apiAppMessageSourceRouteSubIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteSubApi
+     */
+    public apiAppMessageSourceRouteSubIdPut(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubIdPutRequest, options?: AxiosRequestConfig) {
+        return MessageSourceRouteSubApiFp(this.configuration).apiAppMessageSourceRouteSubIdPut(requestParameters.id, requestParameters.createUpdateMessageSourceRouteSubDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MessageSourceRouteSubApi
+     */
+    public apiAppMessageSourceRouteSubPost(requestParameters: MessageSourceRouteSubApiApiAppMessageSourceRouteSubPostRequest = {}, options?: AxiosRequestConfig) {
+        return MessageSourceRouteSubApiFp(this.configuration).apiAppMessageSourceRouteSubPost(requestParameters.createUpdateMessageSourceRouteSubDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -15964,11 +17966,11 @@ export const MessageTemplateApiAxiosParamCreator = function (configuration?: Con
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {CreateOrUpdateMessageTemplateDto} [createOrUpdateMessageTemplateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateIdPut: async (id: string, body?: CreateOrUpdateMessageTemplateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageTemplateIdPut: async (id: string, createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiAppMessageTemplateIdPut', 'id', id)
             const localVarPath = `/api/app/message-template/{id}`
@@ -15995,7 +17997,7 @@ export const MessageTemplateApiAxiosParamCreator = function (configuration?: Con
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateMessageTemplateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -16004,11 +18006,11 @@ export const MessageTemplateApiAxiosParamCreator = function (configuration?: Con
         },
         /**
          * 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {CreateOrUpdateMessageTemplateDto} [createOrUpdateMessageTemplateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplatePost: async (body?: CreateOrUpdateMessageTemplateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageTemplatePost: async (createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message-template`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16032,7 +18034,7 @@ export const MessageTemplateApiAxiosParamCreator = function (configuration?: Con
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdateMessageTemplateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -16081,22 +18083,22 @@ export const MessageTemplateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {CreateOrUpdateMessageTemplateDto} [createOrUpdateMessageTemplateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplateIdPut(id: string, body?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateIdPut(id, body, options);
+        async apiAppMessageTemplateIdPut(id: string, createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateIdPut(id, createOrUpdateMessageTemplateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {CreateOrUpdateMessageTemplateDto} [body] 
+         * @param {CreateOrUpdateMessageTemplateDto} [createOrUpdateMessageTemplateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplatePost(body?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplatePost(body, options);
+        async apiAppMessageTemplatePost(createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplatePost(createOrUpdateMessageTemplateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -16142,7 +18144,7 @@ export const MessageTemplateApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         apiAppMessageTemplateIdPut(requestParameters: MessageTemplateApiApiAppMessageTemplateIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateDto> {
-            return localVarFp.apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.createOrUpdateMessageTemplateDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -16151,7 +18153,7 @@ export const MessageTemplateApiFactory = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         apiAppMessageTemplatePost(requestParameters: MessageTemplateApiApiAppMessageTemplatePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateDto> {
-            return localVarFp.apiAppMessageTemplatePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageTemplatePost(requestParameters.createOrUpdateMessageTemplateDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16202,7 +18204,7 @@ export interface MessageTemplateApiApiAppMessageTemplateIdPutRequest {
      * @type {CreateOrUpdateMessageTemplateDto}
      * @memberof MessageTemplateApiApiAppMessageTemplateIdPut
      */
-    readonly body?: CreateOrUpdateMessageTemplateDto
+    readonly createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto
 }
 
 /**
@@ -16216,7 +18218,7 @@ export interface MessageTemplateApiApiAppMessageTemplatePostRequest {
      * @type {CreateOrUpdateMessageTemplateDto}
      * @memberof MessageTemplateApiApiAppMessageTemplatePost
      */
-    readonly body?: CreateOrUpdateMessageTemplateDto
+    readonly createOrUpdateMessageTemplateDto?: CreateOrUpdateMessageTemplateDto
 }
 
 /**
@@ -16266,7 +18268,7 @@ export class MessageTemplateApi extends BaseAPI {
      * @memberof MessageTemplateApi
      */
     public apiAppMessageTemplateIdPut(requestParameters: MessageTemplateApiApiAppMessageTemplateIdPutRequest, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplateIdPut(requestParameters.id, requestParameters.createOrUpdateMessageTemplateDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -16277,7 +18279,7 @@ export class MessageTemplateApi extends BaseAPI {
      * @memberof MessageTemplateApi
      */
     public apiAppMessageTemplatePost(requestParameters: MessageTemplateApiApiAppMessageTemplatePostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplatePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageTemplateApiFp(this.configuration).apiAppMessageTemplatePost(requestParameters.createOrUpdateMessageTemplateDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16365,11 +18367,11 @@ export const MessageTemplateReleaseApiAxiosParamCreator = function (configuratio
         },
         /**
          * 
-         * @param {CreateMessageTemplateReleaseDto} [body] 
+         * @param {CreateMessageTemplateReleaseDto} [createMessageTemplateReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppMessageTemplateReleasePost: async (body?: CreateMessageTemplateReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppMessageTemplateReleasePost: async (createMessageTemplateReleaseDto?: CreateMessageTemplateReleaseDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/message-template-release`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16393,7 +18395,7 @@ export const MessageTemplateReleaseApiAxiosParamCreator = function (configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createMessageTemplateReleaseDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -16432,12 +18434,12 @@ export const MessageTemplateReleaseApiFp = function(configuration?: Configuratio
         },
         /**
          * 
-         * @param {CreateMessageTemplateReleaseDto} [body] 
+         * @param {CreateMessageTemplateReleaseDto} [createMessageTemplateReleaseDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppMessageTemplateReleasePost(body?: CreateMessageTemplateReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateReleaseDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateReleasePost(body, options);
+        async apiAppMessageTemplateReleasePost(createMessageTemplateReleaseDto?: CreateMessageTemplateReleaseDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MessageTemplateReleaseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppMessageTemplateReleasePost(createMessageTemplateReleaseDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -16475,7 +18477,7 @@ export const MessageTemplateReleaseApiFactory = function (configuration?: Config
          * @throws {RequiredError}
          */
         apiAppMessageTemplateReleasePost(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MessageTemplateReleaseDto> {
-            return localVarFp.apiAppMessageTemplateReleasePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppMessageTemplateReleasePost(requestParameters.createMessageTemplateReleaseDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16519,7 +18521,7 @@ export interface MessageTemplateReleaseApiApiAppMessageTemplateReleasePostReques
      * @type {CreateMessageTemplateReleaseDto}
      * @memberof MessageTemplateReleaseApiApiAppMessageTemplateReleasePost
      */
-    readonly body?: CreateMessageTemplateReleaseDto
+    readonly createMessageTemplateReleaseDto?: CreateMessageTemplateReleaseDto
 }
 
 /**
@@ -16559,7 +18561,7 @@ export class MessageTemplateReleaseApi extends BaseAPI {
      * @memberof MessageTemplateReleaseApi
      */
     public apiAppMessageTemplateReleasePost(requestParameters: MessageTemplateReleaseApiApiAppMessageTemplateReleasePostRequest = {}, options?: AxiosRequestConfig) {
-        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleasePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return MessageTemplateReleaseApiFp(this.configuration).apiAppMessageTemplateReleasePost(requestParameters.createMessageTemplateReleaseDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -16701,11 +18703,11 @@ export const NotificationApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {CreatePushNotificationDto} [body] 
+         * @param {CreatePushNotificationDto} [createPushNotificationDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppNotificationPushPost: async (body?: CreatePushNotificationDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppNotificationPushPost: async (createPushNotificationDto?: CreatePushNotificationDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/notification/push`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -16729,7 +18731,7 @@ export const NotificationApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createPushNotificationDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -16779,12 +18781,12 @@ export const NotificationApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {CreatePushNotificationDto} [body] 
+         * @param {CreatePushNotificationDto} [createPushNotificationDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppNotificationPushPost(body?: CreatePushNotificationDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppNotificationPushPost(body, options);
+        async apiAppNotificationPushPost(createPushNotificationDto?: CreatePushNotificationDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppNotificationPushPost(createPushNotificationDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -16822,7 +18824,7 @@ export const NotificationApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppNotificationPushPost(requestParameters: NotificationApiApiAppNotificationPushPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppNotificationPushPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppNotificationPushPost(requestParameters.createPushNotificationDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -16943,7 +18945,7 @@ export interface NotificationApiApiAppNotificationPushPostRequest {
      * @type {CreatePushNotificationDto}
      * @memberof NotificationApiApiAppNotificationPushPost
      */
-    readonly body?: CreatePushNotificationDto
+    readonly createPushNotificationDto?: CreatePushNotificationDto
 }
 
 /**
@@ -16983,7 +18985,7 @@ export class NotificationApi extends BaseAPI {
      * @memberof NotificationApi
      */
     public apiAppNotificationPushPost(requestParameters: NotificationApiApiAppNotificationPushPostRequest = {}, options?: AxiosRequestConfig) {
-        return NotificationApiFp(this.configuration).apiAppNotificationPushPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return NotificationApiFp(this.configuration).apiAppNotificationPushPost(requestParameters.createPushNotificationDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -17041,11 +19043,11 @@ export const PermissionsApiAxiosParamCreator = function (configuration?: Configu
          * 
          * @param {string} [providerName] 
          * @param {string} [providerKey] 
-         * @param {UpdatePermissionsDto} [body] 
+         * @param {UpdatePermissionsDto} [updatePermissionsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiPermissionManagementPermissionsPut: async (providerName?: string, providerKey?: string, body?: UpdatePermissionsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiPermissionManagementPermissionsPut: async (providerName?: string, providerKey?: string, updatePermissionsDto?: UpdatePermissionsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/permission-management/permissions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17077,7 +19079,7 @@ export const PermissionsApiAxiosParamCreator = function (configuration?: Configu
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(updatePermissionsDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17109,12 +19111,12 @@ export const PermissionsApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [providerName] 
          * @param {string} [providerKey] 
-         * @param {UpdatePermissionsDto} [body] 
+         * @param {UpdatePermissionsDto} [updatePermissionsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiPermissionManagementPermissionsPut(providerName?: string, providerKey?: string, body?: UpdatePermissionsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiPermissionManagementPermissionsPut(providerName, providerKey, body, options);
+        async apiPermissionManagementPermissionsPut(providerName?: string, providerKey?: string, updatePermissionsDto?: UpdatePermissionsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiPermissionManagementPermissionsPut(providerName, providerKey, updatePermissionsDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -17143,7 +19145,7 @@ export const PermissionsApiFactory = function (configuration?: Configuration, ba
          * @throws {RequiredError}
          */
         apiPermissionManagementPermissionsPut(requestParameters: PermissionsApiApiPermissionManagementPermissionsPutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.updatePermissionsDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -17194,7 +19196,7 @@ export interface PermissionsApiApiPermissionManagementPermissionsPutRequest {
      * @type {UpdatePermissionsDto}
      * @memberof PermissionsApiApiPermissionManagementPermissionsPut
      */
-    readonly body?: UpdatePermissionsDto
+    readonly updatePermissionsDto?: UpdatePermissionsDto
 }
 
 /**
@@ -17223,7 +19225,7 @@ export class PermissionsApi extends BaseAPI {
      * @memberof PermissionsApi
      */
     public apiPermissionManagementPermissionsPut(requestParameters: PermissionsApiApiPermissionManagementPermissionsPutRequest = {}, options?: AxiosRequestConfig) {
-        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return PermissionsApiFp(this.configuration).apiPermissionManagementPermissionsPut(requestParameters.providerName, requestParameters.providerKey, requestParameters.updatePermissionsDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -17236,11 +19238,11 @@ export const ProfileApiAxiosParamCreator = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {ChangePasswordInput} [body] 
+         * @param {ChangePasswordInput} [changePasswordInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountMyProfileChangePasswordPost: async (body?: ChangePasswordInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountMyProfileChangePasswordPost: async (changePasswordInput?: ChangePasswordInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/my-profile/change-password`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17264,7 +19266,7 @@ export const ProfileApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(changePasswordInput, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17306,11 +19308,11 @@ export const ProfileApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {UpdateProfileDto} [body] 
+         * @param {UpdateProfileDto} [updateProfileDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountMyProfilePut: async (body?: UpdateProfileDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAccountMyProfilePut: async (updateProfileDto?: UpdateProfileDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/account/my-profile`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17334,7 +19336,7 @@ export const ProfileApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(updateProfileDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17353,12 +19355,12 @@ export const ProfileApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {ChangePasswordInput} [body] 
+         * @param {ChangePasswordInput} [changePasswordInput] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountMyProfileChangePasswordPost(body?: ChangePasswordInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountMyProfileChangePasswordPost(body, options);
+        async apiAccountMyProfileChangePasswordPost(changePasswordInput?: ChangePasswordInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountMyProfileChangePasswordPost(changePasswordInput, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -17372,12 +19374,12 @@ export const ProfileApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {UpdateProfileDto} [body] 
+         * @param {UpdateProfileDto} [updateProfileDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountMyProfilePut(body?: UpdateProfileDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProfileDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountMyProfilePut(body, options);
+        async apiAccountMyProfilePut(updateProfileDto?: UpdateProfileDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProfileDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAccountMyProfilePut(updateProfileDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -17397,7 +19399,7 @@ export const ProfileApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountMyProfileChangePasswordPost(requestParameters: ProfileApiApiAccountMyProfileChangePasswordPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAccountMyProfileChangePasswordPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountMyProfileChangePasswordPost(requestParameters.changePasswordInput, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -17414,7 +19416,7 @@ export const ProfileApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         apiAccountMyProfilePut(requestParameters: ProfileApiApiAccountMyProfilePutRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ProfileDto> {
-            return localVarFp.apiAccountMyProfilePut(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAccountMyProfilePut(requestParameters.updateProfileDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -17430,7 +19432,7 @@ export interface ProfileApiApiAccountMyProfileChangePasswordPostRequest {
      * @type {ChangePasswordInput}
      * @memberof ProfileApiApiAccountMyProfileChangePasswordPost
      */
-    readonly body?: ChangePasswordInput
+    readonly changePasswordInput?: ChangePasswordInput
 }
 
 /**
@@ -17444,7 +19446,7 @@ export interface ProfileApiApiAccountMyProfilePutRequest {
      * @type {UpdateProfileDto}
      * @memberof ProfileApiApiAccountMyProfilePut
      */
-    readonly body?: UpdateProfileDto
+    readonly updateProfileDto?: UpdateProfileDto
 }
 
 /**
@@ -17462,7 +19464,7 @@ export class ProfileApi extends BaseAPI {
      * @memberof ProfileApi
      */
     public apiAccountMyProfileChangePasswordPost(requestParameters: ProfileApiApiAccountMyProfileChangePasswordPostRequest = {}, options?: AxiosRequestConfig) {
-        return ProfileApiFp(this.configuration).apiAccountMyProfileChangePasswordPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return ProfileApiFp(this.configuration).apiAccountMyProfileChangePasswordPost(requestParameters.changePasswordInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -17483,7 +19485,7 @@ export class ProfileApi extends BaseAPI {
      * @memberof ProfileApi
      */
     public apiAccountMyProfilePut(requestParameters: ProfileApiApiAccountMyProfilePutRequest = {}, options?: AxiosRequestConfig) {
-        return ProfileApiFp(this.configuration).apiAccountMyProfilePut(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return ProfileApiFp(this.configuration).apiAccountMyProfilePut(requestParameters.updateProfileDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -17549,11 +19551,11 @@ export const PuupeeApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * 
-         * @param {CreateOrUpdatePuupeeDto} [body] 
+         * @param {CreateOrUpdatePuupeeDto} [createOrUpdatePuupeeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppPuupeePushPost: async (body?: CreateOrUpdatePuupeeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppPuupeePushPost: async (createOrUpdatePuupeeDto?: CreateOrUpdatePuupeeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/puupee/push`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17577,7 +19579,7 @@ export const PuupeeApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrUpdatePuupeeDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17609,12 +19611,12 @@ export const PuupeeApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {CreateOrUpdatePuupeeDto} [body] 
+         * @param {CreateOrUpdatePuupeeDto} [createOrUpdatePuupeeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppPuupeePushPost(body?: CreateOrUpdatePuupeeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PuupeeDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppPuupeePushPost(body, options);
+        async apiAppPuupeePushPost(createOrUpdatePuupeeDto?: CreateOrUpdatePuupeeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PuupeeDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppPuupeePushPost(createOrUpdatePuupeeDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -17643,7 +19645,7 @@ export const PuupeeApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiAppPuupeePushPost(requestParameters: PuupeeApiApiAppPuupeePushPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<PuupeeDto> {
-            return localVarFp.apiAppPuupeePushPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppPuupeePushPost(requestParameters.createOrUpdatePuupeeDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -17694,7 +19696,7 @@ export interface PuupeeApiApiAppPuupeePushPostRequest {
      * @type {CreateOrUpdatePuupeeDto}
      * @memberof PuupeeApiApiAppPuupeePushPost
      */
-    readonly body?: CreateOrUpdatePuupeeDto
+    readonly createOrUpdatePuupeeDto?: CreateOrUpdatePuupeeDto
 }
 
 /**
@@ -17723,7 +19725,7 @@ export class PuupeeApi extends BaseAPI {
      * @memberof PuupeeApi
      */
     public apiAppPuupeePushPost(requestParameters: PuupeeApiApiAppPuupeePushPostRequest = {}, options?: AxiosRequestConfig) {
-        return PuupeeApiFp(this.configuration).apiAppPuupeePushPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return PuupeeApiFp(this.configuration).apiAppPuupeePushPost(requestParameters.createOrUpdatePuupeeDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -17897,11 +19899,11 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @param {string} id 
-         * @param {IdentityRoleUpdateDto} [body] 
+         * @param {IdentityRoleUpdateDto} [identityRoleUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesIdPut: async (id: string, body?: IdentityRoleUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiIdentityRolesIdPut: async (id: string, identityRoleUpdateDto?: IdentityRoleUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiIdentityRolesIdPut', 'id', id)
             const localVarPath = `/api/identity/roles/{id}`
@@ -17928,7 +19930,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(identityRoleUpdateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -17937,11 +19939,11 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          * 
-         * @param {IdentityRoleCreateDto} [body] 
+         * @param {IdentityRoleCreateDto} [identityRoleCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityRolesPost: async (body?: IdentityRoleCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiIdentityRolesPost: async (identityRoleCreateDto?: IdentityRoleCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/identity/roles`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -17965,7 +19967,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(identityRoleCreateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -18027,22 +20029,22 @@ export const RoleApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {IdentityRoleUpdateDto} [body] 
+         * @param {IdentityRoleUpdateDto} [identityRoleUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiIdentityRolesIdPut(id: string, body?: IdentityRoleUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityRoleDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityRolesIdPut(id, body, options);
+        async apiIdentityRolesIdPut(id: string, identityRoleUpdateDto?: IdentityRoleUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityRoleDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityRolesIdPut(id, identityRoleUpdateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {IdentityRoleCreateDto} [body] 
+         * @param {IdentityRoleCreateDto} [identityRoleCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiIdentityRolesPost(body?: IdentityRoleCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityRoleDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityRolesPost(body, options);
+        async apiIdentityRolesPost(identityRoleCreateDto?: IdentityRoleCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityRoleDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityRolesPost(identityRoleCreateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -18097,7 +20099,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiIdentityRolesIdPut(requestParameters: RoleApiApiIdentityRolesIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDto> {
-            return localVarFp.apiIdentityRolesIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiIdentityRolesIdPut(requestParameters.id, requestParameters.identityRoleUpdateDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -18106,7 +20108,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiIdentityRolesPost(requestParameters: RoleApiApiIdentityRolesPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityRoleDto> {
-            return localVarFp.apiIdentityRolesPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiIdentityRolesPost(requestParameters.identityRoleCreateDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -18192,7 +20194,7 @@ export interface RoleApiApiIdentityRolesIdPutRequest {
      * @type {IdentityRoleUpdateDto}
      * @memberof RoleApiApiIdentityRolesIdPut
      */
-    readonly body?: IdentityRoleUpdateDto
+    readonly identityRoleUpdateDto?: IdentityRoleUpdateDto
 }
 
 /**
@@ -18206,7 +20208,7 @@ export interface RoleApiApiIdentityRolesPostRequest {
      * @type {IdentityRoleCreateDto}
      * @memberof RoleApiApiIdentityRolesPost
      */
-    readonly body?: IdentityRoleCreateDto
+    readonly identityRoleCreateDto?: IdentityRoleCreateDto
 }
 
 /**
@@ -18267,7 +20269,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public apiIdentityRolesIdPut(requestParameters: RoleApiApiIdentityRolesIdPutRequest, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return RoleApiFp(this.configuration).apiIdentityRolesIdPut(requestParameters.id, requestParameters.identityRoleUpdateDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -18278,7 +20280,7 @@ export class RoleApi extends BaseAPI {
      * @memberof RoleApi
      */
     public apiIdentityRolesPost(requestParameters: RoleApiApiIdentityRolesPostRequest = {}, options?: AxiosRequestConfig) {
-        return RoleApiFp(this.configuration).apiIdentityRolesPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return RoleApiFp(this.configuration).apiIdentityRolesPost(requestParameters.identityRoleCreateDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -18324,11 +20326,11 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * 
-         * @param {SettingsDto} [body] 
+         * @param {SettingsDto} [settingsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSettingsSetPost: async (body?: SettingsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSettingsSetPost: async (settingsDto?: SettingsDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/settings/set`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -18352,7 +20354,7 @@ export const SettingsApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(settingsDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -18380,12 +20382,12 @@ export const SettingsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {SettingsDto} [body] 
+         * @param {SettingsDto} [settingsDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSettingsSetPost(body?: SettingsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSettingsSetPost(body, options);
+        async apiAppSettingsSetPost(settingsDto?: SettingsDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSettingsSetPost(settingsDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -18413,7 +20415,7 @@ export const SettingsApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         apiAppSettingsSetPost(requestParameters: SettingsApiApiAppSettingsSetPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppSettingsSetPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppSettingsSetPost(requestParameters.settingsDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -18429,7 +20431,7 @@ export interface SettingsApiApiAppSettingsSetPostRequest {
      * @type {SettingsDto}
      * @memberof SettingsApiApiAppSettingsSetPost
      */
-    readonly body?: SettingsDto
+    readonly settingsDto?: SettingsDto
 }
 
 /**
@@ -18457,7 +20459,7 @@ export class SettingsApi extends BaseAPI {
      * @memberof SettingsApi
      */
     public apiAppSettingsSetPost(requestParameters: SettingsApiApiAppSettingsSetPostRequest = {}, options?: AxiosRequestConfig) {
-        return SettingsApiFp(this.configuration).apiAppSettingsSetPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return SettingsApiFp(this.configuration).apiAppSettingsSetPost(requestParameters.settingsDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -18597,11 +20599,11 @@ export const SimpleDataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {SimpleDataDto} [body] 
+         * @param {SimpleDataDto} [simpleDataDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSimpleDataSavePost: async (body?: SimpleDataDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSimpleDataSavePost: async (simpleDataDto?: SimpleDataDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/simple-data/save`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -18625,7 +20627,7 @@ export const SimpleDataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(simpleDataDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -18677,12 +20679,12 @@ export const SimpleDataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {SimpleDataDto} [body] 
+         * @param {SimpleDataDto} [simpleDataDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSimpleDataSavePost(body?: SimpleDataDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SimpleDataDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSimpleDataSavePost(body, options);
+        async apiAppSimpleDataSavePost(simpleDataDto?: SimpleDataDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SimpleDataDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSimpleDataSavePost(simpleDataDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -18729,7 +20731,7 @@ export const SimpleDataApiFactory = function (configuration?: Configuration, bas
          * @throws {RequiredError}
          */
         apiAppSimpleDataSavePost(requestParameters: SimpleDataApiApiAppSimpleDataSavePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SimpleDataDto> {
-            return localVarFp.apiAppSimpleDataSavePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppSimpleDataSavePost(requestParameters.simpleDataDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -18808,7 +20810,7 @@ export interface SimpleDataApiApiAppSimpleDataSavePostRequest {
      * @type {SimpleDataDto}
      * @memberof SimpleDataApiApiAppSimpleDataSavePost
      */
-    readonly body?: SimpleDataDto
+    readonly simpleDataDto?: SimpleDataDto
 }
 
 /**
@@ -18859,7 +20861,7 @@ export class SimpleDataApi extends BaseAPI {
      * @memberof SimpleDataApi
      */
     public apiAppSimpleDataSavePost(requestParameters: SimpleDataApiApiAppSimpleDataSavePostRequest = {}, options?: AxiosRequestConfig) {
-        return SimpleDataApiFp(this.configuration).apiAppSimpleDataSavePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return SimpleDataApiFp(this.configuration).apiAppSimpleDataSavePost(requestParameters.simpleDataDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -19251,11 +21253,11 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {AppleNotificaionDto} [body] 
+         * @param {AppleNotificaionDto} [appleNotificaionDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionAppleNotificationsPost: async (body?: AppleNotificaionDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSubscriptionAppleNotificationsPost: async (appleNotificaionDto?: AppleNotificaionDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/subscription/apple-notifications`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -19279,7 +21281,7 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(appleNotificaionDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -19326,11 +21328,11 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {CreateOrGetSubscriptionOrderDto} [createOrGetSubscriptionOrderDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionOrderPost: async (body?: CreateOrGetSubscriptionOrderDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSubscriptionOrderPost: async (createOrGetSubscriptionOrderDto?: CreateOrGetSubscriptionOrderDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/subscription/order`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -19354,7 +21356,7 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(createOrGetSubscriptionOrderDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -19363,11 +21365,11 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {VerifyReceiptDto} [body] 
+         * @param {VerifyReceiptDto} [verifyReceiptDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppSubscriptionVerifyReceiptPost: async (body?: VerifyReceiptDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppSubscriptionVerifyReceiptPost: async (verifyReceiptDto?: VerifyReceiptDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/subscription/verify-receipt`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -19391,7 +21393,7 @@ export const SubscriptionApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(verifyReceiptDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -19410,12 +21412,12 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {AppleNotificaionDto} [body] 
+         * @param {AppleNotificaionDto} [appleNotificaionDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionAppleNotificationsPost(body?: AppleNotificaionDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(body, options);
+        async apiAppSubscriptionAppleNotificationsPost(appleNotificaionDto?: AppleNotificaionDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionAppleNotificationsPost(appleNotificaionDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -19430,22 +21432,22 @@ export const SubscriptionApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {CreateOrGetSubscriptionOrderDto} [body] 
+         * @param {CreateOrGetSubscriptionOrderDto} [createOrGetSubscriptionOrderDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionOrderPost(body?: CreateOrGetSubscriptionOrderDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionOrderDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionOrderPost(body, options);
+        async apiAppSubscriptionOrderPost(createOrGetSubscriptionOrderDto?: CreateOrGetSubscriptionOrderDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionOrderDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionOrderPost(createOrGetSubscriptionOrderDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {VerifyReceiptDto} [body] 
+         * @param {VerifyReceiptDto} [verifyReceiptDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppSubscriptionVerifyReceiptPost(body?: VerifyReceiptDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VerifyReceiptResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionVerifyReceiptPost(body, options);
+        async apiAppSubscriptionVerifyReceiptPost(verifyReceiptDto?: VerifyReceiptDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VerifyReceiptResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppSubscriptionVerifyReceiptPost(verifyReceiptDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -19465,7 +21467,7 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppSubscriptionAppleNotificationsPost(requestParameters: SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppSubscriptionAppleNotificationsPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppSubscriptionAppleNotificationsPost(requestParameters.appleNotificaionDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -19483,7 +21485,7 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppSubscriptionOrderPost(requestParameters: SubscriptionApiApiAppSubscriptionOrderPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SubscriptionOrderDto> {
-            return localVarFp.apiAppSubscriptionOrderPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppSubscriptionOrderPost(requestParameters.createOrGetSubscriptionOrderDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -19492,7 +21494,7 @@ export const SubscriptionApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppSubscriptionVerifyReceiptPost(requestParameters: SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<VerifyReceiptResult> {
-            return localVarFp.apiAppSubscriptionVerifyReceiptPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppSubscriptionVerifyReceiptPost(requestParameters.verifyReceiptDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -19508,7 +21510,7 @@ export interface SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest 
      * @type {AppleNotificaionDto}
      * @memberof SubscriptionApiApiAppSubscriptionAppleNotificationsPost
      */
-    readonly body?: AppleNotificaionDto
+    readonly appleNotificaionDto?: AppleNotificaionDto
 }
 
 /**
@@ -19536,7 +21538,7 @@ export interface SubscriptionApiApiAppSubscriptionOrderPostRequest {
      * @type {CreateOrGetSubscriptionOrderDto}
      * @memberof SubscriptionApiApiAppSubscriptionOrderPost
      */
-    readonly body?: CreateOrGetSubscriptionOrderDto
+    readonly createOrGetSubscriptionOrderDto?: CreateOrGetSubscriptionOrderDto
 }
 
 /**
@@ -19550,7 +21552,7 @@ export interface SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest {
      * @type {VerifyReceiptDto}
      * @memberof SubscriptionApiApiAppSubscriptionVerifyReceiptPost
      */
-    readonly body?: VerifyReceiptDto
+    readonly verifyReceiptDto?: VerifyReceiptDto
 }
 
 /**
@@ -19568,7 +21570,7 @@ export class SubscriptionApi extends BaseAPI {
      * @memberof SubscriptionApi
      */
     public apiAppSubscriptionAppleNotificationsPost(requestParameters: SubscriptionApiApiAppSubscriptionAppleNotificationsPostRequest = {}, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionAppleNotificationsPost(requestParameters.appleNotificaionDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19590,7 +21592,7 @@ export class SubscriptionApi extends BaseAPI {
      * @memberof SubscriptionApi
      */
     public apiAppSubscriptionOrderPost(requestParameters: SubscriptionApiApiAppSubscriptionOrderPostRequest = {}, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionOrderPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionOrderPost(requestParameters.createOrGetSubscriptionOrderDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -19601,7 +21603,7 @@ export class SubscriptionApi extends BaseAPI {
      * @memberof SubscriptionApi
      */
     public apiAppSubscriptionVerifyReceiptPost(requestParameters: SubscriptionApiApiAppSubscriptionVerifyReceiptPostRequest = {}, options?: AxiosRequestConfig) {
-        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyReceiptPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return SubscriptionApiFp(this.configuration).apiAppSubscriptionVerifyReceiptPost(requestParameters.verifyReceiptDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -20016,11 +22018,11 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * 
          * @param {string} id 
-         * @param {TenantUpdateDto} [body] 
+         * @param {TenantUpdateDto} [tenantUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsIdPut: async (id: string, body?: TenantUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiMultiTenancyTenantsIdPut: async (id: string, tenantUpdateDto?: TenantUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiMultiTenancyTenantsIdPut', 'id', id)
             const localVarPath = `/api/multi-tenancy/tenants/{id}`
@@ -20047,7 +22049,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(tenantUpdateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -20056,11 +22058,11 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * 
-         * @param {TenantCreateDto} [body] 
+         * @param {TenantCreateDto} [tenantCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiMultiTenancyTenantsPost: async (body?: TenantCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiMultiTenancyTenantsPost: async (tenantCreateDto?: TenantCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/multi-tenancy/tenants`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -20084,7 +22086,7 @@ export const TenantApiAxiosParamCreator = function (configuration?: Configuratio
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(tenantCreateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -20168,22 +22170,22 @@ export const TenantApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {TenantUpdateDto} [body] 
+         * @param {TenantUpdateDto} [tenantUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiMultiTenancyTenantsIdPut(id: string, body?: TenantUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiMultiTenancyTenantsIdPut(id, body, options);
+        async apiMultiTenancyTenantsIdPut(id: string, tenantUpdateDto?: TenantUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiMultiTenancyTenantsIdPut(id, tenantUpdateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {TenantCreateDto} [body] 
+         * @param {TenantCreateDto} [tenantCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiMultiTenancyTenantsPost(body?: TenantCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiMultiTenancyTenantsPost(body, options);
+        async apiMultiTenancyTenantsPost(tenantCreateDto?: TenantCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TenantDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiMultiTenancyTenantsPost(tenantCreateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -20257,7 +22259,7 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiMultiTenancyTenantsIdPut(requestParameters: TenantApiApiMultiTenancyTenantsIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<TenantDto> {
-            return localVarFp.apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.tenantUpdateDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -20266,7 +22268,7 @@ export const TenantApiFactory = function (configuration?: Configuration, basePat
          * @throws {RequiredError}
          */
         apiMultiTenancyTenantsPost(requestParameters: TenantApiApiMultiTenancyTenantsPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<TenantDto> {
-            return localVarFp.apiMultiTenancyTenantsPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiMultiTenancyTenantsPost(requestParameters.tenantCreateDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -20401,7 +22403,7 @@ export interface TenantApiApiMultiTenancyTenantsIdPutRequest {
      * @type {TenantUpdateDto}
      * @memberof TenantApiApiMultiTenancyTenantsIdPut
      */
-    readonly body?: TenantUpdateDto
+    readonly tenantUpdateDto?: TenantUpdateDto
 }
 
 /**
@@ -20415,7 +22417,7 @@ export interface TenantApiApiMultiTenancyTenantsPostRequest {
      * @type {TenantCreateDto}
      * @memberof TenantApiApiMultiTenancyTenantsPost
      */
-    readonly body?: TenantCreateDto
+    readonly tenantCreateDto?: TenantCreateDto
 }
 
 /**
@@ -20499,7 +22501,7 @@ export class TenantApi extends BaseAPI {
      * @memberof TenantApi
      */
     public apiMultiTenancyTenantsIdPut(requestParameters: TenantApiApiMultiTenancyTenantsIdPutRequest, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsIdPut(requestParameters.id, requestParameters.tenantUpdateDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -20510,7 +22512,7 @@ export class TenantApi extends BaseAPI {
      * @memberof TenantApi
      */
     public apiMultiTenancyTenantsPost(requestParameters: TenantApiApiMultiTenancyTenantsPostRequest = {}, options?: AxiosRequestConfig) {
-        return TenantApiFp(this.configuration).apiMultiTenancyTenantsPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return TenantApiFp(this.configuration).apiMultiTenancyTenantsPost(requestParameters.tenantCreateDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -20856,11 +22858,11 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @param {string} id 
-         * @param {IdentityUserUpdateDto} [body] 
+         * @param {IdentityUserUpdateDto} [identityUserUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdPut: async (id: string, body?: IdentityUserUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiIdentityUsersIdPut: async (id: string, identityUserUpdateDto?: IdentityUserUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiIdentityUsersIdPut', 'id', id)
             const localVarPath = `/api/identity/users/{id}`
@@ -20887,7 +22889,7 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(identityUserUpdateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -20934,11 +22936,11 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @param {string} id 
-         * @param {IdentityUserUpdateRolesDto} [body] 
+         * @param {IdentityUserUpdateRolesDto} [identityUserUpdateRolesDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersIdRolesPut: async (id: string, body?: IdentityUserUpdateRolesDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiIdentityUsersIdRolesPut: async (id: string, identityUserUpdateRolesDto?: IdentityUserUpdateRolesDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('apiIdentityUsersIdRolesPut', 'id', id)
             const localVarPath = `/api/identity/users/{id}/roles`
@@ -20965,7 +22967,7 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(identityUserUpdateRolesDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -20974,11 +22976,11 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          * 
-         * @param {IdentityUserCreateDto} [body] 
+         * @param {IdentityUserCreateDto} [identityUserCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiIdentityUsersPost: async (body?: IdentityUserCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiIdentityUsersPost: async (identityUserCreateDto?: IdentityUserCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/identity/users`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -21002,7 +23004,7 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(identityUserCreateDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -21084,12 +23086,12 @@ export const UserApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {IdentityUserUpdateDto} [body] 
+         * @param {IdentityUserUpdateDto} [identityUserUpdateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiIdentityUsersIdPut(id: string, body?: IdentityUserUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersIdPut(id, body, options);
+        async apiIdentityUsersIdPut(id: string, identityUserUpdateDto?: IdentityUserUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersIdPut(id, identityUserUpdateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -21105,22 +23107,22 @@ export const UserApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id 
-         * @param {IdentityUserUpdateRolesDto} [body] 
+         * @param {IdentityUserUpdateRolesDto} [identityUserUpdateRolesDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiIdentityUsersIdRolesPut(id: string, body?: IdentityUserUpdateRolesDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersIdRolesPut(id, body, options);
+        async apiIdentityUsersIdRolesPut(id: string, identityUserUpdateRolesDto?: IdentityUserUpdateRolesDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersIdRolesPut(id, identityUserUpdateRolesDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {IdentityUserCreateDto} [body] 
+         * @param {IdentityUserCreateDto} [identityUserCreateDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiIdentityUsersPost(body?: IdentityUserCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersPost(body, options);
+        async apiIdentityUsersPost(identityUserCreateDto?: IdentityUserCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IdentityUserDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiIdentityUsersPost(identityUserCreateDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -21193,7 +23195,7 @@ export const UserApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiIdentityUsersIdPut(requestParameters: UserApiApiIdentityUsersIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiIdentityUsersIdPut(requestParameters.id, requestParameters.identityUserUpdateDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -21211,7 +23213,7 @@ export const UserApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiIdentityUsersIdRolesPut(requestParameters: UserApiApiIdentityUsersIdRolesPutRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.identityUserUpdateRolesDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -21220,7 +23222,7 @@ export const UserApiFactory = function (configuration?: Configuration, basePath?
          * @throws {RequiredError}
          */
         apiIdentityUsersPost(requestParameters: UserApiApiIdentityUsersPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<IdentityUserDto> {
-            return localVarFp.apiIdentityUsersPost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiIdentityUsersPost(requestParameters.identityUserCreateDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -21334,7 +23336,7 @@ export interface UserApiApiIdentityUsersIdPutRequest {
      * @type {IdentityUserUpdateDto}
      * @memberof UserApiApiIdentityUsersIdPut
      */
-    readonly body?: IdentityUserUpdateDto
+    readonly identityUserUpdateDto?: IdentityUserUpdateDto
 }
 
 /**
@@ -21369,7 +23371,7 @@ export interface UserApiApiIdentityUsersIdRolesPutRequest {
      * @type {IdentityUserUpdateRolesDto}
      * @memberof UserApiApiIdentityUsersIdRolesPut
      */
-    readonly body?: IdentityUserUpdateRolesDto
+    readonly identityUserUpdateRolesDto?: IdentityUserUpdateRolesDto
 }
 
 /**
@@ -21383,7 +23385,7 @@ export interface UserApiApiIdentityUsersPostRequest {
      * @type {IdentityUserCreateDto}
      * @memberof UserApiApiIdentityUsersPost
      */
-    readonly body?: IdentityUserCreateDto
+    readonly identityUserCreateDto?: IdentityUserCreateDto
 }
 
 /**
@@ -21466,7 +23468,7 @@ export class UserApi extends BaseAPI {
      * @memberof UserApi
      */
     public apiIdentityUsersIdPut(requestParameters: UserApiApiIdentityUsersIdPutRequest, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return UserApiFp(this.configuration).apiIdentityUsersIdPut(requestParameters.id, requestParameters.identityUserUpdateDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21488,7 +23490,7 @@ export class UserApi extends BaseAPI {
      * @memberof UserApi
      */
     public apiIdentityUsersIdRolesPut(requestParameters: UserApiApiIdentityUsersIdRolesPutRequest, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return UserApiFp(this.configuration).apiIdentityUsersIdRolesPut(requestParameters.id, requestParameters.identityUserUpdateRolesDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -21499,7 +23501,7 @@ export class UserApi extends BaseAPI {
      * @memberof UserApi
      */
     public apiIdentityUsersPost(requestParameters: UserApiApiIdentityUsersPostRequest = {}, options?: AxiosRequestConfig) {
-        return UserApiFp(this.configuration).apiIdentityUsersPost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return UserApiFp(this.configuration).apiIdentityUsersPost(requestParameters.identityUserCreateDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -22013,11 +24015,11 @@ export const VerificationApiAxiosParamCreator = function (configuration?: Config
     return {
         /**
          * 
-         * @param {SendVerificationCodeDto} [body] 
+         * @param {SendVerificationCodeDto} [sendVerificationCodeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAppVerificationSendCodePost: async (body?: SendVerificationCodeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiAppVerificationSendCodePost: async (sendVerificationCodeDto?: SendVerificationCodeDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/app/verification/send-code`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -22041,7 +24043,7 @@ export const VerificationApiAxiosParamCreator = function (configuration?: Config
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(sendVerificationCodeDto, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -22060,12 +24062,12 @@ export const VerificationApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {SendVerificationCodeDto} [body] 
+         * @param {SendVerificationCodeDto} [sendVerificationCodeDto] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAppVerificationSendCodePost(body?: SendVerificationCodeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppVerificationSendCodePost(body, options);
+        async apiAppVerificationSendCodePost(sendVerificationCodeDto?: SendVerificationCodeDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAppVerificationSendCodePost(sendVerificationCodeDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -22085,7 +24087,7 @@ export const VerificationApiFactory = function (configuration?: Configuration, b
          * @throws {RequiredError}
          */
         apiAppVerificationSendCodePost(requestParameters: VerificationApiApiAppVerificationSendCodePostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<void> {
-            return localVarFp.apiAppVerificationSendCodePost(requestParameters.body, options).then((request) => request(axios, basePath));
+            return localVarFp.apiAppVerificationSendCodePost(requestParameters.sendVerificationCodeDto, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -22101,7 +24103,7 @@ export interface VerificationApiApiAppVerificationSendCodePostRequest {
      * @type {SendVerificationCodeDto}
      * @memberof VerificationApiApiAppVerificationSendCodePost
      */
-    readonly body?: SendVerificationCodeDto
+    readonly sendVerificationCodeDto?: SendVerificationCodeDto
 }
 
 /**
@@ -22119,7 +24121,7 @@ export class VerificationApi extends BaseAPI {
      * @memberof VerificationApi
      */
     public apiAppVerificationSendCodePost(requestParameters: VerificationApiApiAppVerificationSendCodePostRequest = {}, options?: AxiosRequestConfig) {
-        return VerificationApiFp(this.configuration).apiAppVerificationSendCodePost(requestParameters.body, options).then((request) => request(this.axios, this.basePath));
+        return VerificationApiFp(this.configuration).apiAppVerificationSendCodePost(requestParameters.sendVerificationCodeDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
