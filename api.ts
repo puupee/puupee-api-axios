@@ -114,6 +114,118 @@ export interface ActionApiDescriptionModel {
 /**
  * 
  * @export
+ * @interface ApiKeyCreateDto
+ */
+export interface ApiKeyCreateDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyCreateDto
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyCreateDto
+     */
+    'key': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ApiKeyCreateDto
+     */
+    'active'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyCreateDto
+     */
+    'expireAt'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface ApiKeyDto
+ */
+export interface ApiKeyDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyDto
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyDto
+     */
+    'name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyDto
+     */
+    'key'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ApiKeyDto
+     */
+    'active'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyDto
+     */
+    'expireAt'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface ApiKeyDtoPagedResultDto
+ */
+export interface ApiKeyDtoPagedResultDto {
+    /**
+     * 
+     * @type {Array<ApiKeyDto>}
+     * @memberof ApiKeyDtoPagedResultDto
+     */
+    'items'?: Array<ApiKeyDto> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiKeyDtoPagedResultDto
+     */
+    'totalCount'?: number;
+}
+/**
+ * 
+ * @export
+ * @interface ApiKeyUpdateDto
+ */
+export interface ApiKeyUpdateDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyUpdateDto
+     */
+    'name': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ApiKeyUpdateDto
+     */
+    'active'?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeyUpdateDto
+     */
+    'expireAt'?: string | null;
+}
+/**
+ * 
+ * @export
  * @interface AppDto
  */
 export interface AppDto {
@@ -9726,6 +9838,488 @@ export class AccountApi extends BaseAPI {
      */
     public apiAppAccountDelete(options?: AxiosRequestConfig) {
         return AccountApiFp(this.configuration).apiAppAccountDelete(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ApiKeysApi - axios parameter creator
+ * @export
+ */
+export const ApiKeysApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysGet: async (sorting?: string, skipCount?: number, maxResultCount?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/api-keys`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+            if (sorting !== undefined) {
+                localVarQueryParameter['Sorting'] = sorting;
+            }
+
+            if (skipCount !== undefined) {
+                localVarQueryParameter['SkipCount'] = skipCount;
+            }
+
+            if (maxResultCount !== undefined) {
+                localVarQueryParameter['MaxResultCount'] = maxResultCount;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiApiKeysIdDelete', 'id', id)
+            const localVarPath = `/api/api-keys/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdGet: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiApiKeysIdGet', 'id', id)
+            const localVarPath = `/api/api-keys/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {ApiKeyUpdateDto} [apiKeyUpdateDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdPut: async (id: string, apiKeyUpdateDto?: ApiKeyUpdateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('apiApiKeysIdPut', 'id', id)
+            const localVarPath = `/api/api-keys/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(apiKeyUpdateDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {ApiKeyCreateDto} [apiKeyCreateDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysPost: async (apiKeyCreateDto?: ApiKeyCreateDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/api-keys`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication oauth2 required
+            // oauth required
+            await setOAuthToObject(localVarHeaderParameter, "oauth2", [], configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(apiKeyCreateDto, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ApiKeysApi - functional programming interface
+ * @export
+ */
+export const ApiKeysApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ApiKeysApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [sorting] 
+         * @param {number} [skipCount] 
+         * @param {number} [maxResultCount] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiApiKeysGet(sorting?: string, skipCount?: number, maxResultCount?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApiKeyDtoPagedResultDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiApiKeysGet(sorting, skipCount, maxResultCount, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiApiKeysIdDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiApiKeysIdDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiApiKeysIdGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApiKeyDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiApiKeysIdGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {ApiKeyUpdateDto} [apiKeyUpdateDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiApiKeysIdPut(id: string, apiKeyUpdateDto?: ApiKeyUpdateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApiKeyDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiApiKeysIdPut(id, apiKeyUpdateDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {ApiKeyCreateDto} [apiKeyCreateDto] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiApiKeysPost(apiKeyCreateDto?: ApiKeyCreateDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApiKeyDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiApiKeysPost(apiKeyCreateDto, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ApiKeysApi - factory interface
+ * @export
+ */
+export const ApiKeysApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ApiKeysApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {ApiKeysApiApiApiKeysGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysGet(requestParameters: ApiKeysApiApiApiKeysGetRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ApiKeyDtoPagedResultDto> {
+            return localVarFp.apiApiKeysGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {ApiKeysApiApiApiKeysIdDeleteRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdDelete(requestParameters: ApiKeysApiApiApiKeysIdDeleteRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.apiApiKeysIdDelete(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {ApiKeysApiApiApiKeysIdGetRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdGet(requestParameters: ApiKeysApiApiApiKeysIdGetRequest, options?: AxiosRequestConfig): AxiosPromise<ApiKeyDto> {
+            return localVarFp.apiApiKeysIdGet(requestParameters.id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {ApiKeysApiApiApiKeysIdPutRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysIdPut(requestParameters: ApiKeysApiApiApiKeysIdPutRequest, options?: AxiosRequestConfig): AxiosPromise<ApiKeyDto> {
+            return localVarFp.apiApiKeysIdPut(requestParameters.id, requestParameters.apiKeyUpdateDto, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {ApiKeysApiApiApiKeysPostRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiApiKeysPost(requestParameters: ApiKeysApiApiApiKeysPostRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ApiKeyDto> {
+            return localVarFp.apiApiKeysPost(requestParameters.apiKeyCreateDto, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for apiApiKeysGet operation in ApiKeysApi.
+ * @export
+ * @interface ApiKeysApiApiApiKeysGetRequest
+ */
+export interface ApiKeysApiApiApiKeysGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeysApiApiApiKeysGet
+     */
+    readonly sorting?: string
+
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiKeysApiApiApiKeysGet
+     */
+    readonly skipCount?: number
+
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiKeysApiApiApiKeysGet
+     */
+    readonly maxResultCount?: number
+}
+
+/**
+ * Request parameters for apiApiKeysIdDelete operation in ApiKeysApi.
+ * @export
+ * @interface ApiKeysApiApiApiKeysIdDeleteRequest
+ */
+export interface ApiKeysApiApiApiKeysIdDeleteRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeysApiApiApiKeysIdDelete
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiApiKeysIdGet operation in ApiKeysApi.
+ * @export
+ * @interface ApiKeysApiApiApiKeysIdGetRequest
+ */
+export interface ApiKeysApiApiApiKeysIdGetRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeysApiApiApiKeysIdGet
+     */
+    readonly id: string
+}
+
+/**
+ * Request parameters for apiApiKeysIdPut operation in ApiKeysApi.
+ * @export
+ * @interface ApiKeysApiApiApiKeysIdPutRequest
+ */
+export interface ApiKeysApiApiApiKeysIdPutRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiKeysApiApiApiKeysIdPut
+     */
+    readonly id: string
+
+    /**
+     * 
+     * @type {ApiKeyUpdateDto}
+     * @memberof ApiKeysApiApiApiKeysIdPut
+     */
+    readonly apiKeyUpdateDto?: ApiKeyUpdateDto
+}
+
+/**
+ * Request parameters for apiApiKeysPost operation in ApiKeysApi.
+ * @export
+ * @interface ApiKeysApiApiApiKeysPostRequest
+ */
+export interface ApiKeysApiApiApiKeysPostRequest {
+    /**
+     * 
+     * @type {ApiKeyCreateDto}
+     * @memberof ApiKeysApiApiApiKeysPost
+     */
+    readonly apiKeyCreateDto?: ApiKeyCreateDto
+}
+
+/**
+ * ApiKeysApi - object-oriented interface
+ * @export
+ * @class ApiKeysApi
+ * @extends {BaseAPI}
+ */
+export class ApiKeysApi extends BaseAPI {
+    /**
+     * 
+     * @param {ApiKeysApiApiApiKeysGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApiKeysApi
+     */
+    public apiApiKeysGet(requestParameters: ApiKeysApiApiApiKeysGetRequest = {}, options?: AxiosRequestConfig) {
+        return ApiKeysApiFp(this.configuration).apiApiKeysGet(requestParameters.sorting, requestParameters.skipCount, requestParameters.maxResultCount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {ApiKeysApiApiApiKeysIdDeleteRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApiKeysApi
+     */
+    public apiApiKeysIdDelete(requestParameters: ApiKeysApiApiApiKeysIdDeleteRequest, options?: AxiosRequestConfig) {
+        return ApiKeysApiFp(this.configuration).apiApiKeysIdDelete(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {ApiKeysApiApiApiKeysIdGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApiKeysApi
+     */
+    public apiApiKeysIdGet(requestParameters: ApiKeysApiApiApiKeysIdGetRequest, options?: AxiosRequestConfig) {
+        return ApiKeysApiFp(this.configuration).apiApiKeysIdGet(requestParameters.id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {ApiKeysApiApiApiKeysIdPutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApiKeysApi
+     */
+    public apiApiKeysIdPut(requestParameters: ApiKeysApiApiApiKeysIdPutRequest, options?: AxiosRequestConfig) {
+        return ApiKeysApiFp(this.configuration).apiApiKeysIdPut(requestParameters.id, requestParameters.apiKeyUpdateDto, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {ApiKeysApiApiApiKeysPostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApiKeysApi
+     */
+    public apiApiKeysPost(requestParameters: ApiKeysApiApiApiKeysPostRequest = {}, options?: AxiosRequestConfig) {
+        return ApiKeysApiFp(this.configuration).apiApiKeysPost(requestParameters.apiKeyCreateDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
