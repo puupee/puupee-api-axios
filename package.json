@@ -1,6 +1,6 @@
 {
   "name": "puupee-api-axios",
-  "version": "1.11.2",
+  "version": "1.12.0",
   "description": "OpenAPI client for puupee-api-axios",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
