@@ -1,0 +1,22 @@
+# CreateMessageTemplateReleaseDto
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**content** | **string** |  | [optional] [default to undefined]
+**templateId** | **string** |  | [optional] [default to undefined]
+
+## Example
+
+```typescript
+import { CreateMessageTemplateReleaseDto } from 'puupee-api-axios';
+
+const instance: CreateMessageTemplateReleaseDto = {
+    content,
+    templateId,
+};
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

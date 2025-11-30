@@ -1,0 +1,44 @@
+# AppFeatureDto
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **string** |  | [optional] [default to undefined]
+**creationTime** | **string** |  | [optional] [default to undefined]
+**creatorId** | **string** |  | [optional] [default to undefined]
+**lastModificationTime** | **string** |  | [optional] [default to undefined]
+**lastModifierId** | **string** |  | [optional] [default to undefined]
+**isDeleted** | **boolean** |  | [optional] [default to undefined]
+**deleterId** | **string** |  | [optional] [default to undefined]
+**deletionTime** | **string** |  | [optional] [default to undefined]
+**name** | **string** |  | [optional] [default to undefined]
+**displayName** | **string** |  | [optional] [default to undefined]
+**description** | **string** |  | [optional] [default to undefined]
+**details** | **string** |  | [optional] [default to undefined]
+**screenshotKeys** | **string** |  | [optional] [default to undefined]
+
+## Example
+
+```typescript
+import { AppFeatureDto } from 'puupee-api-axios';
+
+const instance: AppFeatureDto = {
+    id,
+    creationTime,
+    creatorId,
+    lastModificationTime,
+    lastModifierId,
+    isDeleted,
+    deleterId,
+    deletionTime,
+    name,
+    displayName,
+    description,
+    details,
+    screenshotKeys,
+};
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
