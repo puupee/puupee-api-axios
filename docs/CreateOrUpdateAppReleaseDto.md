@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **isEnabled** | **boolean** |  | [optional] [default to undefined]
 **channel** | **string** |  | [optional] [default to undefined]
 **environment** | **string** |  | [optional] [default to undefined]
+**buildRecordId** | **string** | 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode） | [optional] [default to undefined]
 
 ## Example
 
@@ -42,6 +43,7 @@ const instance: CreateOrUpdateAppReleaseDto = {
     isEnabled,
     channel,
     environment,
+    buildRecordId,
 };
 ```
 
