@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost*
 |[**getAppReleaseById**](#getappreleasebyid) | **GET** /api/app/app-release/{id} | 获取版本|
 |[**getAppReleaseList**](#getappreleaselist) | **GET** /api/app/app-release | 获取版本列表|
 |[**getLatest**](#getlatest) | **GET** /api/app/app-release/latest | 获取最新版本|
+|[**getListByDeveloper**](#getlistbydeveloper) | **GET** /api/app/app-release/by-developer | 开发者获取版本列表（版本的创建者为当前用户）|
 |[**updateAppRelease**](#updateapprelease) | **PUT** /api/app/app-release/{id} | 更新版本|
 
 # **createAppRelease**
@@ -196,7 +197,7 @@ const configuration = new Configuration();
 const apiInstance = new AppReleaseApi(configuration);
 
 let appId: string; // (optional) (default to undefined)
-let environment: string; // (optional) (default to undefined)
+let channel: ReleaseChannel; // (optional) (default to undefined)
 let platform: string; // (optional) (default to undefined)
 let sorting: string; // (optional) (default to undefined)
 let skipCount: number; // (optional) (default to undefined)
@@ -204,7 +205,7 @@ let maxResultCount: number; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getAppReleaseList(
     appId,
-    environment,
+    channel,
     platform,
     sorting,
     skipCount,
@@ -217,7 +218,7 @@ const { status, data } = await apiInstance.getAppReleaseList(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **appId** | [**string**] |  | (optional) defaults to undefined|
-| **environment** | [**string**] |  | (optional) defaults to undefined|
+| **channel** | **ReleaseChannel** |  | (optional) defaults to undefined|
 | **platform** | [**string**] |  | (optional) defaults to undefined|
 | **sorting** | [**string**] |  | (optional) defaults to undefined|
 | **skipCount** | [**number**] |  | (optional) defaults to undefined|
@@ -268,14 +269,12 @@ const apiInstance = new AppReleaseApi(configuration);
 
 let appName: string; // (optional) (default to undefined)
 let platform: string; // (optional) (default to undefined)
-let productType: string; // (optional) (default to undefined)
-let environment: string; // (optional) (default to undefined)
+let artifactType: string; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getLatest(
     appName,
     platform,
-    productType,
-    environment
+    artifactType
 );
 ```
 
@@ -285,13 +284,83 @@ const { status, data } = await apiInstance.getLatest(
 |------------- | ------------- | ------------- | -------------|
 | **appName** | [**string**] |  | (optional) defaults to undefined|
 | **platform** | [**string**] |  | (optional) defaults to undefined|
-| **productType** | [**string**] |  | (optional) defaults to undefined|
-| **environment** | [**string**] |  | (optional) defaults to undefined|
+| **artifactType** | [**string**] |  | (optional) defaults to undefined|
 
 
 ### Return type
 
 **AppReleaseDto**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | Success |  -  |
+|**403** | Forbidden |  -  |
+|**401** | Unauthorized |  -  |
+|**400** | Bad Request |  -  |
+|**404** | Not Found |  -  |
+|**501** | Server Error |  -  |
+|**500** | Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getListByDeveloper**
+> AppReleaseDtoPagedResultDto getListByDeveloper()
+
+
+### Example
+
+```typescript
+import {
+    AppReleaseApi,
+    Configuration
+} from 'puupee-api-axios';
+
+const configuration = new Configuration();
+const apiInstance = new AppReleaseApi(configuration);
+
+let appId: string; // (optional) (default to undefined)
+let channel: ReleaseChannel; // (optional) (default to undefined)
+let platform: string; // (optional) (default to undefined)
+let sorting: string; // (optional) (default to undefined)
+let skipCount: number; // (optional) (default to undefined)
+let maxResultCount: number; // (optional) (default to undefined)
+
+const { status, data } = await apiInstance.getListByDeveloper(
+    appId,
+    channel,
+    platform,
+    sorting,
+    skipCount,
+    maxResultCount
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **appId** | [**string**] |  | (optional) defaults to undefined|
+| **channel** | **ReleaseChannel** |  | (optional) defaults to undefined|
+| **platform** | [**string**] |  | (optional) defaults to undefined|
+| **sorting** | [**string**] |  | (optional) defaults to undefined|
+| **skipCount** | [**number**] |  | (optional) defaults to undefined|
+| **maxResultCount** | [**number**] |  | (optional) defaults to undefined|
+
+
+### Return type
+
+**AppReleaseDtoPagedResultDto**
 
 ### Authorization
 

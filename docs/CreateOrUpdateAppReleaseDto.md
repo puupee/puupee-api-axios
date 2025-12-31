@@ -18,8 +18,7 @@ Name | Type | Description | Notes
 **isForceUpdate** | **boolean** |  | [optional] [default to undefined]
 **appId** | **string** |  | [optional] [default to undefined]
 **isEnabled** | **boolean** |  | [optional] [default to undefined]
-**channel** | **string** |  | [optional] [default to undefined]
-**environment** | **string** |  | [optional] [default to undefined]
+**channel** | [**ReleaseChannel**](ReleaseChannel.md) |  | [optional] [default to undefined]
 **buildRecordId** | **string** | 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode） | [optional] [default to undefined]
 
 ## Example
@@ -42,7 +41,6 @@ const instance: CreateOrUpdateAppReleaseDto = {
     appId,
     isEnabled,
     channel,
-    environment,
     buildRecordId,
 };
 ```

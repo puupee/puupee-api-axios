@@ -1,4 +1,4 @@
-## puupee-api-axios@1.17.53
+## puupee-api-axios@1.17.77
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install puupee-api-axios@1.17.53 --save
+npm install puupee-api-axios@1.17.77 --save
 ```
 
 _unPublished (not recommended):_
@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 *AppReleaseApi* | [**getAppReleaseById**](docs/AppReleaseApi.md#getappreleasebyid) | **GET** /api/app/app-release/{id} | 获取版本
 *AppReleaseApi* | [**getAppReleaseList**](docs/AppReleaseApi.md#getappreleaselist) | **GET** /api/app/app-release | 获取版本列表
 *AppReleaseApi* | [**getLatest**](docs/AppReleaseApi.md#getlatest) | **GET** /api/app/app-release/latest | 获取最新版本
+*AppReleaseApi* | [**getListByDeveloper**](docs/AppReleaseApi.md#getlistbydeveloper) | **GET** /api/app/app-release/by-developer | 开发者获取版本列表（版本的创建者为当前用户）
 *AppReleaseApi* | [**updateAppRelease**](docs/AppReleaseApi.md#updateapprelease) | **PUT** /api/app/app-release/{id} | 更新版本
 *AppSdkApi* | [**createAppSdk**](docs/AppSdkApi.md#createappsdk) | **POST** /api/app/app-sdk | 
 *AppSdkApi* | [**deleteAppSdkById**](docs/AppSdkApi.md#deleteappsdkbyid) | **DELETE** /api/app/app-sdk/{id} | 
@@ -403,6 +404,7 @@ Class | Method | HTTP request | Description
  - [Receipt](docs/Receipt.md)
  - [RefreshDeviceStatusDto](docs/RefreshDeviceStatusDto.md)
  - [RegisterDto](docs/RegisterDto.md)
+ - [ReleaseChannel](docs/ReleaseChannel.md)
  - [RemoteServiceErrorInfo](docs/RemoteServiceErrorInfo.md)
  - [RemoteServiceErrorResponse](docs/RemoteServiceErrorResponse.md)
  - [RemoteServiceValidationErrorInfo](docs/RemoteServiceValidationErrorInfo.md)

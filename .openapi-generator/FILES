@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 README.md
 api.ts
 base.ts
@@ -199,6 +200,7 @@ docs/ProviderInfoDto.md
 docs/Receipt.md
 docs/RefreshDeviceStatusDto.md
 docs/RegisterDto.md
+docs/ReleaseChannel.md
 docs/RemoteServiceErrorInfo.md
 docs/RemoteServiceErrorResponse.md
 docs/RemoteServiceValidationErrorInfo.md

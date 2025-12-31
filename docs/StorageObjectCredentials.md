@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **expiration** | **string** |  | [optional] [default to undefined]
 **expiredTime** | **number** |  | [optional] [default to undefined]
 **appId** | **string** |  | [optional] [default to undefined]
+**cdnDomain** | **string** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -34,6 +35,7 @@ const instance: StorageObjectCredentials = {
     expiration,
     expiredTime,
     appId,
+    cdnDomain,
 };
 ```
 
