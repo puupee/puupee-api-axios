@@ -1,4 +1,4 @@
-## puupee-api-axios@1.17.81
+## puupee-api-axios@1.17.86
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install puupee-api-axios@1.17.81 --save
+npm install puupee-api-axios@1.17.86 --save
 ```
 
 _unPublished (not recommended):_
@@ -204,6 +204,7 @@ Class | Method | HTTP request | Description
 *RoleApi* | [**getIdentityRoleById**](docs/RoleApi.md#getidentityrolebyid) | **GET** /api/identity/roles/{id} | 
 *RoleApi* | [**getIdentityRoleList**](docs/RoleApi.md#getidentityrolelist) | **GET** /api/identity/roles | 
 *RoleApi* | [**updateIdentityRole**](docs/RoleApi.md#updateidentityrole) | **PUT** /api/identity/roles/{id} | 
+*StorageObjectApi* | [**getCdnDomains**](docs/StorageObjectApi.md#getcdndomains) | **GET** /api/app/storage-object/cdn-domains | 获取所有 CDN Domain 配置
 *StorageObjectApi* | [**getFileCredential**](docs/StorageObjectApi.md#getfilecredential) | **GET** /api/app/storage-object/file-credential | 
 *StorageObjectApi* | [**getUserStorages**](docs/StorageObjectApi.md#getuserstorages) | **GET** /api/app/storage-object/user-storages | 
 *StorageObjectApi* | [**preSignUrl**](docs/StorageObjectApi.md#presignurl) | **POST** /api/app/storage-object/pre-sign-url | 
@@ -263,6 +264,7 @@ Class | Method | HTTP request | Description
  - [AppPricingDtoPagedResultDto](docs/AppPricingDtoPagedResultDto.md)
  - [AppPricingItemDto](docs/AppPricingItemDto.md)
  - [AppPricingItemValueDto](docs/AppPricingItemValueDto.md)
+ - [AppPublisher](docs/AppPublisher.md)
  - [AppReleaseDto](docs/AppReleaseDto.md)
  - [AppReleaseDtoPagedResultDto](docs/AppReleaseDtoPagedResultDto.md)
  - [AppRunDto](docs/AppRunDto.md)
@@ -295,6 +297,7 @@ Class | Method | HTTP request | Description
  - [BuildRecordDtoPagedResultDto](docs/BuildRecordDtoPagedResultDto.md)
  - [BuildStatus](docs/BuildStatus.md)
  - [BuildTrigger](docs/BuildTrigger.md)
+ - [CdnDomainDto](docs/CdnDomainDto.md)
  - [ChangePasswordDto](docs/ChangePasswordDto.md)
  - [ChangePasswordInput](docs/ChangePasswordInput.md)
  - [CheckSyncAuthResultDto](docs/CheckSyncAuthResultDto.md)

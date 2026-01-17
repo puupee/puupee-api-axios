@@ -38,6 +38,7 @@ docs/AppPricingDtoPagedResultDto.md
 docs/AppPricingItemApi.md
 docs/AppPricingItemDto.md
 docs/AppPricingItemValueDto.md
+docs/AppPublisher.md
 docs/AppReleaseApi.md
 docs/AppReleaseDto.md
 docs/AppReleaseDtoPagedResultDto.md
@@ -76,6 +77,7 @@ docs/BuildRecordDto.md
 docs/BuildRecordDtoPagedResultDto.md
 docs/BuildStatus.md
 docs/BuildTrigger.md
+docs/CdnDomainDto.md
 docs/ChangePasswordDto.md
 docs/ChangePasswordInput.md
 docs/CheckSyncAuthResultDto.md

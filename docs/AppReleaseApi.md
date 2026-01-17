@@ -199,6 +199,7 @@ const apiInstance = new AppReleaseApi(configuration);
 let appId: string; // (optional) (default to undefined)
 let channel: ReleaseChannel; // (optional) (default to undefined)
 let platform: string; // (optional) (default to undefined)
+let publisher: string; // (optional) (default to undefined)
 let sorting: string; // (optional) (default to undefined)
 let skipCount: number; // (optional) (default to undefined)
 let maxResultCount: number; // (optional) (default to undefined)
@@ -207,6 +208,7 @@ const { status, data } = await apiInstance.getAppReleaseList(
     appId,
     channel,
     platform,
+    publisher,
     sorting,
     skipCount,
     maxResultCount
@@ -220,6 +222,7 @@ const { status, data } = await apiInstance.getAppReleaseList(
 | **appId** | [**string**] |  | (optional) defaults to undefined|
 | **channel** | **ReleaseChannel** |  | (optional) defaults to undefined|
 | **platform** | [**string**] |  | (optional) defaults to undefined|
+| **publisher** | [**string**] |  | (optional) defaults to undefined|
 | **sorting** | [**string**] |  | (optional) defaults to undefined|
 | **skipCount** | [**number**] |  | (optional) defaults to undefined|
 | **maxResultCount** | [**number**] |  | (optional) defaults to undefined|
@@ -270,11 +273,13 @@ const apiInstance = new AppReleaseApi(configuration);
 let appName: string; // (optional) (default to undefined)
 let platform: string; // (optional) (default to undefined)
 let artifactType: string; // (optional) (default to undefined)
+let publisher: string; // (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getLatest(
     appName,
     platform,
-    artifactType
+    artifactType,
+    publisher
 );
 ```
 
@@ -285,6 +290,7 @@ const { status, data } = await apiInstance.getLatest(
 | **appName** | [**string**] |  | (optional) defaults to undefined|
 | **platform** | [**string**] |  | (optional) defaults to undefined|
 | **artifactType** | [**string**] |  | (optional) defaults to undefined|
+| **publisher** | [**string**] |  | (optional) defaults to undefined|
 
 
 ### Return type
@@ -332,6 +338,7 @@ const apiInstance = new AppReleaseApi(configuration);
 let appId: string; // (optional) (default to undefined)
 let channel: ReleaseChannel; // (optional) (default to undefined)
 let platform: string; // (optional) (default to undefined)
+let publisher: string; // (optional) (default to undefined)
 let sorting: string; // (optional) (default to undefined)
 let skipCount: number; // (optional) (default to undefined)
 let maxResultCount: number; // (optional) (default to undefined)
@@ -340,6 +347,7 @@ const { status, data } = await apiInstance.getListByDeveloper(
     appId,
     channel,
     platform,
+    publisher,
     sorting,
     skipCount,
     maxResultCount
@@ -353,6 +361,7 @@ const { status, data } = await apiInstance.getListByDeveloper(
 | **appId** | [**string**] |  | (optional) defaults to undefined|
 | **channel** | **ReleaseChannel** |  | (optional) defaults to undefined|
 | **platform** | [**string**] |  | (optional) defaults to undefined|
+| **publisher** | [**string**] |  | (optional) defaults to undefined|
 | **sorting** | [**string**] |  | (optional) defaults to undefined|
 | **skipCount** | [**number**] |  | (optional) defaults to undefined|
 | **maxResultCount** | [**number**] |  | (optional) defaults to undefined|

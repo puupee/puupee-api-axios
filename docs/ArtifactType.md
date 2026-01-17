@@ -4,31 +4,35 @@ Represents the type of an artifact.
 
 ## Enum
 
+* `Aab` (value: `'Aab'`)
+
 * `Apk` (value: `'Apk'`)
 
-* `Ipa` (value: `'Ipa'`)
-
-* `Exe` (value: `'Exe'`)
-
-* `Msi` (value: `'Msi'`)
-
-* `Dmg` (value: `'Dmg'`)
-
-* `Pkg` (value: `'Pkg'`)
+* `App` (value: `'App'`)
 
 * `AppImage` (value: `'AppImage'`)
 
-* `Web` (value: `'Web'`)
+* `Deb` (value: `'Deb'`)
 
-* `Service` (value: `'Service'`)
+* `Dmg` (value: `'Dmg'`)
 
-* `AppStore` (value: `'AppStore'`)
+* `Docker` (value: `'Docker'`)
 
-* `GooglePlay` (value: `'GooglePlay'`)
+* `Exe` (value: `'Exe'`)
 
-* `MacAppStore` (value: `'MacAppStore'`)
+* `Hap` (value: `'Hap'`)
 
-* `MicrosoftStore` (value: `'MicrosoftStore'`)
+* `Ipa` (value: `'Ipa'`)
+
+* `Msi` (value: `'Msi'`)
+
+* `Msix` (value: `'Msix'`)
+
+* `Pkg` (value: `'Pkg'`)
+
+* `Rpm` (value: `'Rpm'`)
+
+* `Zip` (value: `'Zip'`)
 
 * `Other` (value: `'Other'`)
 

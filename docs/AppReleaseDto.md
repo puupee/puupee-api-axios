@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **hash** | **string** |  | [optional] [default to undefined]
 **downloadUrl** | **string** |  | [optional] [default to undefined]
 **artifactType** | [**ArtifactType**](ArtifactType.md) |  | [optional] [default to undefined]
+**publisher** | [**AppPublisher**](AppPublisher.md) |  | [optional] [default to undefined]
 **isForceUpdate** | **boolean** |  | [optional] [default to undefined]
 **appId** | **string** |  | [optional] [default to undefined]
 **isEnabled** | **boolean** |  | [optional] [default to undefined]
@@ -54,6 +55,7 @@ const instance: AppReleaseDto = {
     hash,
     downloadUrl,
     artifactType,
+    publisher,
     isForceUpdate,
     appId,
     isEnabled,

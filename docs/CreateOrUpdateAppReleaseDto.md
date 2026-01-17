@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **size** | **number** |  | [optional] [default to undefined]
 **hash** | **string** |  | [optional] [default to undefined]
 **artifactType** | [**ArtifactType**](ArtifactType.md) |  | [optional] [default to undefined]
+**publisher** | [**AppPublisher**](AppPublisher.md) |  | [optional] [default to undefined]
 **isForceUpdate** | **boolean** |  | [optional] [default to undefined]
 **appId** | **string** |  | [optional] [default to undefined]
 **isEnabled** | **boolean** |  | [optional] [default to undefined]
@@ -37,6 +38,7 @@ const instance: CreateOrUpdateAppReleaseDto = {
     size,
     hash,
     artifactType,
+    publisher,
     isForceUpdate,
     appId,
     isEnabled,
